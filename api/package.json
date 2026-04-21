@@ -20,5 +20,8 @@
   },
   "optionalDependencies": {
     "puppeteer": "^23.9.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 }
