@@ -1,18 +1,27 @@
-/* Minimal reset: WordPress/Divi ships its own full stylesheet suite via /wp-content/et-cache.
-   We avoid any framework CSS here to keep the original look intact. */
+/* Base global — Design System RankAgile */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: Poppins, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 #root { display: contents; }
 
-/* Force visibility on Divi animated elements — the original WP scroll-trigger
-   JS doesn't run reliably inside the SPA, so we make them visible by default. */
+/* Divi animated elements — make visible by default (scroll-trigger JS no longer runs) */
 .et_animated,
 .et-waypoint {
   opacity: 1 !important;
   animation: none !important;
 }
 
-/* Global black background — override Divi's white defaults */
-html,
-body,
+/* Keep black background inside legacy WP containers rendered by StaticPage */
 #page-container,
 #et-boc,
 #et-main-area,

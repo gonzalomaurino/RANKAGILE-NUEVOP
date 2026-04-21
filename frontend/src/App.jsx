@@ -15,7 +15,13 @@ import SeoAnalyticsPage from './pages/SeoAnalyticsPage.jsx';
 import AnalisisSeoGratuitoPage from './pages/AnalisisSeoGratuitoPage.jsx';
 import BlogsPage from './pages/BlogsPage.jsx';
 import BrandingDigitalPage from './pages/BrandingDigitalPage.jsx';
+import ZeroClickSearchPage from './pages/ZeroClickSearchPage.jsx';
+import PageRankFuncionaPage from './pages/PageRankFuncionaPage.jsx';
+import CuantoCuestaGeoPage from './pages/CuantoCuestaGeoPage.jsx';
+import PorQueNoAparezcoEnChatgptPage from './pages/PorQueNoAparezcoEnChatgptPage.jsx';
+import SeoVsGeoVsAeoPage from './pages/SeoVsGeoVsAeoPage.jsx';
 import AgenciaSeoInternacionalPage from './pages/AgenciaSeoInternacionalPage.jsx';
+import SeoParaEmpresasPage from './pages/SeoParaEmpresasPage.jsx';
 import StaticPage from './pages/StaticPage.jsx';
 import useLegacyScripts from './hooks/useLegacyScripts.js';
 import useSpaNavigation from './hooks/useSpaNavigation.js';
@@ -34,6 +40,8 @@ function AppShell() {
         <Route path="/contacto/" element={<ContactoPage />} />
         <Route path="/geo-generative-engine-optimization" element={<GeoPage />} />
         <Route path="/geo-generative-engine-optimization/" element={<GeoPage />} />
+        <Route path="/geo" element={<GeoPage />} />
+        <Route path="/geo/" element={<GeoPage />} />
         <Route path="/servicios-seo-para-posicionamiento-web" element={<ServiciosSeoPage />} />
         <Route path="/servicios-seo-para-posicionamiento-web/" element={<ServiciosSeoPage />} />
         <Route path="/servicios-seo-para-posicionamiento-web/servicio-seo-completo" element={<ServicioSeoCompletoPage />} />
@@ -52,8 +60,20 @@ function AppShell() {
         <Route path="/blogs/" element={<BlogsPage />} />
         <Route path="/branding-digital" element={<BrandingDigitalPage />} />
         <Route path="/branding-digital/" element={<BrandingDigitalPage />} />
+        <Route path="/zero-click-search" element={<ZeroClickSearchPage />} />
+        <Route path="/zero-click-search/" element={<ZeroClickSearchPage />} />
+        <Route path="/como-funciona-el-algoritmo-pagerank-de-google" element={<PageRankFuncionaPage />} />
+        <Route path="/como-funciona-el-algoritmo-pagerank-de-google/" element={<PageRankFuncionaPage />} />
+        <Route path="/cuanto-cuesta-geo" element={<CuantoCuestaGeoPage />} />
+        <Route path="/cuanto-cuesta-geo/" element={<CuantoCuestaGeoPage />} />
+        <Route path="/por-que-no-aparezco-en-chatgpt" element={<PorQueNoAparezcoEnChatgptPage />} />
+        <Route path="/por-que-no-aparezco-en-chatgpt/" element={<PorQueNoAparezcoEnChatgptPage />} />
+        <Route path="/seo-vs-geo-vs-aeo" element={<SeoVsGeoVsAeoPage />} />
+        <Route path="/seo-vs-geo-vs-aeo/" element={<SeoVsGeoVsAeoPage />} />
         <Route path="/agencia-seo-internacional-rankagile" element={<AgenciaSeoInternacionalPage />} />
         <Route path="/agencia-seo-internacional-rankagile/" element={<AgenciaSeoInternacionalPage />} />
+        <Route path="/seo-para-empresas" element={<SeoParaEmpresasPage />} />
+        <Route path="/seo-para-empresas/" element={<SeoParaEmpresasPage />} />
         <Route path="*" element={<StaticPage />} />
       </Routes>
     </Layout>

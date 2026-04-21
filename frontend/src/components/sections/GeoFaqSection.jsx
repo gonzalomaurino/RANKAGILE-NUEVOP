@@ -7,14 +7,14 @@ const faqs = [
 
 export default function GeoFaqSection() {
   return (
-    <section className="geo-section">
-      <span className="geo-eyebrow">Preguntas frecuentes</span>
-      <h2 className="geo-h2">Lo que preguntan antes de empezar</h2>
-      <div className="geo-faq">
+    <section className="geo-page-section">
+      <span className="geo-page-eyebrow">Preguntas frecuentes</span>
+      <h2 className="geo-page-h2">Lo que preguntan antes de empezar</h2>
+      <div className="geo-page-faq">
         {faqs.map((f, i) => (
           <details key={i}>
             <summary>{f.q}</summary>
-            <p className="geo-faq-body">{f.a}</p>
+            <p className="geo-page-faq-body">{f.a}</p>
           </details>
         ))}
       </div>
