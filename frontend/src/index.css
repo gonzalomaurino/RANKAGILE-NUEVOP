@@ -1,0 +1,28 @@
+/* Minimal reset: WordPress/Divi ships its own full stylesheet suite via /wp-content/et-cache.
+   We avoid any framework CSS here to keep the original look intact. */
+#root { display: contents; }
+
+/* Force visibility on Divi animated elements — the original WP scroll-trigger
+   JS doesn't run reliably inside the SPA, so we make them visible by default. */
+.et_animated,
+.et-waypoint {
+  opacity: 1 !important;
+  animation: none !important;
+}
+
+/* Global black background — override Divi's white defaults */
+html,
+body,
+#page-container,
+#et-boc,
+#et-main-area,
+#main-content,
+.container,
+.entry-content,
+.et-l--post,
+.et_builder_inner_content,
+.et_pb_pagebuilder_layout #main-content,
+.page.et_pb_pagebuilder_layout #main-content,
+.archive.et-tb-has-template #main-content {
+  background-color: #000000 !important;
+}

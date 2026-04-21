@@ -1,0 +1,21 @@
+﻿{
+  "name": "rankagile-full-stack",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "RankAgile - API + Frontend SPA",
+  "main": "api/app.js",
+  "scripts": {
+    "install:all": "npm install && cd frontend && npm install",
+    "build": "cd frontend && npm run build",
+    "build:api": "cd api && npm install",
+    "start": "node api/app.js",
+    "dev": "concurrently \"cd api && npm run dev\" \"cd frontend && npm run dev\"",
+    "preview": "npm run build && npm start"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

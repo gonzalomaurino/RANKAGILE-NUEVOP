@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash",
+      "Edit",
+      "Write",
+      "Bash(npm install *)",
+      "Bash(awk 'NR==56' 'C:\\\\Users\\\\Tomas Zengaro\\\\IMB\\\\RankAgile\\\\frontend\\\\src\\\\raw\\\\head.html')",
+      "Bash(awk 'NR==52' 'C:\\\\Users\\\\Tomas Zengaro\\\\IMB\\\\RankAgile\\\\frontend\\\\src\\\\raw\\\\head.html')",
+      "Bash(grep -oE '\\(\\\\.entry-content|\\\\.et-l|\\\\.et_builder_inner_content|\\\\.hentry|article\\)[^{]{0,30}\\\\{[^}]*background[^}]*\\\\}')",
+      "Bash(grep -oE '\\\\.et_pb_section_[0-9]+[^{,]*\\\\{[^}]*background-color[^}]*\\\\}')",
+      "Bash(npm run *)"
+    ]
+  }
+}
