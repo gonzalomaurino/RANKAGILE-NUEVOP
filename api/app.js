@@ -1,39 +1,41 @@
-import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
+import { config } from './config/env.js';
 import { connect } from './db.js';
 import { errorHandler } from './middlewares/errorHandler.js';
 import { notFound } from './middlewares/notFound.js';
+import { seoAnalyzeLimiter } from './middlewares/rateLimit.js';
 import contactRouter from './routes/contact.routes.js';
 import healthRouter from './routes/health.routes.js';
+import seoRouter from './routes/seo.routes.js';
 
-// Resolver __dirname en módulos ES6
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const FRONTEND_DIST = path.join(__dirname, '..', 'frontend', 'dist');
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+app.set('trust proxy', 1);
 
 app.use(cors());
 app.use(express.json({ limit: '1mb' }));
 app.use(morgan('dev'));
 
-// ==================== RUTAS DE API ====================
+// ==================== API ====================
 app.use('/api/health', healthRouter);
 app.use('/api/contact', contactRouter);
+app.use('/api/seo/analyze', seoAnalyzeLimiter);
+app.use('/api/seo', seoRouter);
 
-// ==================== SERVIR FRONTEND ESTÁTICO ====================
-// Archivos estáticos: JS, CSS, imágenes, HTMLs legacy, etc.
+// ==================== FRONTEND ESTÁTICO ====================
 if (fs.existsSync(FRONTEND_DIST)) {
   app.use(express.static(FRONTEND_DIST, {
-    maxAge: '1d',      // Cache: 1 día
-    etag: false,       // Optimizar rendimiento
-    index: false,      // NO servir index.html automáticamente
+    maxAge: '1d',
+    etag: false,
+    index: false,
   }));
   console.log(`[api] Sirviendo frontend estático desde: ${FRONTEND_DIST}`);
 } else {
@@ -42,37 +44,33 @@ if (fs.existsSync(FRONTEND_DIST)) {
 }
 
 // ==================== SPA FALLBACK ====================
-// Cualquier ruta que no coincida con archivo físico -> index.html
 app.get('*', (req, res) => {
+  if (req.path.startsWith('/api/')) return res.status(404).json({ error: 'Not Found' });
   const indexPath = path.join(FRONTEND_DIST, 'index.html');
-  
-  if (fs.existsSync(indexPath)) {
-    res.sendFile(indexPath);
-  } else {
-    res.status(404).json({
-      error: 'Frontend no construido',
-      message: 'Ejecuta: npm run build:frontend',
-      missingFile: indexPath,
-    });
-  }
+  if (fs.existsSync(indexPath)) return res.sendFile(indexPath);
+  res.status(404).json({
+    error: 'Frontend no construido',
+    message: 'Ejecuta: npm run build:frontend',
+    missingFile: indexPath,
+  });
 });
 
-// ==================== MANEJADORES DE ERROR ====================
 app.use(notFound);
 app.use(errorHandler);
 
-// ==================== INICIAR SERVIDOR ====================
 connect().then(() => {
-  app.listen(PORT, '0.0.0.0', () => {
+  app.listen(config.port, '0.0.0.0', () => {
     console.log(`
 ╔════════════════════════════════════════════════════════╗
 ║     🚀 RANKAGILE - API + FRONTEND (RAILWAY READY)      ║
 ╠════════════════════════════════════════════════════════╣
-║ Puerto:                ${PORT}
-║ Modo:                  ${process.env.NODE_ENV || 'development'}
-║ API:                   http://localhost:${PORT}/api
-║ Frontend:              http://localhost:${PORT}
-║ Frontend Dist:         ${FRONTEND_DIST}
+║ Puerto:                ${config.port}
+║ Modo:                  ${config.env}
+║ API:                   http://localhost:${config.port}/api
+║ SEO Analyzer:          http://localhost:${config.port}/api/seo/analyze?url=...
+║ Frontend:              http://localhost:${config.port}
+║ DB:                    ${config.database.enabled ? 'PostgreSQL' : 'in-memory (fallback)'}
+║ PageSpeed API key:     ${config.external.pageSpeedApiKey ? 'configurada' : 'no (fallback)'}
 ╚════════════════════════════════════════════════════════╝
     `);
   });

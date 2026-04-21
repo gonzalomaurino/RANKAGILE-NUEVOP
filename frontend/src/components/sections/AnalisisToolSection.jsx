@@ -1,26 +1,18 @@
 import { useState } from 'react';
+import { analyzeSeo } from '../../services/seoClient.js';
+import ScorePanel from './analisis/ScorePanel.jsx';
+import CategoriesPanel from './analisis/CategoriesPanel.jsx';
+import ModulesDetail from './analisis/ModulesDetail.jsx';
+import PriorityList from './analisis/PriorityList.jsx';
+import PdfDownloadForm from './analisis/PdfDownloadForm.jsx';
 
-const API = 'https://seo-test-delta.vercel.app/api/analyze';
-
-const LABELS = {
-  performance: 'Rendimiento',
-  page_structure: 'Estructura de Página',
-  headings: 'Encabezados',
-  image_optimization: 'Optimización de Imágenes',
-  internal_links: 'Enlaces Internos',
-  backlinks: 'Enlaces Externos',
-};
-
-const ICONS = { ok: '✓', warning: '!', error: '✕' };
-const STATUS_LABELS = { good: 'BUENO', warning: 'REGULAR', poor: 'DEFICIENTE' };
-
-function severity(score) {
-  if (score >= 80) return 'good';
-  if (score >= 50) return 'warning';
-  return 'poor';
+function summarize(result) {
+  const external = result?.external;
+  const internal = result?.internal;
+  const errors = (internal?.summary?.errors || 0) + (external?.issuesCount || 0);
+  const warnings = internal?.summary?.warnings || 0;
+  return { errors, warnings, issuesCount: errors + warnings };
 }
-
-const CIRCUMFERENCE = 283;
 
 export default function AnalisisToolSection() {
   const [url, setUrl] = useState('');
@@ -46,10 +38,8 @@ export default function AnalisisToolSection() {
     setData(null);
 
     try {
-      const res = await fetch(`${API}?url=${encodeURIComponent(trimmed)}`);
-      const payload = await res.json();
-      if (!res.ok) throw new Error(payload.error || 'Error al analizar la URL');
-      setData(payload);
+      const result = await analyzeSeo(trimmed);
+      setData(result);
       setStatus('ok');
     } catch (err) {
       setStatus('error');
@@ -62,8 +52,8 @@ export default function AnalisisToolSection() {
     analyze();
   }
 
-  const sev = data ? severity(data.score) : 'good';
-  const offset = data ? CIRCUMFERENCE - (data.score / 100) * CIRCUMFERENCE : CIRCUMFERENCE;
+  const summary = data ? summarize(data) : null;
+  const externalIssues = data?.external?.issues || [];
 
   return (
     <section className="ra-ana-gratis-tool">
@@ -73,8 +63,8 @@ export default function AnalisisToolSection() {
           Análisis Gratuito SEO: detecta oportunidades SEO reales
         </h1>
         <p className="ra-ana-gratis-lead">
-          Evaluamos tu URL según terminología SEO, estructura y relevancia
-          semántica.
+          Evaluamos tu URL en 7 módulos: On-Page, Técnico, Rendimiento, Móvil,
+          Off-Page, Servidor y GEO (SEO + IA). Sin registro. En menos de 30 segundos.
         </p>
 
         <form className="ra-ana-gratis-form" onSubmit={onSubmit} noValidate>
@@ -104,110 +94,43 @@ export default function AnalisisToolSection() {
       {status === 'loading' && (
         <div className="ra-ana-gratis-loading" role="status">
           <div className="ra-ana-gratis-spinner" aria-hidden="true" />
-          <p>Analizando URL…</p>
+          <p>Analizando URL en los 7 módulos…</p>
         </div>
       )}
 
       {status === 'ok' && data && (
         <div className="ra-ana-gratis-card">
           <div className="ra-ana-gratis-dashboard">
-            <div className="ra-ana-gratis-score-panel">
-              <div className={`ra-ana-gratis-score-circle is-${sev}`}>
-                <svg viewBox="0 0 100 100">
-                  <circle className="ra-ana-gratis-score-bg" cx="50" cy="50" r="45" />
-                  <circle
-                    className="ra-ana-gratis-score-progress"
-                    cx="50" cy="50" r="45"
-                    style={{ strokeDashoffset: offset }}
-                  />
-                </svg>
-                <div className="ra-ana-gratis-score-inner">
-                  <span className="ra-ana-gratis-score-number">{data.score}</span>
-                  <span className="ra-ana-gratis-score-label">Score</span>
-                </div>
-              </div>
-              <div className={`ra-ana-gratis-score-status is-${sev}`}>
-                {STATUS_LABELS[sev]}
-              </div>
-              {data.issuesCount > 0 && (
-                <div className="ra-ana-gratis-issues-badge">
-                  <span>{data.issuesCount}</span> problemas detectados
-                </div>
-              )}
-            </div>
-
-            <div className="ra-ana-gratis-categories-panel">
-              <h3 className="ra-ana-gratis-h3">Categorías SEO</h3>
-              <div className="ra-ana-gratis-categories-list">
-                {Object.entries(data.categories || {}).map(([k, v]) => {
-                  const cls = severity(v);
-                  return (
-                    <div key={k} className="ra-ana-gratis-category-item">
-                      <span className="ra-ana-gratis-category-label">
-                        {LABELS[k] || k}
-                      </span>
-                      <div className="ra-ana-gratis-category-bar-container">
-                        <div
-                          className={`ra-ana-gratis-category-bar is-${cls}`}
-                          style={{ width: `${v}%` }}
-                        />
-                      </div>
-                      <span className="ra-ana-gratis-category-value">{v}%</span>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+            <ScorePanel
+              score={data.score}
+              status={data.status}
+              issuesCount={summary.issuesCount}
+            />
+            <CategoriesPanel categories={data.external?.categories} />
           </div>
 
-          {data.issues?.length > 0 && (
+          {externalIssues.length > 0 && (
             <div className="ra-ana-gratis-issues-container">
               <h3 className="ra-ana-gratis-h3">Problemas detectados</h3>
               <ul className="ra-ana-gratis-issues-list">
-                {data.issues.map((i, idx) => (
-                  <li key={idx}>{i}</li>
-                ))}
+                {externalIssues.map((i, idx) => (<li key={idx}>{i}</li>))}
               </ul>
             </div>
           )}
 
-          {data.details && (
-            <div className="ra-ana-gratis-details-section">
-              <h3 className="ra-ana-gratis-h3">Análisis Detallado</h3>
-              <div className="ra-ana-gratis-details-list">
-                {Object.entries(data.details).map(([k, findings]) => {
-                  const catScore = data.categories?.[k] || 0;
-                  const cls = severity(catScore);
-                  return (
-                    <div key={k} className="ra-ana-gratis-detail-category">
-                      <div className="ra-ana-gratis-detail-category-header">
-                        <span className="ra-ana-gratis-detail-category-title">
-                          {LABELS[k] || k}
-                        </span>
-                        <span className={`ra-ana-gratis-detail-category-score is-${cls}`}>
-                          {catScore}%
-                        </span>
-                      </div>
-                      <div className="ra-ana-gratis-detail-category-findings">
-                        {findings.map((f, idx) => (
-                          <div key={idx} className="ra-ana-gratis-finding-item">
-                            <div className={`ra-ana-gratis-finding-icon is-${f.type}`}>
-                              {ICONS[f.type] || '?'}
-                            </div>
-                            <div className="ra-ana-gratis-finding-content">
-                              <div className="ra-ana-gratis-finding-message">{f.message}</div>
-                              {f.value && (
-                                <div className="ra-ana-gratis-finding-value">{f.value}</div>
-                              )}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+          {data.internal?.modules && (
+            <ModulesDetail modules={data.internal.modules} />
+          )}
+
+          {data.internal?.priorities && (
+            <PriorityList priorities={data.internal.priorities} />
+          )}
+
+          {data.internal?.id && (
+            <PdfDownloadForm
+              analysisId={data.internal.id}
+              analysisUrl={data.url}
+            />
           )}
         </div>
       )}

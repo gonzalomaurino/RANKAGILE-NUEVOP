@@ -398,6 +398,176 @@ const styles = `
     word-break: break-word;
   }
 
+  .ra-ana-gratis-detail-category-header {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    color: inherit;
+    text-align: left;
+  }
+  .ra-ana-gratis-detail-issues {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgba(255, 107, 107, 0.18);
+    color: #ff6b6b;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .ra-ana-gratis-detail-right {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .ra-ana-gratis-detail-chev {
+    color: rgba(255, 255, 255, 0.55);
+    transition: transform 160ms ease;
+  }
+  .ra-ana-gratis-detail-chev.is-open {
+    transform: rotate(180deg);
+  }
+  .ra-ana-gratis-finding-rec {
+    color: rgba(56, 254, 218, 0.9);
+    font-size: 13px;
+    margin-top: 6px;
+  }
+  .ra-ana-gratis-finding-rec em {
+    color: #38FEDA;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .ra-ana-gratis-priority-section {
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(56, 254, 218, 0.12);
+  }
+  .ra-ana-gratis-priority-lead {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    margin: 0 0 20px;
+  }
+  .ra-ana-gratis-priority-list {
+    list-style: none;
+    counter-reset: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .ra-ana-gratis-priority-item {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 14px;
+    align-items: start;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(56, 254, 218, 0.1);
+    border-left-width: 3px;
+    border-radius: 10px;
+    padding: 14px 18px;
+  }
+  .ra-ana-gratis-priority-item.prio-high { border-left-color: #ff6b6b; }
+  .ra-ana-gratis-priority-item.prio-medium { border-left-color: #ffd166; }
+  .ra-ana-gratis-priority-item.prio-low { border-left-color: rgba(56, 254, 218, 0.5); }
+  .ra-ana-gratis-priority-rank {
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    background: rgba(56, 254, 218, 0.12);
+    color: #38FEDA;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .ra-ana-gratis-priority-body { min-width: 0; }
+  .ra-ana-gratis-priority-meta {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  .ra-ana-gratis-priority-badge {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    padding: 3px 8px;
+    border-radius: 999px;
+  }
+  .ra-ana-gratis-priority-badge.prio-high { background: rgba(255,107,107,0.14); color: #ff6b6b; }
+  .ra-ana-gratis-priority-badge.prio-medium { background: rgba(255,209,102,0.14); color: #ffd166; }
+  .ra-ana-gratis-priority-badge.prio-low { background: rgba(56,254,218,0.14); color: #38FEDA; }
+  .ra-ana-gratis-priority-module {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.55);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .ra-ana-gratis-priority-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .ra-ana-gratis-priority-msg {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 13.5px;
+    margin-top: 2px;
+  }
+  .ra-ana-gratis-priority-rec {
+    color: rgba(56, 254, 218, 0.85);
+    font-size: 13px;
+    margin-top: 6px;
+    line-height: 1.45;
+  }
+
+  .ra-ana-gratis-pdf-trigger {
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(56, 254, 218, 0.12);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .ra-ana-gratis-pdf-note {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.55);
+    margin: 0;
+  }
+  .ra-ana-gratis-pdf-form {
+    margin-top: 32px;
+    padding: 24px;
+    background: rgba(56, 254, 218, 0.04);
+    border: 1px solid rgba(56, 254, 218, 0.18);
+    border-radius: 16px;
+  }
+  .ra-ana-gratis-pdf-form h4 {
+    margin: 0 0 14px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .ra-ana-gratis-pdf-form form {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .ra-ana-gratis-pdf-form .ra-ana-gratis-btn {
+    grid-column: 1 / -1;
+  }
+  .ra-ana-gratis-pdf-ok {
+    color: #38FEDA;
+    font-size: 14px;
+    margin-top: 12px;
+  }
+
   .ra-ana-gratis-cta {
     margin-top: 80px;
     text-align: center;
