@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "build": {
+    "builder": "dockerfile",
+    "context": "."
+  },
+  "deploy": {
+    "startCommand": "node api/app.js",
+    "restartPolicyMaxRetries": 5,
+    "restartPolicyWindow": 600,
+    "healthCheck": {
+      "test": ["CMD", "node", "-e", "require('http').get('http://localhost:8000/health', (r) => {if (r.statusCode !== 200) throw new Error(r.statusCode)})"],
+      "interval": 30,
+      "timeout": 3,
+      "retries": 3,
+      "startPeriod": 40
+    }
+  },
+  "environmentVariables": {
+    "NODE_ENV": "production",
+    "PORT": "8000"
+  }
+}

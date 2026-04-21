@@ -17,7 +17,7 @@ const __dirname = path.dirname(__filename);
 const FRONTEND_DIST = path.join(__dirname, '..', 'frontend', 'dist');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8000;
 
 app.use(cors());
 app.use(express.json({ limit: '1mb' }));
