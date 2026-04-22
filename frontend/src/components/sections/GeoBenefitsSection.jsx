@@ -33,15 +33,15 @@ const beneficios = [
 
 export default function GeoBenefitsSection() {
   return (
-    <section className="geo-section">
-      <span className="geo-eyebrow">Beneficios concretos</span>
-      <h2 className="geo-h2">Qué obtiene tu empresa al implementar GEO</h2>
-      <div className="geo-grid-3">
+    <section className="geo-page-section">
+      <span className="geo-page-eyebrow">Beneficios concretos</span>
+      <h2 className="geo-page-h2">Qué obtiene tu empresa al implementar GEO</h2>
+      <div className="geo-page-grid-3">
         {beneficios.map((b) => (
-          <article className="geo-card" key={b.n}>
-            <p className="geo-card-eyebrow">{b.n}</p>
-            <p className="geo-card-title">{b.title}</p>
-            <p className="geo-card-body">{b.body}</p>
+          <article className="geo-page-card" key={b.n}>
+            <p className="geo-page-card-eyebrow">{b.n}</p>
+            <p className="geo-page-card-title">{b.title}</p>
+            <p className="geo-page-card-body">{b.body}</p>
           </article>
         ))}
       </div>

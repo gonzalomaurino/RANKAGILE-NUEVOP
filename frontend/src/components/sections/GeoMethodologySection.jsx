@@ -9,20 +9,20 @@ const fases = [
 
 export default function GeoMethodologySection() {
   return (
-    <section className="geo-section">
-      <span className="geo-eyebrow">Proceso RankAgile</span>
-      <h2 className="geo-h2">La metodología GEO de RankAgile: 6 fases de ejecución</h2>
-      <p className="geo-p">
+    <section className="geo-page-section">
+      <span className="geo-page-eyebrow">Proceso RankAgile</span>
+      <h2 className="geo-page-h2">La metodología GEO de RankAgile: 6 fases de ejecución</h2>
+      <p className="geo-page-p">
         No vendemos informes. Entregamos ejecución. Cada cliente recibe un
         plan GEO a medida con KPIs claros, cronograma de implementación y
         tracking de resultados mensual.
       </p>
-      <div className="geo-phases">
+      <div className="geo-page-phases">
         {fases.map((f) => (
-          <article className="geo-phase" key={f.n}>
-            <p className="geo-card-eyebrow">{f.n}</p>
-            <p className="geo-phase-title">{f.title}</p>
-            <p className="geo-phase-body">{f.body}</p>
+          <article className="geo-page-phase" key={f.n}>
+            <p className="geo-page-card-eyebrow">{f.n}</p>
+            <p className="geo-page-phase-title">{f.title}</p>
+            <p className="geo-page-phase-body">{f.body}</p>
           </article>
         ))}
       </div>
