@@ -161,6 +161,66 @@ section.block {
   max-width: 640px;
 }
 
+#seo-internacional .section-head {
+  max-width: 780px;
+  margin-bottom: 40px;
+}
+
+#seo-internacional .section-head .display {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  color: #f4f2ea;
+  margin-top: 16px;
+}
+
+.cards-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.seo-card {
+  background: #07070f;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 32px 28px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.seo-card:hover {
+  transform: translateY(-2px);
+  border-color: #38feda;
+  box-shadow: 0 20px 60px rgba(56, 254, 218, 0.08);
+}
+
+.seo-card-title {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #f4f2ea;
+  margin-bottom: 14px;
+}
+
+.seo-card-copy {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #a8a59b;
+  margin: 0;
+}
+
+@media (max-width: 1120px) {
+  .cards-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .cards-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* --- Vignette Cards ------------------------------ */
 .vignette-stack {
   display: flex;

@@ -1,7 +1,7 @@
-import useDocumentMeta from '../hooks/useDocumentMeta.js';
-import { DashPrompts, DashTraffic, DashVisibility } from '../components/rankagile-dashboards.jsx';
+import useDocumentMeta from '../hooks/useDocumentMeta.js';import { Link } from 'react-router-dom';import { DashPrompts, DashTraffic, DashVisibility } from '../components/rankagile-dashboards.jsx';
 import ClaudeNavbar from '../components/ClaudeNavbar.jsx';
 import ClaudeFooter from '../components/ClaudeFooter.jsx';
+import Footer from '../components/Footer.jsx';
 import '../styles/claude-system.css';
 import '../styles/claude-home.css';
 
@@ -32,18 +32,56 @@ const Hero = () =>
     <div className="hero-inner">
       <span className="eyebrow centered">posicionamiento generativo</span>
       <h1 className="display" style={{ marginTop: 18 }}>
-        Agencia SEO internacional experta en <span className="grad">SEO para IA (GEO)</span> y motores generativos.
+        Agencia SEO internacional experta en <span className="grad">SEO para IA (GEO)</span>.
       </h1>
       <p className="hero-sub">
         Optimizamos tu marca para aparecer como respuesta en ChatGPT, Gemini, Claude y Perplexity — sin perder el tráfico orgánico que ya tienes en Google.
       </p>
       <div className="hero-cta">
-        <a className="btn-pill" href="/analisis-seo-gratuito">Análisis SEO Gratuito <ArrowUpRight /></a>
+        <Link className="btn-pill" to="/contacto">Recibir propuesta <ArrowUpRight /></Link>
         <a className="btn-ghost" href="#metodologia">Ver metodología <ArrowUpRight size={12} /></a>
       </div>
     </div>
   </header>;
 
+const SeoInternacional = () =>
+  <section className="block" id="seo-internacional">
+    <div className="section-head">
+      <span className="eyebrow">enfoque global</span>
+      <h2 className="display">Agencia SEO Internacional: Estrategia SEO sin fronteras</h2>
+    </div>
+
+    <div className="cards-grid-4">
+      <div className="svc-card">
+        <div>
+          <div className="svc-card-num">01 / internacional</div>
+          <h4>Expansión Global</h4>
+          <p>Expande tu negocio a nuevos mercados con una estrategia de posicionamiento diseñada para escalar.</p>
+        </div>
+      </div>
+      <div className="svc-card">
+        <div>
+          <div className="svc-card-num">02 / internacional</div>
+          <h4>Audiencias Calificadas</h4>
+          <p>En RankAgile ayudamos a empresas a ganar visibilidad en múltiples países, conectando con clientes en todo el mundo.</p>
+        </div>
+      </div>
+      <div className="svc-card">
+        <div>
+          <div className="svc-card-num">03 / internacional</div>
+          <h4>Más que traducciones</h4>
+          <p>No se trata solo de traducir contenido, sino de entender cómo buscan los usuarios y adaptar la estrategia a su intención.</p>
+        </div>
+      </div>
+      <div className="svc-card">
+        <div>
+          <div className="svc-card-num">04 / internacional</div>
+          <h4>Enfoque Integral</h4>
+          <p>Combinamos análisis de mercado, optimización técnica y contenido localizado para posicionarte desde el primer día.</p>
+        </div>
+      </div>
+    </div>
+  </section>;
 
 // --- Ticker -----------------------------------------------
 const Ticker = () => {
@@ -167,6 +205,7 @@ export default function ClaudeHomePage() {
 
       <Hero />
       <Ticker />
+      <SeoInternacional />
 
       {/* SECTION: Por qué GEO */}
       <section className="block" id="metodologia">
@@ -273,7 +312,7 @@ export default function ClaudeHomePage() {
         </div>
       </section>
 
-      <ClaudeFooter />
+      <Footer />
     </>);
 
 }
