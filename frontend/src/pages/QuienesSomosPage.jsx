@@ -152,14 +152,18 @@ export default function QuienesSomosPage() {
   });
 
   return (
-    <div className="qs-page">
-      <style>{styles}</style>
-      <div className="qs-container">
-        <AboutHeroSection />
-        <AboutMissionVisionSection />
-        <AboutVideoSection />
-        <AboutCtaSection />
+    <>
+      <ClaudeNavbar />
+      <div className="qs-page">
+        <style>{styles}</style>
+        <div className="qs-container">
+          <AboutHeroSection />
+          <AboutMissionVisionSection />
+          <AboutVideoSection />
+          <AboutCtaSection />
+        </div>
       </div>
-    </div>
+      <ClaudeFooter />
+    </>
   );
 }

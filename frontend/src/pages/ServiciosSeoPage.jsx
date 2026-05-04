@@ -183,14 +183,18 @@ export default function ServiciosSeoPage() {
   });
 
   return (
-    <div className="svc-page">
-      <style>{styles}</style>
-      <div className="svc-container">
-        <ServicesHeroSection />
-        <ServicesPackSection />
-        <ServicesConsultingSection />
-        <ServicesAnalyzerSection />
+    <>
+      <ClaudeNavbar />
+      <div className="svc-page">
+        <style>{styles}</style>
+        <div className="svc-container">
+          <ServicesHeroSection />
+          <ServicesPackSection />
+          <ServicesConsultingSection />
+          <ServicesAnalyzerSection />
+        </div>
       </div>
-    </div>
+      <ClaudeFooter />
+    </>
   );
 }

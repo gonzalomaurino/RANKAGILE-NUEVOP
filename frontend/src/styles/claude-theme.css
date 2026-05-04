@@ -1,0 +1,49 @@
+  :root {
+    --bg: #020209;
+    --bg-chrome: #010101;
+    --bg-elev: #0a0a14;
+    --bg-card: #07070f;
+    --surface: rgba(255, 255, 255, 0.02);
+    --border: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(255, 255, 255, 0.16);
+    --fg: #f4f2ea;
+    --fg-dim: #a8a59b;
+    --fg-faint: #6a6a6a;
+    --accent: #38feda;
+    --accent-soft: rgba(56, 254, 218, 0.14);
+    --accent-glow: rgba(56, 254, 218, 0.35);
+    --indigo: #5b5bff;
+    --violet: #a46bff;
+    --warn: #f5c056;
+    --grad-vignette: linear-gradient(135deg, rgba(56, 254, 218, 0.06) 0%, rgba(91, 91, 255, 0.08) 48%, rgba(164, 107, 255, 0.05) 100%);
+    --chart-bar: rgba(56, 254, 218, 0.8);
+    --ring: rgba(56, 254, 218, 0.4);
+    --btn-fg: #020209;
+    --logo-filter: none;
+    --chart-track: rgba(255, 255, 255, 0.08);
+  }
+
+  html[data-theme="light"] {
+    --bg: #f6f3ec;
+    --bg-chrome: #ece8dd;
+    --bg-elev: #efebe0;
+    --bg-card: #fbf9f3;
+    --surface: rgba(0, 0, 0, 0.015);
+    --border: rgba(10, 20, 30, 0.08);
+    --border-strong: rgba(10, 20, 30, 0.18);
+    --fg: #141416;
+    --fg-dim: #4b4b52;
+    --fg-faint: #8a8a8f;
+    --accent: #0fb89a;
+    --accent-soft: rgba(15, 184, 154, 0.12);
+    --accent-glow: rgba(15, 184, 154, 0.28);
+    --indigo: #4a52d9;
+    --violet: #8456d6;
+    --warn: #d69a2e;
+    --grad-vignette: linear-gradient(135deg, rgba(15, 184, 154, 0.09) 0%, rgba(74, 82, 217, 0.08) 48%, rgba(132, 86, 214, 0.06) 100%);
+    --chart-bar: rgba(15, 184, 154, 0.85);
+    --ring: rgba(15, 184, 154, 0.35);
+    --btn-fg: #f6f3ec;
+    --logo-filter: invert(0.88) hue-rotate(160deg) saturate(0.8);
+    --chart-track: rgba(10, 20, 30, 0.08);
+  }

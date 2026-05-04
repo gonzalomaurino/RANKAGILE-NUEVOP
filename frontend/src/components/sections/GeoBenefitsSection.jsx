@@ -35,13 +35,16 @@ export default function GeoBenefitsSection() {
   return (
     <section className="geo-page-section">
       <span className="geo-page-eyebrow">Beneficios concretos</span>
-      <h2 className="geo-page-h2">Qué obtiene tu empresa al implementar GEO</h2>
-      <div className="geo-page-grid-3">
+      <h2 className="geo-page-h2">Lo que gana tu empresa con GEO</h2>
+      <div className="services-grid">
         {beneficios.map((b) => (
-          <article className="geo-page-card" key={b.n}>
-            <p className="geo-page-card-eyebrow">{b.n}</p>
-            <p className="geo-page-card-title">{b.title}</p>
-            <p className="geo-page-card-body">{b.body}</p>
+          <article className="svc-card" key={b.n}>
+            <div>
+              <div className="svc-card-num">{b.n} / beneficio</div>
+              <h4>{b.title}</h4>
+              <p>{b.body}</p>
+            </div>
+            <span className="svc-card-arrow">VENTAJA</span>
           </article>
         ))}
       </div>

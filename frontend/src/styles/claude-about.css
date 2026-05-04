@@ -1,0 +1,67 @@
+/* About page tweaks using the home visual system. */
+
+.about-video-frame {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.about-vignette-media {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+}
+
+.about-cta-copy {
+    color: var(--fg-dim);
+    font-size: 17px;
+    max-width: 640px;
+    margin: 22px auto 0;
+    line-height: 1.6;
+}
+
+.about-display {
+    margin-top: 18px;
+}
+
+.about-display-tight {
+    margin-top: 14px;
+}
+
+.about-display-wide {
+    max-width: 720px;
+    margin-inline: auto;
+}
+
+.about-centered {
+    text-align: center;
+    margin-inline: auto;
+}
+
+.about-lead-centered {
+    margin-inline: auto;
+}
+
+.about-cta-section {
+    padding: 30px 0 50px;
+}
+
+.about-cta-shell {
+    position: relative;
+    z-index: 2;
+}
+
+.about-cta-actions {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.about-block {
+    padding: 80px 0px 32px;
+}

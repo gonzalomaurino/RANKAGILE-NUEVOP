@@ -11,20 +11,30 @@ export default function GeoMethodologySection() {
   return (
     <section className="geo-page-section">
       <span className="geo-page-eyebrow">Proceso RankAgile</span>
-      <h2 className="geo-page-h2">La metodología GEO de RankAgile: 6 fases de ejecución</h2>
-      <p className="geo-page-p">
-        No vendemos informes. Entregamos ejecución. Cada cliente recibe un
-        plan GEO a medida con KPIs claros, cronograma de implementación y
-        tracking de resultados mensual.
-      </p>
-      <div className="geo-page-phases">
-        {fases.map((f) => (
-          <article className="geo-page-phase" key={f.n}>
-            <p className="geo-page-card-eyebrow">{f.n}</p>
-            <p className="geo-page-phase-title">{f.title}</p>
-            <p className="geo-page-phase-body">{f.body}</p>
-          </article>
-        ))}
+      <div className="vignette" style={{ gridTemplateColumns: '1.05fr 1fr' }}>
+        <div className="vignette-left">
+          <span className="eyebrow">metodologia</span>
+          <h2 className="geo-page-h2">6 fases de ejecucion GEO</h2>
+          <p className="geo-page-p">
+            Ejecutamos un plan GEO con KPIs claros, cronograma por fases y
+            optimizacion mensual sobre visibilidad en motores generativos.
+          </p>
+          <ul className="vignette-bullets">
+            <li>Auditoria y gap de citaciones.</li>
+            <li>Mapa semantico y prioridades de contenido.</li>
+            <li>Tracking continuo de resultados.</li>
+          </ul>
+        </div>
+        <div className="vignette-right">
+          <div className="geo-columns">
+            {fases.map((f) => (
+              <div className="geo-column-card" key={f.n}>
+                <h4>{f.n} · {f.title}</h4>
+                <p>{f.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

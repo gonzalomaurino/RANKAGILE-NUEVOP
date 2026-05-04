@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
-import HomePage from './pages/HomePage.jsx';
+import ClaudeHomePage from './pages/rankagile-app.jsx';
 import QuienesSomosPage from './pages/QuienesSomosPage.jsx';
-import ContactoPage from './pages/ContactoPage.jsx';
+import ClaudeContactoPage from './pages/ClaudeContactoPage.jsx';
 import GeoPage from './pages/GeoPage.jsx';
 import ServiciosSeoPage from './pages/ServiciosSeoPage.jsx';
 import ServicioSeoCompletoPage from './pages/ServicioSeoCompletoPage.jsx';
@@ -12,7 +12,7 @@ import AuditoriaTecnicaSeoPage from './pages/AuditoriaTecnicaSeoPage.jsx';
 import ServicioSeoHibridoPage from './pages/ServicioSeoHibridoPage.jsx';
 import SeoConsultoriaAplicadaPage from './pages/SeoConsultoriaAplicadaPage.jsx';
 import SeoAnalyticsPage from './pages/SeoAnalyticsPage.jsx';
-import AnalisisSeoGratuitoPage from './pages/AnalisisSeoGratuitoPage.jsx';
+import ClaudeAnalisisPage from './pages/ClaudeAnalisisPage.jsx';
 import BlogsPage from './pages/BlogsPage.jsx';
 import BrandingDigitalPage from './pages/BrandingDigitalPage.jsx';
 import ZeroClickSearchPage from './pages/ZeroClickSearchPage.jsx';
@@ -28,16 +28,24 @@ import DashboardPowerBiPage from './pages/DashboardPowerBiPage.jsx';
 import QueEsSeoPage from './pages/QueEsSeoPage.jsx';
 import SeoYSemPage from './pages/SeoYSemPage.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx';
+import PreviewPages from './pages/PreviewPages.jsx';
+import NewQuienesSomosPage from './pages-new/QuienesSomosPage.jsx';
+import NewGeoPage from './pages-new/GeoPage.jsx';
+import NewServicioSeoCompletoPage from './pages-new/ServicioSeoCompletoPage.jsx';
+import NewAuditoriaTecnicaSeoPage from './pages-new/AuditoriaTecnicaSeoPage.jsx';
+import NewServicioSeoHibridoPage from './pages-new/ServicioSeoHibridoPage.jsx';
+import NewSeoConsultoriaAplicadaPage from './pages-new/SeoConsultoriaAplicadaPage.jsx';
+import NewSeoAnalyticsPage from './pages-new/SeoAnalyticsPage.jsx';
+import NewBlogsPage from './pages-new/BlogsPage.jsx';
+import NewPrivacyPolicyPage from './pages-new/PrivacyPolicyPage.jsx';
+import NewCookiesPolicyPage from './pages-new/CookiesPolicyPage.jsx';
 
 function AppShell() {
   return (
     <Layout header={<Header />} footer={<Footer />}>
       <Routes>
-        <Route path="/" element={<HomePage />} />
         <Route path="/quienes-somos" element={<QuienesSomosPage />} />
         <Route path="/quienes-somos/" element={<QuienesSomosPage />} />
-        <Route path="/contacto" element={<ContactoPage />} />
-        <Route path="/contacto/" element={<ContactoPage />} />
         <Route path="/geo-generative-engine-optimization" element={<GeoPage />} />
         <Route path="/geo-generative-engine-optimization/" element={<GeoPage />} />
         <Route path="/geo" element={<GeoPage />} />
@@ -54,8 +62,6 @@ function AppShell() {
         <Route path="/servicios-seo-para-posicionamiento-web/seo-consultoria-aplicada/" element={<SeoConsultoriaAplicadaPage />} />
         <Route path="/servicios-seo-para-posicionamiento-web/seo-analytics" element={<SeoAnalyticsPage />} />
         <Route path="/servicios-seo-para-posicionamiento-web/seo-analytics/" element={<SeoAnalyticsPage />} />
-        <Route path="/analisis-seo-gratuito" element={<AnalisisSeoGratuitoPage />} />
-        <Route path="/analisis-seo-gratuito/" element={<AnalisisSeoGratuitoPage />} />
         <Route path="/blogs" element={<BlogsPage />} />
         <Route path="/blogs/" element={<BlogsPage />} />
         <Route path="/branding-digital" element={<BrandingDigitalPage />} />
@@ -105,7 +111,25 @@ function AppShell() {
 export default function App() {
   return (
     <BrowserRouter>
-      <AppShell />
+      <Routes>
+        <Route path="/" element={<ClaudeHomePage />} />
+        <Route path="/contacto" element={<ClaudeContactoPage />} />
+        <Route path="/contacto/" element={<ClaudeContactoPage />} />
+        <Route path="/analisis-seo-gratuito" element={<ClaudeAnalisisPage />} />
+        <Route path="/analisis-seo-gratuito/" element={<ClaudeAnalisisPage />} />
+        <Route path="/preview" element={<PreviewPages />} />
+        <Route path="/preview/quienes-somos" element={<NewQuienesSomosPage />} />
+        <Route path="/preview/geo" element={<NewGeoPage />} />
+        <Route path="/preview/seo-completo" element={<NewServicioSeoCompletoPage />} />
+        <Route path="/preview/auditoria-tecnica" element={<NewAuditoriaTecnicaSeoPage />} />
+        <Route path="/preview/seo-hibrido" element={<NewServicioSeoHibridoPage />} />
+        <Route path="/preview/seo-consultoria" element={<NewSeoConsultoriaAplicadaPage />} />
+        <Route path="/preview/seo-analytics" element={<NewSeoAnalyticsPage />} />
+        <Route path="/preview/blogs" element={<NewBlogsPage />} />
+        <Route path="/preview/privacidad" element={<NewPrivacyPolicyPage />} />
+        <Route path="/preview/cookies" element={<NewCookiesPolicyPage />} />
+        <Route path="*" element={<AppShell />} />
+      </Routes>
     </BrowserRouter>
   );
 }

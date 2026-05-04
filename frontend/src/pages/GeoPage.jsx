@@ -402,19 +402,23 @@ export default function GeoPage() {
   });
 
   return (
-    <main className="geo-page">
-      <style>{styles}</style>
-      <div className="geo-page-container">
-        <GeoHeroSection />
-        <GeoDefinitionSection />
-        <GeoContextSection />
-        <GeoComparisonSection />
-        <GeoBenefitsSection />
-        <GeoMethodologySection />
-        <GeoFaqSection />
-        <GeoRelatedSection />
-        <GeoCtaFinalSection />
+    <>
+      <ClaudeNavbar />
+      <div className="geo-page">
+        <style>{styles}</style>
+        <div className="geo-page-container">
+          <GeoHeroSection />
+          <GeoDefinitionSection />
+          <GeoContextSection />
+          <GeoComparisonSection />
+          <GeoBenefitsSection />
+          <GeoMethodologySection />
+          <GeoFaqSection />
+          <GeoRelatedSection />
+          <GeoCtaFinalSection />
+        </div>
       </div>
-    </main>
+      <ClaudeFooter />
+    </>
   );
 }

@@ -1,0 +1,206 @@
+[
+  {
+    "id": "cap_mocbm41l_uuogno",
+    "selector": "div.mp-toolkit",
+    "label": "SEMRUSH ONE Gana visibilidad para tu mar…",
+    "tag": "div",
+    "url": "https://es.semrush.com/",
+    "title": "Semrush es tu as en la manga para aumentar la visibilidad de marca",
+    "timestamp": "2026-04-24T02:58:07.737Z",
+    "innerText": "SEMRUSH ONE\nGana visibilidad para\ntu marca digital\nExpandir",
+    "outerHTML": "<div class=\"mp-toolkit swiper-slide swiper-slide-active\" data-path=\"toolkits.semrush_one\" role=\"group\" aria-label=\"1 / 9\" style=\"margin-right: 12px;\">\n                    <div class=\"mp-toolkit__title-wrapper\" id=\"toolkit-title-semrush-one\">\n                        <h3 class=\"mp-toolkit__title\">\n                            Semrush One\n                        </h3>\n                        <h4 class=\"mp-toolkit__subtitle\">\n                            Gana visibilidad para <br>tu marca digital\n                        </h4>\n                        <button class=\"mp-toolkit__trigger mp-button mp-button--icon\" aria-controls=\"mp-toolkit-semrush-one\" aria-expanded=\"false\" tabindex=\"0\">\n                            <span class=\"mp-toolkit__trigger-expanded mp-visually-hidden\">Minimizar</span>\n                            <span class=\"mp-toolkit__trigger-minimized mp-visually-hidden\">Expandir</span>\n                        </button>\n                    </div>\n                    <div class=\"mp-toolkit__poster mp-glass\">\n                        <img width=\"256\" height=\"210\" src=\"/static/toolkits/semrush_one_m.webp\" alt=\"Ejemplo de la visibilidad en la IA reflejada en un gráfico temporal.\" loading=\"lazy\">\n                    </div>\n                    <div class=\"mp-toolkit__content\" id=\"mp-toolkit-semrush-one\" role=\"region\" aria-hidden=\"true\" aria-labelledby=\"toolkit-title-semrush-one\">\n                        <div class=\"mp-toolkit__img-wrapper mp-glass\">\n                            <picture>\n                                <source srcset=\"/static/toolkits/semrush_one.webp\" media=\"(min-width: 768px)\">\n                                <img width=\"256\" height=\"210\" src=\"/static/toolkits/semrush_one_m.webp\" alt=\"\" loading=\"lazy\">\n                            </picture>\n                        </div>\n                        <p class=\"mp-toolkit__description\">\n                            Semrush One está diseñado para el nuevo ecosistema de búsquedas y te ayuda a triunfar tanto en el SEO tradicional como en la IA.\n                        </p>\n                        <a href=\"/signup/?src=main_promo&amp;custom=ai-seo&amp;redirect_to=%2Fseo%2F&amp;trial=force\" class=\"mp-button mp-button--fill-black mp-toolkit__cta\" data-ga4-event-onclick=\"\" data-ga4-label=\"try_it_free\" data-ga4-path=\"toolkits.semrush_one\">\n                            Explorar Semrush One\n                        </a>\n                    </div>\n                </div>",
+    "rect": {
+      "x": 152,
+      "y": 241,
+      "width": 430,
+      "height": 500
+    },
+    "computedStyles": {
+      "display": "grid",
+      "position": "relative",
+      "top": "0px",
+      "right": "0px",
+      "bottom": "0px",
+      "left": "0px",
+      "width": "430px",
+      "height": "500px",
+      "margin": "0px 12px 0px 0px",
+      "padding": "24px",
+      "border": "0px none rgb(24, 30, 21)",
+      "border-radius": "5px",
+      "box-sizing": "border-box",
+      "background": "rgb(220, 238, 235) url(\"https://es.semrush.com/static/images/pattern-toolkit-card.daa039e1b121bb762944.svg\") no-repeat scroll 100% 100% / auto padding-box border-box",
+      "color": "rgb(24, 30, 21)",
+      "font-family": "Lazzer, sans-serif",
+      "font-size": "16px",
+      "font-weight": "500",
+      "line-height": "24px",
+      "letter-spacing": "-0.32px",
+      "text-decoration": "none",
+      "flex": "0 0 auto",
+      "grid-template-columns": "382px 0px",
+      "grid-template-rows": "64px 194px 194px",
+      "overflow": "clip",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "transition": "width 0.4s ease-in-out",
+      "cursor": "pointer"
+    },
+    "cssRules": [
+      {
+        "selector": "a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, main, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video",
+        "css": "border: 0px; font: inherit; margin: 0px; padding: 0px; vertical-align: initial;"
+      },
+      {
+        "selector": ".swiper-slide.mp-toolkit",
+        "css": "background-color: var(--mp-mint); box-sizing: border-box; border-radius: 5px; padding: 16px; overflow: clip; cursor: pointer;"
+      },
+      {
+        "selector": ".swiper-slide.mp-toolkit",
+        "css": "flex-shrink: 0; position: relative; padding: 24px; width: 430px; height: 500px; display: grid; grid-template-columns: 382px 1fr; grid-template-rows: 64px auto; background-image: url(\"/static/images/pattern-toolkit-card.daa039e1b121bb762944.svg\"); background-repeat: no-repeat; background-position: right bottom; transition: width var(--mp-expand-transition-duration) var(--mp-transition-easing);",
+        "media": "(min-width: 768px)"
+      },
+      {
+        "selector": ".swiper-slide",
+        "css": "flex-shrink: 0; width: 100%; height: 100%; position: relative; transition-property: transform; display: block;"
+      },
+      {
+        "selector": ".swiper-backface-hidden .swiper-slide",
+        "css": "transform: translateZ(0px); backface-visibility: hidden;"
+      }
+    ]
+  },
+  {
+    "id": "cap_mocbob26_juo44z",
+    "selector": "div.srf-footer-reveal",
+    "label": "div.srf-footer-reveal",
+    "tag": "div",
+    "url": "https://es.semrush.com/",
+    "title": "Semrush es tu as en la manga para aumentar la visibilidad de marca",
+    "timestamp": "2026-04-24T02:59:50.142Z",
+    "innerText": "",
+    "outerHTML": "<div class=\"srf-footer-reveal srf-footer-reveal--main\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1376\" height=\"192\" fill=\"none\" viewBox=\"0 0 1376 192\"><path fill=\"#181e15\" d=\"M357.319 4.208h-159.14V187.82h160.446v-33.577H236.451v-42.755h105.837V77.913H236.451V37.784h120.868zm22.957 0V187.82h37.476V59.275l48.558 128.517h43.812l48.558-128.8v128.8h37.476V4.208h-56.485l-51.455 137.695L436.76 4.208zm242.275 0V187.82h38.272v-67.154h84.187v67.154h38.272V93.134h-23.213c16.877-4.716 27.958-15.221 27.958-38.547 0-38.293-32.447-50.097-69.668-50.351h-95.808zm359.705 104.655V4.208h-38.272v104.655c-1.051 32.786-21.906 48.515-50.148 48.515s-49.097-15.729-50.148-48.515V4.208h-38.272v104.655c1.051 51.932 36.169 83.137 88.42 83.137s87.341-31.205 88.42-83.137M1196.01 4.208V187.82h38.27v-76.332h103.45v76.332H1376V4.208h-38.27v73.705h-103.45V4.208zM660.823 87.09V37.784h57.536c18.468.255 31.14 6.806 31.14 24.653 0 17.848-12.672 24.4-31.14 24.654zm-524.129-23.1h41.425C172.835 23.608 135.898 0 92.626 0c-47.25 0-88.42 17.565-88.42 57.185 0 77.376 137.233 40.665 137.233 74.496 0 19.4-20.06 27.025-48.302 27.025-30.885 0-51.74-13.103-52.507-36.994H0C1.051 165.766 39.068 192 93.165 192c43.017 0 87.881-12.058 87.881-60.319 0-80.794-137.234-39.62-137.234-76.078 0-13.893 17.673-22.309 48.302-22.309 23.753 0 41.966 9.715 44.608 30.697zm997.826 0h41.43C1170.66 23.608 1133.72 0 1090.45 0c-47.25 0-88.42 17.565-88.42 57.185 0 77.376 137.24 40.665 137.24 74.496 0 19.4-20.06 27.025-48.31 27.025-30.88 0-51.74-13.103-52.5-36.994h-40.633C998.878 165.766 1036.89 192 1090.99 192c43.02 0 87.88-12.058 87.88-60.319 0-80.794-137.23-39.62-137.23-76.078 0-13.893 17.67-22.309 48.3-22.309 23.75 0 41.97 9.715 44.61 30.697z\"></path></svg>\n\n</div>",
+    "rect": {
+      "x": 0,
+      "y": 226,
+      "width": 1681,
+      "height": 550
+    },
+    "computedStyles": {
+      "display": "flex",
+      "position": "sticky",
+      "bottom": "0px",
+      "left": "0px",
+      "width": "1680.89px",
+      "height": "550px",
+      "padding": "0px 32px 32px",
+      "border": "0px none rgb(51, 51, 51)",
+      "box-sizing": "border-box",
+      "background": "rgb(220, 238, 235) url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAYPCAMAAABfVEFjAAAARVBMVEUAAAC/j//Hj/+/j/+/j//Dj/+/j//Cj/+/j//Fj//Cj//Ekv/Dkf/Dkf/Ekv/Ckf/Dkv/Ckf/Dkv/Dkf/Ckf/Ckf/Ckf9k6gjCAAAAFnRSTlMAECAgMEBAUFBgYHCAkJ+gr7C/z9/vq3m4ogAAAb1JREFUeNrtyNGOnCAYhmEt6gwd1B0E7v9Sm910m6b5gKh/z97n8Bnwr1Huj9s7s2x3/e0NLNvdVe52eyPL9tbd38SyvZ3vb5ZbWLa33mAdy3Y2GOwkd2HZP1a5+6l9yvUs29losC+5gWU7mwx2Y9nOFoN9y40s+22U687tITexbHtni81yC8t+e8j1J3eU61j2t5fcYLILyzZ3N1nPss39kBtNNrBsc5PJbizb3Cy3mGxk2dY6m00s29rZZrPcwrKt9UbrWLaxwWgnuQvLflnl7qf3KdezbGOj0b7kBpb9cshNp3eVu7FsY4vRvuVGlv00ynXn95CbWPbTJHe22sKy9X3I9Rd2lOtYtrrBbBeWre5utp5lqxv/8waWrW4y241lq5vlFrONLFtbZ7eJZWs7222WW1i2tt5wHctWNhjuJHdh2WGVu1/ap1zPspWNhvuSG1h2OOSmS7vK3Vh2yHKL4b7lRpYd5bpre8hNLDvJnS23sKzeh1x/cUe5jmXlBtNdWFbuKne/uJ5l5X7IjaYbWFbuITdd3I1l5Wa5xXQjy6p1tptYVu1su1luYVm13ngdy4oNJ3b6+bdxGIZf9AyTQKv797YAAAAASUVORK5CYII=\") repeat-x scroll 0px 100% / 7px 550px padding-box border-box",
+      "color": "rgb(51, 51, 51)",
+      "font-family": "Inter, sans-serif",
+      "font-size": "12px",
+      "line-height": "12px",
+      "text-decoration": "none",
+      "justify-content": "center",
+      "align-items": "flex-end",
+      "z-index": "0",
+      "transition": "all"
+    },
+    "cssRules": [
+      {
+        "selector": "a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, main, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video",
+        "css": "border: 0px; font: inherit; margin: 0px; padding: 0px; vertical-align: initial;"
+      },
+      {
+        "selector": ".srf-footer-reveal",
+        "css": "align-items: flex-end; background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAYPCAMAAABfVEFjAAAARVBMVEUAAAC/j//Hj/+/j/+/j//Dj/+/j//Cj/+/j//Fj//Cj//Ekv/Dkf/Dkf/Ekv/Ckf/Dkv/Ckf/Dkv/Dkf/Ckf/Ckf/Ckf9k6gjCAAAAFnRSTlMAECAgMEBAUFBgYHCAkJ+gr7C/z9/vq3m4ogAAAb1JREFUeNrtyNGOnCAYhmEt6gwd1B0E7v9Sm910m6b5gKh/z97n8Bnwr1Huj9s7s2x3/e0NLNvdVe52eyPL9tbd38SyvZ3vb5ZbWLa33mAdy3Y2GOwkd2HZP1a5+6l9yvUs29losC+5gWU7mwx2Y9nOFoN9y40s+22U687tITexbHtni81yC8t+e8j1J3eU61j2t5fcYLILyzZ3N1nPss39kBtNNrBsc5PJbizb3Cy3mGxk2dY6m00s29rZZrPcwrKt9UbrWLaxwWgnuQvLflnl7qf3KdezbGOj0b7kBpb9cshNp3eVu7FsY4vRvuVGlv00ynXn95CbWPbTJHe22sKy9X3I9Rd2lOtYtrrBbBeWre5utp5lqxv/8waWrW4y241lq5vlFrONLFtbZ7eJZWs7222WW1i2tt5wHctWNhjuJHdh2WGVu1/ap1zPspWNhvuSG1h2OOSmS7vK3Vh2yHKL4b7lRpYd5bpre8hNLDvJnS23sKzeh1x/cUe5jmXlBtNdWFbuKne/uJ5l5X7IjaYbWFbuITdd3I1l5Wa5xXQjy6p1tptYVu1su1luYVm13ngdy4oNJ3b6+bdxGIZf9AyTQKv797YAAAAASUVORK5CYII=\") 0px 100% / 5px 393px repeat-x rgb(220, 238, 235); box-sizing: border-box; display: flex; height: 393px; justify-content: center; padding: 0px 16px 16px; position: relative;"
+      },
+      {
+        "selector": ".srf-footer-reveal",
+        "css": "animation: auto ease 0s 1 normal none running none;",
+        "media": "(prefers-reduced-motion: reduce)"
+      },
+      {
+        "selector": ".srf-footer-reveal",
+        "css": "background-size: 5px 450px; height: 450px; padding: 0px 24px 24px;",
+        "media": "(min-width: 768px)"
+      },
+      {
+        "selector": ".srf-footer-reveal",
+        "css": "background-size: 6px 491px; height: 491px; padding: 0px 32px 32px;",
+        "media": "(min-width: 1024px)"
+      },
+      {
+        "selector": ".srf-footer-reveal",
+        "css": "background-size: 7px 550px; height: 550px; padding: 0px 32px 32px;",
+        "media": "(min-width: 1280px)"
+      },
+      {
+        "selector": ".srf-footer-reveal--main",
+        "css": "bottom: 0px; left: 0px; position: sticky; z-index: 0;"
+      }
+    ]
+  },
+  {
+    "id": "cap_mocbon87_0ifab1",
+    "selector": "div.mp-search__container",
+    "label": "Escribe tu sitio web US Obtener datos",
+    "tag": "div",
+    "url": "https://es.semrush.com/",
+    "title": "Semrush es tu as en la manga para aumentar la visibilidad de marca",
+    "timestamp": "2026-04-24T03:00:05.911Z",
+    "innerText": "Escribe tu sitio web\nUS\nObtener datos",
+    "outerHTML": "<div class=\"mp-search__container mp-glass\" data-check-sre=\"\">\n  <script>\n    window.__MAINPAGE_STATE__ = {'start_now': 'Obtener datos', 'db_change_placeholder': 'Introduce el país', 'input_placeholder': 'Escribe tu sitio web', 'country_filter_label': 'Filtrar por país', 'db_countries': '{\"us\": [\"United States, Google\", \"UnitedStates\"], \"uk\": [\"United Kingdom\", \"UnitedKingdom\"], \"de\": [\"Germany\", \"Germany\"], \"fr\": [\"France\", \"France\"], \"af\": [\"Afghanistan\", \"Afghanistan\"], \"al\": [\"Albania\", \"Albania\"], \"dz\": [\"Algeria\", \"Algeria\"], \"ao\": [\"Angola\", \"Angola\"], \"ar\": [\"Argentina\", \"Argentina\"], \"am\": [\"Armenia\", \"Armenia\"], \"au\": [\"Australia\", \"Australia\"], \"mobile-au\": [\"Australia, Google Mobile\", \"Australia\"], \"at\": [\"Austria\", \"Austria\"], \"az\": [\"Azerbaijan\", \"Azerbaijan\"], \"bs\": [\"Bahamas\", \"Bahamas\"], \"bh\": [\"Bahrain\", \"Bahrain\"], \"bd\": [\"Bangladesh\", \"Bangladesh\"], \"by\": [\"Belarus\", \"Belarus\"], \"be\": [\"Belgium\", \"Belgium\"], \"bz\": [\"Belize\", \"Belize\"], \"bo\": [\"Bolivia\", \"Bolivia\"], \"ba\": [\"Bosnia and Herzegovina\", \"BosniaAndHerzegovina\"], \"bw\": [\"Botswana\", \"Botswana\"], \"br\": [\"Brazil\", \"Brazil\"], \"mobile-br\": [\"Brazil, Google Mobile\", \"Brazil\"], \"bn\": [\"Brunei\", \"Brunei\"], \"bg\": [\"Bulgaria\", \"Bulgaria\"], \"cv\": [\"Cabo Verde\", \"CapeVerde\"], \"kh\": [\"Cambodia\", \"Cambodia\"], \"cm\": [\"Cameroon\", \"Cameroon\"], \"ca\": [\"Canada\", \"Canada\"], \"mobile-ca\": [\"Canada, Google Mobile\", \"Canada\"], \"cl\": [\"Chile\", \"Chile\"], \"co\": [\"Colombia\", \"Colombia\"], \"cd\": [\"Congo\", \"RepublicOfTheCongo\"], \"cr\": [\"Costa Rica\", \"CostaRica\"], \"hr\": [\"Croatia\", \"Croatia\"], \"cy\": [\"Cyprus\", \"Cyprus\"], \"cz\": [\"Czech Republic\", \"CzechRepublic\"], \"dk\": [\"Denmark\", \"Denmark\"], \"mobile-dk\": [\"Denmark, Google Mobile\", \"Denmark\"], \"do\": [\"Dominican Republic\", \"DominicanRepublic\"], \"ec\": [\"Ecuador\", \"Ecuador\"], \"eg\": [\"Egypt\", \"Egypt\"], \"sv\": [\"El Salvador\", \"ElSalvador\"], \"ee\": [\"Estonia\", \"Estonia\"], \"et\": [\"Ethiopia\", \"Ethiopia\"], \"fi\": [\"Finland\", \"Finland\"], \"mobile-fr\": [\"France, Google Mobile\", \"France\"], \"ge\": [\"Georgia\", \"Georgia\"], \"mobile-de\": [\"Germany, Google Mobile\", \"Germany\"], \"gh\": [\"Ghana\", \"Ghana\"], \"gr\": [\"Greece\", \"Greece\"], \"gt\": [\"Guatemala\", \"Guatemala\"], \"gy\": [\"Guyana\", \"Guyana\"], \"ht\": [\"Haiti\", \"Haiti\"], \"hn\": [\"Honduras\", \"Honduras\"], \"hk\": [\"Hong Kong\", \"HongKong\"], \"hu\": [\"Hungary\", \"Hungary\"], \"is\": [\"Iceland\", \"Iceland\"], \"in\": [\"India\", \"India\"], \"mobile-in\": [\"India, Google Mobile\", \"India\"], \"id\": [\"Indonesia\", \"Indonesia\"], \"mobile-id\": [\"Indonesia, Google Mobile\", \"Indonesia\"], \"ie\": [\"Ireland\", \"Ireland\"], \"il\": [\"Israel\", \"Israel\"], \"mobile-il\": [\"Israel, Google Mobile\", \"Israel\"], \"it\": [\"Italy\", \"Italy\"], \"mobile-it\": [\"Italy, Google Mobile\", \"Italy\"], \"jm\": [\"Jamaica\", \"Jamaica\"], \"jp\": [\"Japan\", \"Japan\"], \"jo\": [\"Jordan\", \"Jordan\"], \"kz\": [\"Kazakhstan\", \"Kazakhstan\"], \"kw\": [\"Kuwait\", \"Kuwait\"], \"lv\": [\"Latvia\", \"Latvia\"], \"lb\": [\"Lebanon\", \"Lebanon\"], \"ly\": [\"Libya\", \"Libya\"], \"lt\": [\"Lithuania\", \"Lithuania\"], \"lu\": [\"Luxembourg\", \"Luxembourg\"], \"mg\": [\"Madagascar\", \"Madagascar\"], \"my\": [\"Malaysia\", \"Malaysia\"], \"mt\": [\"Malta\", \"Malta\"], \"mu\": [\"Mauritius\", \"Mauritius\"], \"mx\": [\"Mexico\", \"Mexico\"], \"mobile-mx\": [\"Mexico, Google Mobile\", \"Mexico\"], \"md\": [\"Moldova\", \"Moldova\"], \"mn\": [\"Mongolia\", \"Mongolia\"], \"me\": [\"Montenegro\", \"Montenegro\"], \"ma\": [\"Morocco\", \"Morocco\"], \"mz\": [\"Mozambique\", \"Mozambique\"], \"na\": [\"Namibia\", \"Namibia\"], \"np\": [\"Nepal\", \"Nepal\"], \"nl\": [\"Netherlands\", \"Netherlands\"], \"mobile-nl\": [\"Netherlands, Google Mobile\", \"Netherlands\"], \"nz\": [\"New Zealand\", \"NewZealand\"], \"ni\": [\"Nicaragua\", \"Nicaragua\"], \"ng\": [\"Nigeria\", \"Nigeria\"], \"no\": [\"Norway\", \"Norway\"], \"om\": [\"Oman\", \"Oman\"], \"py\": [\"Paraguay\", \"Paraguay\"], \"pe\": [\"Peru\", \"Peru\"], \"ph\": [\"Philippines\", \"Philippines\"], \"pl\": [\"Poland\", \"Poland\"], \"pt\": [\"Portugal\", \"Portugal\"], \"ro\": [\"Romania\", \"Romania\"], \"ru\": [\"Russia\", \"Russia\"], \"sa\": [\"Saudi Arabia\", \"SaudiArabia\"], \"sn\": [\"Senegal\", \"Senegal\"], \"rs\": [\"Serbia\", \"Serbia\"], \"sg\": [\"Singapore\", \"Singapore\"], \"sk\": [\"Slovakia\", \"Slovakia\"], \"si\": [\"Slovenia\", \"Slovenia\"], \"za\": [\"South Africa\", \"SouthAfrica\"], \"kr\": [\"South Korea\", \"SouthKorea\"], \"es\": [\"Spain\", \"Spain\"], \"mobile-es\": [\"Spain, Google Mobile\", \"Spain\"], \"lk\": [\"Sri Lanka\", \"SriLanka\"], \"se\": [\"Sweden\", \"Sweden\"], \"mobile-se\": [\"Sweden, Google Mobile\", \"Sweden\"], \"ch\": [\"Switzerland\", \"Switzerland\"], \"th\": [\"Thailand\", \"Thailand\"], \"tt\": [\"Trinidad and Tobago\", \"TrinidadAndTobago\"], \"tn\": [\"Tunisia\", \"Tunisia\"], \"tr\": [\"Turkey\", \"Turkey\"], \"mobile-tr\": [\"Turkey, Google Mobile\", \"Turkey\"], \"ua\": [\"Ukraine\", \"Ukraine\"], \"ae\": [\"United Arab Emirates\", \"UnitedArabEmirates\"], \"mobile-uk\": [\"United Kingdom, Google Mobile\", \"UnitedKingdom\"], \"mobile-us\": [\"United States, Google Mobile\", \"UnitedStates\"], \"uy\": [\"Uruguay\", \"Uruguay\"], \"ve\": [\"Venezuela\", \"Venezuela\"], \"vn\": [\"Vietnam\", \"Vietnam\"], \"zm\": [\"Zambia\", \"Zambia\"], \"zw\": [\"Zimbabwe\", \"Zimbabwe\"], \"pk\": [\"Pakistan\", \"Pakistan\"]}', 'suggestions_url': '/search-bar/api/search/suggestions'};\n  </script>\n\n  \n\n  <div class=\"mp-search\" id=\"main-cta-top\" role=\"form\" aria-label=\"Configuración del proyecto\">\n  <div class=\"mp-search__input-wrapper mp-search__domain-db-input\"><div class=\"suggest-wrap svelte-s594wd\"><input type=\"text\" class=\"mp-search__input-value\" aria-label=\"Escribe tu sitio web\" placeholder=\"\" role=\"combobox\" aria-autocomplete=\"list\" aria-controls=\"suggest-list\" aria-expanded=\"false\" autocomplete=\"off\" id=\"index-search-input\" aria-activedescendant=\"\"> <span class=\"suggest-placeholder-overlay svelte-s594wd suggest-placeholder-overlay--with-cursor\" aria-hidden=\"true\">Escribe tu sitio web</span> <ul class=\"suggest-list  svelte-s594wd\" id=\"suggest-list\" role=\"listbox\" aria-label=\"Suggestions\"></ul></div> <div class=\"flags-wrap svelte-o91neg\"><div class=\"flags-select svelte-ll6h31\"><button type=\"button\" class=\"flags-select__dropdown svelte-ll6h31\" data-test=\"main-input__open-flags\" aria-label=\"Filtrar por país\" aria-current=\"UnitedStates\" aria-haspopup=\"listbox\" aria-controls=\"\" aria-expanded=\"false\" data-ga4-event-onclick=\"\" data-ga4-label=\"country_drop\" data-ga4-path=\"main_input\"><span>us</span> <span class=\"flags-select__arrow svelte-ll6h31\" aria-hidden=\"true\"></span></button></div> </div></div> <button type=\"button\" tabindex=\"0\" class=\"mp-button\" data-test=\"main-cta__btn\" data-path=\"main_input\">Obtener datos</button></div>\n\n  <script>\n    performance.mark('index__render_main_cta_no_js');\n  </script>\n</div>",
+    "rect": {
+      "x": 530,
+      "y": 474,
+      "width": 620,
+      "height": 86
+    },
+    "computedStyles": {
+      "display": "block",
+      "position": "relative",
+      "top": "0px",
+      "right": "0px",
+      "bottom": "0px",
+      "left": "0px",
+      "width": "620px",
+      "height": "85.7778px",
+      "margin": "32px 0px 0px",
+      "padding": "12px",
+      "border": "0.888889px solid rgba(0, 0, 0, 0)",
+      "border-radius": "100px",
+      "box-sizing": "border-box",
+      "box-shadow": "rgba(0, 0, 0, 0.05) 0px 2px 12px 0px",
+      "background": "rgba(0, 0, 0, 0) linear-gradient(91deg, rgba(5, 5, 5, 0.04) 11.45%, rgba(255, 255, 255, 0.04) 88.55%) repeat scroll 0% 0% / auto padding-box border-box",
+      "color": "rgb(24, 30, 21)",
+      "font-family": "Lazzer, sans-serif",
+      "font-size": "16px",
+      "font-weight": "500",
+      "line-height": "24px",
+      "letter-spacing": "-0.32px",
+      "text-decoration": "none",
+      "z-index": "1",
+      "transition": "all"
+    },
+    "cssRules": [
+      {
+        "selector": "a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, main, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video",
+        "css": "border: 0px; font: inherit; margin: 0px; padding: 0px; vertical-align: initial;"
+      },
+      {
+        "selector": ".mp-glass",
+        "css": "backdrop-filter: blur(5px); background: linear-gradient(91deg, rgba(5, 5, 5, 0.04) 11.45%, rgba(255, 255, 255, 0.04) 88.55%); box-shadow: var(--mp-shadow-glass); border-radius: var(--mp-border-radius); border: 1px solid rgba(0, 0, 0, 0);"
+      },
+      {
+        "selector": ".mp-search__container",
+        "css": "--mp-border-radius: 30px; box-sizing: border-box; margin: 36px auto 0px; max-width: 620px; padding: 6px; border-radius: var(--mp-border-radius); position: relative; z-index: 1;"
+      },
+      {
+        "selector": ".mp-search__container",
+        "css": "padding: 12px; margin-top: 32px; --mp-border-radius: 100px;",
+        "media": "(min-width: 768px)"
+      }
+    ]
+  }
+]

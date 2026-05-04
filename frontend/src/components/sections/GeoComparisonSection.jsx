@@ -1,36 +1,41 @@
 export default function GeoComparisonSection() {
   return (
     <section className="geo-page-section">
-      <span className="geo-page-eyebrow">Comparativa técnica</span>
-      <h2 className="geo-page-h2">SEO vs GEO vs AEO: ¿en qué se diferencian?</h2>
-      <div className="geo-page-grid-3">
-        <article className="geo-page-card">
-          <p className="geo-page-card-title">SEO — Search Engine Optimization</p>
-          <p className="geo-page-card-body">
-            Optimiza páginas web para aparecer en resultados orgánicos de
-            Google y Bing. Trabaja con keywords, backlinks y autoridad de
-            dominio. Objetivo: ranking en SERPs. Métricas: posición, tráfico
-            orgánico, CTR.
-          </p>
+      <span className="geo-page-eyebrow">Comparativa tecnica</span>
+      <h2 className="geo-page-h2">SEO vs GEO vs AEO: diferencias clave</h2>
+      <div className="services-grid">
+        <article className="svc-card">
+          <div>
+            <div className="svc-card-num">01 / SEO</div>
+            <h4>Search Engine Optimization</h4>
+            <p>
+              Ranking en SERPs con keywords, backlinks y autoridad de dominio.
+              Metricas: posicion, trafico organico y CTR.
+            </p>
+          </div>
+          <span className="svc-card-arrow">ORGANICO</span>
         </article>
-        <article className="geo-page-card">
-          <p className="geo-page-card-title is-accent">GEO — Generative Engine Optimization</p>
-          <p className="geo-page-card-body">
-            Optimiza la presencia de marca dentro de las respuestas
-            generadas por IA. Trabaja con autoridad semántica, datos
-            estructurados, citas digitales y cobertura en fuentes de
-            entrenamiento. Objetivo: ser mencionado o recomendado por
-            ChatGPT, Gemini y Perplexity.
-          </p>
+        <article className="svc-card">
+          <div>
+            <div className="svc-card-num">02 / GEO</div>
+            <h4>Generative Engine Optimization</h4>
+            <p>
+              Presencia de marca dentro de respuestas de IA con citaciones,
+              datos estructurados y cobertura en fuentes clave.
+            </p>
+          </div>
+          <span className="svc-card-arrow">GENERATIVO</span>
         </article>
-        <article className="geo-page-card">
-          <p className="geo-page-card-title">AEO — Answer Engine Optimization</p>
-          <p className="geo-page-card-body">
-            Optimiza contenido para obtener featured snippets y posición
-            cero en Google. Trabaja con estructura de preguntas y
-            respuestas, FAQ Schema, y claridad de contenido. Es un
-            subconjunto del SEO enfocado en respuestas directas.
-          </p>
+        <article className="svc-card">
+          <div>
+            <div className="svc-card-num">03 / AEO</div>
+            <h4>Answer Engine Optimization</h4>
+            <p>
+              Featured snippets y posicion cero con estructura Q&A y FAQ Schema.
+              Subconjunto del SEO orientado a respuestas directas.
+            </p>
+          </div>
+          <span className="svc-card-arrow">RESPUESTAS</span>
         </article>
       </div>
       <p className="geo-page-quote">
