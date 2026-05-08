@@ -19,12 +19,19 @@ const styles = `
     padding-bottom: 48px;
   }
 
+  /* Logo SVG — color controlado por currentColor */
+  .ra-footer-brand > a {
+    display: inline-block;
+    line-height: 0;
+  }
+  /* ↓ Cambiá este height para ajustar el tamaño del logo */
   .ra-footer-brand svg {
     display: block;
-    width: 180px;
-    max-width: 100%;
-    height: auto;
+    height: 80px;
+    width: auto;
+    color: #38FEDA;
   }
+
   .ra-footer-tagline {
     font-size: 13px;
     font-weight: 300;
@@ -107,6 +114,44 @@ const styles = `
     margin: 0;
   }
 
+  /* ===== Light mode ===== */
+  html[data-theme="light"] .ra-footer {
+    background: #dedad2;
+    color: rgba(14, 14, 16, 0.92);
+    border-top: 1px solid rgba(8, 184, 154, 0.2);
+  }
+  html[data-theme="light"] .ra-footer-brand svg {
+    color: #08B89A;
+  }
+  html[data-theme="light"] .ra-footer-tagline {
+    color: rgba(14, 14, 16, 0.72);
+  }
+  html[data-theme="light"] .ra-footer-social a {
+    border: 1px solid rgba(8, 184, 154, 0.4);
+    background: rgba(8, 184, 154, 0.08);
+    color: #0e0e10;
+  }
+  html[data-theme="light"] .ra-footer-social a:hover {
+    background: rgba(8, 184, 154, 0.2);
+    border-color: #08B89A;
+  }
+  html[data-theme="light"] .ra-footer-col-title {
+    color: #06927a;
+  }
+  html[data-theme="light"] .ra-footer-list a,
+  html[data-theme="light"] .ra-footer-list span {
+    color: rgba(14, 14, 16, 0.82);
+  }
+  html[data-theme="light"] .ra-footer-list a:hover {
+    color: #06927a;
+  }
+  html[data-theme="light"] .ra-footer-bottom {
+    border-top: 1px solid rgba(14, 14, 16, 0.12);
+  }
+  html[data-theme="light"] .ra-footer-copyright {
+    color: rgba(14, 14, 16, 0.55);
+  }
+
   @media (max-width: 860px) {
     .ra-footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
     .ra-footer-brand { grid-column: 1 / -1; }
@@ -117,6 +162,16 @@ const styles = `
   }
 `;
 
+function FooterLogo() {
+  return (
+    <svg viewBox="100 170 670 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="RankAgile">
+      <path fillRule="evenodd" clipRule="evenodd" d="M443.395 442.279L443.393 557.832H462.478L672.71 288.072L672.932 239.56L612.536 239.663L443.395 442.279ZM739.519 286.998L738.655 176.941L612.536 177.147L576.861 219.628L694.066 219.424L694.847 321.355L739.519 286.998Z" fill="currentColor" />
+      <path fillRule="evenodd" clipRule="evenodd" d="M761.797 558.802L612.451 403.2L566.214 462.791L655.366 558.802H761.797Z" fill="currentColor" />
+      <path fillRule="evenodd" clipRule="evenodd" d="M371.81 356.957H443.393V258.256C415.787 209.924 363.355 177.239 303.171 177.048L302.977 177.047C302.865 177.047 302.753 177.047 302.639 177.047C301.867 177.047 301.098 177.052 300.329 177.062C301.098 177.052 301.867 177.046 302.639 177.046L220.652 176.786L104.285 176.415L166.54 250.617L180.231 266.937H296.287H301.101C301.612 266.926 302.125 266.921 302.64 266.921C303.154 266.921 303.668 266.926 304.179 266.937C342.341 267.746 373.025 298.525 373.025 336.377C373.025 342.924 372.107 349.26 370.391 355.265L371.81 356.957H369.883H255.754L296.544 405.576L362.629 484.347L424.281 557.832H443.393V442.28L433.202 430.132L371.81 356.957Z" fill="currentColor" />
+    </svg>
+  );
+}
+
 export default function Footer() {
   return (
     <footer className="ra-footer">
@@ -126,20 +181,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="ra-footer-brand">
             <Link to="/" aria-label="RankAgile · Inicio">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 634.85 361.35" role="img" aria-label="RankAgile">
-                <g fill="#38feda">
-                  <path d="M47.95,49.79h41.7c43.27,0,50.24,50.95,20.21,66.61l12.81,33.02h-22.91l-10.96-28.46h-19.5v28.46h-21.35V49.79ZM69.3,71.14v28.46h20.35c23.06,0,22.77-28.46,0-28.46h-20.35Z" />
-                  <path d="M154.26,111.98c25.05,0,25.05,37.43,0,37.43s-25.05-37.43,0-37.43ZM201.09,149.41h-21.35v-49.81h-44.12v-21.35h65.47v71.16Z" />
-                  <path d="M206.78,78.25h21.35v10.39c3.84-7.11,13.52-11.81,23.77-11.81,14.66,0,30.31,9.96,30.31,36.72v35.86h-21.49v-35.58c0-12.38-7.97-18.22-15.94-18.22s-16.65,6.26-16.65,18.22v35.58h-21.35v-71.16Z" />
-                  <path d="M287.9,49.79h21.35v48.96l19.21-20.49h29.17l-33.87,36.29,33.87,34.87h-29.74l-18.64-19.07v19.07h-21.35V49.79Z" />
-                  <path d="M330.75,198.85l-25.76,72.15h-22.63l35.44-99.62h25.76l35.58,99.62h-22.63l-25.76-72.15Z" />
-                  <path d="M412.3,198.28h45.54v21.35h-11.53c9.68,22.34-1.71,54.08-34.02,54.08-49.81,0-49.81-75.43,0-75.43ZM449.3,273.71c0,25.33-18.22,37.86-36.29,37.86s-36.43-12.53-36.43-37.86h21.49c0,10.82,7.4,16.08,14.94,16.08s14.8-5.27,14.8-16.08h21.49ZM412.3,219.63c-21.2,0-21.49,32.73,0,32.73s21.35-32.73,0-32.73Z" />
-                  <path d="M463.53,199.85h21.35v71.16h-21.35v-71.16ZM474.49,175.51c13.95,0,13.95,20.78,0,20.78s-13.95-20.78,0-20.78Z" />
-                  <path d="M490.72,171.38h21.35v99.62h-21.35v-99.62Z" />
-                  <path d="M555.19,198.28c28.46,0,35.58,27.75,33.16,44.69h-46.96c2.13,5.26,7.11,9.39,14.66,9.39,3.56,0,7.97-1.14,12.1-5.12l15.09,15.37c-8.26,8.4-18.36,11.1-27.18,11.1-49.81,0-48.1-75.43-.85-75.43ZM568.71,228.74c-2.13-6.26-7.4-9.11-12.81-9.11-5.84,0-11.81,3.13-14.37,9.11h27.18Z" />
-                  <polygon points="319.17 271 330.75 241 338.38 271 319.17 271" />
-                </g>
-              </svg>
+              <FooterLogo />
             </Link>
             <p className="ra-footer-tagline">
               Posicionamiento inteligente.
@@ -173,9 +215,9 @@ export default function Footer() {
           <div>
             <p className="ra-footer-col-title">Empresa</p>
             <ul className="ra-footer-list">
-              <li><Link to="/quienes-somos/">Sobre nosotros</Link></li>
-              <li><Link to="/privacy-policy/">Política de Privacidad</Link></li>
-              <li><Link to="/politica-de-cookies/">Política de Cookies</Link></li>
+              <li><Link to="/preview/quienes-somos">Sobre nosotros</Link></li>
+              <li><Link to="/preview/privacidad">Política de Privacidad</Link></li>
+              <li><Link to="/preview/cookies">Política de Cookies</Link></li>
             </ul>
           </div>
 
@@ -183,9 +225,9 @@ export default function Footer() {
           <div>
             <p className="ra-footer-col-title">Servicios</p>
             <ul className="ra-footer-list">
-              <li><Link to="/servicios-seo-para-posicionamiento-web/">Proyecto SEO</Link></li>
-              <li><Link to="/servicios-seo-para-posicionamiento-web/seo-consultoria-aplicada/">Consultoría SEO</Link></li>
-              <li><Link to="/analisis-seo-gratuito/">Análisis SEO</Link></li>
+              <li><Link to="/preview/seo-completo">Proyecto SEO</Link></li>
+              <li><Link to="/preview/seo-consultoria">Consultoría SEO</Link></li>
+              <li><Link to="/analisis-seo-gratuito">Análisis SEO</Link></li>
             </ul>
           </div>
 

@@ -13,12 +13,12 @@ export default function SeoHibridoFaqsSection() {
       <div className="ra-hib-container">
         <span className="ra-hib-eyebrow">Preguntas Frecuentes</span>
         <h2 className="ra-hib-h2">Lo que suelen preguntarnos</h2>
-        <div className="ra-hib-faqs">
+        <div className="ra-hib-faq-list">
           {faqs.map((f) => (
-            <div key={f.q} className="ra-hib-faq">
-              <h4>{f.q}</h4>
-              <p>{f.a}</p>
-            </div>
+            <details key={f.q} className="ra-hib-faq-item">
+              <summary>{f.q}</summary>
+              <p className="ra-hib-faq-body">{f.a}</p>
+            </details>
           ))}
         </div>
       </div>

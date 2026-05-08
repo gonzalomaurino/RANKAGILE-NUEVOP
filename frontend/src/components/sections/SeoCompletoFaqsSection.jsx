@@ -11,7 +11,7 @@ export default function SeoCompletoFaqsSection() {
   return (
     <section className="ra-comp-section">
       <div className="ra-comp-container">
-        <span className="ra-comp-eyebrow">Preguntas Frecuentes</span>
+        <span className="eyebrow ra-comp-eyebrow">Preguntas Frecuentes</span>
         <h2 className="ra-comp-h2">Lo que suelen preguntarnos</h2>
         <div className="ra-comp-faqs">
           {faqs.map((f) => (

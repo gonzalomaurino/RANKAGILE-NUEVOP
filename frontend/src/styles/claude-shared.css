@@ -191,33 +191,24 @@ html:not([data-theme="light"]) .theme-toggle svg.sun {
   display: none;
 }
 
-/* Aurora background (shared) */
+/* Aurora background (shared) — static, no filter */
 .aurora-bg {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  filter: blur(70px);
-  opacity: 0.65;
-  background-image:
-    radial-gradient(ellipse 50% 50% at 20% 30%, var(--accent-glow), transparent 60%),
-    radial-gradient(ellipse 55% 55% at 80% 70%, rgba(91, 91, 255, 0.35), transparent 60%),
-    radial-gradient(ellipse 45% 50% at 50% 40%, rgba(164, 107, 255, 0.25), transparent 65%);
-  background-size: 200% 200%, 200% 200%, 200% 200%;
-  animation: aurora 60s linear infinite;
+  opacity: 0.7;
+  background:
+    radial-gradient(ellipse 70% 65% at 15% 25%, var(--accent-glow), transparent 65%),
+    radial-gradient(ellipse 75% 65% at 85% 75%, rgba(91, 91, 255, 0.32), transparent 65%),
+    radial-gradient(ellipse 65% 70% at 50% 45%, rgba(164, 107, 255, 0.22), transparent 70%);
 }
 
 html[data-theme="light"] .aurora-bg {
-  opacity: 0.45;
-}
-
-@keyframes aurora {
-  from {
-    background-position: 50% 50%, 50% 50%, 50% 50%;
-  }
-
-  to {
-    background-position: 350% 50%, 350% 50%, 350% 50%;
-  }
+  opacity: 0.9;
+  background:
+    radial-gradient(ellipse 70% 65% at 15% 25%, rgba(15, 184, 154, 0.6), transparent 65%),
+    radial-gradient(ellipse 75% 65% at 85% 75%, rgba(62, 62, 248, 0.55), transparent 65%),
+    radial-gradient(ellipse 65% 70% at 50% 45%, rgba(140, 60, 255, 0.45), transparent 70%);
 }
 
 /* Form elements */

@@ -1,424 +1,129 @@
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
-import GeoHeroSection from '../components/sections/GeoHeroSection.jsx';
-import GeoDefinitionSection from '../components/sections/GeoDefinitionSection.jsx';
-import GeoContextSection from '../components/sections/GeoContextSection.jsx';
-import GeoComparisonSection from '../components/sections/GeoComparisonSection.jsx';
-import GeoBenefitsSection from '../components/sections/GeoBenefitsSection.jsx';
-import GeoMethodologySection from '../components/sections/GeoMethodologySection.jsx';
-import GeoFaqSection from '../components/sections/GeoFaqSection.jsx';
-import GeoRelatedSection from '../components/sections/GeoRelatedSection.jsx';
-import GeoCtaFinalSection from '../components/sections/GeoCtaFinalSection.jsx';
+import BlogPostLayout from '../components/BlogPostLayout.jsx';
 
-const styles = `
-  .geo-page {
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    color: #FFFFFF;
-    background: #000000;
-    padding: 32px 24px 120px;
-    min-height: 100vh;
-    box-sizing: border-box;
-  }
-  .geo-page-container {
-    max-width: 1180px;
-    margin: 0 auto;
-  }
+const aiEngines = [
+  { title: 'ChatGPT', body: 'Consultas de compra, comparativas y recomendaciones.' },
+  { title: 'Gemini', body: 'AI Overviews desplaza resultados orgánicos.' },
+  { title: 'Perplexity', body: 'Preferido por perfiles técnicos, cita fuentes.' },
+  { title: 'Bing Copilot', body: 'Integrado en Microsoft, uso corporativo masivo.' },
+];
 
-  .geo-page-section { padding: 56px 0; }
-  .geo-page-section + .geo-page-section {
-    border-top: 1px solid rgba(56, 254, 218, 0.12);
-  }
+const comparison = [
+  { num: '01', name: 'SEO', sub: 'Search Engine Optimization', body: 'Ranking en SERPs con keywords, backlinks y autoridad de dominio. Métricas: posición, tráfico orgánico y CTR.' },
+  { num: '02', name: 'GEO', sub: 'Generative Engine Optimization', body: 'Presencia de marca dentro de respuestas de IA con citaciones, datos estructurados y cobertura en fuentes clave.' },
+  { num: '03', name: 'AEO', sub: 'Answer Engine Optimization', body: 'Featured snippets y posición cero con estructura Q&A y FAQ Schema. Subconjunto del SEO orientado a respuestas directas.' },
+];
 
-  .geo-page-eyebrow {
-    display: inline-block;
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: #38FEDA;
-    margin: 0 0 20px;
-  }
+const benefits = [
+  { num: '01', title: 'Visibilidad donde compran tus clientes', body: 'Los decisores B2B usan IA para shortlistear proveedores antes de contactar a nadie. GEO te posiciona en esa conversación invisible que determina quién llega a la demo.' },
+  { num: '02', title: 'Autoridad de marca en IA', body: 'Ser citado repetidamente por ChatGPT o Gemini construye percepción de liderazgo. Los modelos aprenden que tu marca es la referencia en tu categoría.' },
+  { num: '03', title: 'Pipeline de ventas ampliado', body: 'Nuevos canales de entrada sin depender exclusivamente de Google Ads o SEO orgánico. Diversificación real de fuentes de tráfico cualificado.' },
+  { num: '04', title: 'Ventaja competitiva duradera', body: 'Tus competidores aún no lo están haciendo. La autoridad en IA se acumula con el tiempo, igual que el DA en SEO. Quien empieza primero construye una ventaja compuesta.' },
+  { num: '05', title: 'Datos estructurados como activo', body: 'GEO genera un ecosistema de datos, citas y referencias digitales que beneficia simultáneamente al SEO tradicional, al AEO y a la búsqueda de voz.' },
+  { num: '06', title: 'Protección frente a AI Overviews', body: 'Google AI Overviews está destruyendo el tráfico orgánico de webs que no están citadas como fuente. GEO es la respuesta defensiva y ofensiva a esa amenaza.' },
+];
 
-  .geo-page-h1 {
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: clamp(2.5rem, 5vw, 3.2rem);
-    line-height: 1.1;
-    color: #FFFFFF;
-    margin: 0 0 28px;
-    letter-spacing: -0.01em;
-    max-width: 980px;
-  }
+const phases = [
+  { num: '01', title: 'Auditoría GEO', body: 'Analizamos tu visibilidad actual en ChatGPT, Gemini y Perplexity para tu categoría, keywords de intención y competidores. Identificamos el gap de citaciones y la arquitectura actual.' },
+  { num: '02', title: 'Estrategia Semántica', body: 'Mapeamos las entidades, conceptos y preguntas que los LLMs asocian a tu categoría. Definimos el plan de contenido orientado a máxima coincidencia con los training patterns.' },
+  { num: '03', title: 'Content Engineering', body: 'Creamos y optimizamos contenido con alta densidad informacional, datos verificables, estructura de respuesta directa y formato que los LLMs aprenden a citar.' },
+  { num: '04', title: 'Authority Building', body: 'Construimos presencia en fuentes que los modelos usan como referencia: medios especializados, directorios de industria, Wikipedia, Wikidata, LinkedIn editorial y podcasts de autoridad.' },
+  { num: '05', title: 'Datos Estructurados', body: 'Implementamos Schema.org avanzado, Knowledge Panel optimization y markup técnico que facilita que los LLMs extraigan y procesen correctamente la información de tu empresa.' },
+  { num: '06', title: 'Tracking y Optimización', body: 'Monitorizamos citaciones en motores de IA, Share of Voice en respuestas generativas, tráfico referido desde IA y conversiones atribuidas. Iteramos cada 30 días.' },
+];
 
-  .geo-page-h2 {
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 1.2;
-    color: #FFFFFF;
-    margin: 0 0 24px;
-    letter-spacing: -0.01em;
-  }
-
-  .geo-page-h3 {
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 1.3;
-    color: #FFFFFF;
-    margin: 32px 0 16px;
-  }
-
-  .geo-page-lead {
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.82);
-    max-width: 820px;
-    margin: 0 0 18px;
-  }
-  .geo-page-lead strong { color: #FFFFFF; font-weight: 600; }
-  .geo-page-lead .accent { color: #38FEDA; font-weight: 600; }
-
-  .geo-page-p {
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.78);
-    max-width: 820px;
-    margin: 0 0 16px;
-  }
-  .geo-page-p strong { color: #FFFFFF; font-weight: 600; }
-  .geo-page-p .accent { color: #38FEDA; font-weight: 600; }
-  .geo-page-p a { color: #38FEDA; text-decoration: none; }
-  .geo-page-p a:hover { color: #5affe3; }
-
-  .geo-page-small {
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    font-size: 14.5px;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.72);
-  }
-
-  .geo-page-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 16px;
-    max-width: 820px;
-  }
-  .geo-page-list li {
-    position: relative;
-    padding: 10px 0 10px 28px;
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    font-size: 15.5px;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.78);
-  }
-  .geo-page-list li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 20px;
-    width: 8px;
-    height: 8px;
-    border-radius: 999px;
-    background: #38FEDA;
-  }
-  .geo-page-list li strong { color: #FFFFFF; font-weight: 600; }
-
-  .geo-page-quote {
-    border-left: 3px solid #38FEDA;
-    padding: 4px 0 4px 20px;
-    margin: 32px 0 0;
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.75;
-    color: rgba(255, 255, 255, 0.72);
-    max-width: 820px;
-  }
-  .geo-page-quote a { color: #38FEDA; text-decoration: none; }
-  .geo-page-quote a:hover { color: #5affe3; }
-
-  .geo-page-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    color: #0A0A0A;
-    background: #38FEDA;
-    border: 0;
-    border-radius: 999px;
-    padding: 14px 28px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: transform 150ms ease, background 150ms ease;
-  }
-  .geo-page-btn:hover {
-    background: #5affe3;
-    transform: translateY(-1px);
-    color: #0A0A0A;
-  }
-  .geo-page-btn-ghost {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    color: #38FEDA;
-    background: transparent;
-    border: 1px solid rgba(56, 254, 218, 0.45);
-    border-radius: 999px;
-    padding: 12px 22px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: transform 150ms ease, background 150ms ease, border-color 150ms ease;
-  }
-  .geo-page-btn-ghost:hover {
-    background: rgba(56, 254, 218, 0.1);
-    border-color: #38FEDA;
-    transform: translateY(-1px);
-  }
-
-  .geo-page-grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 28px;
-  }
-  .geo-page-grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 28px;
-  }
-
-  .geo-page-card {
-    background: rgba(56, 254, 218, 0.04);
-    border: 1px solid rgba(56, 254, 218, 0.2);
-    border-radius: 12px;
-    padding: 32px 28px;
-    transition: border-color 200ms ease, background 200ms ease;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .geo-page-card:hover {
-    border-color: rgba(56, 254, 218, 0.45);
-    background: rgba(56, 254, 218, 0.07);
-  }
-  .geo-page-card-title {
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.3;
-    color: #FFFFFF;
-    margin: 0;
-  }
-  .geo-page-card-title.is-accent { color: #38FEDA; }
-  .geo-page-card-body {
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.78);
-    margin: 0;
-  }
-  .geo-page-card-eyebrow {
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #38FEDA;
-    margin: 0;
-  }
-
-  .geo-page-phases {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    margin-top: 28px;
-  }
-  .geo-page-phase {
-    background: rgba(56, 254, 218, 0.04);
-    border: 1px solid rgba(56, 254, 218, 0.2);
-    border-left: 3px solid #38FEDA;
-    border-radius: 12px;
-    padding: 24px 28px;
-    transition: border-color 200ms ease, background 200ms ease;
-  }
-  .geo-page-phase:hover {
-    border-color: rgba(56, 254, 218, 0.45);
-    background: rgba(56, 254, 218, 0.07);
-    border-left-color: #38FEDA;
-  }
-  .geo-page-phase-title {
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: #FFFFFF;
-    margin: 0 0 8px;
-  }
-  .geo-page-phase-body {
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.78);
-    margin: 0;
-  }
-
-  .geo-page-faq { margin-top: 28px; }
-  .geo-page-faq details {
-    background: rgba(56, 254, 218, 0.04);
-    border: 1px solid rgba(56, 254, 218, 0.2);
-    border-radius: 12px;
-    padding: 0;
-    margin-bottom: 12px;
-    transition: border-color 200ms ease, background 200ms ease;
-  }
-  .geo-page-faq details[open],
-  .geo-page-faq details:hover {
-    border-color: rgba(56, 254, 218, 0.45);
-    background: rgba(56, 254, 218, 0.07);
-  }
-  .geo-page-faq summary {
-    list-style: none;
-    cursor: pointer;
-    padding: 20px 24px;
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-  }
-  .geo-page-faq summary::-webkit-details-marker { display: none; }
-  .geo-page-faq summary::after {
-    content: "+";
-    color: #38FEDA;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 1;
-    flex: 0 0 auto;
-  }
-  .geo-page-faq details[open] summary::after { content: "–"; }
-  .geo-page-faq-body {
-    padding: 0 24px 22px;
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 1.75;
-    color: rgba(255, 255, 255, 0.78);
-    margin: 0;
-  }
-
-  .geo-page-related {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 28px;
-  }
-  .geo-page-related-card {
-    background: rgba(56, 254, 218, 0.04);
-    border: 1px solid rgba(56, 254, 218, 0.2);
-    border-radius: 12px;
-    padding: 32px 28px;
-    transition: border-color 200ms ease, background 200ms ease;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
-  }
-  .geo-page-related-card:hover {
-    border-color: rgba(56, 254, 218, 0.45);
-    background: rgba(56, 254, 218, 0.07);
-  }
-  .geo-page-related-title {
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.3;
-    color: #FFFFFF;
-    margin: 0;
-  }
-  .geo-page-related-body {
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-size: 14.5px;
-    font-weight: 300;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.72);
-    margin: 0;
-  }
-
-  .geo-page-final {
-    text-align: center;
-    padding: 72px 0 24px;
-  }
-  .geo-page-final .geo-page-h2 {
-    margin: 0 auto 12px;
-    max-width: 820px;
-  }
-  .geo-page-final p {
-    max-width: 640px;
-    margin: 0 auto 32px;
-    font-family: Poppins, Helvetica, Arial, sans-serif;
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 1.75;
-    color: rgba(255, 255, 255, 0.78);
-  }
-
-  @media (max-width: 960px) {
-    .geo-page-grid-3 { grid-template-columns: 1fr; }
-    .geo-page-grid-2 { grid-template-columns: 1fr; }
-    .geo-page-related { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 640px) {
-    .geo-page { padding: 16px 16px 88px; }
-    .geo-page-h2 { font-size: 30px; }
-    .geo-page-section { padding: 40px 0; }
-  }
-`;
+const faqs = [
+  { q: '¿GEO reemplaza al SEO que ya hacemos?', a: 'No. GEO amplía el SEO. Las señales que construís para Google siguen siendo valiosas y muchas acciones GEO refuerzan el SEO tradicional. Lo trabajamos como una capa adicional.' },
+  { q: '¿Cuánto tiempo tarda en verse resultados?', a: 'Las primeras citaciones aparecen entre 30 y 60 días en Perplexity. Para ChatGPT y Gemini los resultados consolidados llegan entre 90 y 180 días.' },
+  { q: '¿Funciona para todos los sectores?', a: 'GEO es especialmente efectivo en B2B, SaaS, servicios profesionales, consultoría y tecnología. Si tu cliente consulta IA antes de comprar, GEO es crítico.' },
+  { q: '¿Pueden garantizar que apareceré en ChatGPT?', a: 'Nadie garantiza posiciones en modelos de IA, igual que nadie garantiza el #1 en Google. Garantizamos un proceso sistemático, medible y basado en datos reales con resultados documentados.' },
+];
 
 export default function GeoPage() {
   useDocumentMeta({
     title: 'GEO: Generative Engine Optimization para Empresas | RankAgile',
     description:
-      'GEO (Generative Engine Optimization) es la estrategia que posiciona tu empresa en ChatGPT, Gemini y Perplexity. Descubrí la metodología RankAgile y empezá a existir donde tus clientes ya buscan.',
+      'GEO (Generative Engine Optimization) es la estrategia que posiciona tu empresa en ChatGPT, Gemini y Perplexity. Descubrí la metodología RankAgile.',
   });
 
   return (
-    <>
-      <ClaudeNavbar />
-      <div className="geo-page">
-        <style>{styles}</style>
-        <div className="geo-page-container">
-          <GeoHeroSection />
-          <GeoDefinitionSection />
-          <GeoContextSection />
-          <GeoComparisonSection />
-          <GeoBenefitsSection />
-          <GeoMethodologySection />
-          <GeoFaqSection />
-          <GeoRelatedSection />
-          <GeoCtaFinalSection />
+    <BlogPostLayout
+      tag="GEO"
+      date="3 Mar 2026"
+      title="GEO: Generative Engine Optimization"
+      lead="ChatGPT responde 10 millones de consultas por día. Gemini recomienda marcas. Perplexity sustituye a Google para millones de compradores B2B. ¿Tu empresa aparece en esas respuestas? GEO es el conjunto de estrategias que posiciona tu marca dentro de las respuestas generadas por IA. No es el futuro del SEO. Es el presente."
+    >
+      <h2>GEO optimiza tu presencia dentro de respuestas de IA</h2>
+      <p>
+        GEO trabaja sobre autoridad semántica, datos estructurados y cobertura en fuentes que los modelos usan para citar marcas.
+      </p>
+      <ul>
+        <li>Citaciones en contenido de alta autoridad.</li>
+        <li>Schema claro y coherencia semántica.</li>
+        <li>Contenido con respuestas directas y densidad informacional.</li>
+        <li>Presencia en medios, directorios y fuentes de training data.</li>
+      </ul>
+
+      <h2>GEO es urgente para 2026</h2>
+      <p>
+        El 72% de decisores B2B consulta una IA antes del primer contacto. Si no apareces ahí, no entras al ciclo de venta.
+      </p>
+      <ul>
+        <li>ChatGPT y Gemini influyen en la selección de proveedores.</li>
+        <li>Perplexity y Copilot citan fuentes y desplazan el orgánico.</li>
+        <li>GEO amplifica el SEO tradicional en capas nuevas.</li>
+      </ul>
+
+      <h3>Los motores que tenés que cubrir</h3>
+      {aiEngines.map((e) => (
+        <div key={e.title} className="blogpost-card">
+          <h4 className="blogpost-card-title">{e.title}</h4>
+          <p className="blogpost-card-body">{e.body}</p>
         </div>
-      </div>
-      <ClaudeFooter />
-    </>
+      ))}
+
+      <h2>SEO vs. GEO vs. AEO: diferencias clave</h2>
+      {comparison.map((c) => (
+        <div key={c.num} className="blogpost-card">
+          <h4 className="blogpost-card-title">{c.num} · {c.name} — {c.sub}</h4>
+          <p className="blogpost-card-body">{c.body}</p>
+        </div>
+      ))}
+      <p className="blogpost-pullquote">
+        La estrategia ganadora en 2026 no elige uno: combina SEO + GEO + AEO en una arquitectura de visibilidad integrada.
+      </p>
+
+      <h2>Lo que gana tu empresa con GEO</h2>
+      {benefits.map((b) => (
+        <div key={b.num} className="blogpost-card">
+          <h4 className="blogpost-card-title">{b.num} · {b.title}</h4>
+          <p className="blogpost-card-body">{b.body}</p>
+        </div>
+      ))}
+
+      <h2>6 fases de ejecución GEO</h2>
+      <p>
+        Ejecutamos un plan GEO con KPIs claros, cronograma por fases y optimización mensual sobre visibilidad en motores generativos.
+      </p>
+      {phases.map((p) => (
+        <div key={p.num} className="blogpost-card">
+          <h4 className="blogpost-card-title">{p.num} · {p.title}</h4>
+          <p className="blogpost-card-body">{p.body}</p>
+        </div>
+      ))}
+
+      <h2>Preguntas frecuentes</h2>
+      {faqs.map((f) => (
+        <div key={f.q} className="blogpost-card">
+          <h4 className="blogpost-card-title">{f.q}</h4>
+          <p className="blogpost-card-body">{f.a}</p>
+        </div>
+      ))}
+
+      <h2>Conclusión</h2>
+      <p>
+        GEO no es una moda ni un experimento académico. Es la disciplina que decide si tu empresa existe en la conversación que ya están teniendo tus clientes con la IA. Empezar primero compone ventaja en el tiempo — exactamente como funcionó el SEO en 2005.
+      </p>
+    </BlogPostLayout>
   );
 }

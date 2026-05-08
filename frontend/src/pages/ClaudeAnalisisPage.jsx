@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import ClaudeNavbar from '../components/ClaudeNavbar.jsx';
-import ClaudeFooter from '../components/ClaudeFooter.jsx';
+import Footer from '../components/Footer.jsx';
 import '../styles/claude-system.css';
 import '../styles/claude-analisis.css';
 
@@ -129,7 +129,7 @@ export default function ClaudeAnalisisPage() {
                     </section>
                 </main>
             </div>
-            <ClaudeFooter />
+            <Footer />
         </>
     );
 }

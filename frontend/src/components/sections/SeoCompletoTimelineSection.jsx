@@ -9,7 +9,7 @@ export default function SeoCompletoTimelineSection() {
   return (
     <section className="ra-comp-section">
       <div className="ra-comp-container">
-        <span className="ra-comp-eyebrow">Expectativas Realistas</span>
+        <span className="eyebrow ra-comp-eyebrow">Expectativas Realistas</span>
         <h2 className="ra-comp-h2">Qué podés esperar (y cuándo)</h2>
         <div className="ra-comp-timeline">
           {timeline.map((t) => (

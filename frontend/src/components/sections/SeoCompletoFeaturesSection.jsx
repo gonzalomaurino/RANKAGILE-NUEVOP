@@ -13,7 +13,7 @@ export default function SeoCompletoFeaturesSection() {
   return (
     <section className="ra-comp-section">
       <div className="ra-comp-container">
-        <span className="ra-comp-eyebrow">Entregables</span>
+        <span className="eyebrow ra-comp-eyebrow">Entregables</span>
         <h2 className="ra-comp-h2">Qué incluye el servicio</h2>
         <div className="ra-comp-features">
           {features.map((f) => (

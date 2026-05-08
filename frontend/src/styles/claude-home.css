@@ -9,6 +9,54 @@
   text-align: center;
 }
 
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url('/assets/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.6) 18%,
+    rgba(0, 0, 0, 0.6) 82%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+html[data-theme='light'] .hero-bg {
+  background-image: url('/assets/hero-bg-light.png');
+  opacity: 0.35;
+}
+
+html[data-theme='light'] .hero-overlay {
+  /* top matches --bg-chrome (#ece8dd) exactly so navbar blends in */
+  background: linear-gradient(
+    to bottom,
+    rgba(236, 232, 221, 1.0) 0%,
+    rgba(236, 232, 221, 0.0) 22%,
+    rgba(246, 243, 236, 0.0) 78%,
+    rgba(246, 243, 236, 1.0) 100%
+  );
+}
+
+html[data-theme='light'] .hero h1 .grad {
+  background: linear-gradient(120deg, #00b89c, #3E3EF8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .hero-inner {
   max-width: 1080px;
   margin: 0 auto;
@@ -23,7 +71,7 @@
 }
 
 .hero h1 .grad {
-  background: linear-gradient(120deg, var(--accent), var(--indigo) 45%, var(--violet));
+  background: linear-gradient(120deg, #38FEDA, #3E3EF8);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -60,7 +108,7 @@
     radial-gradient(ellipse 40% 40% at 10% 80%, var(--accent-glow), transparent 60%);
   background-size: 200% 200%, 200% 200%, 200% 200%, 200% 200%;
   background-position: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
-  animation: aurora 60s linear infinite;
+  animation: none;
 }
 
 html[data-theme="light"] .aurora {
@@ -104,10 +152,11 @@ html[data-theme="light"] .aurora {
 
 .ticker-track {
   display: flex;
-  gap: 56px;
+  gap: 0;
   white-space: nowrap;
   animation: ticker 40s linear infinite;
   align-items: center;
+  will-change: transform;
 }
 
 .ticker-item {
@@ -117,6 +166,7 @@ html[data-theme="light"] .aurora {
   align-items: center;
   gap: 10px;
   font-family: 'JetBrains Mono', monospace;
+  margin-right: 56px;
 }
 
 .ticker-item::before {
@@ -169,7 +219,7 @@ section.block {
 #seo-internacional .section-head .display {
   font-family: 'Inter', system-ui, sans-serif;
   font-weight: 600;
-  color: #f4f2ea;
+  color: var(--fg);
   margin-top: 16px;
 }
 
@@ -514,6 +564,264 @@ section.block {
   place-items: center;
   color: var(--btn-fg);
   font-size: 15px;
+}
+
+/* --- Contact section ----------------------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.contact-copy .section-head {
+  margin-bottom: 32px;
+}
+
+.contact-benefits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--fg-dim);
+  line-height: 1.5;
+}
+
+.contact-benefits li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+  margin-top: 6px;
+}
+
+.contact-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 36px 32px;
+}
+
+.contact-card .aurora-bg {
+  opacity: 0.45;
+}
+
+.contact-card-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-card-head {
+  margin-bottom: 6px;
+}
+
+.contact-card-head h3 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 4px;
+}
+
+.contact-card-head p {
+  font-size: 13px;
+  color: var(--fg-dim);
+  margin: 0;
+}
+
+.contact-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.contact-submit {
+  margin-top: 4px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: var(--accent);
+  color: #020209;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.contact-submit:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 860px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* --- Clients carousel ----------------------------- */
+.clients-carousel {
+  overflow: hidden;
+  padding: 28px 0;
+  margin-top: 48px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-chrome);
+}
+
+.clients-track {
+  display: flex;
+  gap: 0;
+  align-items: center;
+  animation: clients-scroll 28s linear infinite;
+  will-change: transform;
+}
+
+.clients-track:hover {
+  animation-play-state: paused;
+}
+
+.clients-logo-item {
+  flex-shrink: 0;
+  margin-right: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-logo-item img {
+  height: 52px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.45);
+  transition: filter 0.3s ease;
+}
+
+.clients-logo-item img:hover {
+  filter: grayscale(0%) opacity(1);
+}
+
+html[data-theme='light'] .clients-logo-item img {
+  filter: grayscale(100%) opacity(0.35);
+}
+
+html[data-theme='light'] .clients-logo-item img:hover {
+  filter: grayscale(0%) opacity(1);
+}
+
+@keyframes clients-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* --- FAQ ----------------------------------------- */
+.faq-list {
+  max-width: 760px;
+  margin: 48px auto 0;
+  border-top: 1px solid var(--border);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--fg);
+  font-family: inherit;
+}
+
+.faq-trigger:hover {
+  color: var(--accent);
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--fg-dim);
+  transition: transform 0.25s ease;
+}
+
+.faq-item[data-open='true'] .faq-icon {
+  transform: rotate(45deg);
+  color: var(--accent);
+}
+
+.faq-answer {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.32s ease;
+}
+
+.faq-item[data-open='true'] .faq-answer {
+  max-height: 240px;
+}
+
+.faq-answer p {
+  padding-bottom: 22px;
+  color: var(--fg-dim);
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* --- WhatsApp float ------------------------------ */
+.wa-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+  z-index: 200;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+
+.wa-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.6);
 }
 
 /* --- CTA footer ---------------------------------- */

@@ -11,7 +11,7 @@ export default function SeoCompletoStepsSection() {
   return (
     <section className="ra-comp-section">
       <div className="ra-comp-container">
-        <span className="ra-comp-eyebrow">Nuestro Proceso</span>
+        <span className="eyebrow ra-comp-eyebrow">Nuestro Proceso</span>
         <h2 className="ra-comp-h2">En qué consiste el servicio</h2>
         <div className="ra-comp-steps">
           {steps.map((s) => (

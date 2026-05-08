@@ -5,14 +5,28 @@
     top: 0;
     z-index: 50;
     background: var(--bg-chrome);
-    border-bottom: 1px solid var(--border);
     backdrop-filter: blur(12px);
+    border: none;
+    box-shadow: none;
+    outline: none;
     transition: transform 0.25s ease;
     will-change: transform;
 }
 
 .nav.nav--hidden {
     transform: translateY(-110%);
+}
+
+html[data-theme='light'] .nav {
+    backdrop-filter: none;
+    border-bottom: none;
+    box-shadow: none;
+    outline: none;
+}
+
+body.nav-mega-open #root> :not(.nav) {
+    filter: blur(6px);
+    transition: filter 0.25s ease;
 }
 
 .nav-inner {
@@ -31,11 +45,9 @@
     flex-shrink: 0;
 }
 
-.nav-logo img {
-    height: 26px;
+.nav-logo svg {
+    height: 40px;
     width: auto;
-    filter: var(--logo-filter);
-    transition: filter 0.5s ease;
 }
 
 .nav-links {
@@ -117,18 +129,20 @@ html[data-theme='light'] .nav-link[aria-expanded='true'] {
 
 .mega {
     position: absolute;
-    top: calc(100% + 1px);
+    top: 100%;
     left: 0;
     right: 0;
     background: var(--bg-chrome);
-    border-bottom: 1px solid var(--border);
     overflow: hidden;
     max-height: 0;
+    pointer-events: none;
     transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mega[data-open='true'] {
     max-height: 480px;
+    border-bottom: 1px solid var(--border);
+    pointer-events: auto;
 }
 
 .mega-inner {

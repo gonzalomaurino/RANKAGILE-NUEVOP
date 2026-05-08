@@ -4,7 +4,6 @@ export default function GeoDefinitionSection() {
       <span className="geo-page-eyebrow">Definicion operativa</span>
       <div className="vignette" style={{ gridTemplateColumns: '1fr' }}>
         <div className="vignette-left geo-center">
-          <span className="eyebrow">que es geo</span>
           <h2 className="geo-page-h2">GEO optimiza presencia dentro de respuestas de IA</h2>
           <p className="geo-page-p">
             GEO trabaja sobre autoridad semantica, datos estructurados y cobertura en

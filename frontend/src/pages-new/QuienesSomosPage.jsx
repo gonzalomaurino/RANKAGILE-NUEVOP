@@ -1,6 +1,7 @@
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import ClaudeNavbar from '../components/ClaudeNavbar.jsx';
-import ClaudeFooter from '../components/ClaudeFooter.jsx';
+import Footer from '../components/Footer.jsx';
+import GeoCtaFinalSection from '../components/sections/GeoCtaFinalSection.jsx';
 import '../styles/claude-system.css';
 import '../styles/claude-home.css';
 import '../styles/claude-about.css';
@@ -110,27 +111,9 @@ export default function QuienesSomosPage() {
                 </div>
             </section>
 
-            <section className="about-cta-section">
-                <div className="cta-band">
-                    <div className="aurora"></div>
-                    <div className="about-cta-shell">
-                        <span className="eyebrow centered">empecemos</span>
-                        <h2 className="display about-display about-display-wide">
-                            Trabajemos juntos en tu proximo salto de visibilidad.
-                        </h2>
-                        <p className="about-cta-copy">
-                            Revisamos tu situacion actual, tu mercado y tus objetivos. Luego
-                            armamos un plan claro para que ganes presencia organica y generativa.
-                        </p>
-                        <div className="about-cta-actions">
-                            <a className="btn-pill" href="/contacto/">Coordinar reunion</a>
-                            <a className="btn-ghost" href="/analisis-seo-gratuito">Analisis SEO Gratuito</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <GeoCtaFinalSection />
 
-            <ClaudeFooter />
+            <Footer />
         </>
     );
 }

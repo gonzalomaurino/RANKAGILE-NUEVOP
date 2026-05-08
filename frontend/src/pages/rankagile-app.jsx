@@ -1,6 +1,6 @@
-import useDocumentMeta from '../hooks/useDocumentMeta.js';import { Link } from 'react-router-dom';import { DashPrompts, DashTraffic, DashVisibility } from '../components/rankagile-dashboards.jsx';
+import { useState } from 'react';
+import useDocumentMeta from '../hooks/useDocumentMeta.js'; import { Link } from 'react-router-dom'; import { DashPrompts, DashTraffic, DashVisibility } from '../components/rankagile-dashboards.jsx';
 import ClaudeNavbar from '../components/ClaudeNavbar.jsx';
-import ClaudeFooter from '../components/ClaudeFooter.jsx';
 import Footer from '../components/Footer.jsx';
 import '../styles/claude-system.css';
 import '../styles/claude-home.css';
@@ -14,21 +14,20 @@ const Check = () =>
 
 // --- Services data ---------------------------------------
 const SERVICES = [
-  { slug: 'geo', title: 'SEO para IA (GEO)', desc: 'Aparece en ChatGPT, Gemini, Claude y Perplexity cuando tus clientes preguntan.' },
-  { slug: 'tecnico', title: 'SEO Técnico', desc: 'Core Web Vitals, schema, indexación y arquitectura para rendimiento extremo.' },
-  { slug: 'contenido', title: 'SEO de Contenidos', desc: 'Estrategia editorial basada en intención real y respuestas optimizadas para LLMs.' },
-  { slug: 'local', title: 'SEO Local', desc: 'Domina búsquedas geo-localizadas, Maps y menciones en respuestas generativas.' },
-  { slug: 'ecommerce', title: 'SEO eCommerce', desc: 'Ficha de producto, feed optimizado y canibalización controlada.' },
-  { slug: 'linkbuilding', title: 'Linkbuilding', desc: 'Enlaces editoriales relevantes, con métricas y reporting transparente.' },
-  { slug: 'auditoria', title: 'Auditoría SEO', desc: 'Diagnóstico de 250+ puntos con roadmap priorizado por impacto.' },
-  { slug: 'consultoria', title: 'Consultoría SEO', desc: 'Equipo senior embebido con tu in-house. Estrategia y ejecución.' },
-  { slug: 'internacional', title: 'SEO Internacional', desc: 'Hreflang, mercados y arquitecturas multi-región sin fricción.' }];
+  { slug: 'geo', title: 'GEO', desc: 'Posiciona tu marca en motores generativos con estrategia GEO.', href: '/preview/geo' },
+  { slug: 'seo-completo', title: 'SEO Completo', desc: 'Estrategia integral para escalar visibilidad, autoridad y resultados orgánicos.', href: '/preview/seo-completo' },
+  { slug: 'auditoria-tecnica', title: 'Auditoria Tecnica', desc: 'Diagnostico tecnico y roadmap priorizado para corregir los cuellos de botella.', href: '/preview/auditoria-tecnica' },
+  { slug: 'seo-hibrido', title: 'SEO Hibrido', desc: 'Ejecucion combinada de SEO tecnico, contenido y performance.', href: '/preview/seo-hibrido' },
+  { slug: 'seo-consultoria', title: 'SEO Consultoria', desc: 'Equipo senior embebido con tu in-house para estrategia y ejecucion.', href: '/preview/seo-consultoria' },
+  { slug: 'seo-analytics', title: 'SEO Analytics', desc: 'Datos claros, dashboards y decisiones basadas en performance real.', href: '/preview/seo-analytics' },
+  { slug: 'analisis-seo-gratuito', title: 'Analisis SEO Gratuito', desc: 'Diagnostico inicial para detectar errores y oportunidades.', href: '/analisis-seo-gratuito' },
+];
 
 // --- Hero -------------------------------------------------
 const Hero = () =>
   <header className="hero" id="top">
-    <div className="aurora"></div>
-    <div className="hero-grid"></div>
+    <div className="hero-bg"></div>
+    <div className="hero-overlay"></div>
     <div className="hero-inner">
       <span className="eyebrow centered">posicionamiento generativo</span>
       <h1 className="display" style={{ marginTop: 18 }}>
@@ -39,7 +38,6 @@ const Hero = () =>
       </p>
       <div className="hero-cta">
         <Link className="btn-pill" to="/contacto">Recibir propuesta <ArrowUpRight /></Link>
-        <a className="btn-ghost" href="#metodologia">Ver metodología <ArrowUpRight size={12} /></a>
       </div>
     </div>
   </header>;
@@ -127,7 +125,7 @@ const Vignette = ({ eyebrow, title, body, bullets, children, reverse = false }) 
 const ServicesGrid = () =>
   <div className="services-grid">
     {SERVICES.map((s, i) =>
-      <a href="#" className="svc-card" key={s.slug}>
+      <a href={s.href} className="svc-card" key={s.slug}>
         <div>
           <div className="svc-card-num">0{i + 1} / servicio</div>
           <h4>{s.title}</h4>
@@ -190,7 +188,182 @@ const Quote = () =>
   </div>;
 
 
-// --- Footer ---------------------------------------------
+// --- Clients carousel -----------------------------------
+const LOGOS = [
+  { src: '/assets/logo1.png', alt: 'VL' },
+  { src: '/assets/logo2.png', alt: 'Cliente' },
+  { src: '/assets/logo3.png', alt: 'Ocean Dream' },
+  { src: '/assets/logo4.png', alt: 'Cliente' },
+  { src: '/assets/logo5.png', alt: 'Interreal Capital' },
+  { src: '/assets/logo6.png', alt: 'Cliente' },
+  { src: '/assets/logo7.png', alt: 'HabiSite' },
+];
+
+const ClientsCarousel = () => {
+  // Duplicate the full set for the seamless -50% loop.
+  const loop = [...LOGOS, ...LOGOS];
+  return (
+    <section className="block" id="clientes" style={{ paddingTop: 40 }}>
+      <SectionHead
+        eyebrow="empresas que confían en nosotros"
+        title="Marcas que ya dominan la IA."
+        centered />
+      <div className="clients-carousel">
+        <div className="clients-track">
+          {loop.map((logo, i) => (
+            <div className="clients-logo-item" key={i}>
+              <img src={logo.src} alt={logo.alt} loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
+// --- FAQ ------------------------------------------------
+const FAQ_ITEMS = [
+  {
+    q: '¿Qué es GEO y en qué se diferencia del SEO tradicional?',
+    a: 'GEO (Generative Engine Optimization) optimiza tu marca para aparecer citada en las respuestas de motores de IA como ChatGPT, Gemini o Perplexity. El SEO clásico apunta a rankings en Google; GEO apunta a ser la fuente que los LLMs recomiendan.',
+  },
+  {
+    q: '¿Cuánto tiempo tarda en verse resultados?',
+    a: 'Las primeras mejoras de citabilidad en LLMs suelen verse en 60–90 días. Los resultados orgánicos en Google se consolidan en 4–6 meses. Trabajamos con sprints mensuales para que siempre haya entregables visibles.',
+  },
+  {
+    q: '¿Tienen experiencia en mi industria?',
+    a: 'Trabajamos con más de 240 marcas en sectores como e-commerce, SaaS, salud, finanzas y retail. En la llamada de diagnóstico te mostramos casos de clientes de tu vertical.',
+  },
+  {
+    q: '¿El análisis SEO gratuito tiene algún compromiso?',
+    a: 'Ninguno. El análisis es 100% gratuito, sin contrato y sin letra pequeña. Si al final decide seguir adelante con nosotros, genial; si no, te vas con un roadmap accionable igualmente.',
+  },
+  {
+    q: '¿Cómo miden la visibilidad en IA?',
+    a: 'Usamos un dashboard propietario que rastrea más de 500 prompts en ChatGPT, Gemini, Claude y Perplexity. Cada semana recibes un reporte con tu tasa de citabilidad, las marcas que te desplazan y las acciones concretas para mejorar.',
+  },
+];
+
+const FAQ = () => {
+  const [open, setOpen] = useState(null);
+  const toggle = (i) => setOpen(prev => prev === i ? null : i);
+
+  return (
+    <section className="block" id="faq" style={{ paddingTop: 40 }}>
+      <SectionHead
+        eyebrow="preguntas frecuentes"
+        title="Todo lo que necesitás saber."
+        centered />
+      <div className="faq-list">
+        {FAQ_ITEMS.map((item, i) => (
+          <div className="faq-item" key={i} data-open={open === i ? 'true' : 'false'}>
+            <button className="faq-trigger" onClick={() => toggle(i)} aria-expanded={open === i}>
+              {item.q}
+              <svg className="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </button>
+            <div className="faq-answer">
+              <p>{item.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+
+// --- WhatsApp float button ------------------------------
+const WaButton = () =>
+  <a
+    className="wa-float"
+    href="https://wa.me/3513167306"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
+  >
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+    </svg>
+  </a>;
+
+
+// --- Contact section ------------------------------------
+const ContactSection = () => {
+  const [form, setForm] = useState({ firstName: '', lastName: '', email: '', web: '' });
+  const onChange = (field) => (e) => setForm(prev => ({ ...prev, [field]: e.target.value }));
+  const onSubmit = (e) => {
+    e.preventDefault();
+    alert('Gracias, te contactamos en menos de 24h.');
+  };
+
+  return (
+    <section className="block" id="contacto" style={{ paddingTop: 40 }}>
+      <div className="contact-grid">
+
+        {/* Left: copy */}
+        <div className="contact-copy">
+          <SectionHead
+            eyebrow="empieza hoy"
+            eyebrow="empieza hoy"
+            title="Análisis GEO de tu marca en 72h." />
+          <p className="lead" style={{ marginBottom: 32 }}>
+            Sin compromiso, sin letra pequeña. Completá tus datos, agendamos una llamada de diagnóstico de 30 minutos y recibís un plan GEO accionable.
+          </p>
+          <ul className="contact-benefits">
+            <li>Diagnóstico técnico de tu presencia en LLMs</li>
+            <li>Mapa de prompts relevantes a tu negocio</li>
+            <li>Roadmap priorizado con quick wins en 90 días</li>
+            <li>Sin costo, sin contrato</li>
+          </ul>
+        </div>
+
+        {/* Right: form card */}
+        <div className="contact-card">
+          <div className="aurora-bg" />
+          <div className="contact-card-inner">
+            <div className="contact-card-head">
+              <h3>Contactanos</h3>
+              <p>Introducí tus datos para recibir tu análisis gratuito.</p>
+            </div>
+
+            <form onSubmit={onSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <div className="contact-row-2">
+                <div>
+                  <label className="field-label" htmlFor="hs-fn">Nombre</label>
+                  <input className="input" id="hs-fn" type="text" placeholder="Natalia" value={form.firstName} onChange={onChange('firstName')} required />
+                </div>
+                <div>
+                  <label className="field-label" htmlFor="hs-ln">Apellido</label>
+                  <input className="input" id="hs-ln" type="text" placeholder="Ruiz" value={form.lastName} onChange={onChange('lastName')} required />
+                </div>
+              </div>
+
+              <div>
+                <label className="field-label" htmlFor="hs-em">Email de trabajo</label>
+                <input className="input" id="hs-em" type="email" placeholder="natalia@marca.com" value={form.email} onChange={onChange('email')} required />
+              </div>
+
+              <div>
+                <label className="field-label" htmlFor="hs-web">Sitio web</label>
+                <input className="input" id="hs-web" type="text" placeholder="marca.com" value={form.web} onChange={onChange('web')} required />
+              </div>
+
+              <button type="submit" className="contact-submit">
+                Solicitar análisis gratuito <ArrowUpRight size={14} />
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
 // --- App --------------------------------------------------
 export default function ClaudeHomePage() {
   useDocumentMeta({
@@ -205,9 +378,24 @@ export default function ClaudeHomePage() {
 
       <Hero />
       <Ticker />
+
+      {/* 1. Servicios */}
+      <section className="block" id="servicios" style={{ paddingTop: 40 }}>
+        <SectionHead
+          eyebrow="nueve verticales"
+          title="Un equipo senior por cada pieza de tu SEO."
+          lead="Nada de generalistas. Cada servicio lo lidera un especialista con 7+ años en su área." />
+
+        <ServicesGrid />
+      </section>
+
+      {/* 2. Clientes */}
+      <ClientsCarousel />
+
+      {/* 3. Agencia SEO Internacional */}
       <SeoInternacional />
 
-      {/* SECTION: Por qué GEO */}
+      {/* 4. Por qué GEO + Metodología */}
       <section className="block" id="metodologia">
         <SectionHead
           eyebrow="por qué geo"
@@ -255,17 +443,7 @@ export default function ClaudeHomePage() {
         </div>
       </section>
 
-      {/* SECTION: Servicios */}
-      <section className="block" id="servicios" style={{ paddingTop: 40 }}>
-        <SectionHead
-          eyebrow="nueve verticales"
-          title="Un equipo senior por cada pieza de tu SEO."
-          lead="Nada de generalistas. Cada servicio lo lidera un especialista con 7+ años en su área." />
-
-        <ServicesGrid />
-      </section>
-
-      {/* SECTION: Stats */}
+      {/* Stats */}
       <section className="block" style={{ paddingTop: 0 }}>
         <SectionHead
           eyebrow="resultados medibles"
@@ -274,7 +452,7 @@ export default function ClaudeHomePage() {
         <Stats />
       </section>
 
-      {/* SECTION: Process */}
+      {/* Process */}
       <section className="block" id="proceso" style={{ paddingTop: 40 }}>
         <SectionHead
           eyebrow="cómo trabajamos"
@@ -283,7 +461,7 @@ export default function ClaudeHomePage() {
         <Process />
       </section>
 
-      {/* SECTION: Quote */}
+      {/* Quote */}
       <section className="block" id="casos" style={{ paddingTop: 40 }}>
         <SectionHead
           eyebrow="clientes"
@@ -292,27 +470,16 @@ export default function ClaudeHomePage() {
         <Quote />
       </section>
 
-      {/* CTA Band */}
-      <section style={{ padding: '40px 0 60px' }}>
-        <div className="cta-band">
-          <div className="aurora"></div>
-          <div style={{ position: 'relative', zIndex: 2 }}>
-            <span className="eyebrow centered">empieza hoy</span>
-            <h2 className="display" style={{ marginTop: 18, maxWidth: 720, marginInline: 'auto' }}>
-              Te enviamos un análisis GEO de tu marca en 72h.
-            </h2>
-            <p style={{ color: 'var(--fg-dim)', fontSize: 17, maxWidth: 560, margin: '22px auto 0' }}>
-              Sin compromiso, sin letra pequeña. Si lo que ves te convence, hablamos.
-            </p>
-            <div style={{ marginTop: 32, display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-              <a className="btn-pill" href="/analisis-seo-gratuito">Análisis SEO Gratuito <ArrowUpRight /></a>
-              <a className="btn-ghost" href="/contacto">Ver casos de éxito <ArrowUpRight size={12} /></a>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* 5. FAQ */}
+      <FAQ />
+
+      {/* 6. Formulario de contacto */}
+      <ContactSection />
 
       <Footer />
+
+      {/* WhatsApp flotante */}
+      <WaButton />
     </>);
 
 }

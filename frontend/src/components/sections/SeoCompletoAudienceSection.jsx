@@ -21,7 +21,7 @@ export default function SeoCompletoAudienceSection() {
   return (
     <section className="ra-comp-section">
       <div className="ra-comp-container">
-        <span className="ra-comp-eyebrow">¿Es Para Ti?</span>
+        <span className="eyebrow ra-comp-eyebrow">¿Es Para Ti?</span>
         <h2 className="ra-comp-h2">Ideal para negocios que buscan resultados a largo plazo</h2>
         <div className="ra-comp-audience">
           {audience.map((a) => (
