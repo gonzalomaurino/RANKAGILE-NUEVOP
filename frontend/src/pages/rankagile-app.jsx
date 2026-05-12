@@ -190,13 +190,13 @@ const Quote = () =>
 
 // --- Clients carousel -----------------------------------
 const LOGOS = [
-  { src: '/assets/logo1.png', alt: 'VL' },
-  { src: '/assets/logo2.png', alt: 'Cliente' },
-  { src: '/assets/logo3.png', alt: 'Ocean Dream' },
-  { src: '/assets/logo4.png', alt: 'Cliente' },
-  { src: '/assets/logo5.png', alt: 'Interreal Capital' },
-  { src: '/assets/logo6.png', alt: 'Cliente' },
-  { src: '/assets/logo7.png', alt: 'HabiSite' },
+  { src: '/assets/logo1.png', light: '/assets/logo1-light.png', alt: 'VL' },
+  { src: '/assets/logo2.png', light: '/assets/logo2-light.png', alt: 'Cliente' },
+  { src: '/assets/logo3.png', light: '/assets/logo3-light.png', alt: 'Ocean Dream' },
+  { src: '/assets/logo4.png', light: '/assets/logo4-light.png', alt: 'Cliente' },
+  { src: '/assets/logo5.png', light: '/assets/logo5-light.png', alt: 'Interreal Capital' },
+  { src: '/assets/logo6.png', light: '/assets/logo6-light.png', alt: 'Cliente' },
+  { src: '/assets/logo7-light.png', light: '/assets/logo7-light.png', alt: 'HabiSite' },
 ];
 
 const ClientsCarousel = () => {
@@ -212,7 +212,8 @@ const ClientsCarousel = () => {
         <div className="clients-track">
           {loop.map((logo, i) => (
             <div className="clients-logo-item" key={i}>
-              <img src={logo.src} alt={logo.alt} loading="lazy" />
+              <img className="logo-dark" src={logo.src} alt={logo.alt} loading="lazy" />
+              <img className="logo-light" src={logo.light} alt={logo.alt} loading="lazy" />
             </div>
           ))}
         </div>
@@ -294,10 +295,29 @@ const WaButton = () =>
 // --- Contact section ------------------------------------
 const ContactSection = () => {
   const [form, setForm] = useState({ firstName: '', lastName: '', email: '', web: '' });
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
   const onChange = (field) => (e) => setForm(prev => ({ ...prev, [field]: e.target.value }));
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    alert('Gracias, te contactamos en menos de 24h.');
+    if (submitting) return;
+    setSubmitting(true);
+    setErrorMsg('');
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form, source: 'home' }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || `Error ${res.status}`);
+      alert('Gracias, te contactamos en menos de 24h.');
+      setForm({ firstName: '', lastName: '', email: '', web: '' });
+    } catch (err) {
+      setErrorMsg(err.message);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -334,27 +354,28 @@ const ContactSection = () => {
               <div className="contact-row-2">
                 <div>
                   <label className="field-label" htmlFor="hs-fn">Nombre</label>
-                  <input className="input" id="hs-fn" type="text" placeholder="Natalia" value={form.firstName} onChange={onChange('firstName')} required />
+                  <input className="input" id="hs-fn" type="text" placeholder="Tu nombre" value={form.firstName} onChange={onChange('firstName')} required />
                 </div>
                 <div>
                   <label className="field-label" htmlFor="hs-ln">Apellido</label>
-                  <input className="input" id="hs-ln" type="text" placeholder="Ruiz" value={form.lastName} onChange={onChange('lastName')} required />
+                  <input className="input" id="hs-ln" type="text" placeholder="Tu apellido" value={form.lastName} onChange={onChange('lastName')} required />
                 </div>
               </div>
 
               <div>
                 <label className="field-label" htmlFor="hs-em">Email de trabajo</label>
-                <input className="input" id="hs-em" type="email" placeholder="natalia@marca.com" value={form.email} onChange={onChange('email')} required />
+                <input className="input" id="hs-em" type="email" placeholder="correo@gmail.com" value={form.email} onChange={onChange('email')} required />
               </div>
 
               <div>
                 <label className="field-label" htmlFor="hs-web">Sitio web</label>
-                <input className="input" id="hs-web" type="text" placeholder="marca.com" value={form.web} onChange={onChange('web')} required />
+                <input className="input" id="hs-web" type="text" placeholder="Marca" value={form.web} onChange={onChange('web')} required />
               </div>
 
-              <button type="submit" className="contact-submit">
-                Solicitar análisis gratuito <ArrowUpRight size={14} />
+              <button type="submit" className="contact-submit" disabled={submitting}>
+                {submitting ? 'Enviando…' : 'Enviar'} <ArrowUpRight size={14} />
               </button>
+              {errorMsg && <p style={{ color: '#ef4444', fontSize: 13, margin: '4px 0 0' }}>{errorMsg}</p>}
             </form>
           </div>
         </div>

@@ -34,4 +34,14 @@ export const config = {
   pdf: {
     enabled: process.env.PDF_ENABLED !== 'false',
   },
+
+  mail: {
+    host: process.env.SMTP_HOST || null,
+    port: Number(process.env.SMTP_PORT || 587),
+    secure: process.env.SMTP_SECURE === 'true',
+    user: process.env.SMTP_USER || null,
+    pass: process.env.SMTP_PASS || null,
+    from: process.env.MAIL_FROM || 'RankAgile <no-reply@rankagile.com>',
+    to: process.env.MAIL_TO || 'growthimbar@gmail.com',
+  },
 };

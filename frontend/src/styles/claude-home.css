@@ -7,6 +7,10 @@
   overflow: hidden;
   padding: 72px 32px 88px;
   text-align: center;
+  min-height: clamp(560px, 60vh, 820px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-bg {
@@ -16,8 +20,22 @@
   pointer-events: none;
   background-image: url('/assets/hero-bg.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center bottom;
   background-repeat: no-repeat;
+}
+
+/* Monitores anchos (16:9 y +) — anclar a la derecha-abajo donde está la onda */
+@media (min-aspect-ratio: 16/9) {
+  .hero-bg {
+    background-position: right bottom;
+  }
+}
+
+/* Monitores muy anchos (21:9 y +) — más altura para que la onda respire */
+@media (min-aspect-ratio: 2/1) {
+  .hero {
+    min-height: clamp(620px, 75vh, 900px);
+  }
 }
 
 .hero-overlay {
@@ -705,16 +723,16 @@ section.block {
 
 .clients-logo-item {
   flex-shrink: 0;
-  margin-right: 80px;
+  margin-right: 110px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .clients-logo-item img {
-  height: 52px;
+  height: 84px;
   width: auto;
-  max-width: 160px;
+  max-width: 240px;
   object-fit: contain;
   filter: grayscale(100%) opacity(0.45);
   transition: filter 0.3s ease;
@@ -723,6 +741,11 @@ section.block {
 .clients-logo-item img:hover {
   filter: grayscale(0%) opacity(1);
 }
+
+/* Theme-based logo swap */
+.clients-logo-item .logo-light { display: none; }
+html[data-theme='light'] .clients-logo-item .logo-dark { display: none; }
+html[data-theme='light'] .clients-logo-item .logo-light { display: block; }
 
 html[data-theme='light'] .clients-logo-item img {
   filter: grayscale(100%) opacity(0.35);
