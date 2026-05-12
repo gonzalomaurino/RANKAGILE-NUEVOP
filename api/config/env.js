@@ -42,6 +42,6 @@ export const config = {
     user: process.env.SMTP_USER || null,
     pass: process.env.SMTP_PASS || null,
     from: process.env.MAIL_FROM || 'RankAgile <no-reply@rankagile.com>',
-    to: process.env.MAIL_TO || 'growthimbar@gmail.com',
+    to: process.env.MAIL_TO || 'contacto@rankagile.com',
   },
 };
