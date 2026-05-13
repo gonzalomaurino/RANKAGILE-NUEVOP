@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useGTMPageTracking } from './hooks/useGTMPageTracking';
 
 import ClaudeHomePage from './pages/rankagile-app.jsx';
 import ClaudeContactoPage from './pages/ClaudeContactoPage.jsx';
@@ -34,10 +35,17 @@ function ScrollToTop() {
   return null;
 }
 
+/** Registra cada cambio de ruta como page_view en GTM/GA4. No renderiza nada. */
+function GTMPageTracker() {
+  useGTMPageTracking();
+  return null;
+}
+
 export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <GTMPageTracker />
       <Routes>
         {/* Core */}
         <Route path="/" element={<ClaudeHomePage />} />
