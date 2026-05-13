@@ -27,6 +27,16 @@ import ZeroClickSearchPage from './pages/ZeroClickSearchPage.jsx';
 import GeoBlogPage from './pages/GeoPage.jsx';
 import SeoParaEmpresasPage from './pages/SeoParaEmpresasPage.jsx';
 
+// Cluster GEO — páginas migradas desde SEO archive
+import CuantoCuestaGeoPage from './pages/CuantoCuestaGeoPage.jsx';
+import PorQueNoAparezcoEnChatGPTPage from './pages/PorQueNoAparezcoEnChatGPTPage.jsx';
+import SeoVsGeoVsAeoPage from './pages/SeoVsGeoVsAeoPage.jsx';
+
+// Cluster SEO — páginas migradas desde SEO archive
+import QueEsSeoPage from './pages/QueEsSeoPage.jsx';
+import SeoYSemPage from './pages/SeoYSemPage.jsx';
+import DashboardPowerBiPage from './pages/DashboardPowerBiPage.jsx';
+
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -78,19 +88,42 @@ export default function App() {
         <Route path="/preview/privacidad" element={<Navigate to="/privacidad" replace />} />
         <Route path="/preview/cookies" element={<Navigate to="/cookies" replace />} />
 
-        {/* Blog posts */}
-        <Route path="/como-funciona-el-algoritmo-pagerank-de-google" element={<PageRankFuncionaPage />} />
-        <Route path="/como-funciona-el-algoritmo-pagerank-de-google/" element={<PageRankFuncionaPage />} />
-        <Route path="/agencia-seo-internacional-rankagile" element={<AgenciaSeoInternacionalPage />} />
-        <Route path="/agencia-seo-internacional-rankagile/" element={<AgenciaSeoInternacionalPage />} />
-        <Route path="/branding-digital" element={<BrandingDigitalPage />} />
-        <Route path="/branding-digital/" element={<BrandingDigitalPage />} />
-        <Route path="/zero-click-search" element={<ZeroClickSearchPage />} />
-        <Route path="/zero-click-search/" element={<ZeroClickSearchPage />} />
-        <Route path="/geo" element={<GeoBlogPage />} />
-        <Route path="/geo/" element={<GeoBlogPage />} />
-        <Route path="/seo-para-empresas" element={<SeoParaEmpresasPage />} />
-        <Route path="/seo-para-empresas/" element={<SeoParaEmpresasPage />} />
+        {/* Cluster GEO */}
+        <Route path="/cuanto-cuesta-geo" element={<CuantoCuestaGeoPage />} />
+        <Route path="/por-que-no-aparezco-en-chatgpt" element={<PorQueNoAparezcoEnChatGPTPage />} />
+        <Route path="/seo-vs-geo-vs-aeo" element={<SeoVsGeoVsAeoPage />} />
+
+        {/* Redirect legacy: /agencia-geo → /servicios/geo */}
+        <Route path="/agencia-geo" element={<Navigate to="/servicios/geo" replace />} />
+        <Route path="/agencia-geo/" element={<Navigate to="/servicios/geo" replace />} />
+
+        {/* Blog posts — canonical URLs under /blog/ */}
+        <Route path="/blog/como-funciona-el-algoritmo-pagerank-de-google" element={<PageRankFuncionaPage />} />
+        <Route path="/blog/agencia-seo-internacional-rankagile" element={<AgenciaSeoInternacionalPage />} />
+        <Route path="/blog/branding-digital" element={<BrandingDigitalPage />} />
+        <Route path="/blog/zero-click-search" element={<ZeroClickSearchPage />} />
+        <Route path="/blog/geo" element={<GeoBlogPage />} />
+        <Route path="/blog/seo-para-empresas" element={<SeoParaEmpresasPage />} />
+        <Route path="/blog/seo-que-es-y-para-que-sirve" element={<QueEsSeoPage />} />
+        <Route path="/blog/seo-y-sem-en-marketing-digital" element={<SeoYSemPage />} />
+        <Route path="/blog/dashboard-seo-en-power-bi-para-agencias" element={<DashboardPowerBiPage />} />
+
+        {/* Redirects desde URLs antiguas de blog sin prefijo /blog/ */}
+        <Route path="/como-funciona-el-algoritmo-pagerank-de-google" element={<Navigate to="/blog/como-funciona-el-algoritmo-pagerank-de-google" replace />} />
+        <Route path="/como-funciona-el-algoritmo-pagerank-de-google/" element={<Navigate to="/blog/como-funciona-el-algoritmo-pagerank-de-google" replace />} />
+        <Route path="/agencia-seo-internacional-rankagile" element={<Navigate to="/blog/agencia-seo-internacional-rankagile" replace />} />
+        <Route path="/agencia-seo-internacional-rankagile/" element={<Navigate to="/blog/agencia-seo-internacional-rankagile" replace />} />
+        <Route path="/branding-digital" element={<Navigate to="/blog/branding-digital" replace />} />
+        <Route path="/branding-digital/" element={<Navigate to="/blog/branding-digital" replace />} />
+        <Route path="/zero-click-search" element={<Navigate to="/blog/zero-click-search" replace />} />
+        <Route path="/zero-click-search/" element={<Navigate to="/blog/zero-click-search" replace />} />
+        <Route path="/geo" element={<Navigate to="/blog/geo" replace />} />
+        <Route path="/geo/" element={<Navigate to="/blog/geo" replace />} />
+        <Route path="/seo-para-empresas" element={<Navigate to="/blog/seo-para-empresas" replace />} />
+        <Route path="/seo-para-empresas/" element={<Navigate to="/blog/seo-para-empresas" replace />} />
+        <Route path="/seo-que-es-y-para-que-sirve" element={<Navigate to="/blog/seo-que-es-y-para-que-sirve" replace />} />
+        <Route path="/seo-y-sem-en-marketing-digital" element={<Navigate to="/blog/seo-y-sem-en-marketing-digital" replace />} />
+        <Route path="/dashboard-seo-en-power-bi-para-agencias" element={<Navigate to="/blog/dashboard-seo-en-power-bi-para-agencias" replace />} />
 
         {/* 404 */}
         <Route path="*" element={<NotFoundPage />} />

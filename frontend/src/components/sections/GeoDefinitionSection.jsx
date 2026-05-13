@@ -15,7 +15,7 @@ export default function GeoDefinitionSection() {
             <li>Contenido con respuestas directas y densidad informacional.</li>
             <li>Presencia en medios, directorios y fuentes de training data.</li>
           </ul>
-          <a className="btn-ghost" href="/agencia-geo/">Ver agencia GEO</a>
+          <a className="btn-ghost" href="/servicios/geo">Ver agencia GEO</a>
         </div>
       </div>
     </section>
