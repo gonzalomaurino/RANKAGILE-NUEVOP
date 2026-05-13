@@ -96,7 +96,7 @@ export default function SeoVsGeoVsAeoPage() {
       </p>
       <p>
         En RankAgile diseñamos estrategias integradas que trabajan las tres capas con recursos coordinados. Si tu empresa ya tiene SEO maduro, agregar GEO es la siguiente palanca de mayor impacto. Si recién empezás,{' '}
-        <Link to="/seo-que-es-y-para-que-sirve">entendé primero qué es el SEO y cómo funciona</Link> antes de construir las capas superiores.
+        <Link to="/blog/seo-que-es-y-para-que-sirve">entendé primero qué es el SEO y cómo funciona</Link> antes de construir las capas superiores.
       </p>
 
       <h2>¿Por qué GEO es urgente ahora?</h2>
@@ -120,7 +120,7 @@ export default function SeoVsGeoVsAeoPage() {
       </div>
       <div className="blogpost-card">
         <h4 className="blogpost-card-title">
-          <Link to="/seo-que-es-y-para-que-sirve">SEO: Qué es y para qué sirve</Link>
+          <Link to="/blog/seo-que-es-y-para-que-sirve">SEO: Qué es y para qué sirve</Link>
         </h4>
         <p className="blogpost-card-body">La base que toda empresa necesita antes de construir las capas de AEO y GEO.</p>
       </div>

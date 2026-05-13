@@ -104,7 +104,7 @@ export default function SeoYSemPage() {
       <h2>Artículos relacionados</h2>
       <div className="blogpost-card">
         <h4 className="blogpost-card-title">
-          <Link to="/seo-que-es-y-para-que-sirve">SEO: Qué es y para qué sirve</Link>
+          <Link to="/blog/seo-que-es-y-para-que-sirve">SEO: Qué es y para qué sirve</Link>
         </h4>
         <p className="blogpost-card-body">Todo lo que necesitás saber sobre el posicionamiento orgánico en Google: pilares, errores y estrategia.</p>
       </div>

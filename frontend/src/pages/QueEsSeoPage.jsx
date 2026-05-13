@@ -133,7 +133,7 @@ export default function QueEsSeoPage() {
       </div>
       <div className="blogpost-card">
         <h4 className="blogpost-card-title">
-          <Link to="/seo-y-sem-en-marketing-digital">SEO y SEM en Marketing Digital</Link>
+          <Link to="/blog/seo-y-sem-en-marketing-digital">SEO y SEM en Marketing Digital</Link>
         </h4>
         <p className="blogpost-card-body">Orgánico y pagado trabajando juntos: cuándo usar cada uno y cómo se retroalimentan.</p>
       </div>

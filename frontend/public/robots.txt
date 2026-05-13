@@ -1,8 +1,4 @@
-# START YOAST BLOCK
-# ---------------------------
 User-agent: *
-Disallow:
+Allow: /
 
-Sitemap: https://rankagile.com/sitemap_index.xml
-# ---------------------------
-# END YOAST BLOCK
+Sitemap: https://rankagile.com/sitemap.xml

@@ -7,7 +7,37 @@ import '../styles/claude-system.css';
 // ─── Data ────────────────────────────────────────────────
 const POSTS = [
   {
-    href: '/como-funciona-el-algoritmo-pagerank-de-google/',
+    href: '/blog/dashboard-seo-en-power-bi-para-agencias',
+    image: '/assets/DashboardPowerBI.png',
+    alt: 'Dashboard SEO en Power BI',
+    title: 'Dashboard SEO en Power BI para Agencias',
+    tag: 'SEO Analytics',
+    date: 'Mar 2026',
+    excerpt:
+      'Cómo centralizar datos de GSC, GA4 y herramientas de ranking en un único panel de Power BI. Módulos clave, métricas DAX y arquitectura de datos para agencias que reportan a clientes.',
+  },
+  {
+    href: '/blog/seo-y-sem-en-marketing-digital',
+    image: '/assets/SeoYSem.png',
+    alt: 'SEO y SEM en Marketing Digital',
+    title: 'SEO y SEM en Marketing Digital: Diferencias y Estrategia',
+    tag: 'SEO · SEM',
+    date: 'Feb 2026',
+    excerpt:
+      'El debate SEO vs SEM es una trampa. Las empresas que dominan los resultados de búsqueda operan ambos canales de forma sincronizada, usando datos de Google Ads para acelerar decisiones de SEO.',
+  },
+  {
+    href: '/blog/seo-que-es-y-para-que-sirve',
+    image: '/assets/QueEsSEO.png',
+    alt: 'Qué es SEO',
+    title: 'SEO: Qué es y para qué sirve — Guía Completa 2026',
+    tag: 'SEO',
+    date: 'Ene 2026',
+    excerpt:
+      'El SEO no es una táctica de marketing: es la infraestructura que determina si tu sitio existe para Google o no. Guía completa con los tres pilares, errores frecuentes y cómo aplicarlo.',
+  },
+  {
+    href: '/blog/como-funciona-el-algoritmo-pagerank-de-google',
     image: '/assets/PageRank.png',
     alt: 'PageRank',
     title: '¿Cómo funciona el algoritmo PageRank de Google?',
@@ -17,7 +47,7 @@ const POSTS = [
       'PageRank no es una métrica del pasado. Es la arquitectura de confianza sobre la que Google construyó su hegemonía de búsqueda. Entender cómo fluye la autoridad entre dominios es la diferencia entre optimizar contenido y construir posicionamiento sostenible.',
   },
   {
-    href: '/agencia-seo-internacional-rankagile/',
+    href: '/blog/agencia-seo-internacional-rankagile',
     image: '/assets/RankAgileBlog.png',
     alt: 'Agencia SEO Internacional: RankAgile',
     title: 'Agencia SEO Internacional: RankAgile',
@@ -27,7 +57,7 @@ const POSTS = [
       'Descubrí cómo una agencia SEO internacional como RankAgile puede ayudarte a posicionar tu negocio en múltiples países, atraer tráfico global y escalar de forma estratégica con una metodología que ya probamos en más de 20 mercados.',
   },
   {
-    href: '/branding-digital/',
+    href: '/blog/branding-digital',
     image: '/assets/BrandingDigital.png',
     alt: 'Branding Digital',
     title: 'Branding Digital: Construí una marca que escala',
@@ -37,7 +67,7 @@ const POSTS = [
       'El branding ya no es solo una cuestión de diseño, sino de estrategia, coherencia y conexión auténtica con la audiencia. Una marca sólida combina identidad visual, narrativa clara y presencia digital que convierte visitas en clientes.',
   },
   {
-    href: '/zero-click-search/',
+    href: '/blog/zero-click-search',
     image: '/assets/ZeroClick.png',
     alt: 'Zero-Click Search',
     title: 'Zero-Click Search: Cómo adaptarte a las búsquedas sin clic',
@@ -47,7 +77,7 @@ const POSTS = [
       'El Zero-Click Search está redefiniendo las reglas del SEO. Las búsquedas sin clic impactan directamente en tu tráfico orgánico. Estas son las estrategias que aplicamos para convertir tu contenido en la respuesta directa de Google y los motores de IA.',
   },
   {
-    href: '/geo/',
+    href: '/blog/geo',
     image: '/assets/GEO.png',
     alt: 'GEO: Generative Engine Optimization',
     title: 'GEO: Generative Engine Optimization',
@@ -57,7 +87,7 @@ const POSTS = [
       'El Generative Engine Optimization redefine la visibilidad digital. Analizamos métricas de citación, relevancia semántica y datos estructurados para que los motores de IA —ChatGPT, Gemini, Perplexity— citen tu marca como referencia en su nicho.',
   },
   {
-    href: '/seo-para-empresas/',
+    href: '/blog/seo-para-empresas',
     image: '/assets/SEO Empresas.png',
     alt: 'SEO Para Empresas',
     title: 'SEO Para Empresas: Escalá tu visibilidad online',

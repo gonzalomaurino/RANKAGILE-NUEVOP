@@ -135,7 +135,7 @@ export default function DashboardPowerBiPage() {
       </div>
       <div className="blogpost-card">
         <h4 className="blogpost-card-title">
-          <Link to="/seo-que-es-y-para-que-sirve">SEO: Qué es y para qué sirve</Link>
+          <Link to="/blog/seo-que-es-y-para-que-sirve">SEO: Qué es y para qué sirve</Link>
         </h4>
         <p className="blogpost-card-body">La base conceptual del SEO: pilares, algoritmo de Google y estrategia de largo plazo.</p>
       </div>
