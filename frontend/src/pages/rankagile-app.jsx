@@ -14,12 +14,12 @@ const Check = () =>
 
 // --- Services data ---------------------------------------
 const SERVICES = [
-  { slug: 'geo', title: 'GEO', desc: 'Posiciona tu marca en motores generativos con estrategia GEO.', href: '/preview/geo' },
-  { slug: 'seo-completo', title: 'SEO Completo', desc: 'Estrategia integral para escalar visibilidad, autoridad y resultados orgánicos.', href: '/preview/seo-completo' },
-  { slug: 'auditoria-tecnica', title: 'Auditoria Tecnica', desc: 'Diagnostico tecnico y roadmap priorizado para corregir los cuellos de botella.', href: '/preview/auditoria-tecnica' },
-  { slug: 'seo-hibrido', title: 'SEO Hibrido', desc: 'Ejecucion combinada de SEO tecnico, contenido y performance.', href: '/preview/seo-hibrido' },
-  { slug: 'seo-consultoria', title: 'SEO Consultoria', desc: 'Equipo senior embebido con tu in-house para estrategia y ejecucion.', href: '/preview/seo-consultoria' },
-  { slug: 'seo-analytics', title: 'SEO Analytics', desc: 'Datos claros, dashboards y decisiones basadas en performance real.', href: '/preview/seo-analytics' },
+  { slug: 'geo', title: 'GEO', desc: 'Posiciona tu marca en motores generativos con estrategia GEO.', href: '/servicios/geo' },
+  { slug: 'seo-completo', title: 'SEO Completo', desc: 'Estrategia integral para escalar visibilidad, autoridad y resultados orgánicos.', href: '/seo-completo' },
+  { slug: 'auditoria-tecnica', title: 'Auditoria Tecnica', desc: 'Diagnostico tecnico y roadmap priorizado para corregir los cuellos de botella.', href: '/auditoria-tecnica' },
+  { slug: 'seo-hibrido', title: 'SEO Hibrido', desc: 'Ejecucion combinada de SEO tecnico, contenido y performance.', href: '/seo-hibrido' },
+  { slug: 'seo-consultoria', title: 'SEO Consultoria', desc: 'Equipo senior embebido con tu in-house para estrategia y ejecucion.', href: '/seo-consultoria' },
+  { slug: 'seo-analytics', title: 'SEO Analytics', desc: 'Datos claros, dashboards y decisiones basadas en performance real.', href: '/seo-analytics' },
   { slug: 'analisis-seo-gratuito', title: 'Analisis SEO Gratuito', desc: 'Diagnostico inicial para detectar errores y oportunidades.', href: '/analisis-seo-gratuito' },
 ];
 

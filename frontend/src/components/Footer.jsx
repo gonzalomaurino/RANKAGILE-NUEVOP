@@ -239,9 +239,9 @@ export default function Footer() {
           <div>
             <p className="ra-footer-col-title">Empresa</p>
             <ul className="ra-footer-list">
-              <li><Link to="/preview/quienes-somos">Sobre nosotros</Link></li>
-              <li><Link to="/preview/privacidad">Política de Privacidad</Link></li>
-              <li><Link to="/preview/cookies">Política de Cookies</Link></li>
+              <li><Link to="/quienes-somos">Sobre nosotros</Link></li>
+              <li><Link to="/privacidad">Política de Privacidad</Link></li>
+              <li><Link to="/cookies">Política de Cookies</Link></li>
             </ul>
           </div>
 
@@ -249,11 +249,11 @@ export default function Footer() {
           <div>
             <p className="ra-footer-col-title">Servicios</p>
             <ul className="ra-footer-list">
-              <li><Link to="/preview/geo">GEO</Link></li>
-              <li><Link to="/preview/seo-completo">SEO Completo</Link></li>
-              <li><Link to="/preview/auditoria-tecnica">Auditoría Técnica</Link></li>
-              <li><Link to="/preview/seo-hibrido">SEO Híbrido</Link></li>
-              <li><Link to="/preview/seo-consultoria">Consultoría SEO</Link></li>
+              <li><Link to="/servicios/geo">GEO</Link></li>
+              <li><Link to="/seo-completo">SEO Completo</Link></li>
+              <li><Link to="/auditoria-tecnica">Auditoría Técnica</Link></li>
+              <li><Link to="/seo-hibrido">SEO Híbrido</Link></li>
+              <li><Link to="/seo-consultoria">Consultoría SEO</Link></li>
               <li><Link to="/analisis-seo-gratuito">Análisis SEO Gratuito</Link></li>
             </ul>
           </div>

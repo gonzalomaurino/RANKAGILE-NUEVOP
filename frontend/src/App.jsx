@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { useGTMPageTracking } from './hooks/useGTMPageTracking';
 
 import ClaudeHomePage from './pages/rankagile-app.jsx';
@@ -55,16 +55,28 @@ export default function App() {
         <Route path="/analisis-seo-gratuito/" element={<ClaudeAnalisisPage />} />
 
         {/* Service / landing pages */}
-        <Route path="/preview/quienes-somos" element={<QuienesSomosPage />} />
-        <Route path="/preview/geo" element={<GeoPage />} />
-        <Route path="/preview/seo-completo" element={<ServicioSeoCompletoPage />} />
-        <Route path="/preview/auditoria-tecnica" element={<AuditoriaTecnicaSeoPage />} />
-        <Route path="/preview/seo-hibrido" element={<ServicioSeoHibridoPage />} />
-        <Route path="/preview/seo-consultoria" element={<SeoConsultoriaAplicadaPage />} />
-        <Route path="/preview/seo-analytics" element={<SeoAnalyticsPage />} />
-        <Route path="/preview/blogs" element={<BlogsPage />} />
-        <Route path="/preview/privacidad" element={<PrivacyPolicyPage />} />
-        <Route path="/preview/cookies" element={<CookiesPolicyPage />} />
+        <Route path="/quienes-somos" element={<QuienesSomosPage />} />
+        <Route path="/servicios/geo" element={<GeoPage />} />
+        <Route path="/seo-completo" element={<ServicioSeoCompletoPage />} />
+        <Route path="/auditoria-tecnica" element={<AuditoriaTecnicaSeoPage />} />
+        <Route path="/seo-hibrido" element={<ServicioSeoHibridoPage />} />
+        <Route path="/seo-consultoria" element={<SeoConsultoriaAplicadaPage />} />
+        <Route path="/seo-analytics" element={<SeoAnalyticsPage />} />
+        <Route path="/blog" element={<BlogsPage />} />
+        <Route path="/privacidad" element={<PrivacyPolicyPage />} />
+        <Route path="/cookies" element={<CookiesPolicyPage />} />
+
+        {/* Redirects 301 desde URLs viejas con /preview/ */}
+        <Route path="/preview/quienes-somos" element={<Navigate to="/quienes-somos" replace />} />
+        <Route path="/preview/geo" element={<Navigate to="/servicios/geo" replace />} />
+        <Route path="/preview/seo-completo" element={<Navigate to="/seo-completo" replace />} />
+        <Route path="/preview/auditoria-tecnica" element={<Navigate to="/auditoria-tecnica" replace />} />
+        <Route path="/preview/seo-hibrido" element={<Navigate to="/seo-hibrido" replace />} />
+        <Route path="/preview/seo-consultoria" element={<Navigate to="/seo-consultoria" replace />} />
+        <Route path="/preview/seo-analytics" element={<Navigate to="/seo-analytics" replace />} />
+        <Route path="/preview/blogs" element={<Navigate to="/blog" replace />} />
+        <Route path="/preview/privacidad" element={<Navigate to="/privacidad" replace />} />
+        <Route path="/preview/cookies" element={<Navigate to="/cookies" replace />} />
 
         {/* Blog posts */}
         <Route path="/como-funciona-el-algoritmo-pagerank-de-google" element={<PageRankFuncionaPage />} />
