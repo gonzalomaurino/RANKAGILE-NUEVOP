@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 
 const SERVICES = [
-    { slug: 'seo-completo', title: 'SEO Completo', desc: 'Estrategia integral para escalar visibilidad, autoridad y resultados orgánicos.', href: '/preview/seo-completo' },
-    { slug: 'auditoria-tecnica', title: 'Auditoria Tecnica', desc: 'Diagnostico tecnico y roadmap priorizado para corregir los cuellos de botella.', href: '/preview/auditoria-tecnica' },
-    { slug: 'seo-hibrido', title: 'SEO Hibrido', desc: 'Ejecucion combinada de SEO tecnico, contenido y performance.', href: '/preview/seo-hibrido' },
-    { slug: 'seo-consultoria', title: 'SEO Consultoria', desc: 'Equipo senior embebido con tu in-house para estrategia y ejecucion.', href: '/preview/seo-consultoria' },
-    { slug: 'seo-analytics', title: 'SEO Analytics', desc: 'Datos claros, dashboards y decisiones basadas en performance real.', href: '/preview/seo-analytics' },
+    { slug: 'seo-completo', title: 'SEO Completo', desc: 'Estrategia integral para escalar visibilidad, autoridad y resultados orgánicos.', href: '/seo-completo' },
+    { slug: 'auditoria-tecnica', title: 'Auditoria Tecnica', desc: 'Diagnostico tecnico y roadmap priorizado para corregir los cuellos de botella.', href: '/auditoria-tecnica' },
+    { slug: 'seo-hibrido', title: 'SEO Hibrido', desc: 'Ejecucion combinada de SEO tecnico, contenido y performance.', href: '/seo-hibrido' },
+    { slug: 'seo-consultoria', title: 'SEO Consultoria', desc: 'Equipo senior embebido con tu in-house para estrategia y ejecucion.', href: '/seo-consultoria' },
+    { slug: 'seo-analytics', title: 'SEO Analytics', desc: 'Datos claros, dashboards y decisiones basadas en performance real.', href: '/seo-analytics' },
     { slug: 'analisis-seo-gratuito', title: 'Analisis SEO Gratuito', desc: 'Diagnostico inicial para detectar errores y oportunidades.', href: '/analisis-seo-gratuito' },
 ];
 
@@ -146,8 +146,8 @@ export default function ClaudeNavbar({ isHome = false }) {
                 </a>
 
                 <div className="nav-links">
-                    <a className="nav-link" href="/preview/geo">GEO</a>
-                    <a className="nav-link" href="/preview/quienes-somos">Quienes Somos</a>
+                    <a className="nav-link" href="/servicios/geo">GEO</a>
+                    <a className="nav-link" href="/quienes-somos">Quienes Somos</a>
                     <a className="nav-link" href="/contacto">Contacto</a>
                     <div className="nav-services" onMouseEnter={handleServicesEnter} onMouseLeave={handleServicesLeave}>
                         <button
@@ -178,7 +178,7 @@ export default function ClaudeNavbar({ isHome = false }) {
                             </div>
                         </div>
                     </div>
-                    <a className="nav-link" href="/preview/blogs">Blogs</a>
+                    <a className="nav-link" href="/blog">Blogs</a>
                 </div>
 
                 <div className="nav-scroll">
