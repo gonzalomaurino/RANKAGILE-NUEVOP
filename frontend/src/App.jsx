@@ -27,6 +27,16 @@ import ZeroClickSearchPage from './pages/ZeroClickSearchPage.jsx';
 import GeoBlogPage from './pages/GeoPage.jsx';
 import SeoParaEmpresasPage from './pages/SeoParaEmpresasPage.jsx';
 
+// Cluster GEO — páginas migradas desde SEO archive
+import CuantoCuestaGeoPage from './pages/CuantoCuestaGeoPage.jsx';
+import PorQueNoAparezcoEnChatGPTPage from './pages/PorQueNoAparezcoEnChatGPTPage.jsx';
+import SeoVsGeoVsAeoPage from './pages/SeoVsGeoVsAeoPage.jsx';
+
+// Cluster SEO — páginas migradas desde SEO archive
+import QueEsSeoPage from './pages/QueEsSeoPage.jsx';
+import SeoYSemPage from './pages/SeoYSemPage.jsx';
+import DashboardPowerBiPage from './pages/DashboardPowerBiPage.jsx';
+
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -77,6 +87,20 @@ export default function App() {
         <Route path="/preview/blogs" element={<Navigate to="/blog" replace />} />
         <Route path="/preview/privacidad" element={<Navigate to="/privacidad" replace />} />
         <Route path="/preview/cookies" element={<Navigate to="/cookies" replace />} />
+
+        {/* Cluster GEO */}
+        <Route path="/cuanto-cuesta-geo" element={<CuantoCuestaGeoPage />} />
+        <Route path="/por-que-no-aparezco-en-chatgpt" element={<PorQueNoAparezcoEnChatGPTPage />} />
+        <Route path="/seo-vs-geo-vs-aeo" element={<SeoVsGeoVsAeoPage />} />
+
+        {/* Cluster SEO */}
+        <Route path="/seo-que-es-y-para-que-sirve" element={<QueEsSeoPage />} />
+        <Route path="/seo-y-sem-en-marketing-digital" element={<SeoYSemPage />} />
+        <Route path="/dashboard-seo-en-power-bi-para-agencias" element={<DashboardPowerBiPage />} />
+
+        {/* Redirect legacy: /agencia-geo → /servicios/geo */}
+        <Route path="/agencia-geo" element={<Navigate to="/servicios/geo" replace />} />
+        <Route path="/agencia-geo/" element={<Navigate to="/servicios/geo" replace />} />
 
         {/* Blog posts */}
         <Route path="/como-funciona-el-algoritmo-pagerank-de-google" element={<PageRankFuncionaPage />} />

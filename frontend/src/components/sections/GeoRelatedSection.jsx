@@ -11,7 +11,7 @@ export default function GeoRelatedSection() {
             <h4>Por que tu empresa no aparece en ChatGPT</h4>
             <p>Las 5 razones por las que el modelo no te conoce y como revertirlo.</p>
           </div>
-          <a className="btn-ghost" href="/por-que-no-aparezco-en-chatgpt/">Leer articulo</a>
+          <a className="btn-ghost" href="/por-que-no-aparezco-en-chatgpt">Leer articulo</a>
         </article>
         <article className="svc-card">
           <div>
@@ -19,7 +19,7 @@ export default function GeoRelatedSection() {
             <h4>Cuanto cuesta el GEO y que incluye en 2026</h4>
             <p>Precios reales, que exigir en una propuesta y como calcular el ROI.</p>
           </div>
-          <a className="btn-ghost" href="/cuanto-cuesta-geo/">Leer articulo</a>
+          <a className="btn-ghost" href="/cuanto-cuesta-geo">Leer articulo</a>
         </article>
       </div>
     </section>

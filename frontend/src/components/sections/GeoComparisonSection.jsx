@@ -34,7 +34,7 @@ export default function GeoComparisonSection() {
       </div>
       <p className="geo-page-quote">
         La estrategia ganadora en 2026 no elige uno: combina{' '}
-        <a href="/seo-vs-geo-vs-aeo/">SEO + GEO + AEO</a> en una
+        <a href="/seo-vs-geo-vs-aeo">SEO + GEO + AEO</a> en una
         arquitectura de visibilidad integrada. Eso es exactamente lo que
         construimos en RankAgile.
       </p>
