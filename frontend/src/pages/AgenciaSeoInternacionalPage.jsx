@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
 
@@ -49,6 +50,10 @@ export default function AgenciaSeoInternacionalPage() {
         Nuestra metodología combina análisis predictivo, NLP multilingüe y optimización técnica distribuida para construir presencias digitales verdaderamente globales.
       </p>
 
+      <p>
+        Si buscás una <Link to="/">agencia SEO internacional</Link> que combine posicionamiento orgánico con visibilidad en IA generativa, en RankAgile integramos ambas disciplinas en una estrategia unificada orientada a resultados medibles.
+      </p>
+
       <h2>Estrategias Core de SEO Internacional</h2>
       {strategies.map((s) => (
         <div key={s.num} className="blogpost-card">
@@ -90,6 +95,16 @@ export default function AgenciaSeoInternacionalPage() {
       <h2>Construyendo Visibilidad Sin Fronteras</h2>
       <p>
         Las agencias SEO internacionales del futuro no son proveedores de servicios, son socios estratégicos en la arquitectura de la presencia digital global. RankAgile no solo optimiza para Google, sino para un ecosistema en constante evolución donde la visibilidad orgánica es la moneda de cambio del conocimiento.
+      </p>
+
+      <hr />
+      <p style={{ textAlign: 'center', marginTop: 32 }}>
+        <Link
+          to="/"
+          style={{ display: 'inline-block', padding: '14px 32px', background: 'var(--accent)', color: 'var(--btn-fg)', borderRadius: 8, fontWeight: 600, textDecoration: 'none', fontSize: 15 }}
+        >
+          Explorar RankAgile — agencia SEO internacional
+        </Link>
       </p>
     </BlogPostLayout>
   );

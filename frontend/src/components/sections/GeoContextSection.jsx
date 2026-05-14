@@ -14,7 +14,10 @@ export default function GeoContextSection() {
             <li>Perplexity y Copilot citan fuentes y desplazan el organico.</li>
             <li>GEO amplifica el SEO tradicional en capas nuevas.</li>
           </ul>
-          <a className="btn-ghost" href="/">Ver SEO para IA</a>
+          <p className="geo-page-p" style={{ fontSize: 14, marginTop: 16 }}>
+            En <a href="/" style={{ color: 'var(--accent)', textDecoration: 'none', fontWeight: 500 }}>RankAgile</a> combinamos SEO orgánico y GEO en una estrategia integrada para que tu marca gane visibilidad en Google y en la IA al mismo tiempo.
+          </p>
+          <a className="btn-ghost" href="/">Conocé RankAgile — SEO + GEO</a>
         </div>
         <div className="geo-urgent-panel">
           <div className="geo-urgent-item">
