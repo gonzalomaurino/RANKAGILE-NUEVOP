@@ -12,9 +12,9 @@ import '../styles/claude-geo.css';
 
 export default function SeoAnalyticsPage() {
     useDocumentMeta({
-        title: 'SEO Analytics | RankAgile',
+        title: 'SEO Analytics y Reporting para Empresas | RankAgile',
         description:
-            'SEO analytics para analizar datos, medir resultados y optimizar tu estrategia SEO con decisiones basadas en información real.',
+            'Medición y análisis SEO para decisiones basadas en datos. Dashboards personalizados, seguimiento de rankings y análisis de conversiones orgánicas.',
     });
 
     return (

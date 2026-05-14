@@ -31,9 +31,9 @@ const steps = [
 
 export default function ZeroClickSearchPage() {
   useDocumentMeta({
-    title: 'Zero-Click Search | RankAgile',
+    title: 'Zero-Click Search: Qué Es y Cómo Adaptarte en 2026 | RankAgile Blog',
     description:
-      'Cómo el Zero-Click Search redefine el SEO: estrategias para ganar visibilidad cuando los usuarios obtienen respuestas sin abandonar Google.',
+      'Qué son las búsquedas zero-click, por qué crecen y qué estrategias usar para mantener visibilidad cuando Google responde sin que el usuario haga clic.',
   });
 
   return (

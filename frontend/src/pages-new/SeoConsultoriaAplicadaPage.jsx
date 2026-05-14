@@ -13,9 +13,9 @@ import '../styles/claude-geo.css';
 
 export default function SeoConsultoriaAplicadaPage() {
     useDocumentMeta({
-        title: 'Consultoría SEO Aplicada | RankAgile',
+        title: 'Consultoría SEO Estratégica para Empresas | RankAgile',
         description:
-            'Consultoría SEO aplicada para mejorar tu posicionamiento con estrategias prácticas, análisis experto y acompañamiento enfocado en resultados.',
+            'Consultoría SEO aplicada con foco en resultados. Hoja de ruta priorizada, análisis experto y acompañamiento en la implementación. Sin generalidades.',
     });
 
     return (

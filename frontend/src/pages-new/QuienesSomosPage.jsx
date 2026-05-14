@@ -8,9 +8,9 @@ import '../styles/claude-about.css';
 
 export default function QuienesSomosPage() {
     useDocumentMeta({
-        title: 'Quienes somos | RankAgile',
+        title: 'Quiénes Somos | RankAgile — Equipo SEO & GEO',
         description:
-            'En RankAgile somos especialistas en SEO y crecimiento digital. Ayudamos a empresas a posicionarse en Google y ChatGPT.',
+            'Conocé al equipo detrás de RankAgile: especialistas en SEO técnico, GEO y posicionamiento en IA con proyectos en LATAM y Europa.',
     });
 
     return (
