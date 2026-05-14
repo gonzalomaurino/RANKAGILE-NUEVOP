@@ -395,9 +395,9 @@ const ContactSection = () => {
 // --- App --------------------------------------------------
 export default function ClaudeHomePage() {
   useDocumentMeta({
-    title: 'RankAgile — Agencia SEO para IA (GEO)',
+    title: 'RankAgile | Agencia SEO Internacional & GEO para IA',
     description:
-      'Agencia SEO internacional experta en SEO para IA (GEO) y motores generativos.',
+      'Posicionamos tu marca en Google y en motores de IA (ChatGPT, Gemini, Perplexity) con estrategia SEO internacional y GEO. Pedí tu análisis gratuito.',
   });
 
   return (

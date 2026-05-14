@@ -47,8 +47,8 @@ function normalizeInputUrl(raw) {
 
 export default function ClaudeAnalisisPage() {
     useDocumentMeta({
-        title: 'RankAgile - Analisis SEO Gratuito',
-        description: 'Evalua tu sitio en GEO + SEO clasico en segundos.',
+        title: 'Análisis SEO + GEO Gratuito | RankAgile',
+        description: 'Evaluá tu sitio en SEO técnico y visibilidad en IA en segundos. Análisis gratuito con informe detallado. Sin registro.',
     });
 
     const [url, setUrl] = useState('');

@@ -13,9 +13,9 @@ import '../styles/claude-geo.css';
 
 export default function ServicioSeoCompletoPage() {
   useDocumentMeta({
-    title: 'Servicio SEO Completo | RankAgile',
+    title: 'SEO Completo para Empresas: Técnico, Contenido y GEO | RankAgile',
     description:
-      'Servicio SEO completo que incluye auditoría, estrategia, contenido y SEO técnico para mejorar tu posicionamiento en Google e IA.',
+      'Servicio SEO integral: auditoría técnica, estrategia de contenidos, link building y visibilidad en IA. Resultados medibles en 3–6 meses.',
   });
 
   return (

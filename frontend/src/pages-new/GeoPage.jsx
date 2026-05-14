@@ -15,9 +15,9 @@ import '../styles/claude-geo.css';
 
 export default function GeoPage() {
   useDocumentMeta({
-    title: 'GEO: Generative Engine Optimization para Empresas | RankAgile',
+    title: 'GEO (AI Search Optimization) para Empresas | RankAgile',
     description:
-      'GEO (Generative Engine Optimization) es la estrategia que posiciona tu empresa en ChatGPT, Gemini y Perplexity. Descubrí la metodología RankAgile y empezá a existir donde tus clientes ya buscan.',
+      'Posicionamos tu marca dentro de las respuestas de ChatGPT, Gemini y Perplexity con GEO — la estrategia de AI Search Optimization que lidera RankAgile.',
   });
 
   return (

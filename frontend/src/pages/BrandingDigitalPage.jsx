@@ -37,9 +37,9 @@ const vectors = [
 
 export default function BrandingDigitalPage() {
   useDocumentMeta({
-    title: 'Branding Digital | RankAgile',
+    title: 'Branding Digital en la Era de la IA: Guía Estratégica | RankAgile Blog',
     description:
-      'Branding digital en la era de la IA: cómo construir autoridad, ser interpretable por algoritmos y liderar tu industria con SEO híbrido.',
+      'Cómo construir una marca digital sólida: autoridad semántica, SEO híbrido y posicionamiento en IA. Estrategias para liderar tu categoría en Google y modelos generativos.',
   });
 
   return (

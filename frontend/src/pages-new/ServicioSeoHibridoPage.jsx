@@ -13,9 +13,9 @@ import '../styles/claude-geo.css';
 
 export default function ServicioSeoHibridoPage() {
   useDocumentMeta({
-    title: 'Servicio SEO Híbrido | RankAgile',
+    title: 'SEO Híbrido: Google + Visibilidad en IA | RankAgile',
     description:
-      'Escala tu negocio con un servicio SEO híbrido que combina estrategia y ejecución enfocada en resultados reales.',
+      'Combina posicionamiento en Google con presencia en ChatGPT, Gemini y Perplexity. La estrategia SEO+GEO que prepara tu marca para el presente digital.',
   });
 
   return (

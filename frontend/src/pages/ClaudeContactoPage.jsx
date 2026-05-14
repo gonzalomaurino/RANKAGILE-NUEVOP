@@ -7,8 +7,8 @@ import '../styles/claude-contacto.css';
 
 export default function ClaudeContactoPage() {
     useDocumentMeta({
-        title: 'RankAgile - Contacto',
-        description: 'Contacta con RankAgile para recibir un plan GEO accionable.',
+        title: 'Contacto | RankAgile — Agencia SEO & GEO',
+        description: 'Hablemos sobre tu proyecto SEO o GEO. Contanos en qué estás trabajando y te respondemos en 48h. Sin compromiso.',
     });
 
     const [form, setForm] = useState({

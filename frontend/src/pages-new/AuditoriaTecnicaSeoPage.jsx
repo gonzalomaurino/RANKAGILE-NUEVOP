@@ -13,9 +13,9 @@ import '../styles/claude-geo.css';
 
 export default function AuditoriaTecnicaSeoPage() {
   useDocumentMeta({
-    title: 'Auditoría Técnica SEO | RankAgile',
+    title: 'Auditoría Técnica SEO Profesional | RankAgile',
     description:
-      'Auditoría técnica SEO para detectar errores, mejorar la indexación y optimizar el rendimiento de tu web en Google.',
+      'Detectamos todos los errores técnicos que frenan tu posicionamiento: velocidad, indexación, Core Web Vitals y arquitectura web. Informe en 72h.',
   });
 
   return (

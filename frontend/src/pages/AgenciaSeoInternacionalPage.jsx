@@ -27,9 +27,9 @@ const faqs = [
 
 export default function AgenciaSeoInternacionalPage() {
   useDocumentMeta({
-    title: 'RankAgile: Agencia SEO Internacional experta en IA para empresas',
+    title: 'Agencia SEO Internacional: Estrategia y Metodología | RankAgile Blog',
     description:
-      'Aumentamos tu tráfico orgánico con SEO técnico + GEO (optimización para IA). Auditoría SEO gratis las 24 hs. ¡Hablemos!',
+      'Cómo funciona el SEO internacional, qué diferencia a una agencia global y cómo la optimización multilingüe escala la visibilidad en nuevos mercados.',
   });
 
   return (
