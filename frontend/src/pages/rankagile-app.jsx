@@ -47,6 +47,9 @@ const SeoInternacional = () =>
     <div className="section-head">
       <span className="eyebrow">enfoque global</span>
       <h2 className="display">Agencia SEO Internacional: Estrategia SEO sin fronteras</h2>
+      <p className="lead" style={{ marginTop: 16 }}>
+        Descubrí cómo una <Link to="/blog/agencia-seo-internacional-rankagile">estrategia de SEO internacional</Link> permite posicionar marcas en múltiples países y motores de búsqueda globales — desde la arquitectura técnica multilingüe hasta el contenido adaptado a cada mercado y audiencia.
+      </p>
     </div>
 
     <div className="cards-grid-4">
@@ -139,19 +142,24 @@ const ServicesGrid = () =>
 
 // --- Stats ------------------------------------------------
 const Stats = () =>
-  <div className="stats">
-    {[
-      { n: '240', u: '+', l: 'Marcas con visibilidad en LLMs' },
-      { n: '148', u: '%', l: 'Crecimiento orgánico medio a 12 meses' },
-      { n: '4.9', u: '/5', l: 'Satisfacción en 72 reviews verificadas' },
-      { n: '12', u: '', l: 'Especialistas senior full-time' }].
-      map((s, i) =>
+  <>
+    <div className="stats">
+      {[
+        { n: '15',  u: '+', l: 'Mercados activos en América, Europa y Asia Pacífico' },
+        { n: '3',   u: '+', l: 'Años especializados en SEO técnico y posicionamiento en IA' },
+        { n: '4',   u: '',  l: 'Especialistas asignados por proyecto: técnico SEO, contenido, link building y GEO' },
+        { n: '100', u: '%', l: 'Proyectos con acceso a métricas y reporting en tiempo real' },
+      ].map((s, i) =>
         <div className="stat" key={i}>
           <div className="stat-num">{s.n}<span className="unit">{s.u}</span></div>
           <div className="stat-label">{s.l}</div>
         </div>
       )}
-  </div>;
+    </div>
+    <p style={{ textAlign: 'center', color: 'var(--fg-dim)', fontSize: 14, marginTop: 32, maxWidth: 600, marginInline: 'auto' }}>
+      Marcas como <strong style={{ color: 'var(--fg)' }}>DigitalAxios</strong> e <strong style={{ color: 'var(--fg)' }}>IMB Institute</strong> — junto a equipos de SaaS, educación y e-commerce — confían su posicionamiento orgánico y en IA a RankAgile.
+    </p>
+  </>;
 
 
 // --- Process --------------------------------------------
@@ -327,16 +335,15 @@ const ContactSection = () => {
         {/* Left: copy */}
         <div className="contact-copy">
           <SectionHead
-            eyebrow="empieza hoy"
-            eyebrow="empieza hoy"
-            title="Análisis GEO de tu marca en 72h." />
+            eyebrow="hablemos"
+            title="Hablemos sobre tu proyecto." />
           <p className="lead" style={{ marginBottom: 32 }}>
-            Sin compromiso, sin letra pequeña. Completá tus datos, agendamos una llamada de diagnóstico de 30 minutos y recibís un plan GEO accionable.
+            Completá el formulario y coordinamos una llamada para entender tus objetivos, tu situación actual y qué estrategia tiene más sentido para tu negocio. Sin plantillas genéricas, sin compromiso.
           </p>
           <ul className="contact-benefits">
-            <li>Diagnóstico técnico de tu presencia en LLMs</li>
-            <li>Mapa de prompts relevantes a tu negocio</li>
-            <li>Roadmap priorizado con quick wins en 90 días</li>
+            <li>Análisis de tu presencia orgánica y en IA</li>
+            <li>Oportunidades reales para tu industria y mercado</li>
+            <li>Estrategia personalizada con foco en resultados</li>
             <li>Sin costo, sin contrato</li>
           </ul>
         </div>
@@ -346,8 +353,8 @@ const ContactSection = () => {
           <div className="aurora-bg" />
           <div className="contact-card-inner">
             <div className="contact-card-head">
-              <h3>Contactanos</h3>
-              <p>Introducí tus datos para recibir tu análisis gratuito.</p>
+              <h3>Contanos sobre tu proyecto</h3>
+              <p>Dejá tus datos y coordinamos una llamada para conocer tu negocio y tus objetivos.</p>
             </div>
 
             <form onSubmit={onSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -403,9 +410,9 @@ export default function ClaudeHomePage() {
       {/* 1. Servicios */}
       <section className="block" id="servicios" style={{ paddingTop: 40 }}>
         <SectionHead
-          eyebrow="nueve verticales"
-          title="Un equipo senior por cada pieza de tu SEO."
-          lead="Nada de generalistas. Cada servicio lo lidera un especialista con 7+ años en su área." />
+          eyebrow="cómo trabajamos"
+          title="Cada área del SEO, trabajada por quien la domina."
+          lead="Técnico, contenido, autoridad y GEO son disciplinas distintas que requieren criterios distintos. Distribuimos el trabajo por expertise para que cada decisión esté respaldada por quien realmente entiende esa parte del proyecto." />
 
         <ServicesGrid />
       </section>
@@ -421,7 +428,7 @@ export default function ClaudeHomePage() {
         <SectionHead
           eyebrow="por qué geo"
           title="El SEO cambió. Tus clientes ya preguntan a la IA."
-          lead="El 64% de las búsquedas informativas ya se resuelven dentro de un LLM. Si tu marca no es citada en esas respuestas, simplemente no existes para quien decide." />
+          lead={<>El 64% de las búsquedas informativas ya se resuelven dentro de un LLM. Si tu marca no es citada en esas respuestas, simplemente no existes para quien decide. Conocé nuestra <Link to="/servicios/geo">estrategia GEO para IA</Link> y empezá a posicionarte donde tus clientes ya buscan.</>} />
 
         <div className="vignette-stack">
           <Vignette
@@ -467,8 +474,8 @@ export default function ClaudeHomePage() {
       {/* Stats */}
       <section className="block" style={{ paddingTop: 0 }}>
         <SectionHead
-          eyebrow="resultados medibles"
-          title="Números que explican la confianza." />
+          eyebrow="experiencia real"
+          title="Lo que respalda nuestro trabajo." />
 
         <Stats />
       </section>
