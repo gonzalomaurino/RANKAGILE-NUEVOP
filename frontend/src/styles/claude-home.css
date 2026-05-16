@@ -856,6 +856,15 @@ html[data-theme='light'] .clients-logo-item img:hover {
   border-top: none;
 }
 
+/* --- FAQ teal glow ------------------------------- */
+#faq {
+  background-image: radial-gradient(ellipse 70% 55% at 50% -10%, rgba(56, 254, 218, 0.10), transparent 65%);
+}
+
+html[data-theme='light'] #faq {
+  background-image: none;
+}
+
 /* --- WhatsApp float ------------------------------ */
 .wa-float {
   position: fixed;
