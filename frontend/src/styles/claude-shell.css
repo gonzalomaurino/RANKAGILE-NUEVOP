@@ -61,7 +61,7 @@ body.nav-mega-open #root> :not(.nav) {
     padding: 10px 16px;
     font-size: 14.5px;
     font-weight: 400;
-    color: var(--fg-dim);
+    color: rgba(255, 255, 255, 0.82);
     border-radius: 8px;
     display: inline-flex;
     align-items: center;
@@ -96,6 +96,10 @@ html[data-theme='light'] .nav-link::after {
 .nav-link[aria-expanded='true'] {
     color: #ffffff;
     text-shadow: 0 0 12px rgba(255, 255, 255, 0.55), 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+html[data-theme='light'] .nav-link {
+    color: var(--fg-dim);
 }
 
 html[data-theme='light'] .nav-link:hover,
