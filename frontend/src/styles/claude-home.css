@@ -774,7 +774,7 @@ html[data-theme='light'] .clients-logo-item img:hover {
 
 /* --- FAQ ----------------------------------------- */
 .faq-list {
-  max-width: 960px;
+  max-width: 100%;
   margin: 60px auto 0;
   border-top: 1px solid var(--border);
 }
@@ -835,7 +835,7 @@ html[data-theme='light'] .clients-logo-item img:hover {
   font-size: clamp(14px, 1vw, 16px);
   line-height: 1.7;
   margin: 0;
-  max-width: 840px;
+  max-width: 100%;
 }
 
 /* --- Stats + Process unified full-width band ----- */
