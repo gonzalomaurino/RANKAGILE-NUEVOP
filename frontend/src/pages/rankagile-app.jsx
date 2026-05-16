@@ -471,23 +471,24 @@ export default function ClaudeHomePage() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="block" style={{ paddingTop: 0 }}>
-        <SectionHead
-          eyebrow="experiencia real"
-          title="Lo que respalda nuestro trabajo." />
+      {/* Stats + Process — banda full-width con fondo alternado */}
+      <div className="band-full">
+        <section className="block">
+          <SectionHead
+            eyebrow="experiencia real"
+            title="Lo que respalda nuestro trabajo." />
 
-        <Stats />
-      </section>
+          <Stats />
+        </section>
 
-      {/* Process */}
-      <section className="block" id="proceso" style={{ paddingTop: 40 }}>
-        <SectionHead
-          eyebrow="cómo trabajamos"
-          title="Cuatro fases. Cero fricción. Foco total en negocio." />
+        <section className="block" id="proceso" style={{ paddingTop: 40 }}>
+          <SectionHead
+            eyebrow="cómo trabajamos"
+            title="Cuatro fases. Cero fricción. Foco total en negocio." />
 
-        <Process />
-      </section>
+          <Process />
+        </section>
+      </div>
 
       {/* Quote */}
       <section className="block" id="casos" style={{ paddingTop: 40 }}>

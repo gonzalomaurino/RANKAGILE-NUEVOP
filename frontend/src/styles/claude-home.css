@@ -838,6 +838,18 @@ html[data-theme='light'] .clients-logo-item img:hover {
   max-width: 840px;
 }
 
+/* --- Stats + Process unified full-width band ----- */
+.band-full {
+  width: 100%;
+  background: var(--bg-elev);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.band-full .stats {
+  border-top: none;
+}
+
 /* --- WhatsApp float ------------------------------ */
 .wa-float {
   position: fixed;
