@@ -471,7 +471,7 @@ export default function ClaudeHomePage() {
         </div>
       </section>
 
-      {/* Stats + Process — banda full-width con fondo alternado */}
+      {/* Stats — banda full-width */}
       <div className="band-full">
         <section className="block">
           <SectionHead
@@ -480,7 +480,10 @@ export default function ClaudeHomePage() {
 
           <Stats />
         </section>
+      </div>
 
+      {/* Process — banda full-width, fondo alternado */}
+      <div className="band-full band-alt">
         <section className="block" id="proceso">
           <SectionHead
             eyebrow="cómo trabajamos"

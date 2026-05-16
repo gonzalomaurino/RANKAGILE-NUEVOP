@@ -943,6 +943,10 @@ html[data-theme='light'] .clients-logo-item img:hover {
   border-bottom: 1px solid var(--border);
 }
 
+.band-full.band-alt {
+  background: var(--bg-card);
+}
+
 .band-full section.block {
   max-width: 100%;
   padding-left: clamp(24px, 4vw, 80px);
