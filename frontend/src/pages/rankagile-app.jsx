@@ -260,27 +260,25 @@ const FAQ = () => {
   const toggle = (i) => setOpen(prev => prev === i ? null : i);
 
   return (
-    <section className="block" id="faq">
-      <div className="section-panel">
-        <SectionHead
-          eyebrow="preguntas frecuentes"
-          title="Todo lo que necesitás saber."
-          centered />
-        <div className="faq-list">
-          {FAQ_ITEMS.map((item, i) => (
-            <div className="faq-item" key={i} data-open={open === i ? 'true' : 'false'}>
-              <button className="faq-trigger" onClick={() => toggle(i)} aria-expanded={open === i}>
-                {item.q}
-                <svg className="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
-                </svg>
-              </button>
-              <div className="faq-answer">
-                <p>{item.a}</p>
-              </div>
+    <section className="block" id="faq" style={{ paddingTop: 40 }}>
+      <SectionHead
+        eyebrow="preguntas frecuentes"
+        title="Todo lo que necesitás saber."
+        centered />
+      <div className="faq-list">
+        {FAQ_ITEMS.map((item, i) => (
+          <div className="faq-item" key={i} data-open={open === i ? 'true' : 'false'}>
+            <button className="faq-trigger" onClick={() => toggle(i)} aria-expanded={open === i}>
+              {item.q}
+              <svg className="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </button>
+            <div className="faq-answer">
+              <p>{item.a}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
@@ -331,8 +329,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="block" id="contacto">
-      <div className="section-panel">
+    <section className="block" id="contacto" style={{ paddingTop: 40 }}>
       <div className="contact-grid">
 
         {/* Left: copy */}
@@ -390,7 +387,6 @@ const ContactSection = () => {
           </div>
         </div>
 
-      </div>
       </div>
     </section>
   );
@@ -476,22 +472,20 @@ export default function ClaudeHomePage() {
       </section>
 
       {/* Stats */}
-      <section className="block-full">
-        <div className="block-full-head">
-          <SectionHead
-            eyebrow="experiencia real"
-            title="Lo que respalda nuestro trabajo." />
-        </div>
+      <section className="block" style={{ paddingTop: 0 }}>
+        <SectionHead
+          eyebrow="experiencia real"
+          title="Lo que respalda nuestro trabajo." />
+
         <Stats />
       </section>
 
       {/* Process */}
-      <section className="block-full" id="proceso">
-        <div className="block-full-head">
-          <SectionHead
-            eyebrow="cómo trabajamos"
-            title="Cuatro fases. Cero fricción. Foco total en negocio." />
-        </div>
+      <section className="block" id="proceso" style={{ paddingTop: 40 }}>
+        <SectionHead
+          eyebrow="cómo trabajamos"
+          title="Cuatro fases. Cero fricción. Foco total en negocio." />
+
         <Process />
       </section>
 
