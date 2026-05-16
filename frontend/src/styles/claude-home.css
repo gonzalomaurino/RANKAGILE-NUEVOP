@@ -846,6 +846,12 @@ html[data-theme='light'] .clients-logo-item img:hover {
   border-bottom: 1px solid var(--border);
 }
 
+.band-full section.block {
+  max-width: 100%;
+  padding-left: clamp(24px, 4vw, 80px);
+  padding-right: clamp(24px, 4vw, 80px);
+}
+
 .band-full .stats {
   border-top: none;
 }
