@@ -948,7 +948,7 @@ html[data-theme='light'] .clients-logo-item img:hover {
 }
 
 .band-full section.block {
-  max-width: 100%;
+  max-width: 90vw;
   padding-left: clamp(24px, 4vw, 80px);
   padding-right: clamp(24px, 4vw, 80px);
 }
