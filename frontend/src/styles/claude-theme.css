@@ -7,7 +7,7 @@
     --border: rgba(255, 255, 255, 0.08);
     --border-strong: rgba(255, 255, 255, 0.16);
     --fg: #f4f2ea;
-    --fg-dim: #a8a59b;
+    --fg-dim: rgba(255, 255, 255, 0.72);
     --fg-faint: #6a6a6a;
     --accent: #38feda;
     --accent-soft: rgba(56, 254, 218, 0.14);

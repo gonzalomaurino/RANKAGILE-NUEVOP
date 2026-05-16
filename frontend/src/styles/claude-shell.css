@@ -30,12 +30,12 @@ body.nav-mega-open #root> :not(.nav) {
 }
 
 .nav-inner {
-    max-width: 1320px;
+    max-width: 1440px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     gap: 40px;
-    padding: 14px 32px;
+    padding: 20px clamp(32px, 4vw, 80px);
 }
 
 .nav-logo {
@@ -46,7 +46,7 @@ body.nav-mega-open #root> :not(.nav) {
 }
 
 .nav-logo svg {
-    height: 40px;
+    height: 48px;
     width: auto;
 }
 
@@ -58,10 +58,10 @@ body.nav-mega-open #root> :not(.nav) {
 }
 
 .nav-link {
-    padding: 8px 14px;
-    font-size: 13.5px;
+    padding: 10px 16px;
+    font-size: 14.5px;
     font-weight: 400;
-    color: var(--fg-dim);
+    color: rgba(255, 255, 255, 0.82);
     border-radius: 8px;
     display: inline-flex;
     align-items: center;
@@ -96,6 +96,10 @@ html[data-theme='light'] .nav-link::after {
 .nav-link[aria-expanded='true'] {
     color: #ffffff;
     text-shadow: 0 0 12px rgba(255, 255, 255, 0.55), 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+html[data-theme='light'] .nav-link {
+    color: var(--fg-dim);
 }
 
 html[data-theme='light'] .nav-link:hover,
@@ -146,12 +150,12 @@ html[data-theme='light'] .nav-link[aria-expanded='true'] {
 }
 
 .mega-inner {
-    max-width: 1320px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 28px 32px 32px;
+    padding: 32px clamp(32px, 4vw, 80px) 40px;
     display: grid;
-    grid-template-columns: 240px 1fr;
-    gap: 40px;
+    grid-template-columns: 260px 1fr;
+    gap: 48px;
 }
 
 .mega-aside {
@@ -270,12 +274,12 @@ footer.foot {
 }
 
 .foot-inner {
-    max-width: 1320px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 48px 32px;
+    padding: 60px clamp(32px, 4vw, 80px);
     display: grid;
     grid-template-columns: 1.5fr repeat(3, 1fr);
-    gap: 28px;
+    gap: 32px;
 }
 
 .foot h6 {
@@ -316,13 +320,13 @@ footer.foot {
 
 .foot-base {
     border-top: 1px solid var(--border);
-    padding: 16px 32px;
+    padding: 20px clamp(32px, 4vw, 80px);
     color: var(--fg-faint);
     font-size: 11px;
     letter-spacing: 0.08em;
     display: flex;
     justify-content: space-between;
-    max-width: 1320px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -346,8 +350,12 @@ footer.foot {
 
 @media (max-width: 768px) {
     .nav-inner {
-        padding: 12px 16px;
+        padding: 14px 20px;
         gap: 12px;
+    }
+
+    .nav-logo svg {
+        height: 38px;
     }
 
     .nav-right .btn-pill {

@@ -86,7 +86,7 @@ const SeoInternacional = () =>
 
 // --- Ticker -----------------------------------------------
 const Ticker = () => {
-  const items = ['ChatGPT', 'Gemini 2.5', 'Claude Sonnet', 'Perplexity', 'Copilot', 'Grok', 'Meta AI', 'You.com', 'DuckAssist', 'Arc Search'];
+  const items = ['ChatGPT', 'Gemini', 'Grok', 'Perplexity', 'Google'];
   const loop = [...items, ...items];
   return (
     <div className="ticker">
@@ -145,9 +145,9 @@ const Stats = () =>
   <>
     <div className="stats">
       {[
-        { n: '15', u: '+', l: 'Mercados activos en América, Europa y Asia Pacífico' },
-        { n: '3',  u: '+', l: 'Años especializados en SEO técnico y posicionamiento en IA' },
-        { n: '4',  u: '',  l: 'Especialistas asignados por proyecto: técnico SEO, contenido, link building y GEO' },
+        { n: '15',  u: '+', l: 'Mercados activos en América, Europa y Asia Pacífico' },
+        { n: '3',   u: '+', l: 'Años especializados en SEO técnico y posicionamiento en IA' },
+        { n: '4',   u: '',  l: 'Especialistas asignados por proyecto: técnico SEO, contenido, link building y GEO' },
         { n: '100', u: '%', l: 'Proyectos con acceso a métricas y reporting en tiempo real' },
       ].map((s, i) =>
         <div className="stat" key={i}>
@@ -156,8 +156,8 @@ const Stats = () =>
         </div>
       )}
     </div>
-    <p style={{ textAlign: 'center', color: 'var(--fg-dim)', fontSize: 14, marginTop: 32, maxWidth: 600, marginInline: 'auto' }}>
-      Marcas como <strong style={{ color: 'var(--fg)' }}>DigitalAxios</strong> e <strong style={{ color: 'var(--fg)' }}>IMB Institute</strong> — junto a equipos de SaaS, educación y e-commerce — confían su posicionamiento orgánico y en IA a RankAgile.
+    <p className="stats-footnote">
+      Marcas como <strong>DigitalAxios</strong> e <strong>IMB Institute</strong> — junto a equipos de SaaS, educación y e-commerce — confían su posicionamiento orgánico y en IA a RankAgile.
     </p>
   </>;
 
@@ -302,8 +302,9 @@ const WaButton = () =>
 
 // --- Contact section ------------------------------------
 const ContactSection = () => {
-  const [form, setForm] = useState({ firstName: '', lastName: '', email: '', web: '' });
+  const [form, setForm] = useState({ name: '', email: '', web: '' });
   const [submitting, setSubmitting] = useState(false);
+  const [sent, setSent] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
   const onChange = (field) => (e) => setForm(prev => ({ ...prev, [field]: e.target.value }));
   const onSubmit = async (e) => {
@@ -315,12 +316,11 @@ const ContactSection = () => {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, source: 'home' }),
+        body: JSON.stringify({ firstName: form.name, email: form.email, web: form.web, source: 'home' }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data.error || `Error ${res.status}`);
-      alert('Gracias, te contactamos en menos de 24h.');
-      setForm({ firstName: '', lastName: '', email: '', web: '' });
+      setSent(true);
     } catch (err) {
       setErrorMsg(err.message);
     } finally {
@@ -334,9 +334,7 @@ const ContactSection = () => {
 
         {/* Left: copy */}
         <div className="contact-copy">
-          <SectionHead
-            eyebrow="hablemos"
-            title="Hablemos sobre tu proyecto." />
+          <SectionHead eyebrow="hablemos" title="Hablemos sobre tu proyecto." />
           <p className="lead" style={{ marginBottom: 32 }}>
             Completá el formulario y coordinamos una llamada para entender tus objetivos, tu situación actual y qué estrategia tiene más sentido para tu negocio. Sin plantillas genéricas, sin compromiso.
           </p>
@@ -352,38 +350,58 @@ const ContactSection = () => {
         <div className="contact-card">
           <div className="aurora-bg" />
           <div className="contact-card-inner">
-            <div className="contact-card-head">
-              <h3>Contanos sobre tu proyecto</h3>
-              <p>Dejá tus datos y coordinamos una llamada para conocer tu negocio y tus objetivos.</p>
-            </div>
-
-            <form onSubmit={onSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-              <div className="contact-row-2">
-                <div>
-                  <label className="field-label" htmlFor="hs-fn">Nombre</label>
-                  <input className="input" id="hs-fn" type="text" placeholder="Tu nombre" value={form.firstName} onChange={onChange('firstName')} required />
+            {sent ? (
+              <div className="contact-success">
+                <div className="contact-success-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
                 </div>
-                <div>
-                  <label className="field-label" htmlFor="hs-ln">Apellido</label>
-                  <input className="input" id="hs-ln" type="text" placeholder="Tu apellido" value={form.lastName} onChange={onChange('lastName')} required />
+                <h4>¡Mensaje recibido!</h4>
+                <p>Te contactamos en menos de 24h para coordinar el primer paso.</p>
+              </div>
+            ) : (
+              <>
+                <div className="contact-card-head">
+                  <h3>Coordinemos una llamada</h3>
+                  <p>Completá tus datos y te respondemos antes de las próximas 24h.</p>
                 </div>
-              </div>
 
-              <div>
-                <label className="field-label" htmlFor="hs-em">Email de trabajo</label>
-                <input className="input" id="hs-em" type="email" placeholder="correo@gmail.com" value={form.email} onChange={onChange('email')} required />
-              </div>
+                <form onSubmit={onSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+                  <div>
+                    <label className="field-label" htmlFor="cf-name">Nombre completo</label>
+                    <input className="input" id="cf-name" type="text" placeholder="Tu nombre" value={form.name} onChange={onChange('name')} required />
+                  </div>
+                  <div>
+                    <label className="field-label" htmlFor="cf-email">Email de trabajo</label>
+                    <input className="input" id="cf-email" type="email" placeholder="correo@tuempresa.com" value={form.email} onChange={onChange('email')} required />
+                  </div>
+                  <div>
+                    <label className="field-label" htmlFor="cf-web">Sitio web o empresa</label>
+                    <input className="input" id="cf-web" type="text" placeholder="tudominio.com" value={form.web} onChange={onChange('web')} required />
+                  </div>
 
-              <div>
-                <label className="field-label" htmlFor="hs-web">Sitio web</label>
-                <input className="input" id="hs-web" type="text" placeholder="Marca" value={form.web} onChange={onChange('web')} required />
-              </div>
+                  <button type="submit" className="contact-submit" disabled={submitting}>
+                    {submitting ? 'Enviando…' : 'Quiero hablar con el equipo'} <ArrowUpRight size={14} />
+                  </button>
 
-              <button type="submit" className="contact-submit" disabled={submitting}>
-                {submitting ? 'Enviando…' : 'Enviar'} <ArrowUpRight size={14} />
-              </button>
-              {errorMsg && <p style={{ color: '#ef4444', fontSize: 13, margin: '4px 0 0' }}>{errorMsg}</p>}
-            </form>
+                  <p className="contact-trust-row">
+                    <span>Sin contrato</span>
+                    <span>·</span>
+                    <span>Sin compromiso</span>
+                    <span>·</span>
+                    <span>Respuesta en &lt; 24h</span>
+                  </p>
+
+                  <p className="contact-privacy">
+                    Al enviar tus datos, aceptás nuestra{' '}
+                    <a href="/privacidad">Política de Privacidad</a>.
+                  </p>
+
+                  {errorMsg && <p className="contact-error">{errorMsg}</p>}
+                </form>
+              </>
+            )}
           </div>
         </div>
 
@@ -402,10 +420,10 @@ export default function ClaudeHomePage() {
 
   return (
     <>
+      <Ticker />
       <ClaudeNavbar isHome />
 
       <Hero />
-      <Ticker />
 
       {/* 1. Servicios */}
       <section className="block" id="servicios" style={{ paddingTop: 40 }}>
@@ -471,23 +489,27 @@ export default function ClaudeHomePage() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="block" style={{ paddingTop: 0 }}>
-        <SectionHead
-          eyebrow="experiencia real"
-          title="Lo que respalda nuestro trabajo." />
+      {/* Stats — banda full-width */}
+      <div className="band-full">
+        <section className="block">
+          <SectionHead
+            eyebrow="experiencia real"
+            title="Lo que respalda nuestro trabajo." />
 
-        <Stats />
-      </section>
+          <Stats />
+        </section>
+      </div>
 
-      {/* Process */}
-      <section className="block" id="proceso" style={{ paddingTop: 40 }}>
-        <SectionHead
-          eyebrow="cómo trabajamos"
-          title="Cuatro fases. Cero fricción. Foco total en negocio." />
+      {/* Process — banda full-width, fondo alternado */}
+      <div className="band-full band-alt">
+        <section className="block" id="proceso">
+          <SectionHead
+            eyebrow="cómo trabajamos"
+            title="Cuatro fases. Cero fricción. Foco total en negocio." />
 
-        <Process />
-      </section>
+          <Process />
+        </section>
+      </div>
 
       {/* Quote */}
       <section className="block" id="casos" style={{ paddingTop: 40 }}>
