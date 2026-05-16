@@ -481,7 +481,7 @@ export default function ClaudeHomePage() {
           <Stats />
         </section>
 
-        <section className="block" id="proceso" style={{ paddingTop: 40 }}>
+        <section className="block" id="proceso">
           <SectionHead
             eyebrow="cómo trabajamos"
             title="Cuatro fases. Cero fricción. Foco total en negocio." />
