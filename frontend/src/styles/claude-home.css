@@ -839,16 +839,16 @@ section.block {
 }
 
 .clients-logo-item img {
-  height: 84px;
+  height: 110px;
   width: auto;
-  max-width: 240px;
+  max-width: 260px;
   object-fit: contain;
-  filter: grayscale(100%) opacity(0.45);
+  filter: brightness(0) invert(1) opacity(0.55);
   transition: filter 0.3s ease;
 }
 
 .clients-logo-item img:hover {
-  filter: grayscale(0%) opacity(1);
+  filter: brightness(0) invert(1) opacity(1);
 }
 
 /* Theme-based logo swap */
@@ -857,11 +857,11 @@ html[data-theme='light'] .clients-logo-item .logo-dark { display: none; }
 html[data-theme='light'] .clients-logo-item .logo-light { display: block; }
 
 html[data-theme='light'] .clients-logo-item img {
-  filter: grayscale(100%) opacity(0.35);
+  filter: brightness(0) opacity(0.55);
 }
 
 html[data-theme='light'] .clients-logo-item img:hover {
-  filter: grayscale(0%) opacity(1);
+  filter: brightness(0) opacity(1);
 }
 
 @keyframes clients-scroll {
