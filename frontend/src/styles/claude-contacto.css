@@ -131,21 +131,12 @@
   /* RIGHT — form panel */
   .right {
     background: var(--bg);
-    padding: 20px 40px;
+    padding: 48px 48px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    min-height: 0;
-    overflow: hidden;
-  }
-
-  .form-wrap {
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    overflow-y: auto;
   }
 
   .form-head {
