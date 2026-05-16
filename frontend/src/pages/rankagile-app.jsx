@@ -156,8 +156,8 @@ const Stats = () =>
         </div>
       )}
     </div>
-    <p style={{ textAlign: 'center', color: 'var(--fg-dim)', fontSize: 14, marginTop: 32, maxWidth: 600, marginInline: 'auto' }}>
-      Marcas como <strong style={{ color: 'var(--fg)' }}>DigitalAxios</strong> e <strong style={{ color: 'var(--fg)' }}>IMB Institute</strong> — junto a equipos de SaaS, educación y e-commerce — confían su posicionamiento orgánico y en IA a RankAgile.
+    <p className="stats-footnote">
+      Marcas como <strong>DigitalAxios</strong> e <strong>IMB Institute</strong> — junto a equipos de SaaS, educación y e-commerce — confían su posicionamiento orgánico y en IA a RankAgile.
     </p>
   </>;
 
