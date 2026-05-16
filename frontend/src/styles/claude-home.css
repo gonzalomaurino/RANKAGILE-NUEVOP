@@ -944,7 +944,7 @@ html[data-theme='light'] .clients-logo-item img:hover {
 }
 
 .band-full.band-alt {
-  background: var(--bg-card);
+  background: var(--bg);
 }
 
 .band-full section.block {
