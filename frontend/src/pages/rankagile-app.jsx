@@ -472,7 +472,7 @@ export default function ClaudeHomePage() {
       </section>
 
       {/* Stats */}
-      <section className="block" id="stats" style={{ paddingTop: 0 }}>
+      <section className="block" style={{ paddingTop: 0 }}>
         <SectionHead
           eyebrow="experiencia real"
           title="Lo que respalda nuestro trabajo." />
