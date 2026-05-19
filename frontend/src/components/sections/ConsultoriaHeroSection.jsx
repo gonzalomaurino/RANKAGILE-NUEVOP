@@ -1,20 +1,18 @@
+import { useTranslation } from 'react-i18next';
+
 export default function ConsultoriaHeroSection() {
+  const { t } = useTranslation();
+  const checks = t('consultoria.hero.checks', { returnObjects: true });
   return (
     <section className="ra-cons-hero">
       <div className="ra-cons-container">
-        <span className="ra-cons-eyebrow">Estrategia Direccionada</span>
-        <h1 className="ra-cons-h1">SEO Consultoría</h1>
-        <p className="ra-cons-lead">
-          Asesoría estratégica personalizada para resolver desafíos complejos.
-          Guiamos a tu equipo en la toma de decisiones críticas para maximizar
-          el rendimiento orgánico.
-        </p>
+        <span className="ra-cons-eyebrow">{t('consultoria.hero.eyebrow')}</span>
+        <h1 className="ra-cons-h1">{t('consultoria.hero.h1')}</h1>
+        <p className="ra-cons-lead">{t('consultoria.hero.lead')}</p>
         <ul className="ra-cons-checks">
-          <li><span className="ra-cons-check">✓</span>Diagnóstico estratégico inicial</li>
-          <li><span className="ra-cons-check">✓</span>Roadmap SEO personalizado</li>
-          <li><span className="ra-cons-check">✓</span>Sesiones mensuales de consultoría</li>
-          <li><span className="ra-cons-check">✓</span>Revisión y validación técnica</li>
-          <li><span className="ra-cons-check">✓</span>Capacitación de equipos internos</li>
+          {checks.map((c) => (
+            <li key={c}><span className="ra-cons-check">✓</span>{c}</li>
+          ))}
         </ul>
       </div>
     </section>

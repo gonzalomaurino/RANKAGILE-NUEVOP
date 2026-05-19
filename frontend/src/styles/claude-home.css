@@ -836,7 +836,7 @@ section.block {
   border-radius: 12px;
   border: none;
   cursor: pointer;
-  background: var(--indigo);
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
   color: #ffffff;
   letter-spacing: -0.01em;
   transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
@@ -845,7 +845,7 @@ section.block {
 .contact-submit:hover {
   opacity: 0.88;
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(91, 91, 255, 0.4);
+  box-shadow: 0 8px 28px rgba(249, 115, 22, 0.40);
 }
 
 .contact-submit:disabled {

@@ -1,42 +1,26 @@
+import { useTranslation } from 'react-i18next';
+
 export default function GeoComparisonSection() {
+  const { t, i18n } = useTranslation();
+  const prefix = i18n.language === 'en' ? '/en' : '';
   return (
     <section className="geo-page-section">
-      <span className="geo-page-eyebrow">Comparativa tecnica</span>
-      <h2 className="geo-page-h2">SEO vs GEO vs AEO: diferencias clave</h2>
+      <span className="geo-page-eyebrow">{t('geo.comparison.eyebrow')}</span>
+      <h2 className="geo-page-h2">{t('geo.comparison.title')}</h2>
       <div className="geo-compare">
-        <div className="geo-compare-col">
-          <span className="geo-compare-kicker">01 / SEO</span>
-          <h3 className="geo-compare-title">Search Engine Optimization</h3>
-          <p className="geo-compare-body">
-            Ranking en SERPs con keywords, backlinks y autoridad de dominio.
-            Metricas: posicion, trafico organico y CTR.
-          </p>
-          <span className="geo-compare-tag">ORGANICO</span>
-        </div>
-        <div className="geo-compare-col">
-          <span className="geo-compare-kicker">02 / GEO</span>
-          <h3 className="geo-compare-title">Generative Engine Optimization</h3>
-          <p className="geo-compare-body">
-            Presencia de marca dentro de respuestas de IA con citaciones,
-            datos estructurados y cobertura en fuentes clave.
-          </p>
-          <span className="geo-compare-tag">GENERATIVO</span>
-        </div>
-        <div className="geo-compare-col">
-          <span className="geo-compare-kicker">03 / AEO</span>
-          <h3 className="geo-compare-title">Answer Engine Optimization</h3>
-          <p className="geo-compare-body">
-            Featured snippets y posicion cero con estructura Q&A y FAQ Schema.
-            Subconjunto del SEO orientado a respuestas directas.
-          </p>
-          <span className="geo-compare-tag">RESPUESTAS</span>
-        </div>
+        {['seo', 'geo', 'aeo'].map((key) => (
+          <div className="geo-compare-col" key={key}>
+            <span className="geo-compare-kicker">{t(`geo.comparison.${key}.kicker`)}</span>
+            <h3 className="geo-compare-title">{t(`geo.comparison.${key}.title`)}</h3>
+            <p className="geo-compare-body">{t(`geo.comparison.${key}.body`)}</p>
+            <span className="geo-compare-tag">{t(`geo.comparison.${key}.tag`)}</span>
+          </div>
+        ))}
       </div>
       <p className="geo-page-quote">
-        La estrategia ganadora en 2026 no elige uno: combina{' '}
-        <a href="/seo-vs-geo-vs-aeo">SEO + GEO + AEO</a> en una
-        arquitectura de visibilidad integrada. Eso es exactamente lo que
-        construimos en RankAgile.
+        {t('geo.comparison.quote')}{' '}
+        <a href={`${prefix}/seo-vs-geo-vs-aeo`}>{t('geo.comparison.quoteLink')}</a>{' '}
+        {t('geo.comparison.quotePost')}
       </p>
     </section>
   );

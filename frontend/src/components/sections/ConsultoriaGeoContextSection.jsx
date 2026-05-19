@@ -1,46 +1,33 @@
-const audience = [
-    {
-        title: 'Equipos con recursos internos',
-        body: 'Tienes desarrolladores, marketers o content creators in-house que pueden ejecutar, pero necesitas dirección estratégica experta para priorizar y validar decisiones.',
-    },
-    {
-        title: 'Startups en crecimiento',
-        body: 'Fase de tracción donde el SEO puede ser diferencial competitivo, pero no tienes bandwidth para contratar un equipo completo dedicado aún.',
-    },
-    {
-        title: 'Empresas con desafíos complejos',
-        body: 'Sitios grandes, migraciones técnicas, internacionalización o industrias altamente competitivas que requieren expertise especializado puntual.',
-    },
-    {
-        title: 'Agencias y consultoras',
-        body: 'Necesitan respaldo técnico especializado para proyectos cliente específicos o quieren validar estrategias antes de implementar a escala.',
-    },
-];
+import { useTranslation } from 'react-i18next';
 
 export default function ConsultoriaGeoContextSection() {
-    return (
-        <section className="geo-page-section">
-            <span className="geo-page-eyebrow">¿Es Para Ti?</span>
-            <div className="geo-urgent">
-                <div className="geo-urgent-copy">
-                    <h2 className="geo-page-h2">Ideal para equipos que buscan dirección experta</h2>
-                    <ul className="geo-page-list">
-                        <li><strong>Dirección estratégica.</strong> Te guiamos en la toma de decisiones críticas y tu equipo ejecuta las implementaciones.</li>
-                        <li><strong>Ideal si tienes:</strong> Equipo técnico interno, pero necesitas expertise especializado para priorizar y validar.</li>
-                        <li><strong>Entregamos:</strong> Roadmaps, auditorías, validación técnica, sesiones mensuales y capacitación de equipos.</li>
-                        <li><strong>Soporte continuo.</strong> Acceso directo vía Slack/email para consultas urgentes y resolución de dudas técnicas.</li>
-                    </ul>
-                    <a className="btn-ghost" href="/contacto/">Hablar con un especialista</a>
-                </div>
-                <div className="geo-urgent-panel">
-                    {audience.map((item) => (
-                        <div className="geo-urgent-item" key={item.title}>
-                            <span className="geo-urgent-name">{item.title}</span>
-                            <p>{item.body}</p>
-                        </div>
-                    ))}
-                </div>
+  const { t, i18n } = useTranslation();
+  const prefix = i18n.language === 'en' ? '/en' : '';
+  const audience = t('consultoria.audience.items', { returnObjects: true });
+  const bullets = t('consultoria.geoContext.bullets', { returnObjects: true });
+  return (
+    <section className="geo-page-section">
+      <span className="geo-page-eyebrow">{t('consultoria.geoContext.eyebrow')}</span>
+      <div className="geo-urgent">
+        <div className="geo-urgent-copy">
+          <h2 className="geo-page-h2">{t('consultoria.geoContext.h2')}</h2>
+          <ul className="geo-page-list">
+            {bullets.map((item) => {
+              const parts = item.split('. ');
+              return <li key={item}><strong>{parts[0]}.</strong> {parts.slice(1).join('. ')}</li>;
+            })}
+          </ul>
+          <a className="btn-ghost" href={`${prefix}/contacto/`}>{t('consultoria.geoContext.cta')}</a>
+        </div>
+        <div className="geo-urgent-panel">
+          {audience.map((item) => (
+            <div className="geo-urgent-item" key={item.title}>
+              <span className="geo-urgent-name">{item.title}</span>
+              <p>{item.body}</p>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

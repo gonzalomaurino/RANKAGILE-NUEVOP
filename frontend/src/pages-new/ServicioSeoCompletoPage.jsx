@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import ClaudeNavbar from '../components/ClaudeNavbar.jsx';
 import Footer from '../components/Footer.jsx';
@@ -12,10 +13,13 @@ import '../styles/claude-home.css';
 import '../styles/claude-geo.css';
 
 export default function ServicioSeoCompletoPage() {
+  const { t, i18n } = useTranslation();
+  const prefix = i18n.language === 'en' ? '/en' : '';
+  const items = t('seoCompleto.geoPage.items', { returnObjects: true });
+
   useDocumentMeta({
-    title: 'SEO Completo para Empresas: Técnico, Contenido y GEO | RankAgile',
-    description:
-      'Servicio SEO integral: auditoría técnica, estrategia de contenidos, link building y visibilidad en IA. Resultados medibles en 3–6 meses.',
+    title: t('seoCompleto.geoPage.meta.title'),
+    description: t('seoCompleto.geoPage.meta.description'),
   });
 
   return (
@@ -25,24 +29,16 @@ export default function ServicioSeoCompletoPage() {
         <section className="geo-page-section geo-intro">
           <div className="aurora" />
           <div className="geo-intro-content">
-            <span className="geo-page-eyebrow">SEO Completo · RankAgile</span>
+            <span className="geo-page-eyebrow">{t('seoCompleto.geoPage.eyebrow')}</span>
             <h1 className="display geo-title">
-              Servicio <span className="grad">SEO Completo</span> para escalar tu visibilidad organica
+              {t('seoCompleto.geoPage.h1')}
             </h1>
-            <p className="geo-page-p">
-              Estrategia integral diseñada para escalar tu visibilidad orgánica.
-              Gestionamos contenido, técnica y autoridad para que tu marca lidere
-              los resultados de búsqueda hoy mismo.
-            </p>
+            <p className="geo-page-p">{t('seoCompleto.geoPage.p')}</p>
             <ul className="geo-page-list">
-              <li>Auditoría técnica profunda.</li>
-              <li>Keyword research estratégico.</li>
-              <li>Optimización on-page continua.</li>
-              <li>Link building de autoridad.</li>
-              <li>Monitoreo y reporting avanzado.</li>
+              {items.map((item) => <li key={item}>{item}</li>)}
             </ul>
             <div style={{ marginTop: 24 }}>
-              <a className="geo-page-btn" href="/contacto/">Hablar con un especialista</a>
+              <a className="geo-page-btn" href={`${prefix}/contacto/`}>{t('seoCompleto.geoPage.btn')}</a>
             </div>
           </div>
         </section>

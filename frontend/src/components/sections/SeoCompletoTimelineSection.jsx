@@ -1,22 +1,19 @@
-const timeline = [
-  { tag: 'Mes 1–2', title: 'Fundamentos', body: 'Resolución de errores técnicos críticos. Primeras optimizaciones on-page. Indexación correcta.' },
-  { tag: 'Mes 3–4', title: 'Tracción', body: 'Primeras mejoras en rankings. Incremento en impresiones. Contenido nuevo indexándose.' },
-  { tag: 'Mes 5–6', title: 'Crecimiento', body: 'Aumento sostenido de tráfico orgánico. Rankings en primera página. ROI medible.' },
-  { tag: 'Mes 7+', title: 'Consolidación', body: 'Autoridad de dominio sólida. Visibilidad estable. Escalabilidad comprobada.' },
-];
+import { useTranslation } from 'react-i18next';
 
 export default function SeoCompletoTimelineSection() {
+  const { t } = useTranslation();
+  const items = t('seoCompleto.timeline.items', { returnObjects: true });
   return (
     <section className="ra-comp-section">
       <div className="ra-comp-container">
-        <span className="eyebrow ra-comp-eyebrow">Expectativas Realistas</span>
-        <h2 className="ra-comp-h2">Qué podés esperar (y cuándo)</h2>
+        <span className="eyebrow ra-comp-eyebrow">{t('seoCompleto.timeline.eyebrow')}</span>
+        <h2 className="ra-comp-h2">{t('seoCompleto.timeline.h2')}</h2>
         <div className="ra-comp-timeline">
-          {timeline.map((t) => (
-            <div key={t.tag} className="ra-comp-tl-card">
-              <div className="ra-comp-tl-tag">{t.tag}</div>
-              <h4>{t.title}</h4>
-              <p>{t.body}</p>
+          {items.map((item) => (
+            <div key={item.tag} className="ra-comp-tl-card">
+              <div className="ra-comp-tl-tag">{item.tag}</div>
+              <h4>{item.title}</h4>
+              <p>{item.body}</p>
             </div>
           ))}
         </div>

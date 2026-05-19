@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import ClaudeNavbar from '../components/ClaudeNavbar.jsx';
 import Footer from '../components/Footer.jsx';
@@ -12,10 +13,13 @@ import '../styles/claude-home.css';
 import '../styles/claude-geo.css';
 
 export default function ServicioSeoHibridoPage() {
+  const { t, i18n } = useTranslation();
+  const prefix = i18n.language === 'en' ? '/en' : '';
+  const items = t('seoHibrido.geoPage.items', { returnObjects: true });
+
   useDocumentMeta({
-    title: 'SEO Híbrido: Google + Visibilidad en IA | RankAgile',
-    description:
-      'Combina posicionamiento en Google con presencia en ChatGPT, Gemini y Perplexity. La estrategia SEO+GEO que prepara tu marca para el presente digital.',
+    title: t('seoHibrido.geoPage.meta.title'),
+    description: t('seoHibrido.geoPage.meta.description'),
   });
 
   return (
@@ -25,24 +29,16 @@ export default function ServicioSeoHibridoPage() {
         <section className="geo-page-section geo-intro">
           <div className="aurora" />
           <div className="geo-intro-content">
-            <span className="geo-page-eyebrow">El Futuro de la Búsqueda</span>
+            <span className="geo-page-eyebrow">{t('seoHibrido.geoPage.eyebrow')}</span>
             <h1 className="display geo-title">
-              SEO <span className="grad">Híbrido</span> (Google + IA)
+              {t('seoHibrido.geoPage.h1')}
             </h1>
-            <p className="geo-page-p">
-              Optimización avanzada para dominar Google y motores de IA.
-              Fusionamos semántica, datos estructurados y visibilidad en entornos
-              generativos para el futuro digital.
-            </p>
+            <p className="geo-page-p">{t('seoHibrido.geoPage.p')}</p>
             <ul className="geo-page-list">
-              <li>Optimización para ChatGPT, Perplexity, Gemini</li>
-              <li>Schema markup avanzado y Knowledge Graph</li>
-              <li>Estrategia de contenido semántico</li>
-              <li>Entity SEO y contextualización</li>
-              <li>Visibilidad en respuestas generativas</li>
+              {items.map((item) => <li key={item}>{item}</li>)}
             </ul>
             <div style={{ marginTop: 24 }}>
-              <a className="geo-page-btn" href="/contacto/">Hablar con un especialista</a>
+              <a className="geo-page-btn" href={`${prefix}/contacto/`}>{t('seoHibrido.geoPage.btn')}</a>
             </div>
           </div>
         </section>

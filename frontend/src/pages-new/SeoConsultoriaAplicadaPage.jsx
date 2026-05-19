@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import ClaudeNavbar from '../components/ClaudeNavbar.jsx';
 import Footer from '../components/Footer.jsx';
@@ -12,48 +13,43 @@ import '../styles/claude-home.css';
 import '../styles/claude-geo.css';
 
 export default function SeoConsultoriaAplicadaPage() {
-    useDocumentMeta({
-        title: 'Consultoría SEO Estratégica para Empresas | RankAgile',
-        description:
-            'Consultoría SEO aplicada con foco en resultados. Hoja de ruta priorizada, análisis experto y acompañamiento en la implementación. Sin generalidades.',
-    });
+  const { t, i18n } = useTranslation();
+  const prefix = i18n.language === 'en' ? '/en' : '';
+  const items = t('consultoria.geoPage.items', { returnObjects: true });
 
-    return (
-        <>
-            <ClaudeNavbar />
-            <main className="geo-page">
-                <section className="geo-page-section geo-intro">
-                    <div className="aurora" />
-                    <div className="geo-intro-content">
-                        <span className="geo-page-eyebrow">Estrategia Direccionada · RankAgile</span>
-                        <h1 className="display geo-title">
-                            SEO <span className="grad">Consultoría</span> Aplicada
-                        </h1>
-                        <p className="geo-page-p">
-                            Asesoría estratégica personalizada para resolver desafíos complejos.
-                            Guiamos a tu equipo en la toma de decisiones críticas para maximizar
-                            el rendimiento orgánico.
-                        </p>
-                        <ul className="geo-page-list">
-                            <li>Diagnóstico estratégico inicial</li>
-                            <li>Roadmap SEO personalizado</li>
-                            <li>Sesiones mensuales de consultoría</li>
-                            <li>Revisión y validación técnica</li>
-                            <li>Capacitación de equipos internos</li>
-                        </ul>
-                        <div style={{ marginTop: 24 }}>
-                            <a className="geo-page-btn" href="/contacto/">Agenda una sesión de diagnóstico</a>
-                        </div>
-                    </div>
-                </section>
-                <ConsultoriaGeoMethodologySection />
-                <ConsultoriaGeoContextSection />
-                <ConsultoriaGeoTimelineSection />
-                <ConsultoriaGeoFeaturesSection />
-                <ConsultoriaGeoFaqSection />
-                <ConsultoriaGeoCtaSection />
-            </main>
-            <Footer />
-        </>
-    );
+  useDocumentMeta({
+    title: t('consultoria.geoPage.meta.title'),
+    description: t('consultoria.geoPage.meta.description'),
+  });
+
+  return (
+    <>
+      <ClaudeNavbar />
+      <main className="geo-page">
+        <section className="geo-page-section geo-intro">
+          <div className="aurora" />
+          <div className="geo-intro-content">
+            <span className="geo-page-eyebrow">{t('consultoria.geoPage.eyebrow')}</span>
+            <h1 className="display geo-title">
+              {t('consultoria.geoPage.h1')}
+            </h1>
+            <p className="geo-page-p">{t('consultoria.geoPage.p')}</p>
+            <ul className="geo-page-list">
+              {items.map((item) => <li key={item}>{item}</li>)}
+            </ul>
+            <div style={{ marginTop: 24 }}>
+              <a className="geo-page-btn" href={`${prefix}/contacto/`}>{t('consultoria.geoPage.btn')}</a>
+            </div>
+          </div>
+        </section>
+        <ConsultoriaGeoMethodologySection />
+        <ConsultoriaGeoContextSection />
+        <ConsultoriaGeoTimelineSection />
+        <ConsultoriaGeoFeaturesSection />
+        <ConsultoriaGeoFaqSection />
+        <ConsultoriaGeoCtaSection />
+      </main>
+      <Footer />
+    </>
+  );
 }

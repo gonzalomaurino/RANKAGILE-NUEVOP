@@ -1,20 +1,18 @@
+import { useTranslation } from 'react-i18next';
+
 export default function AnalyticsHeroSection() {
+  const { t } = useTranslation();
+  const checks = t('analytics.hero.checks', { returnObjects: true });
   return (
     <section className="ra-ana-hero">
       <div className="ra-ana-container">
-        <span className="ra-ana-eyebrow">Inteligencia de Datos</span>
-        <h1 className="ra-ana-h1">Dashboard SEO Analytics</h1>
-        <p className="ra-ana-lead">
-          Visualización de métricas clave en tiempo real. Transformamos datos
-          complejos en decisiones estratégicas claras para medir tu retorno de
-          inversión real.
-        </p>
+        <span className="ra-ana-eyebrow">{t('analytics.hero.eyebrow')}</span>
+        <h1 className="ra-ana-h1">{t('analytics.hero.h1')}</h1>
+        <p className="ra-ana-lead">{t('analytics.hero.lead')}</p>
         <ul className="ra-ana-checks">
-          <li><span className="ra-ana-check">✓</span>Todas tus métricas SEO en un solo lugar</li>
-          <li><span className="ra-ana-check">✓</span>Tráfico cualificado y revenue atribuido a SEO</li>
-          <li><span className="ra-ana-check">✓</span>Análisis predictivo y forecasting</li>
-          <li><span className="ra-ana-check">✓</span>Alertas inteligentes ante cambios críticos</li>
-          <li><span className="ra-ana-check">✓</span>Reportes automáticos white-label</li>
+          {checks.map((check) => (
+            <li key={check}><span className="ra-ana-check">✓</span>{check}</li>
+          ))}
         </ul>
       </div>
     </section>

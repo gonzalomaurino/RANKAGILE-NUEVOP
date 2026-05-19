@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher.jsx';
 
-const SERVICES = [
-    { slug: 'seo-completo', title: 'SEO Completo', desc: 'Estrategia integral para escalar visibilidad, autoridad y resultados orgánicos.', href: '/seo-completo' },
-    { slug: 'auditoria-tecnica', title: 'Auditoria Tecnica', desc: 'Diagnostico tecnico y roadmap priorizado para corregir los cuellos de botella.', href: '/auditoria-tecnica' },
-    { slug: 'seo-hibrido', title: 'SEO Hibrido', desc: 'Ejecucion combinada de SEO tecnico, contenido y performance.', href: '/seo-hibrido' },
-    { slug: 'seo-consultoria', title: 'SEO Consultoria', desc: 'Equipo senior embebido con tu in-house para estrategia y ejecucion.', href: '/seo-consultoria' },
-    { slug: 'seo-analytics', title: 'SEO Analytics', desc: 'Datos claros, dashboards y decisiones basadas en performance real.', href: '/seo-analytics' },
-    { slug: 'analisis-seo-gratuito', title: 'Analisis SEO Gratuito', desc: 'Diagnostico inicial para detectar errores y oportunidades.', href: '/analisis-seo-gratuito' },
+const SERVICE_KEYS = [
+    { slug: 'seoCompleto',        href: '/seo-completo' },
+    { slug: 'auditoriaTecnica',   href: '/auditoria-tecnica' },
+    { slug: 'seoHibrido',         href: '/seo-hibrido' },
+    { slug: 'seoConsultoria',     href: '/seo-consultoria' },
+    { slug: 'seoAnalytics',       href: '/seo-analytics' },
+    { slug: 'analisisSeoGratuito',href: '/analisis-seo-gratuito' },
 ];
 
 function ArrowUpRight({ size = 14 }) {
@@ -48,12 +50,10 @@ function RankAgileLogo({ theme }) {
     const accent = theme === 'light' ? '#0FB89A' : '#38FEDA';
     return (
         <svg viewBox="100 170 710 525" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="RankAgile">
-            {/* Icon */}
             <path fillRule="evenodd" clipRule="evenodd" d="M300.329 177.062C298.407 177.09 296.493 177.149 294.589 177.241C296.493 177.149 298.407 177.09 300.329 177.062Z" fill={main} />
             <path fillRule="evenodd" clipRule="evenodd" d="M443.395 442.279L443.393 557.832H462.478L672.71 288.072L672.932 239.56L612.536 239.663L443.395 442.279ZM739.519 286.998L738.655 176.941L612.536 177.147L576.861 219.628L694.066 219.424L694.847 321.355L739.519 286.998Z" fill={accent} />
             <path fillRule="evenodd" clipRule="evenodd" d="M761.797 558.802L612.451 403.2L566.214 462.791L655.366 558.802H761.797Z" fill={main} />
             <path fillRule="evenodd" clipRule="evenodd" d="M371.81 356.957H443.393V258.256C415.787 209.924 363.355 177.239 303.171 177.048L302.977 177.047C302.865 177.047 302.753 177.047 302.639 177.047C301.867 177.047 301.098 177.052 300.329 177.062C301.098 177.052 301.867 177.046 302.639 177.046L220.652 176.786L104.285 176.415L166.54 250.617L180.231 266.937H296.287H301.101C301.612 266.926 302.125 266.921 302.64 266.921C303.154 266.921 303.668 266.926 304.179 266.937C342.341 267.746 373.025 298.525 373.025 336.377C373.025 342.924 372.107 349.26 370.391 355.265L371.81 356.957H369.883H255.754L296.544 405.576L362.629 484.347L424.281 557.832H443.393V442.28L433.202 430.132L371.81 356.957Z" fill={main} />
-            {/* Text: RANKAGILE — "A" in AGILE is accent */}
             <path fillRule="evenodd" clipRule="evenodd" d="M124 662.417V684.976H136.834V672.968H166.934L179.139 684.976H195.955L181.849 671.132C184.097 670.202 185.986 668.941 187.566 667.509C191.972 663.495 193.244 658.476 193.244 653.923C193.244 650.692 192.615 647.179 190.726 644.021C187.412 638.5 181.053 634.632 171.828 634.632H124V645.171H136.834H171.752C174.36 645.171 176.274 645.857 177.854 647.289C179.703 648.978 180.411 651.303 180.411 653.776C180.411 656.285 179.703 658.586 177.854 660.263C176.235 661.769 174.36 662.417 171.752 662.417H136.834H124Z" fill={main} />
             <path fillRule="evenodd" clipRule="evenodd" d="M285.381 684.976L251.658 634.632H235.896L202.173 684.976H216.767L226.595 670.343L243.424 645.171H244.169L260.953 670.343L270.774 684.976H285.381Z" fill={main} />
             <path fillRule="evenodd" clipRule="evenodd" d="M349.628 684.976H360.805V634.632H347.971V669.59L302.776 634.632H291.561V684.976H304.395V650.483L349.628 684.976Z" fill={main} />
@@ -69,6 +69,9 @@ function RankAgileLogo({ theme }) {
 }
 
 export default function ClaudeNavbar({ isHome = false }) {
+    const { t, i18n } = useTranslation();
+    const isEN = i18n.language === 'en';
+
     const [megaOpen, setMegaOpen] = useState(false);
     const [isHidden, setIsHidden] = useState(false);
     const [theme, setTheme] = useState(() => localStorage.getItem('ra-theme') || 'dark');
@@ -76,6 +79,14 @@ export default function ClaudeNavbar({ isHome = false }) {
     const lastScrollY = useRef(0);
     const scrollTicking = useRef(false);
     const closeTimeout = useRef(null);
+
+    const prefix = isEN ? '/en' : '';
+    const homeHref = isEN ? '/en/' : '/';
+    const geoHref = `${prefix}/servicios/geo`;
+    const aboutHref = `${prefix}/quienes-somos`;
+    const contactHref = `${prefix}/contacto`;
+    const blogHref = `${prefix}/blog`;
+    const analysisHref = `${prefix}/analisis-seo-gratuito`;
 
     useEffect(() => {
         document.documentElement.setAttribute('data-theme', theme);
@@ -99,7 +110,6 @@ export default function ClaudeNavbar({ isHome = false }) {
 
     useEffect(() => {
         lastScrollY.current = window.scrollY;
-
         const updateVisibility = () => {
             const currentY = window.scrollY;
             const delta = currentY - lastScrollY.current;
@@ -109,102 +119,103 @@ export default function ClaudeNavbar({ isHome = false }) {
             }
             scrollTicking.current = false;
         };
-
         const onScroll = () => {
             if (!scrollTicking.current) {
                 scrollTicking.current = true;
                 window.requestAnimationFrame(updateVisibility);
             }
         };
-
         window.addEventListener('scroll', onScroll, { passive: true });
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
-    const sectionHref = (sectionId) => (isHome ? `#${sectionId}` : `/#${sectionId}`);
+    const sectionHref = (sectionId) => (isHome ? `#${sectionId}` : `${homeHref}#${sectionId}`);
 
     const handleServicesEnter = () => {
-        if (closeTimeout.current) {
-            clearTimeout(closeTimeout.current);
-            closeTimeout.current = null;
-        }
+        if (closeTimeout.current) { clearTimeout(closeTimeout.current); closeTimeout.current = null; }
         setMegaOpen(true);
     };
-
     const handleServicesLeave = () => {
-        if (closeTimeout.current) {
-            clearTimeout(closeTimeout.current);
-        }
+        if (closeTimeout.current) clearTimeout(closeTimeout.current);
         closeTimeout.current = setTimeout(() => setMegaOpen(false), 120);
+    };
+
+    const serviceHref = (key) => {
+        const paths = {
+            seoCompleto: '/seo-completo',
+            auditoriaTecnica: '/auditoria-tecnica',
+            seoHibrido: '/seo-hibrido',
+            seoConsultoria: '/seo-consultoria',
+            seoAnalytics: '/seo-analytics',
+            analisisSeoGratuito: '/analisis-seo-gratuito',
+        };
+        return `${prefix}${paths[key]}`;
     };
 
     return (
         <nav className={`nav ${isHidden && !megaOpen ? 'nav--hidden' : ''}`} ref={navRef}>
             <div className="nav-inner">
-                <a className="nav-logo" href="/" aria-label="RankAgile">
+                <a className="nav-logo" href={homeHref} aria-label="RankAgile">
                     <RankAgileLogo theme={theme} />
                 </a>
 
                 <div className="nav-links">
-                    <a className="nav-link" href="/servicios/geo">GEO</a>
-                    <a className="nav-link" href="/quienes-somos">Quienes Somos</a>
-                    <a className="nav-link" href="/contacto">Contacto</a>
+                    <a className="nav-link" href={geoHref}>{t('nav.geo')}</a>
+                    <a className="nav-link" href={aboutHref}>{t('nav.about')}</a>
+                    <a className="nav-link" href={contactHref}>{t('nav.contact')}</a>
                     <div className="nav-services" onMouseEnter={handleServicesEnter} onMouseLeave={handleServicesLeave}>
                         <button
                             className="nav-link"
                             aria-expanded={megaOpen}
-                            onClick={(event) => {
-                                event.stopPropagation();
-                                setMegaOpen((prev) => !prev);
-                            }}
+                            onClick={(event) => { event.stopPropagation(); setMegaOpen((prev) => !prev); }}
                         >
-                            Servicio <ChevDown />
+                            {t('nav.servicesLabel')} <ChevDown />
                         </button>
                         <div className="mega" data-open={megaOpen}>
                             <div className="mega-inner">
                                 <div className="mega-aside">
-                                    <div className="mega-aside-title">Servicios</div>
-                                    <p className="mega-aside-text">Nueve servicios especializados, un enfoque: ganar visibilidad donde tus clientes ya estan buscando.</p>
-                                    <a className="btn-ghost" href={sectionHref('servicios')}>Ver todos <ArrowUpRight size={12} /></a>
+                                    <div className="mega-aside-title">{t('nav.megaTitle')}</div>
+                                    <p className="mega-aside-text">{t('nav.megaDesc')}</p>
+                                    <a className="btn-ghost" href={sectionHref('servicios')}>{t('nav.megaSeeAll')} <ArrowUpRight size={12} /></a>
                                 </div>
                                 <div className="mega-grid">
-                                    {SERVICES.map((service) => (
-                                        <a key={service.slug} className="mega-item" href={service.href} onClick={() => setMegaOpen(false)}>
-                                            <span className="mega-item-title"><span className="dot" />{service.title}</span>
-                                            <span className="mega-item-desc">{service.desc}</span>
+                                    {SERVICE_KEYS.map(({ slug }) => (
+                                        <a key={slug} className="mega-item" href={serviceHref(slug)} onClick={() => setMegaOpen(false)}>
+                                            <span className="mega-item-title"><span className="dot" />{t(`nav.services.${slug}.title`)}</span>
+                                            <span className="mega-item-desc">{t(`nav.services.${slug}.desc`)}</span>
                                         </a>
                                     ))}
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <a className="nav-link" href="/blog">Blogs</a>
+                    {!isEN && <a className="nav-link" href={blogHref}>{t('nav.blog')}</a>}
                 </div>
 
                 <div className="nav-scroll">
                     <div className="nav-scroll-inner">
-                        <button className="nav-scroll-item">GEO</button>
-                        <button className="nav-scroll-item">Quienes Somos</button>
-                        <button className="nav-scroll-item">Contacto</button>
-                        <button className="nav-scroll-item">Servicio</button>
-                        {SERVICES.map((service) => (
-                            <button key={service.slug} className="nav-scroll-item">{service.title}</button>
+                        <button className="nav-scroll-item">{t('nav.geo')}</button>
+                        <button className="nav-scroll-item">{t('nav.about')}</button>
+                        <button className="nav-scroll-item">{t('nav.contact')}</button>
+                        <button className="nav-scroll-item">{t('nav.servicesLabel')}</button>
+                        {SERVICE_KEYS.map(({ slug }) => (
+                            <button key={slug} className="nav-scroll-item">{t(`nav.services.${slug}.title`)}</button>
                         ))}
-                        <button className="nav-scroll-item">Blogs</button>
+                        <button className="nav-scroll-item">{t('nav.blog')}</button>
                     </div>
                 </div>
 
                 <div className="nav-right">
-                    <button className="theme-toggle" onClick={() => setTheme((curr) => (curr === 'dark' ? 'light' : 'dark'))} aria-label="Cambiar tema">
+                    <LanguageSwitcher />
+                    <button className="theme-toggle" onClick={() => setTheme((curr) => (curr === 'dark' ? 'light' : 'dark'))} aria-label={t('nav.themeToggle')}>
                         <Sun />
                         <Moon />
                     </button>
-                    <a className="btn-pill" href="/analisis-seo-gratuito">
-                        Analisis SEO Gratuito <ArrowUpRight />
+                    <a className="btn-pill" href={analysisHref}>
+                        {t('nav.cta')} <ArrowUpRight />
                     </a>
                 </div>
             </div>
-
         </nav>
     );
 }

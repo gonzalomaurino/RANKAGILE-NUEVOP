@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import ClaudeNavbar from '../components/ClaudeNavbar.jsx';
 import Footer from '../components/Footer.jsx';
@@ -11,47 +12,42 @@ import '../styles/claude-home.css';
 import '../styles/claude-geo.css';
 
 export default function SeoAnalyticsPage() {
-    useDocumentMeta({
-        title: 'SEO Analytics y Reporting para Empresas | RankAgile',
-        description:
-            'Medición y análisis SEO para decisiones basadas en datos. Dashboards personalizados, seguimiento de rankings y análisis de conversiones orgánicas.',
-    });
+  const { t, i18n } = useTranslation();
+  const prefix = i18n.language === 'en' ? '/en' : '';
+  const checks = t('analytics.hero.checks', { returnObjects: true });
 
-    return (
-        <>
-            <ClaudeNavbar />
-            <main className="geo-page">
-                <section className="geo-page-section geo-intro">
-                    <div className="aurora" />
-                    <div className="geo-intro-content">
-                        <span className="geo-page-eyebrow">Inteligencia de Datos · RankAgile</span>
-                        <h1 className="display geo-title">
-                            Dashboard SEO <span className="grad">Analytics</span>
-                        </h1>
-                        <p className="geo-page-p">
-                            Visualización de métricas clave en tiempo real. Transformamos datos
-                            complejos en decisiones estratégicas claras para medir tu retorno de
-                            inversión real.
-                        </p>
-                        <ul className="geo-page-list">
-                            <li>Todas tus métricas SEO en un solo lugar</li>
-                            <li>Tráfico cualificado y revenue atribuido a SEO</li>
-                            <li>Análisis predictivo y forecasting</li>
-                            <li>Alertas inteligentes ante cambios críticos</li>
-                            <li>Reportes automáticos white-label</li>
-                        </ul>
-                        <div style={{ marginTop: 24 }}>
-                            <a className="geo-page-btn" href="/contacto/">Agenda tu demo personalizada</a>
-                        </div>
-                    </div>
-                </section>
-                <AnalyticsGeoFeaturesSection />
-                <AnalyticsGeoMetricsSection />
-                <AnalyticsGeoContextSection />
-                <AnalyticsGeoFaqSection />
-                <AnalyticsGeoCtaSection />
-            </main>
-            <Footer />
-        </>
-    );
+  useDocumentMeta({
+    title: t('analytics.meta.title'),
+    description: t('analytics.meta.description'),
+  });
+
+  return (
+    <>
+      <ClaudeNavbar />
+      <main className="geo-page">
+        <section className="geo-page-section geo-intro">
+          <div className="aurora" />
+          <div className="geo-intro-content">
+            <span className="geo-page-eyebrow">{t('analytics.hero.eyebrow')} · RankAgile</span>
+            <h1 className="display geo-title">
+              {t('analytics.hero.h1')}
+            </h1>
+            <p className="geo-page-p">{t('analytics.hero.lead')}</p>
+            <ul className="geo-page-list">
+              {checks.map((item) => <li key={item}>{item}</li>)}
+            </ul>
+            <div style={{ marginTop: 24 }}>
+              <a className="geo-page-btn" href={`${prefix}/contacto/`}>{t('analytics.cta.btn')}</a>
+            </div>
+          </div>
+        </section>
+        <AnalyticsGeoFeaturesSection />
+        <AnalyticsGeoMetricsSection />
+        <AnalyticsGeoContextSection />
+        <AnalyticsGeoFaqSection />
+        <AnalyticsGeoCtaSection />
+      </main>
+      <Footer />
+    </>
+  );
 }

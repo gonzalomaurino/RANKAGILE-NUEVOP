@@ -1,32 +1,6 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import '../styles/claude-contact-form.css';
-
-const SERVICES = [
-  'SEO Técnico', 'SEO Semántico / Contenido', 'GEO / AI Search',
-  'Arquitectura Web', 'CRO & Conversión', 'Core Web Vitals',
-  'Entity SEO / EEAT', 'Auditoría SEO',
-];
-
-const GOALS = [
-  'Más tráfico orgánico', 'Generar leads cualificados', 'Mejorar posicionamiento',
-  'Migración / Rediseño web', 'Visibilidad en IA y GEO', 'Auditoría estratégica',
-];
-
-const BUDGETS = [
-  'Hasta USD 500/mes', 'USD 500–1.500/mes',
-  'USD 1.500–3.000/mes', 'Más de USD 3.000/mes',
-];
-
-const URGENCY = [
-  'En menos de 1 mes', 'En 1–3 meses',
-  'Sin urgencia definida', 'Solo quiero una consulta',
-];
-
-const ROLES = [
-  'Founder / CEO', 'Director / Gerente de Marketing',
-  'Responsable de E-commerce', 'Product Manager',
-  'Coordinador Digital', 'Otro',
-];
 
 const ArrowRight = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -53,6 +27,15 @@ const INITIAL_FORM = {
 };
 
 export default function ContactForm() {
+  const { t, i18n } = useTranslation();
+  const prefix = i18n.language === 'en' ? '/en' : '';
+
+  const SERVICES = t('contactForm.step2.servicesList', { returnObjects: true });
+  const GOALS    = t('contactForm.step2.goalsList',    { returnObjects: true });
+  const BUDGETS  = t('contactForm.step3.budgetList',   { returnObjects: true });
+  const URGENCY  = t('contactForm.step3.urgencyList',  { returnObjects: true });
+  const ROLES    = t('contactForm.step1.roles',        { returnObjects: true });
+
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -74,19 +57,19 @@ export default function ContactForm() {
   const validateStep = () => {
     const e = {};
     if (step === 1) {
-      if (!form.name.trim()) e.name = 'Este campo es requerido.';
+      if (!form.name.trim()) e.name = t('contactForm.errors.required');
       if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-        e.email = 'Ingresá un email válido.';
-      if (!form.company.trim()) e.company = 'Este campo es requerido.';
-      if (!form.role) e.role = 'Seleccioná una opción.';
+        e.email = t('contactForm.errors.email');
+      if (!form.company.trim()) e.company = t('contactForm.errors.required');
+      if (!form.role) e.role = t('contactForm.errors.selectOption');
     }
     if (step === 2) {
-      if (form.services.length === 0) e.services = 'Seleccioná al menos un servicio.';
-      if (!form.goal) e.goal = 'Seleccioná una opción.';
+      if (form.services.length === 0) e.services = t('contactForm.errors.selectService');
+      if (!form.goal) e.goal = t('contactForm.errors.selectOption');
     }
     if (step === 3) {
-      if (!form.budget) e.budget = 'Seleccioná una opción.';
-      if (!form.urgency) e.urgency = 'Seleccioná una opción.';
+      if (!form.budget) e.budget = t('contactForm.errors.selectOption');
+      if (!form.urgency) e.urgency = t('contactForm.errors.selectOption');
     }
     return e;
   };
@@ -106,9 +89,9 @@ export default function ContactForm() {
         body: JSON.stringify({ ...form, source: 'contacto' }),
       });
       if (res.ok) setSubmitted(true);
-      else setSubmitError('Hubo un error. Intentá nuevamente.');
+      else setSubmitError(t('contactForm.error'));
     } catch {
-      setSubmitError('Hubo un error. Intentá nuevamente.');
+      setSubmitError(t('contactForm.error'));
     } finally {
       setSubmitting(false);
     }
@@ -126,67 +109,55 @@ export default function ContactForm() {
     return (
       <div className="cform-success">
         <div className="cform-success-icon"><CheckIcon /></div>
-        <h3>¡Formulario enviado!</h3>
-        <p>
-          Tu consulta llegó correctamente. Un estratega de RankAgile revisará
-          tu proyecto y te contactará en menos de 24 horas hábiles.
-        </p>
+        <h3>{t('contactForm.success.title')}</h3>
+        <p>{t('contactForm.success.body')}</p>
       </div>
     );
   }
 
   return (
     <div className="cform">
-      {/* Header — visible en todos los pasos */}
       <div className="cform-badge">
         <span className="cform-badge-dot" />
-        Diagnóstico gratuito
+        {t('contactForm.badge')}
       </div>
-      <h2 className="cform-title">Hablemos de tu proyecto</h2>
-      <p className="cform-subtitle">
-        Completá el formulario y te respondemos en menos de 24h con un análisis
-        inicial personalizado.
-      </p>
+      <h2 className="cform-title">{t('contactForm.title')}</h2>
+      <p className="cform-subtitle">{t('contactForm.subtitle')}</p>
 
       <div className="cform-trust">
-        <span className="cform-trust-item">🛡 Sin spam</span>
-        <span className="cform-trust-item">⏱ &lt; 24h</span>
-        <span className="cform-trust-item">🔒 Datos seguros</span>
+        <span className="cform-trust-item">{t('contactForm.trust.spam')}</span>
+        <span className="cform-trust-item">{t('contactForm.trust.time')}</span>
+        <span className="cform-trust-item">{t('contactForm.trust.secure')}</span>
       </div>
 
-      {/* Progress bar */}
       <div className="cform-progress" role="progressbar" aria-valuenow={step} aria-valuemin={1} aria-valuemax={3}>
         <div className={segClass(1)} />
         <div className={segClass(2)} />
         <div className={segClass(3)} />
       </div>
 
-      {/* Step content — key fuerza remount para la animación */}
       <div key={step} className="cform-step">
 
-        {/* ── PASO 1 — Identificación ── */}
         {step === 1 && (
           <>
-            <p className="cform-step-label">Paso 1 — Identificación</p>
+            <p className="cform-step-label">{t('contactForm.step1.label')}</p>
 
             <div className="cform-row-2">
               <div className="cform-field">
-                <label className="field-label" htmlFor="cf-name">Nombre completo</label>
+                <label className="field-label" htmlFor="cf-name">{t('contactForm.step1.name')}</label>
                 <input
                   className={`input${errors.name ? ' input-error' : ''}`}
-                  id="cf-name" type="text" placeholder="Tu nombre"
-                  value={form.name} onChange={set('name')}
-                  autoComplete="name"
+                  id="cf-name" type="text" placeholder={t('contactForm.step1.namePlaceholder')}
+                  value={form.name} onChange={set('name')} autoComplete="name"
                 />
                 {errors.name && <p className="cform-error">{errors.name}</p>}
               </div>
               <div className="cform-field">
-                <label className="field-label" htmlFor="cf-email">Email profesional</label>
+                <label className="field-label" htmlFor="cf-email">{t('contactForm.step1.email')}</label>
                 <input
                   className={`input${errors.email ? ' input-error' : ''}`}
-                  id="cf-email" type="email" placeholder="correo@tuempresa.com"
-                  value={form.email} onChange={set('email')}
-                  autoComplete="email"
+                  id="cf-email" type="email" placeholder={t('contactForm.step1.emailPlaceholder')}
+                  value={form.email} onChange={set('email')} autoComplete="email"
                 />
                 {errors.email && <p className="cform-error">{errors.email}</p>}
               </div>
@@ -194,35 +165,34 @@ export default function ContactForm() {
 
             <div className="cform-row-2">
               <div className="cform-field">
-                <label className="field-label" htmlFor="cf-company">Empresa / Marca</label>
+                <label className="field-label" htmlFor="cf-company">{t('contactForm.step1.company')}</label>
                 <input
                   className={`input${errors.company ? ' input-error' : ''}`}
-                  id="cf-company" type="text" placeholder="Nombre de tu empresa"
-                  value={form.company} onChange={set('company')}
-                  autoComplete="organization"
+                  id="cf-company" type="text" placeholder={t('contactForm.step1.companyPlaceholder')}
+                  value={form.company} onChange={set('company')} autoComplete="organization"
                 />
                 {errors.company && <p className="cform-error">{errors.company}</p>}
               </div>
               <div className="cform-field">
                 <label className="field-label" htmlFor="cf-website">
-                  Sitio web <span style={{ color: 'var(--fg-faint)', fontWeight: 400 }}>(opcional)</span>
+                  {t('contactForm.step1.website')}{' '}
+                  <span style={{ color: 'var(--fg-faint)', fontWeight: 400 }}>{t('contactForm.step1.optional')}</span>
                 </label>
                 <input
                   className="input"
-                  id="cf-website" type="url" placeholder="https://tudominio.com"
-                  value={form.website} onChange={set('website')}
-                  autoComplete="url"
+                  id="cf-website" type="url" placeholder={t('contactForm.step1.websitePlaceholder')}
+                  value={form.website} onChange={set('website')} autoComplete="url"
                 />
               </div>
             </div>
 
             <div className="cform-field">
-              <label className="field-label" htmlFor="cf-role">Rol en la empresa</label>
+              <label className="field-label" htmlFor="cf-role">{t('contactForm.step1.role')}</label>
               <select
                 className={`input${errors.role ? ' input-error' : ''}`}
                 id="cf-role" value={form.role} onChange={set('role')}
               >
-                <option value="">Seleccioná tu rol</option>
+                <option value="">{t('contactForm.step1.rolePlaceholder')}</option>
                 {ROLES.map((r) => <option key={r} value={r}>{r}</option>)}
               </select>
               {errors.role && <p className="cform-error">{errors.role}</p>}
@@ -230,13 +200,12 @@ export default function ContactForm() {
           </>
         )}
 
-        {/* ── PASO 2 — Proyecto ── */}
         {step === 2 && (
           <>
-            <p className="cform-step-label">Paso 2 — Proyecto</p>
+            <p className="cform-step-label">{t('contactForm.step2.label')}</p>
 
             <div className="cform-field">
-              <label className="field-label">Servicios de interés</label>
+              <label className="field-label">{t('contactForm.step2.services')}</label>
               <div className="cform-chips">
                 {SERVICES.map((s) => (
                   <button
@@ -250,7 +219,7 @@ export default function ContactForm() {
             </div>
 
             <div className="cform-field">
-              <label className="field-label">Objetivo principal</label>
+              <label className="field-label">{t('contactForm.step2.goal')}</label>
               <div className="cform-chips">
                 {GOALS.map((g) => (
                   <button
@@ -265,13 +234,13 @@ export default function ContactForm() {
 
             <div className="cform-field">
               <label className="field-label" htmlFor="cf-message">
-                Contexto adicional{' '}
-                <span style={{ color: 'var(--fg-faint)', fontWeight: 400 }}>(opcional)</span>
+                {t('contactForm.step2.message')}{' '}
+                <span style={{ color: 'var(--fg-faint)', fontWeight: 400 }}>{t('contactForm.step1.optional')}</span>
               </label>
               <textarea
                 className="input textarea"
                 id="cf-message"
-                placeholder="Contanos más sobre tu proyecto, situación actual, desafíos..."
+                placeholder={t('contactForm.step2.messagePlaceholder')}
                 value={form.message}
                 onChange={(e) => {
                   if (e.target.value.length <= 400)
@@ -284,13 +253,12 @@ export default function ContactForm() {
           </>
         )}
 
-        {/* ── PASO 3 — Presupuesto y urgencia ── */}
         {step === 3 && (
           <>
-            <p className="cform-step-label">Paso 3 — Presupuesto y urgencia</p>
+            <p className="cform-step-label">{t('contactForm.step3.label')}</p>
 
             <div className="cform-field">
-              <label className="field-label">Presupuesto mensual</label>
+              <label className="field-label">{t('contactForm.step3.budget')}</label>
               <div className="cform-budget-grid">
                 {BUDGETS.map((b) => (
                   <button
@@ -306,7 +274,7 @@ export default function ContactForm() {
             </div>
 
             <div className="cform-field">
-              <label className="field-label">¿Cuándo querés comenzar?</label>
+              <label className="field-label">{t('contactForm.step3.urgency')}</label>
               <div className="cform-chips">
                 {URGENCY.map((u) => (
                   <button
@@ -321,24 +289,22 @@ export default function ContactForm() {
 
             <div className="cform-field">
               <label className="field-label" htmlFor="cf-phone">
-                WhatsApp / Teléfono{' '}
-                <span style={{ color: 'var(--fg-faint)', fontWeight: 400 }}>(opcional)</span>
+                {t('contactForm.step3.phone')}{' '}
+                <span style={{ color: 'var(--fg-faint)', fontWeight: 400 }}>{t('contactForm.step1.optional')}</span>
               </label>
               <input
                 className="input"
                 id="cf-phone" type="tel" placeholder="+54 9 11 1234 5678"
-                value={form.phone} onChange={set('phone')}
-                autoComplete="tel"
+                value={form.phone} onChange={set('phone')} autoComplete="tel"
               />
             </div>
           </>
         )}
 
-        {/* Navigation */}
         <div className="cform-nav">
           {step > 1 && (
             <button type="button" className="cform-btn-back" onClick={handleBack}>
-              <ArrowLeft /> Anterior
+              <ArrowLeft /> {t('contactForm.nav.back')}
             </button>
           )}
           <button
@@ -346,16 +312,16 @@ export default function ContactForm() {
             onClick={handleNext} disabled={submitting}
           >
             {step === 3
-              ? (submitting ? 'Enviando…' : 'Enviar consulta')
-              : 'Continuar'}
+              ? (submitting ? t('contactForm.nav.submitting') : t('contactForm.nav.submit'))
+              : t('contactForm.nav.next')}
             {!submitting && <ArrowRight />}
           </button>
         </div>
 
         {step === 3 && (
           <p className="cform-privacy">
-            Al enviar tus datos, aceptás nuestra{' '}
-            <a href="/privacidad">Política de Privacidad</a>.
+            {t('contactForm.privacy')}{' '}
+            <a href={`${prefix}/privacidad`}>{t('contactForm.privacyLink')}</a>.
           </p>
         )}
 

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import ClaudeNavbar from '../components/ClaudeNavbar.jsx';
 import Footer from '../components/Footer.jsx';
@@ -240,10 +241,11 @@ const styles = `
 
 // ─── Page ─────────────────────────────────────────────────
 export default function BlogsPage() {
+  const { t } = useTranslation();
+
   useDocumentMeta({
-    title: 'Blog RankAgile — SEO, GEO y Posicionamiento Web',
-    description:
-      'Descubrí en el blog de RankAgile las últimas estrategias de SEO, marketing digital y posicionamiento web. Contenidos prácticos para crecer.',
+    title: t('blog.meta.title'),
+    description: t('blog.meta.description'),
   });
 
   return (
@@ -254,8 +256,8 @@ export default function BlogsPage() {
 
         {/* Hero */}
         <section className="blog-hero">
-          <span className="eyebrow centered">recursos y aprendizaje</span>
-          <h1 className="display" style={{ marginTop: 16 }}>Blog</h1>
+          <span className="eyebrow centered">{t('blog.eyebrow')}</span>
+          <h1 className="display" style={{ marginTop: 16 }}>{t('blog.h1')}</h1>
         </section>
 
         {/* Post list */}
@@ -274,7 +276,7 @@ export default function BlogsPage() {
                 </Link>
                 <p className="blog-post-excerpt">{post.excerpt}</p>
                 <Link to={post.href} className="blog-post-link">
-                  Leer artículo <ArrowRight />
+                  {t('blog.readMore')} <ArrowRight />
                 </Link>
               </div>
 

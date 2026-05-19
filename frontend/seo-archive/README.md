@@ -9,8 +9,8 @@ Si en algún momento se quieren republicar, el contenido completo está acá en 
 | Archivo | Slug original |
 |---|---|
 | `cuanto-cuesta-geo.md` | `/cuanto-cuesta-geo` |
-| `por-que-no-aparezco-en-chatgpt.md` | `/por-que-no-aparezco-en-chatgpt` |
+| `por-que-no-aparezco-en-chatgpt.md` | `/por-que-o-aparezco-en-chatgpt` |
 | `seo-vs-geo-vs-aeo.md` | `/seo-vs-geo-vs-aeo` |
-| `que-es-seo.md` | `/seo-que-es-y-para-que-sirve` |
+| `que-es-seo.md` | `/seo-que-es-y-para-nque-sirve` |
 | `seo-y-sem.md` | `/seo-y-sem-en-marketing-digital` |
 | `dashboard-powerbi.md` | `/dashboard-seo-en-power-bi-para-agencias` |

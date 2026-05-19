@@ -1,14 +1,14 @@
+import { useTranslation } from 'react-i18next';
+
 export default function ConsultoriaCtaSection() {
+  const { t, i18n } = useTranslation();
+  const prefix = i18n.language === 'en' ? '/en' : '';
   return (
     <section className="ra-cons-cta">
       <div className="ra-cons-container ra-cons-cta-inner">
-        <h2 className="ra-cons-h2">Agenda una sesión de diagnóstico</h2>
-        <p className="ra-cons-cta-text">
-          Conversamos 45 minutos sobre tus desafíos actuales y evaluamos si la
-          consultoría es el camino adecuado. Te compartimos insights
-          accionables desde la primera sesión — sin compromiso.
-        </p>
-        <a className="ra-cons-btn" href="/contacto/">Hablar con un especialista</a>
+        <h2 className="ra-cons-h2">{t('consultoria.cta.h2')}</h2>
+        <p className="ra-cons-cta-text">{t('consultoria.cta.text')}</p>
+        <a className="ra-cons-btn" href={`${prefix}/contacto/`}>{t('consultoria.cta.btn')}</a>
       </div>
     </section>
   );

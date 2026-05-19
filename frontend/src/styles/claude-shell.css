@@ -131,6 +131,35 @@ html[data-theme='light'] .nav-link[aria-expanded='true'] {
     flex-shrink: 0;
 }
 
+.lang-switcher {
+    display: inline-flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(56,254,218,0.2);
+    transition: color 150ms, border-color 150ms, background 150ms;
+}
+.lang-switcher:hover {
+    color: #38FEDA;
+    border-color: rgba(56,254,218,0.5);
+    background: rgba(56,254,218,0.06);
+}
+html[data-theme="light"] .lang-switcher {
+    color: rgba(14,14,16,0.55);
+    border-color: rgba(8,184,154,0.25);
+}
+html[data-theme="light"] .lang-switcher:hover {
+    color: #06927a;
+    border-color: rgba(8,184,154,0.5);
+    background: rgba(8,184,154,0.06);
+}
+
 .mega {
     position: absolute;
     top: 100%;

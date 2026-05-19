@@ -1,0 +1,1026 @@
+{
+  "nav": {
+    "geo": "GEO",
+    "about": "About Us",
+    "contact": "Contact",
+    "servicesLabel": "Services",
+    "blog": "Blog",
+    "cta": "Free SEO Analysis",
+    "themeToggle": "Toggle theme",
+    "megaTitle": "Services",
+    "megaDesc": "Nine specialized services, one focus: winning visibility where your customers are already searching.",
+    "megaSeeAll": "See all",
+    "services": {
+      "seoCompleto": { "title": "Full SEO", "desc": "Comprehensive strategy to scale visibility, authority and organic results." },
+      "auditoriaTecnica": { "title": "Technical Audit", "desc": "Technical diagnosis and prioritized roadmap to fix bottlenecks." },
+      "seoHibrido": { "title": "Hybrid SEO", "desc": "Combined execution of technical SEO, content and performance." },
+      "seoConsultoria": { "title": "SEO Consulting", "desc": "Senior team embedded with your in-house team for strategy and execution." },
+      "seoAnalytics": { "title": "SEO Analytics", "desc": "Clear data, dashboards and decisions based on real performance." },
+      "analisisSeoGratuito": { "title": "Free SEO Analysis", "desc": "Initial diagnosis to detect errors and opportunities." }
+    }
+  },
+  "footer": {
+    "tagline": "Intelligent positioning.\nResults that scale.",
+    "company": "Company",
+    "about": "About us",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "services": "Services",
+    "offices": "Offices",
+    "copyright": "© 2026 RankAgile · All rights reserved",
+    "ariaLabel": "RankAgile · Home",
+    "socialLabel": "Social media",
+    "linkedinLabel": "Follow RankAgile on LinkedIn",
+    "youtubeLabel": "Follow RankAgile on YouTube",
+    "instagramLabel": "Follow RankAgile on Instagram",
+    "facebookLabel": "Follow RankAgile on Facebook",
+    "links": {
+      "geo": "GEO",
+      "seoCompleto": "Full SEO",
+      "auditoriaTecnica": "Technical Audit",
+      "seoHibrido": "Hybrid SEO",
+      "seoConsultoria": "SEO Consulting",
+      "analisisSeoGratuito": "Free SEO Analysis",
+      "argentina": "Argentina",
+      "peru": "Peru",
+      "bolivia": "Bolivia"
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "RankAgile | International SEO Agency & AI GEO",
+      "description": "We position your brand on Google and AI engines (ChatGPT, Gemini, Perplexity) with international SEO and GEO strategy. Request your free analysis."
+    },
+    "ticker": "We optimize for",
+    "hero": {
+      "eyebrow": "generative positioning",
+      "h1": "International SEO agency specialized in <grad>AI SEO (GEO)</grad>.",
+      "sub": "We optimize your brand to appear as an answer in ChatGPT, Gemini, Claude and Perplexity — without losing the organic traffic you already have on Google.",
+      "cta": "Get a proposal"
+    },
+    "services": {
+      "eyebrow": "how we work",
+      "title": "Every area of SEO, handled by who masters it.",
+      "lead": "Technical, content, authority and GEO are distinct disciplines that require distinct criteria. We distribute the work by expertise so every decision is backed by whoever truly understands that part of the project.",
+      "cardLabel": "/ service",
+      "ctaLabel": "SEE SERVICE"
+    },
+    "serviceItems": {
+      "geo": { "title": "GEO", "desc": "Position your brand in generative engines with GEO strategy." },
+      "seoCompleto": { "title": "Full SEO", "desc": "Comprehensive strategy to scale visibility, authority and organic results." },
+      "auditoriaTecnica": { "title": "Technical Audit", "desc": "Technical diagnosis and prioritized roadmap to fix bottlenecks." },
+      "seoHibrido": { "title": "Hybrid SEO", "desc": "Combined execution of technical SEO, content and performance." },
+      "seoConsultoria": { "title": "SEO Consulting", "desc": "Senior team embedded with your in-house team for strategy and execution." },
+      "seoAnalytics": { "title": "SEO Analytics", "desc": "Clear data, dashboards and decisions based on real performance." },
+      "analisisSeoGratuito": { "title": "Free SEO Analysis", "desc": "Initial diagnosis to detect errors and opportunities." }
+    },
+    "clients": {
+      "eyebrow": "companies that trust us",
+      "title": "Brands already dominating AI."
+    },
+    "international": {
+      "eyebrow": "global focus",
+      "title": "International SEO Agency: Strategy Without Borders",
+      "lead": "Discover how an international SEO strategy allows you to position brands in multiple countries and global search engines — from multilingual technical architecture to content adapted to each market and audience.",
+      "cards": [
+        { "num": "01 / international", "h4": "Global Expansion", "p": "Expand your business to new markets with a positioning strategy designed to scale." },
+        { "num": "02 / international", "h4": "Qualified Audiences", "p": "At RankAgile we help companies gain visibility in multiple countries, connecting with customers around the world." },
+        { "num": "03 / international", "h4": "Beyond Translations", "p": "It's not just about translating content — it's about understanding how users search and adapting the strategy to their intent." },
+        { "num": "04 / international", "h4": "Integrated Approach", "p": "We combine market analysis, technical optimization and localized content to position you from day one." }
+      ]
+    },
+    "whyGeo": {
+      "eyebrow": "why geo",
+      "title": "SEO changed. Your customers already ask AI.",
+      "lead": "64% of informational searches are now resolved inside an LLM. If your brand is not cited in those answers, you simply don't exist for the decision-maker.",
+      "vignettes": [
+        {
+          "eyebrow": "generative visibility",
+          "title": "Appear as an answer — not a link.",
+          "body": "We measure and optimize your citability rate in the main LLMs. Every week, a live dashboard shows you where you are present, where you're not, and which brand is substituting you.",
+          "bullets": [
+            "Tracking of 500+ prompts relevant to your business",
+            "Cross-monitor on ChatGPT, Gemini, Claude, Perplexity",
+            "Alerts when a competing entity displaces us"
+          ]
+        },
+        {
+          "eyebrow": "organic SEO",
+          "title": "Compounding growth on Google — without depending on it.",
+          "body": "While you gain AI presence, we reinforce the organic base: architecture, intent-mapping and content your competition can't replicate.",
+          "bullets": [
+            "Core Web Vitals in green within 90 days or less",
+            "Schema specific to intent + entity",
+            "Content structured to be cited"
+          ]
+        },
+        {
+          "eyebrow": "prompt tracking",
+          "title": "You'll know exactly which questions are bringing you business.",
+          "body": "We reverse-engineer the prompts your clients use. We prioritize them by commercial intent and connect them to an actionable editorial plan — not an 80-page PDF.",
+          "bullets": [
+            "248 prompts analyzed in the initial audit",
+            "We connect each prompt to URL + CTA",
+            "Weekly reporting with progress and next steps"
+          ]
+        }
+      ],
+      "geoLink": "GEO strategy for AI",
+      "proposalLink": "Request proposal"
+    },
+    "stats": {
+      "eyebrow": "real experience",
+      "title": "What backs our work.",
+      "items": [
+        { "n": "15", "u": "+", "l": "Active markets in the Americas, Europe and Asia Pacific" },
+        { "n": "3", "u": "+", "l": "Years specialized in technical SEO and AI positioning" },
+        { "n": "4", "u": "", "l": "Specialists assigned per project: technical SEO, content, link building and GEO" },
+        { "n": "100", "u": "%", "l": "Projects with access to real-time metrics and reporting" }
+      ],
+      "footnote": "Brands like <strong>DigitalAxios</strong> and <strong>IMB Institute</strong> — along with SaaS, education and e-commerce teams — trust RankAgile with their organic and AI positioning."
+    },
+    "process": {
+      "eyebrow": "how we work",
+      "title": "Four phases. Zero friction. Full business focus.",
+      "steps": [
+        { "n": "01", "t": "360 Audit", "d": "Technical, content and LLM presence scan. 250+ points evaluated." },
+        { "n": "02", "t": "GEO Strategy", "d": "Prompt, entity and citability map. Impact-prioritized roadmap." },
+        { "n": "03", "t": "Execution", "d": "Content, links, schemas and experience. Monthly sprint with deliverables." },
+        { "n": "04", "t": "Measurement", "d": "Live dashboard for AI + classic SEO visibility. Weekly reporting." }
+      ],
+      "phaseLabel": "/ phase"
+    },
+    "testimonial": {
+      "eyebrow": "clients",
+      "title": "What those already working with RankAgile say.",
+      "quote": "In 8 months we went from being invisible in ChatGPT to being the default recommendation in our niche. Referral traffic from AI already surpasses Instagram.",
+      "author": "Natalia Ruiz",
+      "role": "Head of Growth · Vento Skincare"
+    },
+    "faq": {
+      "eyebrow": "frequently asked questions",
+      "title": "Everything you need to know.",
+      "items": [
+        {
+          "q": "What is GEO and how is it different from traditional SEO?",
+          "a": "GEO (Generative Engine Optimization) optimizes your brand to appear cited in the responses of AI engines like ChatGPT, Gemini or Perplexity. Classic SEO targets Google rankings; GEO targets being the source LLMs recommend."
+        },
+        {
+          "q": "How long does it take to see results?",
+          "a": "First citability improvements in LLMs are usually seen within 60–90 days. Organic results on Google consolidate in 4–6 months. We work with monthly sprints so there are always visible deliverables."
+        },
+        {
+          "q": "Do you have experience in my industry?",
+          "a": "We work with over 240 brands in sectors including e-commerce, SaaS, health, finance and retail. In the diagnostic call we show cases from clients in your vertical."
+        },
+        {
+          "q": "Is the free SEO analysis commitment-free?",
+          "a": "Completely. The analysis is 100% free, no contract and no fine print. If you decide to move forward with us, great; if not, you still leave with an actionable roadmap."
+        },
+        {
+          "q": "How do you measure AI visibility?",
+          "a": "We use a proprietary dashboard that tracks over 500 prompts in ChatGPT, Gemini, Claude and Perplexity. Every week you receive a report with your citability rate, the brands displacing you and the concrete actions to improve."
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "let's talk",
+      "title": "Let's talk about your project.",
+      "lead": "Fill out the form and we'll set up a call to understand your goals, your current situation and what strategy makes the most sense for your business. No generic templates, no commitment.",
+      "benefits": [
+        "Analysis of your organic and AI presence",
+        "Real opportunities for your industry and market",
+        "Personalized strategy focused on results",
+        "No cost, no contract"
+      ],
+      "form": {
+        "title": "Let's schedule a call",
+        "subtitle": "Fill in your details and we'll respond within the next 24h.",
+        "name": { "label": "Full name", "placeholder": "Your name" },
+        "email": { "label": "Work email", "placeholder": "mail@yourcompany.com" },
+        "web": { "label": "Website or company", "placeholder": "yourdomain.com" },
+        "submit": "I want to talk to the team",
+        "submitting": "Sending…",
+        "trust": ["No contract", "No commitment", "Response in < 24h"],
+        "privacy": "By submitting your data, you accept our",
+        "privacyLink": "Privacy Policy"
+      },
+      "success": {
+        "title": "Message received!",
+        "body": "We'll contact you within 24h to coordinate the first step."
+      }
+    }
+  },
+  "geo": {
+    "meta": {
+      "title": "GEO (AI Search Optimization) for Companies | RankAgile",
+      "description": "We position your brand inside the responses of ChatGPT, Gemini and Perplexity with GEO — the AI Search Optimization strategy led by RankAgile."
+    },
+    "page": {
+      "eyebrow": "GEO · RankAgile",
+      "title": "<grad>GEO</grad>: The New Discipline That Decides Whether Your Company Exists in AI",
+      "description": "GEO — Generative Engine Optimization — is the set of technical and content strategies that positions your brand within AI-generated responses. It's not the future of SEO.",
+      "accent": "It's the present.",
+      "cta": "I want to position in AI"
+    },
+    "hero": {
+      "eyebrow": "GEO · RankAgile",
+      "title": "GEO: The New Discipline That Decides Whether Your Company Exists in AI",
+      "lead1": "ChatGPT answers 10 million queries per day. Gemini recommends brands, services and solutions. Perplexity replaces Google for millions of B2B buyers.",
+      "lead2Strong": "Does your company appear in those answers? Or does it simply not exist?",
+      "body": "GEO — Generative Engine Optimization — is the set of technical and content strategies that positions your brand within AI-generated responses. It's not the future of SEO.",
+      "accent": "It's the present.",
+      "cta": "I want to position in AI"
+    },
+    "definition": {
+      "eyebrow": "Operational definition",
+      "title": "GEO optimizes presence inside AI responses",
+      "body": "GEO works on semantic authority, structured data and coverage in the sources models use to cite brands.",
+      "bullets": [
+        "Citations in high-authority content.",
+        "Clear schema and semantic coherence.",
+        "Content with direct answers and informational density.",
+        "Presence in media, directories and training data sources."
+      ],
+      "cta": "See GEO agency"
+    },
+    "context": {
+      "eyebrow": "Strategic context",
+      "title": "GEO is urgent for 2026",
+      "body1": "72% of B2B decision-makers consult an AI before first contact. If you're not there, you don't enter the sales cycle.",
+      "list": [
+        "ChatGPT and Gemini influence supplier selection.",
+        "Perplexity and Copilot cite sources and displace organic.",
+        "GEO amplifies traditional SEO in new layers."
+      ],
+      "body2pre": "At",
+      "body2link": "RankAgile",
+      "body2post": "we combine organic SEO and GEO in an integrated strategy so your brand gains visibility on Google and AI at the same time.",
+      "cta": "Discover RankAgile — SEO + GEO",
+      "engines": {
+        "chatgpt": { "name": "ChatGPT", "desc": "Purchase queries, comparisons and recommendations." },
+        "gemini": { "name": "Gemini", "desc": "AI Overviews displacing organic results." },
+        "perplexity": { "name": "Perplexity", "desc": "Preferred by technical profiles, cites sources." },
+        "copilot": { "name": "Bing Copilot", "desc": "Integrated in Microsoft, massive corporate usage." }
+      }
+    },
+    "comparison": {
+      "eyebrow": "Technical comparison",
+      "title": "SEO vs GEO vs AEO: key differences",
+      "seo": {
+        "kicker": "01 / SEO",
+        "title": "Search Engine Optimization",
+        "body": "Ranking in SERPs with keywords, backlinks and domain authority. Metrics: position, organic traffic and CTR.",
+        "tag": "ORGANIC"
+      },
+      "geo": {
+        "kicker": "02 / GEO",
+        "title": "Generative Engine Optimization",
+        "body": "Brand presence inside AI responses with citations, structured data and coverage in key sources.",
+        "tag": "GENERATIVE"
+      },
+      "aeo": {
+        "kicker": "03 / AEO",
+        "title": "Answer Engine Optimization",
+        "body": "Featured snippets and position zero with Q&A structure and FAQ Schema. SEO subset oriented to direct answers.",
+        "tag": "ANSWERS"
+      },
+      "quote": "The winning strategy in 2026 doesn't choose one: it combines",
+      "quoteLink": "SEO + GEO + AEO",
+      "quotePost": "in an integrated visibility architecture. That's exactly what we build at RankAgile."
+    },
+    "benefits": {
+      "eyebrow": "Concrete benefits",
+      "title": "What your company gains with GEO",
+      "label": "/ benefit",
+      "advantage": "ADVANTAGE",
+      "items": [
+        { "n": "01", "title": "Visibility where your customers buy", "body": "B2B decision-makers use AI to shortlist vendors before contacting anyone. GEO positions you in that invisible conversation that determines who gets the demo." },
+        { "n": "02", "title": "Brand authority in AI", "body": "Being repeatedly cited by ChatGPT or Gemini builds a perception of leadership. Models learn that your brand is the reference in your category." },
+        { "n": "03", "title": "Expanded sales pipeline", "body": "New entry channels without depending exclusively on Google Ads or organic SEO. Real diversification of qualified traffic sources." },
+        { "n": "04", "title": "Lasting competitive advantage", "body": "Your competitors aren't doing it yet. AI authority accumulates over time, just like DA in SEO. Whoever starts first builds a compounding advantage." },
+        { "n": "05", "title": "Structured data as an asset", "body": "GEO generates an ecosystem of data, citations and digital references that simultaneously benefit traditional SEO, AEO and voice search." },
+        { "n": "06", "title": "Protection against AI Overviews", "body": "Google AI Overviews is destroying organic traffic for sites not cited as a source. GEO is the defensive and offensive response to that threat." }
+      ]
+    },
+    "methodology": {
+      "eyebrow": "RankAgile process",
+      "title": "6 GEO execution phases",
+      "lead": "We execute a GEO plan with clear KPIs, phased timeline and monthly optimization on generative engine visibility.",
+      "phaseLabel": "/ phase",
+      "phases": [
+        { "title": "GEO Audit", "body": "We analyze your current visibility in ChatGPT, Gemini and Perplexity for your category, intent keywords and competitors. We identify the citation gap and current architecture." },
+        { "title": "Semantic Strategy", "body": "We map the entities, concepts and questions LLMs associate with your category. We define the content plan oriented to maximum match with training patterns." },
+        { "title": "Content Engineering", "body": "We create and optimize content with high informational density, verifiable data, direct-answer structure and format LLMs learn to cite." },
+        { "title": "Authority Building", "body": "We build presence in sources models use as reference: specialized media, industry directories, Wikipedia, Wikidata, LinkedIn editorial and authority podcasts." },
+        { "title": "Structured Data", "body": "We implement advanced Schema.org, Knowledge Panel optimization and technical markup that helps LLMs correctly extract and process your company's information." },
+        { "title": "Tracking & Optimization", "body": "We monitor citations in AI engines, Share of Voice in generative responses, traffic referred from AI and attributed conversions. We iterate every 30 days." }
+      ]
+    },
+    "faq": {
+      "eyebrow": "Frequently asked questions",
+      "title": "What they ask before getting started",
+      "items": [
+        { "q": "Does GEO replace the SEO we already do?", "a": "No. GEO expands SEO. The signals you build for Google remain valuable and many GEO actions reinforce traditional SEO. We work it as an additional layer." },
+        { "q": "How long does it take to see results?", "a": "First citations appear between 30 and 60 days on Perplexity. For ChatGPT and Gemini, consolidated results arrive between 90 and 180 days." },
+        { "q": "Does it work for all sectors?", "a": "GEO is especially effective in B2B, SaaS, professional services, consulting and technology. If your client consults AI before buying, GEO is critical." },
+        { "q": "Can you guarantee I'll appear in ChatGPT?", "a": "Nobody guarantees positions in AI models, just as nobody guarantees #1 on Google. We guarantee a systematic, measurable, data-based process with documented results." }
+      ]
+    },
+    "related": {
+      "eyebrow": "Dive deeper",
+      "title": "Complementary readings",
+      "small": "Two key resources to close the visibility circle.",
+      "articles": [
+        { "num": "01 / reading", "h4": "Why your company doesn't appear in ChatGPT", "p": "The 5 reasons the model doesn't know you and how to reverse it.", "cta": "Read article", "href": "/en/por-que-no-aparezco-en-chatgpt" },
+        { "num": "02 / reading", "h4": "How much GEO costs and what it includes in 2026", "p": "Real prices, what to demand in a proposal and how to calculate ROI.", "cta": "Read article", "href": "/en/cuanto-cuesta-geo" }
+      ]
+    },
+    "cta": {
+      "eyebrow": "start today",
+      "title": "We send you a GEO analysis of your brand in 72h.",
+      "body": "No commitment, no fine print. If what you see convinces you, let's talk.",
+      "cta": "Talk to a specialist"
+    }
+  },
+  "seoCompleto": {
+    "hero": {
+      "eyebrow": "Visibility Architecture",
+      "h1": "Full SEO Service",
+      "lead": "Comprehensive strategy designed to scale your organic visibility. We manage content, technical SEO and authority so your brand leads search results from day one.",
+      "checks": ["Deep technical audit", "Strategic keyword research", "Ongoing on-page optimization", "Authority link building", "Advanced monitoring and reporting"]
+    },
+    "audience": {
+      "eyebrow": "Is It For You?",
+      "h2": "Ideal for businesses seeking long-term results",
+      "items": [
+        {"title": "E-commerce & Marketplaces", "body": "Extensive catalogs that need scalable organic visibility. We optimize category architecture, product pages and transactional content to capture purchase intent."},
+        {"title": "SaaS & Technology", "body": "Platforms competing in saturated markets. We create valuable technical content that attracts qualified users and reduces CAC (customer acquisition cost)."},
+        {"title": "Professional Services", "body": "Law firms, consultancies and agencies requiring digital authority. We position your expertise in commercial and informational searches to attract high-value clients."},
+        {"title": "Media & Content", "body": "Editorial sites and blogs that monetize traffic. We maximize organic reach with long-tail keyword strategies, content updates and topical clustering."}
+      ]
+    },
+    "features": {
+      "eyebrow": "Deliverables",
+      "h2": "What the service includes",
+      "label": "/ deliverable",
+      "tag": "DELIVERABLE",
+      "items": [
+        {"n": "01", "title": "Complete technical SEO audit", "body": "Exhaustive analysis of web architecture, load speed, indexing, Schema markup and Core Web Vitals optimization."},
+        {"n": "02", "title": "SEO content strategy", "body": "Content roadmap based on keyword analysis, search intent and content gaps vs competition."},
+        {"n": "03", "title": "Monthly on-page optimization", "body": "Ongoing work on titles, meta descriptions, headers, content, internal links and image optimization."},
+        {"n": "04", "title": "Authority link building", "body": "Acquiring quality backlinks from relevant sites with high domain authority."},
+        {"n": "05", "title": "Rankings and traffic monitoring", "body": "Daily tracking of Google positions for target keywords and analysis of organic traffic evolution."},
+        {"n": "06", "title": "Competitive analysis", "body": "Monthly benchmark against direct competitors: keywords, backlinks, content and emerging strategies."},
+        {"n": "07", "title": "Monthly executive reports", "body": "Detailed reports with KPIs, metric evolution, actionable insights and next strategic actions."},
+        {"n": "08", "title": "Priority technical support", "body": "Direct access to our team of specialists for incident resolution and strategic queries."}
+      ]
+    },
+    "steps": {
+      "eyebrow": "Our Process",
+      "h2": "What the service consists of",
+      "items": [
+        {"n": "01", "title": "Technical Audit", "body": "Deep analysis of architecture, indexing and Core Web Vitals. We optimize the technical foundation of your site to ensure efficient crawling and ultra-fast loading."},
+        {"n": "02", "title": "Keyword Research", "body": "We identify critical searches for your business. We combine semantics, structured data and generative engine visibility to maximize organic return."},
+        {"n": "03", "title": "On-Page Optimization", "body": "Continuous optimization of content, structure and metadata. Each page becomes a strategic asset designed to capture search intent."},
+        {"n": "04", "title": "Link Building", "body": "Building authority through quality links. We prioritize relevance and context over volume to strengthen your brand's digital reputation."},
+        {"n": "05", "title": "Continuous Monitoring", "body": "Tracking rankings, traffic and conversions. We transform complex data into clear strategic decisions to measure your real return on investment."},
+        {"n": "06", "title": "Strategic Reporting", "body": "Detailed monthly reports with actionable insights. We understand that data without context is noise; we deliver clarity."}
+      ]
+    },
+    "faqs": {
+      "eyebrow": "Frequently Asked Questions",
+      "h2": "What they usually ask us",
+      "items": [
+        {"q": "How is this different from consulting?", "a": "The Full SEO Service is hands-on: we execute the entire strategy. Consulting is strategic: we guide your internal team to implement the actions."},
+        {"q": "Do I need to invest in content separately?", "a": "The service includes strategy and optimization of existing content. If you need extensive new content creation, we can coordinate specialized writers under an additional budget."},
+        {"q": "Do you work with my current CMS?", "a": "Yes. We work with WordPress, Shopify, Webflow, custom frameworks and any CMS with programmatic access."},
+        {"q": "What reports will I receive and how often?", "a": "Monthly executive report with rankings evolution, organic traffic, Core Web Vitals, link building, competitive analysis and next actions. Includes review session if needed."},
+        {"q": "Can I pause or cancel the service?", "a": "We recommend a minimum of 6 months to see solid results, but there's no forced commitment. You can cancel with 30 days' notice."},
+        {"q": "How long does it take to see results?", "a": "Month 1-2: technical foundations. Month 3-4: first ranking movements. Month 5-6: measurable organic growth. Month 7+: consolidation and scalability."}
+      ]
+    },
+    "cta": {
+      "eyebrow": "start today",
+      "h2": "Ready to scale your ranking on Google and AI?",
+      "text": "Start with a commitment-free analysis. We deliver a diagnosis of your site to detect errors and opportunities, and a clear roadmap to boost your positioning.",
+      "btn": "Talk to a specialist"
+    },
+    "timeline": {
+      "eyebrow": "Realistic Expectations",
+      "h2": "What you can expect (and when)",
+      "items": [
+        {"tag": "Month 1–2", "title": "Foundations", "body": "Resolution of critical technical errors. First on-page optimizations. Correct indexing."},
+        {"tag": "Month 3–4", "title": "Traction", "body": "First ranking improvements. Increase in impressions. New content getting indexed."},
+        {"tag": "Month 5–6", "title": "Growth", "body": "Sustained increase in organic traffic. Rankings on the first page. Measurable ROI."},
+        {"tag": "Month 7+", "title": "Consolidation", "body": "Solid domain authority. Stable visibility. Proven scalability."}
+      ]
+    },
+    "geoContext": {
+      "eyebrow": "Strategic Context",
+      "h2": "Ideal for businesses seeking long-term results",
+      "p": "Comprehensive strategy designed to scale your organic visibility. We manage content, technical SEO and authority so your brand leads search results from day one.",
+      "list": ["Complete technical SEO audit.", "SEO content strategy.", "Monthly on-page optimization."],
+      "cta": "Talk to a specialist"
+    },
+    "geoMethodology": {
+      "eyebrow": "RankAgile Process",
+      "h2": "6 phases of the full SEO service",
+      "lead": "We execute an SEO plan with clear KPIs, phased timeline and monthly optimization to accelerate your organic visibility."
+    },
+    "geoPage": {
+      "eyebrow": "Complete SEO · RankAgile",
+      "h1": "Complete SEO Service to Scale Your Organic Visibility",
+      "p": "Comprehensive strategy designed to scale your organic visibility. We manage content, technical SEO, and authority so your brand leads search results.",
+      "items": ["In-depth technical audit.", "Strategic keyword research.", "Continuous on-page optimization.", "Authority link building.", "Monitoring and advanced reporting."],
+      "btn": "Talk to a specialist",
+      "meta": { "title": "Complete SEO for Companies: Technical, Content and GEO | RankAgile", "description": "Comprehensive SEO service: technical audit, content strategy, link building and AI visibility. Measurable results in 3–6 months." }
+    }
+  },
+  "auditoria": {
+    "hero": {
+      "eyebrow": "Solid Foundations",
+      "h1": "Professional Technical Audit",
+      "lead": "Deep analysis of architecture, indexing and Core Web Vitals. We optimize the technical foundation of your site to ensure efficient crawling and ultra-fast loading.",
+      "checks": ["Web architecture analysis", "Core Web Vitals and performance", "Indexing and crawlability", "Schema markup and structured data", "Prioritized technical roadmap"]
+    },
+    "features": {
+      "eyebrow": "Exhaustive Analysis",
+      "h2": "What the audit includes",
+      "items": [
+        {"title": "Crawlability and Indexing", "body": "Robots.txt, XML sitemap, noindex/nofollow directives, crawl errors, budget optimization, information architecture and page depth."},
+        {"title": "Core Web Vitals and Performance", "body": "LCP, FID, CLS, TTFB, mobile/desktop load speed, resource optimization, lazy loading, critical rendering path."},
+        {"title": "Web Architecture and URLs", "body": "URL structure, site hierarchy, internal linking, breadcrumbs, pagination, URL parameters, canonicalization."},
+        {"title": "JavaScript and Rendering", "body": "Client-side rendering issues, blocking JavaScript, SPA frameworks (React/Vue/Angular), hydration, SSR/SSG optimization."},
+        {"title": "Schema Markup and Structured Data", "body": "Schema.org implementation, JSON-LD, markup validation, rich snippet opportunities, structured data errors."},
+        {"title": "Mobile-First and Responsive", "body": "Mobile usability, viewport configuration, touch elements, font sizes, mobile performance, AMP implementation if applicable."},
+        {"title": "Security and HTTPS", "body": "SSL/TLS certificates, mixed content, HSTS, secure cookies, HTTP→HTTPS redirects, security headers."},
+        {"title": "Duplicate Content and Canonicals", "body": "Detection of internal/external duplicate content, canonical tags, URL parameters, www/non-www variants, trailing slashes."},
+        {"title": "Hreflang and International", "body": "Hreflang implementation, international structure (ccTLDs, subdirectories, subdomains), geographic targeting."},
+        {"title": "Log File Analysis", "body": "Analysis of server logs to understand Googlebot behavior, crawl budget usage, discovered vs crawled pages."}
+      ]
+    },
+    "audience": {
+      "eyebrow": "Is It For You?",
+      "h2": "When you need a technical audit",
+      "items": [
+        {"title": "Unexplained traffic drops", "body": "Your organic traffic dropped for no apparent reason. There are probably silent technical errors blocking the crawl or deindexing pages."},
+        {"title": "Pre/post site migration", "body": "Domain, HTTPS, platform or redesign migrations are high risk. Pre-migration audit prevents disasters. Post-migration validates everything worked."},
+        {"title": "Large or complex sites", "body": "E-commerce with thousands of SKUs, marketplaces, multi-language sites, heavy JavaScript platforms. Technical complexity requires specialized expertise."},
+        {"title": "Baseline before investing in SEO", "body": "Before investing in content or link building, make sure the technical foundation is solid. There's no point building on broken foundations."}
+      ]
+    },
+    "steps": {
+      "eyebrow": "Our Process",
+      "h2": "How we conduct the audit",
+      "items": [
+        {"n": "01", "title": "Full Crawl", "body": "We crawl your entire site with enterprise tools: Screaming Frog, Sitebulb, proprietary crawlers."},
+        {"n": "02", "title": "Deep Analysis", "body": "We identify critical errors, warnings and opportunities. We cross-reference with GSC, GA4, PageSpeed Insights."},
+        {"n": "03", "title": "Prioritization", "body": "We classify issues by impact vs effort. Focus on quick wins and errors bleeding authority."},
+        {"n": "04", "title": "Deliverable Roadmap", "body": "Detailed report + actionable technical roadmap with specific steps and post-fix validation."}
+      ]
+    },
+    "faqs": {
+      "eyebrow": "Frequently Asked Questions",
+      "h2": "What they usually ask us",
+      "items": [
+        {"q": "How long does the audit take?", "a": "7-14 days depending on site size. Small sites (<1K pages): 7 days. Medium (1K-10K): 10 days. Large (>10K): 14 days."},
+        {"q": "Do I need technical access to the site?", "a": "Not for the initial audit. Minimum: GSC + GA4. Ideal: + CMS/code access for post-fix validation or server log analysis."},
+        {"q": "Does it include fixing implementation?", "a": "The audit delivers the diagnosis + roadmap. Implementation can be contracted separately or your team can execute internally with our roadmap."},
+        {"q": "What exactly do I receive?", "a": "Executive PDF report (30-50 pages), prioritized technical roadmap in spreadsheet, exportable crawl data and presentation session + Q&A (60 min)."},
+        {"q": "Does it work for my CMS/framework?", "a": "Yes. WordPress, Shopify, Webflow, Next.js, Gatsby, custom stacks. We have experience auditing all types of architectures, including headless/JAMstack."},
+        {"q": "How often should I audit?", "a": "Annually at minimum. Every time you make major technical changes (migration, redesign, CMS change). Or if you detect unexplained traffic drops."}
+      ]
+    },
+    "cta": {
+      "h2": "Request your technical audit",
+      "text": "We talk for 30 minutes about your site and objectives. We send you a personalized proposal with scope, timing and pricing.",
+      "btn": "Talk to a specialist"
+    },
+    "compare": {
+      "eyebrow": "Our Difference",
+      "h2": "What sets us apart from automated audits",
+      "bad": {
+        "title": "Automated Audits",
+        "items": ["Generic error lists without business context", "No prioritization — everything seems equally urgent", "Don't detect issues specific to your tech stack", "False positives that generate noise", "No implementation roadmap or follow-up"]
+      },
+      "good": {
+        "title": "Our Professional Audit",
+        "items": ["Human analysis with industry context and business objectives", "Prioritization by real impact on rankings and revenue", "Expertise in React, Next.js, WordPress, Shopify, custom stacks", "Manual validation to eliminate false positive noise", "Implementable technical roadmap + Q&A session with your team"]
+      }
+    },
+    "geoProcess": {
+      "eyebrow": "Our process",
+      "h2": "How we conduct the audit",
+      "p": "We run a complete technical audit focused on real impact, prioritization and an actionable plan for your team.",
+      "bullets": ["Full crawl with enterprise tools", "Deep analysis with GSC, GA4 and PageSpeed", "Prioritization by impact vs effort", "Actionable technical roadmap"],
+      "cta": "Talk to a specialist"
+    },
+    "geoDifference": {
+      "eyebrow": "Our difference",
+      "h2": "What sets us apart from automated audits",
+      "automatic": {
+        "title": "Automated Audits",
+        "items": ["Generic error lists without business context", "No prioritization; everything seems equally urgent", "Don't detect issues specific to your tech stack", "False positives that generate noise", "No implementation roadmap or follow-up"]
+      },
+      "professional": {
+        "title": "Our Professional Audit",
+        "items": ["Human analysis with industry context and business objectives", "Prioritization by real impact on rankings and revenue", "Expertise in React, Next.js, WordPress, Shopify, custom stacks", "Manual validation to eliminate false positive noise", "Implementable technical roadmap + Q&A session with your team"]
+      }
+    },
+    "geoCta": {
+      "eyebrow": "start today",
+      "h2": "Request your technical audit",
+      "text": "We talk for 30 minutes about your site and objectives. We send you a personalized proposal with scope, timing and pricing.",
+      "cta": "Talk to a specialist"
+    },
+    "geoPage": {
+      "eyebrow": "Technical Audit · RankAgile",
+      "h1": "Professional Technical SEO Audit",
+      "p": "In-depth analysis of architecture, indexing, and Core Web Vitals. We optimize your site's technical foundation for efficient crawling and ultra-fast loading.",
+      "items": ["Web architecture analysis", "Core Web Vitals & performance", "Indexing and crawlability", "Schema markup & structured data", "Prioritized technical roadmap"],
+      "btn": "Talk to a specialist",
+      "meta": { "title": "Professional Technical SEO Audit | RankAgile", "description": "We detect all technical errors slowing your rankings: speed, indexing, Core Web Vitals and web architecture. Report in 72h." }
+    }
+  },
+  "seoHibrido": {
+    "hero": {
+      "eyebrow": "The Future of Search",
+      "h1": "Hybrid SEO (Google + AI)",
+      "lead": "Advanced optimization to dominate Google and AI engines. We combine semantics, structured data and visibility in generative environments for the digital future.",
+      "checks": ["Optimization for ChatGPT, Perplexity, Gemini", "Advanced Schema markup and Knowledge Graph", "Semantic content strategy", "Entity SEO and contextualization", "Visibility in generative responses"]
+    },
+    "features": {
+      "eyebrow": "Deliverables",
+      "h2": "What the service includes",
+      "items": [
+        {"title": "AI visibility audit", "body": "Analysis of current presence in ChatGPT, Perplexity, Gemini, SGE and other generative engines. Identification of citation gaps."},
+        {"title": "Advanced Schema implementation", "body": "Strategic structured data: Organization, Product, Article, FAQ, HowTo, Event and custom schemas by industry."},
+        {"title": "Entity SEO strategy", "body": "Building brand as a recognizable entity: Knowledge Panel, disambiguation, semantic relationships and authority signals."},
+        {"title": "Semantic content optimization", "body": "NLP-optimized rewriting, topic modeling, contextual depth and co-occurrences that maximize citations in LLMs."},
+        {"title": "AI citation monitoring", "body": "Monthly tracking of mentions in generative responses, citation context analysis and share of voice vs competition."},
+        {"title": "SGE and AI Overviews optimization", "body": "Specific strategies to appear in Google's Search Generative Experience and AI-powered overviews."},
+        {"title": "Complete traditional technical SEO", "body": "Technical audit, Core Web Vitals, indexing, information architecture and authority link building."},
+        {"title": "Dual reporting: Google + AI", "body": "Monthly reports with traditional metrics (rankings, traffic) + AI metrics (citations, context, share of voice)."}
+      ]
+    },
+    "audience": {
+      "eyebrow": "Is It For You?",
+      "h2": "Ideal for brands thinking ahead",
+      "items": [
+        {"title": "B2B Brands and SaaS", "body": "Complex products and services where users research deeply before deciding. Appearing in ChatGPT/Perplexity during that phase is critical."},
+        {"title": "Niche E-Commerce", "body": "Sites that need to maximize citations in generative responses to stay relevant as searches evolve."},
+        {"title": "Experts and Thought Leaders", "body": "Professionals who create authority content and need to be cited as a trusted source in generative responses about their domain."}
+      ]
+    },
+    "faqs": {
+      "eyebrow": "Frequently Asked Questions",
+      "h2": "What they usually ask us",
+      "items": [
+        {"q": "Can I really measure AI visibility?", "a": "Yes. We monitor mentions and citations of your brand in ChatGPT, Perplexity, Gemini through recurring strategic queries. We measure share of voice vs competitors."},
+        {"q": "Does this replace traditional SEO?", "a": "No. It's complementary. We keep optimizing for Google (which remains dominant) while preparing your presence for the future of search."},
+        {"q": "What exactly is Entity SEO?", "a": "Building your brand as a recognizable entity in Google's Knowledge Graph. Disambiguating who you are, what you do and why you're an authority — readable by machines."},
+        {"q": "How long does it take to see results?", "a": "Google results: 3-6 months. AI citations: 2-4 months. LLMs update their understanding faster than Google's traditional crawl."},
+        {"q": "Do I need technical knowledge?", "a": "No. We implement everything technically and explain the strategy in accessible language. You just need access to your website for implementations."},
+        {"q": "Does this work for any industry?", "a": "Especially effective in B2B, SaaS, professional services, tech and niche e-commerce. Industries where users research before deciding."}
+      ]
+    },
+    "cta": {
+      "h2": "Ready to scale your ranking on Google and AI?",
+      "text": "We'll run a generative engine presence analysis for free. Discover where you appear (or don't) when users ask about your industry.",
+      "btn": "Talk to a specialist"
+    },
+    "stats": {
+      "eyebrow": "Paradigm Shift",
+      "h2": "Why traditional SEO is no longer enough",
+      "items": [
+        {"num": "43%", "title": "Zero-Click Searches", "body": "Almost half of Google searches end without a click. The answer appears directly in the SERP or in generative engines."},
+        {"num": "2B+", "title": "ChatGPT Users", "body": "Generative AI models are redefining how people search for information. Your brand needs to appear there."},
+        {"num": "SGE", "title": "Search Generative Experience", "body": "Google integrates generative AI directly into results. Optimizing for SGE is optimizing for the future of search."}
+      ]
+    },
+    "dual": {
+      "eyebrow": "Our Methodology",
+      "h2": "Dual strategy: Google + generative engines",
+      "google": {
+        "title": "Optimization for Traditional Google",
+        "items": [
+          {"label": "Technical SEO:", "text": "Core Web Vitals, indexing, crawlability, site structure optimized for efficient crawling."},
+          {"label": "Strategic Keywords:", "text": "Deep research, search intent, long-tail and featured snippet opportunities."},
+          {"label": "Link Building:", "text": "Domain authority through quality backlinks from relevant and trusted sources."},
+          {"label": "On-Page Optimization:", "text": "Meta tags, headers, content, internal linking and optimized user experience."}
+        ]
+      },
+      "ai": {
+        "title": "Optimization for Generative AI",
+        "items": [
+          {"label": "Entity SEO:", "text": "Building recognizable entities in the Knowledge Graph, disambiguation and contextual authority."},
+          {"label": "Advanced Schema:", "text": "Rich structured data that allows LLMs to understand context, relationships and verifiable facts."},
+          {"label": "Semantic Content:", "text": "NLP-optimized, topic clusters, co-occurrences and thematic depth that LLMs value."},
+          {"label": "E-E-A-T Signals:", "text": "Demonstrable experience, expertise, authority and trust to be cited by generative engines."}
+        ]
+      }
+    },
+    "geoContext": {
+      "eyebrow": "Paradigm Shift",
+      "h2": "Why traditional SEO is no longer enough",
+      "list": [
+        "43% Zero-Click Searches. Almost half of Google searches end without a click. The answer appears directly in the SERP or in generative engines.",
+        "2B+ ChatGPT Users. Generative AI models are redefining how people search for information. Your brand needs to appear there.",
+        "SGE (Search Generative Experience). Google integrates generative AI directly into results. Optimizing for SGE is optimizing for the future of search."
+      ],
+      "cta": "Talk to a specialist"
+    },
+    "geoFeatures": {
+      "eyebrow": "Deliverables",
+      "h2": "What the service includes",
+      "label": "/ deliverable",
+      "tag": "DELIVERABLE"
+    },
+    "geoMethodology": {
+      "eyebrow": "Our Methodology",
+      "h2": "Dual strategy: Google + generative engines",
+      "lead": "We combine traditional optimization with generative AI positioning. Two fronts, one coherent results-oriented strategy.",
+      "items": [
+        {"kicker": "google", "title": "Technical SEO", "body": "Core Web Vitals, indexing, crawlability, site structure optimized for efficient crawling."},
+        {"kicker": "google", "title": "Strategic Keywords", "body": "Deep research, search intent, long-tail and featured snippet opportunities."},
+        {"kicker": "google", "title": "Link Building", "body": "Domain authority through quality backlinks from relevant and trusted sources."},
+        {"kicker": "google", "title": "On-Page Optimization", "body": "Meta tags, headers, content, internal linking and optimized user experience."},
+        {"kicker": "ia", "title": "Entity SEO", "body": "Building recognizable entities in the Knowledge Graph, disambiguation and contextual authority."},
+        {"kicker": "ia", "title": "Advanced Schema", "body": "Rich structured data that allows LLMs to understand context, relationships and verifiable facts."},
+        {"kicker": "ia", "title": "Semantic Content", "body": "NLP-optimized, topic clusters, co-occurrences and thematic depth that LLMs value."},
+        {"kicker": "ia", "title": "E-E-A-T Signals", "body": "Demonstrable experience, expertise, authority and trust to be cited by generative engines."}
+      ]
+    },
+    "geoTimeline": {
+      "eyebrow": "Realistic Expectations",
+      "h2": "What you can expect (and when)",
+      "items": [
+        {"tag": "Month 1-2", "title": "Implementation", "body": "Technical audit, advanced schema markup and entity SEO. Foundations to dominate Google and generative AI."},
+        {"tag": "Month 2-4", "title": "AI Citations", "body": "LLMs update their understanding faster than Google's traditional crawl. First citations appear."},
+        {"tag": "Month 3-6", "title": "Google Rankings", "body": "Google results: 3-6 months. First organic ranking improvements and growing traffic."},
+        {"tag": "Month 7+", "title": "Consolidation", "body": "Consolidated authority on Google and AI. Growing share of voice in generative engines. Measurable ROI."}
+      ]
+    },
+    "geoCta": {
+      "eyebrow": "start today",
+      "h2": "Ready to scale your ranking on Google and AI?",
+      "text": "We'll run a generative engine presence analysis for free. Discover where you appear (or don't) when users ask about your industry.",
+      "cta": "Talk to a specialist"
+    },
+    "geoPage": {
+      "eyebrow": "The Future of Search",
+      "h1": "Hybrid SEO (Google + AI)",
+      "p": "Advanced optimization to dominate Google and AI engines. We combine semantics, structured data, and visibility in generative environments for the digital future.",
+      "items": ["Optimization for ChatGPT, Perplexity, Gemini", "Advanced schema markup & Knowledge Graph", "Semantic content strategy", "Entity SEO & contextualization", "Visibility in generative responses"],
+      "btn": "Talk to a specialist",
+      "meta": { "title": "Hybrid SEO: Google + AI Visibility | RankAgile", "description": "Combine Google rankings with presence on ChatGPT, Gemini and Perplexity. The SEO+GEO strategy that prepares your brand for today's digital landscape." }
+    }
+  },
+  "consultoria": {
+    "hero": {
+      "eyebrow": "Directed Strategy",
+      "h1": "SEO Consulting",
+      "lead": "Personalized strategic advisory to solve complex challenges. We guide your team in making critical decisions to maximize organic performance.",
+      "checks": ["Initial strategic diagnosis", "Personalized SEO roadmap", "Monthly consulting sessions", "Technical review and validation", "Internal team training"]
+    },
+    "features": {
+      "eyebrow": "Deliverables",
+      "h2": "What the consulting includes",
+      "items": [
+        {"title": "Complete strategic SEO audit", "body": "Exhaustive analysis of technical architecture, content, link profile and competitive positioning with prioritized recommendations."},
+        {"title": "Quarterly SEO roadmap", "body": "Detailed action plan with initiatives prioritized by impact, required effort and technical dependencies."},
+        {"title": "Monthly consulting sessions", "body": "Strategic meetings of 90 minutes for alignment, unblocking issues and validation of critical decisions."},
+        {"title": "Implementation review", "body": "Technical validation of critical changes implemented by your team to ensure correct SEO execution."},
+        {"title": "Strategic competitive analysis", "body": "Deep benchmarking vs direct competitors: keywords, content, domain authority and detected strategies."},
+        {"title": "Internal team training", "body": "Workshops and training sessions for marketing, product and development in SEO best practices."},
+        {"title": "Key metrics dashboard", "body": "Control panel with essential KPIs: rankings, organic traffic, conversions and progress vs objectives."},
+        {"title": "Ongoing strategic support", "body": "Direct access via Slack/email for urgent queries, decision validation and technical issue resolution."}
+      ]
+    },
+    "audience": {
+      "eyebrow": "Is It For You?",
+      "h2": "Ideal for teams seeking expert direction",
+      "items": [
+        {"title": "Teams with internal resources", "body": "You have developers, marketers or content creators in-house who can execute, but need expert strategic direction to prioritize and validate decisions."},
+        {"title": "Growing startups", "body": "Traction phase where SEO can be a competitive differentiator, but you don't have the bandwidth to hire a full dedicated team yet."},
+        {"title": "Companies with complex challenges", "body": "Large sites, technical migrations, internationalization or highly competitive industries requiring specialized expertise on demand."},
+        {"title": "Agencies and consultancies", "body": "Need specialized technical support for specific client projects or want to validate strategies before implementing at scale."}
+      ]
+    },
+    "steps": {
+      "eyebrow": "How It Works",
+      "h2": "What the consulting consists of",
+      "items": [
+        {"n": "01", "title": "Initial Diagnosis", "body": "Complete audit of your current SEO situation. We identify strategic gaps, growth opportunities and action priorities."},
+        {"n": "02", "title": "Strategic Roadmap", "body": "We design an impact-prioritized action plan. We define KPIs, required resources and realistic implementation timeline."},
+        {"n": "03", "title": "Monthly Sessions", "body": "Recurring strategic alignment meetings. We review progress, adjust tactics and resolve technical blockers."},
+        {"n": "04", "title": "Technical Validation", "body": "Review of critical implementations by your team. We ensure technical execution meets SEO excellence standards."},
+        {"n": "05", "title": "Internal Training", "body": "Knowledge transfer to your marketing and development team. We build sustainable internal capacity long-term."},
+        {"n": "06", "title": "Results Analysis", "body": "Measurement of real impact of implemented initiatives. We optimize the roadmap based on concrete performance data."}
+      ]
+    },
+    "faqs": {
+      "eyebrow": "Frequently Asked Questions",
+      "h2": "What they usually ask us",
+      "items": [
+        {"q": "How often do we meet?", "a": "Monthly 90-minute sessions as standard. For highly complex projects or technical migrations, we can increase frequency temporarily."},
+        {"q": "What is the minimum duration?", "a": "We recommend a minimum of 3 months for specific projects, 6-12 months for strategic transformations. No forced commitment — you can cancel with 30 days' notice."},
+        {"q": "Do I need prior technical knowledge?", "a": "No. We adapt the language to your profile (CEO, CMO, Product Manager, CTO). We explain technical concepts accessibly without losing rigor."},
+        {"q": "What if we need urgent support?", "a": "We include direct access via Slack/email for queries between sessions. We respond in <24 business hours for urgent technical validations (migrations, traffic drops)."},
+        {"q": "Do you handle the implementation?", "a": "We don't execute directly. Our role is strategic: we design the plan, prioritize actions and validate that your team implements correctly."},
+        {"q": "Can you train our team?", "a": "Yes. We include workshops and training sessions for marketing, product and development. We transfer knowledge to build sustainable internal capacity."}
+      ]
+    },
+    "cta": {
+      "h2": "Schedule a diagnostic session",
+      "text": "We talk for 45 minutes about your current challenges and evaluate whether consulting is the right path. We share actionable insights from the first session — no commitment.",
+      "btn": "Talk to a specialist"
+    },
+    "compare": {
+      "eyebrow": "Consulting vs Service",
+      "h2": "Which path to choose?",
+      "consultoria": {
+        "title": "SEO Consulting",
+        "items": [
+          {"label": "Strategic direction.", "text": "We guide you in making critical decisions and your team executes the implementations."},
+          {"label": "Ideal if you have:", "text": "Internal technical team but need specialized expertise to prioritize and validate."},
+          {"label": "We deliver:", "text": "Roadmaps, audits, technical validation, monthly sessions and team training."}
+        ]
+      },
+      "seoCompleto": {
+        "title": "Full SEO Service",
+        "items": [
+          {"label": "Hands-on execution.", "text": "We implement the entire end-to-end SEO strategy: audit, optimization, content, link building."},
+          {"label": "Ideal if:", "text": "You don't have a dedicated SEO team or prefer to delegate full execution to external specialists."},
+          {"label": "We deliver:", "text": "Audits, on-page optimizations, active link building, content, continuous monitoring and monthly reports."}
+        ]
+      }
+    },
+    "geoContext": {
+      "eyebrow": "Is It For You?",
+      "h2": "Ideal for teams seeking expert direction",
+      "bullets": [
+        "Strategic direction. We guide you in making critical decisions and your team executes the implementations.",
+        "Ideal if you have: Internal technical team but need specialized expertise to prioritize and validate.",
+        "We deliver: Roadmaps, audits, technical validation, monthly sessions and team training.",
+        "Ongoing support. Direct access via Slack/email for urgent queries and technical issue resolution."
+      ],
+      "cta": "Talk to a specialist"
+    },
+    "geoFeatures": {
+      "eyebrow": "Deliverables",
+      "h2": "What the consulting includes",
+      "label": "/ deliverable",
+      "tag": "DELIVERABLE"
+    },
+    "geoMethodology": {
+      "eyebrow": "How It Works",
+      "h2": "What the consulting consists of"
+    },
+    "geoTimeline": {
+      "eyebrow": "Realistic Expectations",
+      "h2": "What you can expect (and when)",
+      "items": [
+        {"tag": "Month 1", "title": "Diagnosis", "body": "Complete audit + prioritized strategic roadmap. We define KPIs and the action plan with real impact from day one."},
+        {"tag": "Month 2-3", "title": "First Sessions", "body": "Recurring strategic alignment. We validate your team's first implementations and course-correct if needed."},
+        {"tag": "Month 3-6", "title": "Training", "body": "Internal workshops and knowledge transfer. Your team gains strategic autonomy with expert judgment."},
+        {"tag": "Month 6+", "title": "Results", "body": "Growing rankings, consolidated organic traffic and built internal capacity. Measurable and sustainable ROI long-term."}
+      ]
+    },
+    "geoCta": {
+      "eyebrow": "start today",
+      "h2": "Schedule a diagnostic session",
+      "text": "We talk for 45 minutes about your current challenges and evaluate whether consulting is the right path. We share actionable insights from the first session — no commitment.",
+      "cta": "Talk to a specialist"
+    },
+    "geoFaq": {
+      "eyebrow": "Frequently asked questions",
+      "h2": "What they usually ask us"
+    },
+    "geoPage": {
+      "eyebrow": "Strategic Direction · RankAgile",
+      "h1": "Applied SEO Consulting",
+      "p": "Personalized strategic consulting to solve complex challenges. We guide your team in critical decision-making to maximize organic performance.",
+      "items": ["Initial strategic diagnosis", "Personalized SEO roadmap", "Monthly consulting sessions", "Technical review & validation", "Internal team training"],
+      "btn": "Schedule a diagnosis session",
+      "meta": { "title": "Strategic SEO Consulting for Companies | RankAgile", "description": "Applied SEO consulting focused on results. Prioritized roadmap, expert analysis and implementation support. No generalities." }
+    }
+  },
+  "analytics": {
+    "meta": { "title": "SEO Analytics and Reporting for Companies | RankAgile", "description": "SEO measurement and analysis for data-driven decisions. Custom dashboards, ranking tracking and organic conversion analysis." },
+    "hero": {
+      "eyebrow": "Data Intelligence",
+      "h1": "SEO Analytics Dashboard",
+      "lead": "Real-time visualization of key metrics. We transform complex data into clear strategic decisions to measure your real return on investment.",
+      "checks": ["All your SEO metrics in one place", "Qualified traffic and revenue attributed to SEO", "Predictive analysis and forecasting", "Intelligent alerts for critical changes", "Automatic white-label reports"]
+    },
+    "audience": {
+      "eyebrow": "Is It For You?",
+      "h2": "Ideal for data-driven decision makers",
+      "items": [
+        {"title": "CMOs and marketing directors", "body": "You need to demonstrate SEO ROI to CEO/board. Executive dashboard with business metrics, not technical metrics nobody understands."},
+        {"title": "SEO Agencies", "body": "Manage multiple clients from a single dashboard. Automated white-label reports that free up hours of manual work each month."},
+        {"title": "Product / growth teams", "body": "Fast decisions based on data. Real-time dashboards to validate hypotheses, measure experiments and prioritize the roadmap."},
+        {"title": "E-commerce and marketplaces", "body": "Granular tracking by category, product, landing page. Connect SEO directly with revenue to optimize what generates sales."}
+      ]
+    },
+    "features": {
+      "eyebrow": "Our Solution",
+      "h2": "Unified dashboard with metrics that matter",
+      "items": [
+        {"title": "Unified real-time view", "body": "All your SEO metrics in one place: rankings, traffic, conversions, backlinks, competition. Live updates without waiting 24-48h."},
+        {"title": "Business metrics, not vanity", "body": "Qualified traffic, organic conversions, revenue attributed to SEO, calculated ROI. We connect SEO data with real business results."},
+        {"title": "Predictive analysis", "body": "Projections based on historical trends. Impact simulations before implementing changes. Traffic and conversion forecasting."},
+        {"title": "Intelligent alerts", "body": "Automatic notifications for critical ranking drops, anomalous traffic spikes, newly detected backlinks or competitive movements."},
+        {"title": "Competitive benchmarking", "body": "Side-by-side comparison vs competitors: share of voice, keyword gaps, growth speed, detected content strategies."},
+        {"title": "Automatic reports", "body": "Monthly reports generated automatically with actionable insights. White-label format to present to stakeholders or clients."},
+        {"title": "Native integrations", "body": "Connect Google Analytics, Search Console, GA4, CRM, Ahrefs, SEMrush. Centralize data without manually exporting/importing each time."},
+        {"title": "Multi-user access", "body": "Personalized dashboards by role: CEO sees ROI, Marketing sees traffic, Product sees conversions. Granular permissions by team."}
+      ]
+    },
+    "metrics": {
+      "eyebrow": "What We Measure",
+      "h2": "Metrics we track in your dashboard",
+      "items": [
+        {"title": "Visibility", "items": ["Rankings by keyword", "Share of voice", "Featured snippets", "SERP visibility", "Average position"]},
+        {"title": "Traffic", "items": ["Organic sessions", "New users", "Page views", "Time on site", "Bounce rate"]},
+        {"title": "Conversion", "items": ["Conversion rate", "Cost per acquisition", "Direct sales by SEO", "Return on investment", "Organic revenue"]},
+        {"title": "Authority", "items": ["Domain Authority", "Referring domains", "Backlink profile", "Trust Flow", "Growth speed"]}
+      ]
+    },
+    "faqs": {
+      "eyebrow": "Frequently Asked Questions",
+      "h2": "What they usually ask us",
+      "items": [
+        {"q": "What tools and integrations does it support?", "a": "Google Analytics (UA + GA4), Search Console, Ahrefs, SEMrush, Moz, Screaming Frog and CRMs like HubSpot and Salesforce. Centralizes everything without manual export."},
+        {"q": "How often is data updated?", "a": "Rankings daily, traffic and conversions in real-time via GA4, backlinks weekly, competitive data weekly."},
+        {"q": "Can the dashboard be customized?", "a": "Yes, it's fully customizable with drag & drop widgets, custom filters and saved views by role. Each user sees what they need."},
+        {"q": "Can it be used independently or only with another service?", "a": "It can be used standalone or combined with the Full SEO Service or Consulting for greater analytical power."},
+        {"q": "How many users can the dashboard have?", "a": "Unlimited users with granular permissions. Each team or stakeholder sees only the metrics relevant to their role."},
+        {"q": "Does it work on mobile?", "a": "Yes. Responsive dashboard optimized for all devices, plus native apps for iOS and Android for on-the-go monitoring."}
+      ]
+    },
+    "cta": {
+      "h2": "Request a dashboard demo",
+      "text": "Schedule a personalized 30-minute demo and we'll show you the dashboard configured with your own metrics. No commitment, no unnecessary jargon.",
+      "btn": "Schedule your personalized demo"
+    },
+    "geoContext": {
+      "eyebrow": "Is It For You?",
+      "h2": "Ideal for data-driven decision makers",
+      "bullets": [
+        "Unified view. All your SEO metrics in one place, updated in real-time without waiting 24-48h.",
+        "Measurable ROI. We connect SEO data with real business results: revenue, conversions and return on investment.",
+        "No manual work. Native integrations with GA4, Search Console, Ahrefs and more — centralize everything automatically.",
+        "White-label reports. Automatic reports ready to present to stakeholders or clients each month."
+      ],
+      "cta": "Schedule your personalized demo"
+    },
+    "geoFeatures": {
+      "eyebrow": "Our Solution",
+      "h2": "Unified dashboard with metrics that matter",
+      "label": "/ module",
+      "tag": "MODULE"
+    },
+    "geoMetrics": {
+      "eyebrow": "What We Measure",
+      "h2": "Metrics we track in your dashboard",
+      "label": "/ category"
+    },
+    "geoFaq": {
+      "eyebrow": "Frequently asked questions",
+      "h2": "What they usually ask us"
+    },
+    "geoCta": {
+      "eyebrow": "start today",
+      "h2": "Request a dashboard demo",
+      "text": "Schedule a personalized 30-minute demo and we'll show you the dashboard configured with your own metrics. No commitment, no unnecessary jargon.",
+      "cta": "Schedule your personalized demo"
+    }
+  },
+  "about": {
+    "meta": { "title": "About Us | RankAgile — SEO & GEO Team", "description": "Meet the team behind RankAgile: specialists in technical SEO, GEO and AI positioning with projects in LATAM and Europe." },
+    "hero": {
+      "eyebrow": "Meet the team",
+      "h1": "Who we are at RankAgile",
+      "body": "RankAgile is a growing company specialized in niche digital products, with an international focus and a professional team. We develop strategies aimed at search engine positioning and artificial intelligence environments, combining analysis, technology, and execution to scale brands in competitive markets.",
+      "btn": "Let's work together"
+    },
+    "mission": {
+      "eyebrow": "mission and vision",
+      "h2": "What guides our work",
+      "lead": "We are a team focused on measurable results and building brand presence in search engines and generative engines.",
+      "card1": {"n": "01 / mission", "title": "Mission", "body": "Help brands and digital projects to position themselves, grow in search engines and artificial intelligence environments, through agile strategies developed by a professional team with an international focus.", "tag": "REAL IMPACT"},
+      "card2": {"n": "02 / vision", "title": "Vision", "body": "Become a global reference in AI-oriented digital positioning, leading the evolution of traditional SEO towards new search and content discovery models.", "tag": "LONG TERM"}
+    },
+    "presentation": {
+      "eyebrow": "presentation",
+      "h2": "How we work",
+      "lead": "A quick look at our approach and the way we build sustainable growth strategies."
+    },
+    "video": {
+      "eyebrow": "video",
+      "h3": "Our vision in 2 minutes",
+      "body": "Meet the team, our international approach, and the methodology we apply to improve organic visibility and LLM presence.",
+      "btn": "Let's talk about your project"
+    }
+  },
+  "contacto": {
+    "meta": { "title": "Contact | RankAgile — SEO & GEO Agency", "description": "Let's talk about your SEO or GEO project. Tell us what you're working on and we'll respond within 48h. No commitment." },
+    "eyebrow": "let's talk",
+    "h1": "Let's start with three simple steps",
+    "lead": "Fill out the form in three steps and we'll respond within 24 hours with a personalized analysis of your project."
+  },
+  "analisis": {
+    "meta": { "title": "Free SEO + GEO Analysis | RankAgile", "description": "Evaluate your site in technical SEO and AI visibility in seconds. Free analysis with detailed report. No registration." },
+    "eyebrow": "free seo analysis",
+    "h1": "Analyze your site in GEO + classic SEO in 30 seconds.",
+    "lead": "Enter your domain URL. We'll audit performance, structure, AI visibility, and opportunities.",
+    "placeholder": "https://your-domain.com",
+    "btnAnalyze": "Analyze",
+    "btnLoading": "Analyzing…",
+    "scoreHead": "GLOBAL SCORE",
+    "tabSeo": "SEO On-Page",
+    "tabGeo": "GEO",
+    "tabResumen": "Summary",
+    "tabRendimiento": "Performance",
+    "tabMobile": "Mobile",
+    "catsHead": "SEO Categories",
+    "noData": "No data available for this module.",
+    "startHere": "Where to start",
+    "fullReport": "Receive full report",
+    "loading": "Analyzing site…",
+    "errors": "ERRORS",
+    "warnings": "WARNINGS",
+    "moduleLabels": {
+      "onPage": "SEO On-Page",
+      "technical": "Technical SEO",
+      "performance": "Performance",
+      "mobile": "Mobile",
+      "geo": "GEO",
+      "server": "Server",
+      "offPage": "Off-Page"
+    }
+  },
+  "blog": {
+    "meta": { "title": "RankAgile Blog — SEO, GEO and Web Positioning", "description": "Discover the latest SEO, digital marketing and web positioning strategies at the RankAgile blog. Practical content to grow." },
+    "eyebrow": "resources & learning",
+    "h1": "Blog",
+    "readMore": "Read article"
+  },
+  "common": {
+    "viewService": "SEE SERVICE",
+    "seeAll": "See all",
+    "requestProposal": "Request proposal",
+    "freeAnalysis": "Free SEO Analysis",
+    "contactCta": "Talk to a specialist",
+    "readMore": "Read article",
+    "back": "Back",
+    "faseLabel": "/ phase",
+    "pasoLabel": "/ step"
+  },
+  "contactForm": {
+    "badge": "Free diagnosis",
+    "title": "Let's talk about your project",
+    "subtitle": "Fill out the form and we'll respond within 24h with a personalized initial analysis.",
+    "trust": { "spam": "🛡 No spam", "time": "⏱ < 24h", "secure": "🔒 Secure data" },
+    "step1": {
+      "label": "Step 1 — Identification",
+      "name": "Full name", "namePlaceholder": "Your name",
+      "email": "Professional email", "emailPlaceholder": "email@yourcompany.com",
+      "company": "Company / Brand", "companyPlaceholder": "Your company name",
+      "website": "Website", "websitePlaceholder": "https://yourdomain.com",
+      "optional": "(optional)",
+      "role": "Role in the company", "rolePlaceholder": "Select your role",
+      "roles": ["Founder / CEO", "Marketing Director / Manager", "E-commerce Manager", "Product Manager", "Digital Coordinator", "Other"]
+    },
+    "step2": {
+      "label": "Step 2 — Project",
+      "services": "Services of interest",
+      "servicesList": ["Technical SEO", "Semantic SEO / Content", "GEO / AI Search", "Web Architecture", "CRO & Conversion", "Core Web Vitals", "Entity SEO / EEAT", "SEO Audit"],
+      "goal": "Main goal",
+      "goalsList": ["More organic traffic", "Generate qualified leads", "Improve rankings", "Migration / Web redesign", "AI & GEO visibility", "Strategic audit"],
+      "message": "Additional context", "messagePlaceholder": "Tell us more about your project, current situation, challenges..."
+    },
+    "step3": {
+      "label": "Step 3 — Budget and urgency",
+      "budget": "Monthly budget",
+      "budgetList": ["Up to USD 500/mo", "USD 500–1,500/mo", "USD 1,500–3,000/mo", "Over USD 3,000/mo"],
+      "urgency": "When do you want to start?",
+      "urgencyList": ["In less than 1 month", "In 1–3 months", "No defined urgency", "Just want a consultation"],
+      "phone": "WhatsApp / Phone"
+    },
+    "errors": {
+      "required": "This field is required.",
+      "email": "Please enter a valid email.",
+      "selectOption": "Please select an option.",
+      "selectService": "Please select at least one service."
+    },
+    "nav": { "back": "Previous", "next": "Continue", "submit": "Send inquiry", "submitting": "Sending…" },
+    "success": { "title": "Form submitted!", "body": "Your inquiry was received. A RankAgile strategist will review your project and contact you within 24 business hours." },
+    "privacy": "By submitting your data, you accept our",
+    "privacyLink": "Privacy Policy",
+    "error": "An error occurred. Please try again."
+  }
+}

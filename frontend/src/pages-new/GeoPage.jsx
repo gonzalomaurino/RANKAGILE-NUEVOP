@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import ClaudeNavbar from '../components/ClaudeNavbar.jsx';
 import Footer from '../components/Footer.jsx';
@@ -14,10 +15,12 @@ import '../styles/claude-home.css';
 import '../styles/claude-geo.css';
 
 export default function GeoPage() {
+  const { t, i18n } = useTranslation();
+  const prefix = i18n.language === 'en' ? '/en' : '';
+
   useDocumentMeta({
-    title: 'GEO (AI Search Optimization) para Empresas | RankAgile',
-    description:
-      'Posicionamos tu marca dentro de las respuestas de ChatGPT, Gemini y Perplexity con GEO — la estrategia de AI Search Optimization que lidera RankAgile.',
+    title: t('geo.meta.title'),
+    description: t('geo.meta.description'),
   });
 
   return (
@@ -27,18 +30,16 @@ export default function GeoPage() {
         <section className="geo-page-section geo-intro">
           <div className="aurora" />
           <div className="geo-intro-content">
-            <span className="geo-page-eyebrow">GEO · RankAgile</span>
+            <span className="geo-page-eyebrow">{t('geo.page.eyebrow')}</span>
             <h1 className="display geo-title">
-              <span className="grad">GEO</span>: La Nueva Disciplina que Decide si tu Empresa Existe en la IA
+              <span className="grad">GEO</span>{t('geo.page.title').replace('<grad>GEO</grad>', '').replace('GEO', '')}
             </h1>
             <p className="geo-page-p">
-              GEO — Generative Engine Optimization — es el conjunto de estrategias
-              tecnicas y de contenido que posiciona tu marca dentro de las
-              respuestas generadas por motores de IA. No es el futuro del SEO.
-              <span className="accent"> Es el presente.</span>
+              {t('geo.page.description')}
+              <span className="accent"> {t('geo.page.accent')}</span>
             </p>
             <div style={{ marginTop: 24 }}>
-              <a className="geo-page-btn" href="/contacto/">Quiero posicionar en la IA</a>
+              <a className="geo-page-btn" href={`${prefix}/contacto/`}>{t('geo.page.cta')}</a>
             </div>
           </div>
         </section>

@@ -1,25 +1,22 @@
+import { useTranslation } from 'react-i18next';
+
 export default function AuditoriaCompareSection() {
+  const { t } = useTranslation();
+  const bad = t('auditoria.compare.bad.items', { returnObjects: true });
+  const good = t('auditoria.compare.good.items', { returnObjects: true });
   return (
     <section className="ra-aud-section">
       <div className="ra-aud-container">
-        <span className="ra-aud-eyebrow">Nuestra Diferencia</span>
-        <h2 className="ra-aud-h2">Qué nos diferencia de auditorías automáticas</h2>
+        <span className="ra-aud-eyebrow">{t('auditoria.compare.eyebrow')}</span>
+        <h2 className="ra-aud-h2">{t('auditoria.compare.h2')}</h2>
         <div className="ra-aud-compare">
           <div className="ra-aud-compare-card ra-aud-compare-bad">
-            <h3>Auditorías Automáticas</h3>
-            <p>✗ Listas genéricas de errores sin contexto de negocio</p>
-            <p>✗ Sin priorización — todo parece igualmente urgente</p>
-            <p>✗ No detectan problemas específicos de tu stack tecnológico</p>
-            <p>✗ Falsos positivos que generan ruido</p>
-            <p>✗ Sin roadmap de implementación ni seguimiento</p>
+            <h3>{t('auditoria.compare.bad.title')}</h3>
+            {bad.map((item) => <p key={item}>✗ {item}</p>)}
           </div>
           <div className="ra-aud-compare-card ra-aud-compare-good">
-            <h3>Nuestra Auditoría Profesional</h3>
-            <p>✓ Análisis humano con contexto de industria y objetivos de negocio</p>
-            <p>✓ Priorización por impacto real en rankings y revenue</p>
-            <p>✓ Expertise en React, Next.js, WordPress, Shopify, custom stacks</p>
-            <p>✓ Validación manual para eliminar ruido de falsos positivos</p>
-            <p>✓ Roadmap técnico implementable + sesión de Q&amp;A con tu equipo</p>
+            <h3>{t('auditoria.compare.good.title')}</h3>
+            {good.map((item) => <p key={item}>✓ {item}</p>)}
           </div>
         </div>
       </div>

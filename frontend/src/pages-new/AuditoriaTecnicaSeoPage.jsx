@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import ClaudeNavbar from '../components/ClaudeNavbar.jsx';
 import Footer from '../components/Footer.jsx';
@@ -12,10 +13,13 @@ import '../styles/claude-home.css';
 import '../styles/claude-geo.css';
 
 export default function AuditoriaTecnicaSeoPage() {
+  const { t, i18n } = useTranslation();
+  const prefix = i18n.language === 'en' ? '/en' : '';
+  const items = t('auditoria.geoPage.items', { returnObjects: true });
+
   useDocumentMeta({
-    title: 'Auditoría Técnica SEO Profesional | RankAgile',
-    description:
-      'Detectamos todos los errores técnicos que frenan tu posicionamiento: velocidad, indexación, Core Web Vitals y arquitectura web. Informe en 72h.',
+    title: t('auditoria.geoPage.meta.title'),
+    description: t('auditoria.geoPage.meta.description'),
   });
 
   return (
@@ -25,22 +29,14 @@ export default function AuditoriaTecnicaSeoPage() {
         <section className="geo-page-section geo-intro">
           <div className="aurora" />
           <div className="geo-intro-content">
-            <span className="geo-page-eyebrow">Auditoria Tecnica · RankAgile</span>
-            <h1 className="display geo-title">Auditoria Tecnica Profesional</h1>
-            <p className="geo-page-p">
-              Analisis profundo de arquitectura, indexacion y Core Web Vitals.
-              Optimizamos la base tecnica de tu sitio para garantizar un rastreo
-              eficiente y carga ultra rapida.
-            </p>
+            <span className="geo-page-eyebrow">{t('auditoria.geoPage.eyebrow')}</span>
+            <h1 className="display geo-title">{t('auditoria.geoPage.h1')}</h1>
+            <p className="geo-page-p">{t('auditoria.geoPage.p')}</p>
             <ul className="geo-page-list">
-              <li>Analisis de arquitectura web</li>
-              <li>Core Web Vitals y performance</li>
-              <li>Indexacion y crawlability</li>
-              <li>Schema markup y datos estructurados</li>
-              <li>Roadmap tecnico priorizado</li>
+              {items.map((item) => <li key={item}>{item}</li>)}
             </ul>
             <div style={{ marginTop: 24 }}>
-              <a className="geo-page-btn" href="/contacto/">Hablar con un especialista</a>
+              <a className="geo-page-btn" href={`${prefix}/contacto/`}>{t('auditoria.geoPage.btn')}</a>
             </div>
           </div>
         </section>

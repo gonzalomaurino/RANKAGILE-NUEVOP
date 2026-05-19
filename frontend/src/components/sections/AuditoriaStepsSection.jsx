@@ -1,18 +1,15 @@
-const steps = [
-  { n: '01', title: 'Crawl Completo', body: 'Rastreamos tu sitio completo con herramientas enterprise: Screaming Frog, Sitebulb, crawlers propietarios.' },
-  { n: '02', title: 'Análisis Profundo', body: 'Identificamos errores críticos, warnings y oportunidades. Cruzamos con GSC, GA4, PageSpeed Insights.' },
-  { n: '03', title: 'Priorización', body: 'Clasificamos issues por impacto vs esfuerzo. Foco en quick wins y errores que sangran autoridad.' },
-  { n: '04', title: 'Roadmap Entregable', body: 'Informe detallado + roadmap técnico accionable con pasos específicos y validación post-fix.' },
-];
+import { useTranslation } from 'react-i18next';
 
 export default function AuditoriaStepsSection() {
+  const { t } = useTranslation();
+  const items = t('auditoria.steps.items', { returnObjects: true });
   return (
     <section className="ra-aud-section">
       <div className="ra-aud-container">
-        <span className="ra-aud-eyebrow">Nuestro Proceso</span>
-        <h2 className="ra-aud-h2">Cómo trabajamos la auditoría</h2>
+        <span className="ra-aud-eyebrow">{t('auditoria.steps.eyebrow')}</span>
+        <h2 className="ra-aud-h2">{t('auditoria.steps.h2')}</h2>
         <div className="ra-aud-steps">
-          {steps.map((s) => (
+          {items.map((s) => (
             <div key={s.n} className="ra-aud-step">
               <div className="ra-aud-num">{s.n}</div>
               <h4>{s.title}</h4>
