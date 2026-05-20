@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
 
@@ -100,7 +101,8 @@ export default function ZeroClickSearchPage() {
         La tendencia de respuestas directas no solo persistirá sino que se intensificará exponencialmente. Google integra Search Generative Experience (SGE), Microsoft potencia Bing con GPT-4, y OpenAI posiciona ChatGPT Search como alternativa disruptiva.
       </p>
       <p>
-        Los motores de inteligencia artificial no se limitan a indexar: sintetizan, analizan y generan respuestas completas sin requerir navegación externa. El SEO evoluciona hacia un paradigma nuevo donde la visibilidad se mide en autoridad citada, no en tráfico capturado.
+        Los motores de inteligencia artificial no se limitan a indexar: sintetizan, analizan y generan respuestas completas sin requerir navegación externa. El SEO evoluciona hacia un paradigma nuevo donde la visibilidad se mide en autoridad citada, no en tráfico capturado. La disciplina que trabaja esta capa es el{' '}
+        <Link to="/servicios/geo">GEO (Generative Engine Optimization)</Link>.
       </p>
 
       <h2>La Evolución, No El Fin</h2>
@@ -108,7 +110,18 @@ export default function ZeroClickSearchPage() {
         La búsqueda sin clic no representa el apocalipsis del SEO, sino su metamorfosis inevitable. En este nuevo paradigma, el éxito no se mide exclusivamente en clics capturados sino en autoridad reconocida, visibilidad ganada y confianza construida.
       </p>
       <p>
-        Los sitios que prosperen serán aquellos capaces de ofrecer respuestas cristalinas, estructuradas con precisión técnica y respaldadas por autoridad demostrable. <strong>El objetivo ya no es solo conseguir clics, sino convertirse en la fuente que los motores de búsqueda citan cuando responden al mundo.</strong>
+        Los sitios que prosperen serán aquellos capaces de ofrecer respuestas cristalinas, estructuradas con precisión técnica y respaldadas por autoridad demostrable. <strong>El objetivo ya no es solo conseguir clics, sino convertirse en la fuente que los motores de búsqueda citan cuando responden al mundo.</strong>{' '}
+        <Link to="/servicios/geo">Conocé cómo RankAgile implementa GEO para posicionar tu marca en motores de IA</Link>.
+      </p>
+
+      <hr />
+      <p style={{ textAlign: 'center', marginTop: 32 }}>
+        <Link
+          to="/servicios/geo"
+          style={{ display: 'inline-block', padding: '14px 32px', background: 'var(--accent)', color: 'var(--btn-fg)', borderRadius: 8, fontWeight: 600, textDecoration: 'none', fontSize: 15 }}
+        >
+          Ver el servicio GEO de RankAgile
+        </Link>
       </p>
     </BlogPostLayout>
   );

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
 
@@ -62,7 +63,8 @@ export default function BrandingDigitalPage() {
       <h3>El Cambio de Paradigma: SEO Híbrido</h3>
       <p>
         RankAgile define este nuevo escenario como un enfoque híbrido:{' '}
-        <strong>visibilidad orgánica en Google sumada a la relevancia en motores de respuesta de IA</strong>. Para lograr esto, el branding digital debe apoyarse en una estructura de datos impecable y una narrativa coherente que los algoritmos puedan procesar como una fuente de verdad confiable.
+        <strong>visibilidad orgánica en Google sumada a la relevancia en motores de respuesta de IA</strong>. Para lograr esto, el branding digital debe apoyarse en una estructura de datos impecable y una narrativa coherente que los algoritmos puedan procesar como una fuente de verdad confiable. La disciplina específica que trabaja esta capa es el{' '}
+        <Link to="/servicios/geo">GEO (Generative Engine Optimization)</Link>.
       </p>
 
       <h2>Construye tu Presencia Digital en 5 Pasos</h2>
@@ -121,7 +123,18 @@ export default function BrandingDigitalPage() {
         En RankAgile, entendemos que <strong>el futuro del posicionamiento es híbrido</strong>. No se trata solo de aparecer en los resultados; se trata de ser la opción recomendada por la inteligencia que mueve el mundo digital.
       </p>
       <p>
-        Si tu estrategia actual se siente fragmentada o carece de visión de negocio, es momento de transformar tu presencia digital en un activo que escale y lidere de manera sostenible. <strong>El SEO ha evolucionado, y tu marca debe hacerlo con él.</strong>
+        Si tu estrategia actual se siente fragmentada o carece de visión de negocio, es momento de transformar tu presencia digital en un activo que escale y lidere de manera sostenible. <strong>El SEO ha evolucionado, y tu marca debe hacerlo con él.</strong>{' '}
+        <Link to="/servicios/geo">Conocé cómo RankAgile implementa GEO para construir autoridad de marca en motores de IA</Link>.
+      </p>
+
+      <hr />
+      <p style={{ textAlign: 'center', marginTop: 32 }}>
+        <Link
+          to="/servicios/geo"
+          style={{ display: 'inline-block', padding: '14px 32px', background: 'var(--accent)', color: 'var(--btn-fg)', borderRadius: 8, fontWeight: 600, textDecoration: 'none', fontSize: 15 }}
+        >
+          Ver el servicio GEO de RankAgile
+        </Link>
       </p>
     </BlogPostLayout>
   );

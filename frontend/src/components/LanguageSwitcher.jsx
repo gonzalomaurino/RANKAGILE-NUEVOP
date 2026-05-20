@@ -15,9 +15,9 @@ const ES_TO_EN = {
   '/blog': '/en/blog',
   '/privacidad': '/en/privacidad',
   '/cookies': '/en/cookies',
-  '/cuanto-cuesta-geo': '/en/cuanto-cuesta-geo',
-  '/por-que-no-aparezco-en-chatgpt': '/en/por-que-no-aparezco-en-chatgpt',
-  '/seo-vs-geo-vs-aeo': '/en/seo-vs-geo-vs-aeo',
+  '/blog/cuanto-cuesta-geo': '/en/blog/cuanto-cuesta-geo',
+  '/blog/por-que-no-aparezco-en-chatgpt': '/en/blog/por-que-no-aparezco-en-chatgpt',
+  '/blog/seo-vs-geo-vs-aeo': '/en/blog/seo-vs-geo-vs-aeo',
   '/blog/como-funciona-el-algoritmo-pagerank-de-google': '/en/blog/como-funciona-el-algoritmo-pagerank-de-google',
   '/blog/agencia-seo-internacional-rankagile': '/en/blog/agencia-seo-internacional-rankagile',
   '/blog/branding-digital': '/en/blog/branding-digital',
@@ -27,6 +27,15 @@ const ES_TO_EN = {
   '/blog/seo-que-es-y-para-que-sirve': '/en/blog/seo-que-es-y-para-que-sirve',
   '/blog/seo-y-sem-en-marketing-digital': '/en/blog/seo-y-sem-en-marketing-digital',
   '/blog/dashboard-seo-en-power-bi-para-agencias': '/en/blog/dashboard-seo-en-power-bi-para-agencias',
+  '/blog/seo-tecnico-que-es': '/en/blog/seo-tecnico-que-es',
+  '/blog/que-es-on-page-seo': '/en/blog/que-es-on-page-seo',
+  '/blog/que-es-link-building': '/en/blog/que-es-link-building',
+  '/blog/que-es-eeat-google': '/en/blog/que-es-eeat-google',
+  '/blog/como-aparecer-en-motores-de-ia': '/en/blog/como-aparecer-en-motores-de-ia',
+  '/blog/citabilidad-llms-como-medirla': '/en/blog/citabilidad-llms-como-medirla',
+  '/blog/knowledge-panel-google-como-conseguirlo': '/en/blog/knowledge-panel-google-como-conseguirlo',
+  '/blog/wikipedia-wikidata-marcas': '/en/blog/wikipedia-wikidata-marcas',
+  '/blog/schema-markup-para-geo': '/en/blog/schema-markup-para-geo',
 };
 
 function getAlternatePath(pathname, currentLang) {

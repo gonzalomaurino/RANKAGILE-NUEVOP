@@ -35,6 +35,16 @@ import QueEsSeoPage from './pages/QueEsSeoPage.jsx';
 import SeoYSemPage from './pages/SeoYSemPage.jsx';
 import DashboardPowerBiPage from './pages/DashboardPowerBiPage.jsx';
 
+import SeoTecnicoPage from './pages/SeoTecnicoPage.jsx';
+import OnPageSeoPage from './pages/OnPageSeoPage.jsx';
+import LinkBuildingPage from './pages/LinkBuildingPage.jsx';
+import EEATPage from './pages/EEATPage.jsx';
+import ComoAparecerEnMotoresDeIAPage from './pages/ComoAparecerEnMotoresDeIAPage.jsx';
+import CitabilidadLLMsPage from './pages/CitabilidadLLMsPage.jsx';
+import KnowledgePanelPage from './pages/KnowledgePanelPage.jsx';
+import WikipediaWikidataMarcasPage from './pages/WikipediaWikidataMarcasPage.jsx';
+import SchemaMarkupGeoPage from './pages/SchemaMarkupGeoPage.jsx';
+
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
@@ -108,10 +118,10 @@ export default function App() {
         <Route path="/privacidad" element={<Es><PrivacyPolicyPage /></Es>} />
         <Route path="/cookies" element={<Es><CookiesPolicyPage /></Es>} />
 
-        {/* Cluster GEO */}
-        <Route path="/cuanto-cuesta-geo" element={<Es><CuantoCuestaGeoPage /></Es>} />
-        <Route path="/por-que-no-aparezco-en-chatgpt" element={<Es><PorQueNoAparezcoEnChatGPTPage /></Es>} />
-        <Route path="/seo-vs-geo-vs-aeo" element={<Es><SeoVsGeoVsAeoPage /></Es>} />
+        {/* Cluster GEO — old root URLs redirect to /blog/* */}
+        <Route path="/cuanto-cuesta-geo" element={<Navigate to="/blog/cuanto-cuesta-geo" replace />} />
+        <Route path="/por-que-no-aparezco-en-chatgpt" element={<Navigate to="/blog/por-que-no-aparezco-en-chatgpt" replace />} />
+        <Route path="/seo-vs-geo-vs-aeo" element={<Navigate to="/blog/seo-vs-geo-vs-aeo" replace />} />
 
         {/* Blog posts */}
         <Route path="/blog/como-funciona-el-algoritmo-pagerank-de-google" element={<Es><PageRankFuncionaPage /></Es>} />
@@ -123,6 +133,21 @@ export default function App() {
         <Route path="/blog/seo-que-es-y-para-que-sirve" element={<Es><QueEsSeoPage /></Es>} />
         <Route path="/blog/seo-y-sem-en-marketing-digital" element={<Es><SeoYSemPage /></Es>} />
         <Route path="/blog/dashboard-seo-en-power-bi-para-agencias" element={<Es><DashboardPowerBiPage /></Es>} />
+        {/* Cluster GEO — moved to /blog/* */}
+        <Route path="/blog/cuanto-cuesta-geo" element={<Es><CuantoCuestaGeoPage /></Es>} />
+        <Route path="/blog/por-que-no-aparezco-en-chatgpt" element={<Es><PorQueNoAparezcoEnChatGPTPage /></Es>} />
+        <Route path="/blog/seo-vs-geo-vs-aeo" element={<Es><SeoVsGeoVsAeoPage /></Es>} />
+        {/* SEO pillar satellites */}
+        <Route path="/blog/seo-tecnico-que-es" element={<Es><SeoTecnicoPage /></Es>} />
+        <Route path="/blog/que-es-on-page-seo" element={<Es><OnPageSeoPage /></Es>} />
+        <Route path="/blog/que-es-link-building" element={<Es><LinkBuildingPage /></Es>} />
+        <Route path="/blog/que-es-eeat-google" element={<Es><EEATPage /></Es>} />
+        {/* IA visibility pillar + satellites */}
+        <Route path="/blog/como-aparecer-en-motores-de-ia" element={<Es><ComoAparecerEnMotoresDeIAPage /></Es>} />
+        <Route path="/blog/citabilidad-llms-como-medirla" element={<Es><CitabilidadLLMsPage /></Es>} />
+        <Route path="/blog/knowledge-panel-google-como-conseguirlo" element={<Es><KnowledgePanelPage /></Es>} />
+        <Route path="/blog/wikipedia-wikidata-marcas" element={<Es><WikipediaWikidataMarcasPage /></Es>} />
+        <Route path="/blog/schema-markup-para-geo" element={<Es><SchemaMarkupGeoPage /></Es>} />
 
         {/* Redirects legacy /preview/ */}
         <Route path="/preview/quienes-somos" element={<Navigate to="/quienes-somos" replace />} />
@@ -179,10 +204,10 @@ export default function App() {
         <Route path="/en/privacidad" element={<En><PrivacyPolicyPage /></En>} />
         <Route path="/en/cookies" element={<En><CookiesPolicyPage /></En>} />
 
-        {/* Cluster GEO */}
-        <Route path="/en/cuanto-cuesta-geo" element={<En><CuantoCuestaGeoPage /></En>} />
-        <Route path="/en/por-que-no-aparezco-en-chatgpt" element={<En><PorQueNoAparezcoEnChatGPTPage /></En>} />
-        <Route path="/en/seo-vs-geo-vs-aeo" element={<En><SeoVsGeoVsAeoPage /></En>} />
+        {/* Cluster GEO — old EN root URLs redirect to Spanish /blog/* */}
+        <Route path="/en/cuanto-cuesta-geo" element={<Navigate to="/blog/cuanto-cuesta-geo" replace />} />
+        <Route path="/en/por-que-no-aparezco-en-chatgpt" element={<Navigate to="/blog/por-que-no-aparezco-en-chatgpt" replace />} />
+        <Route path="/en/seo-vs-geo-vs-aeo" element={<Navigate to="/blog/seo-vs-geo-vs-aeo" replace />} />
 
         {/* Blog posts — redirect /en/blog/* to Spanish equivalents */}
         <Route path="/en/blog/como-funciona-el-algoritmo-pagerank-de-google" element={<Navigate to="/blog/como-funciona-el-algoritmo-pagerank-de-google" replace />} />
@@ -194,6 +219,18 @@ export default function App() {
         <Route path="/en/blog/seo-que-es-y-para-que-sirve" element={<Navigate to="/blog/seo-que-es-y-para-que-sirve" replace />} />
         <Route path="/en/blog/seo-y-sem-en-marketing-digital" element={<Navigate to="/blog/seo-y-sem-en-marketing-digital" replace />} />
         <Route path="/en/blog/dashboard-seo-en-power-bi-para-agencias" element={<Navigate to="/blog/dashboard-seo-en-power-bi-para-agencias" replace />} />
+        <Route path="/en/blog/cuanto-cuesta-geo" element={<Navigate to="/blog/cuanto-cuesta-geo" replace />} />
+        <Route path="/en/blog/por-que-no-aparezco-en-chatgpt" element={<Navigate to="/blog/por-que-no-aparezco-en-chatgpt" replace />} />
+        <Route path="/en/blog/seo-vs-geo-vs-aeo" element={<Navigate to="/blog/seo-vs-geo-vs-aeo" replace />} />
+        <Route path="/en/blog/seo-tecnico-que-es" element={<Navigate to="/blog/seo-tecnico-que-es" replace />} />
+        <Route path="/en/blog/que-es-on-page-seo" element={<Navigate to="/blog/que-es-on-page-seo" replace />} />
+        <Route path="/en/blog/que-es-link-building" element={<Navigate to="/blog/que-es-link-building" replace />} />
+        <Route path="/en/blog/que-es-eeat-google" element={<Navigate to="/blog/que-es-eeat-google" replace />} />
+        <Route path="/en/blog/como-aparecer-en-motores-de-ia" element={<Navigate to="/blog/como-aparecer-en-motores-de-ia" replace />} />
+        <Route path="/en/blog/citabilidad-llms-como-medirla" element={<Navigate to="/blog/citabilidad-llms-como-medirla" replace />} />
+        <Route path="/en/blog/knowledge-panel-google-como-conseguirlo" element={<Navigate to="/blog/knowledge-panel-google-como-conseguirlo" replace />} />
+        <Route path="/en/blog/wikipedia-wikidata-marcas" element={<Navigate to="/blog/wikipedia-wikidata-marcas" replace />} />
+        <Route path="/en/blog/schema-markup-para-geo" element={<Navigate to="/blog/schema-markup-para-geo" replace />} />
 
         {/* 404 */}
         <Route path="*" element={<NotFoundPage />} />

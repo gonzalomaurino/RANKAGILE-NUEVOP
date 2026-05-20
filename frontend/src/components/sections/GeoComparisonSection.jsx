@@ -19,7 +19,7 @@ export default function GeoComparisonSection() {
       </div>
       <p className="geo-page-quote">
         {t('geo.comparison.quote')}{' '}
-        <a href={`${prefix}/seo-vs-geo-vs-aeo`}>{t('geo.comparison.quoteLink')}</a>{' '}
+        <a href={`${prefix}/blog/seo-vs-geo-vs-aeo`}>{t('geo.comparison.quoteLink')}</a>{' '}
         {t('geo.comparison.quotePost')}
       </p>
     </section>

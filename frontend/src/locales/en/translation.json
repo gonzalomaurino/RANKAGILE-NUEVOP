@@ -321,10 +321,10 @@
       "eyebrow": "Frequently asked questions",
       "title": "What they ask before getting started",
       "items": [
-        { "q": "Does GEO replace the SEO we already do?", "a": "No. GEO expands SEO. The signals you build for Google remain valuable and many GEO actions reinforce traditional SEO. We work it as an additional layer." },
-        { "q": "How long does it take to see results?", "a": "First citations appear between 30 and 60 days on Perplexity. For ChatGPT and Gemini, consolidated results arrive between 90 and 180 days." },
-        { "q": "Does it work for all sectors?", "a": "GEO is especially effective in B2B, SaaS, professional services, consulting and technology. If your client consults AI before buying, GEO is critical." },
-        { "q": "Can you guarantee I'll appear in ChatGPT?", "a": "Nobody guarantees positions in AI models, just as nobody guarantees #1 on Google. We guarantee a systematic, measurable, data-based process with documented results." }
+        { "q": "Does GEO replace the SEO we already do?", "a": "No. GEO expands SEO. The signals you build for Google remain valuable and many GEO actions reinforce traditional SEO. We work it as an additional layer.", "link": { "to": "/blog/geo", "text": "What is GEO in detail" } },
+        { "q": "How long does it take to see results?", "a": "First citations appear between 30 and 60 days on Perplexity. For ChatGPT and Gemini, consolidated results arrive between 90 and 180 days.", "link": { "to": "/blog/cuanto-cuesta-geo", "text": "How much does GEO cost" } },
+        { "q": "Does it work for all sectors?", "a": "GEO is especially effective in B2B, SaaS, professional services, consulting and technology. If your client consults AI before buying, GEO is critical.", "link": { "to": "/blog/seo-vs-geo-vs-aeo", "text": "Differences between SEO, GEO and AEO" } },
+        { "q": "Can you guarantee I'll appear in ChatGPT?", "a": "Nobody guarantees positions in AI models, just as nobody guarantees #1 on Google. We guarantee a systematic, measurable, data-based process with documented results.", "link": { "to": "/blog/como-aparecer-en-motores-de-ia", "text": "How to appear in AI search engines" } }
       ]
     },
     "related": {
@@ -332,8 +332,8 @@
       "title": "Complementary readings",
       "small": "Two key resources to close the visibility circle.",
       "articles": [
-        { "num": "01 / reading", "h4": "Why your company doesn't appear in ChatGPT", "p": "The 5 reasons the model doesn't know you and how to reverse it.", "cta": "Read article", "href": "/en/por-que-no-aparezco-en-chatgpt" },
-        { "num": "02 / reading", "h4": "How much GEO costs and what it includes in 2026", "p": "Real prices, what to demand in a proposal and how to calculate ROI.", "cta": "Read article", "href": "/en/cuanto-cuesta-geo" }
+        { "num": "01 / reading", "h4": "Why your company doesn't appear in ChatGPT", "p": "The 5 reasons the model doesn't know you and how to reverse it.", "cta": "Read article", "href": "/blog/por-que-no-aparezco-en-chatgpt" },
+        { "num": "02 / reading", "h4": "How much GEO costs and what it includes in 2026", "p": "Real prices, what to demand in a proposal and how to calculate ROI.", "cta": "Read article", "href": "/blog/cuanto-cuesta-geo" }
       ]
     },
     "cta": {

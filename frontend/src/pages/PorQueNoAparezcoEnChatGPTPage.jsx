@@ -69,17 +69,18 @@ export default function PorQueNoAparezcoEnChatGPTPage() {
         La solución es el <strong>GEO (Generative Engine Optimization)</strong>: una combinación de content engineering, authority building y optimización de datos estructurados diseñada para construir presencia en motores de IA.
       </p>
       <p>
-        En RankAgile auditamos tu visibilidad actual en ChatGPT, Gemini y Perplexity e identificamos exactamente dónde está el gap. El proceso tiene 6 fases con KPIs claros y optimización mensual.
+        En RankAgile auditamos tu visibilidad actual en ChatGPT, Gemini y Perplexity e identificamos exactamente dónde está el gap.{' '}
+        <Link to="/servicios/geo">Conocé la metodología completa del servicio GEO</Link>: 6 fases con KPIs claros y optimización mensual.
       </p>
       <p>
         ¿Querés saber cuánto cuesta implementarlo?{' '}
-        <Link to="/cuanto-cuesta-geo">Revisá la guía de precios GEO 2026</Link> para entender qué incluye cada nivel de servicio.
+        <Link to="/blog/cuanto-cuesta-geo">Revisá la guía de precios GEO 2026</Link> para entender qué incluye cada nivel de servicio.
       </p>
 
       <h2>La diferencia entre GEO, SEO y AEO</h2>
       <p>
         Muchas empresas confunden estas tres disciplinas. GEO no reemplaza al SEO: lo amplía hacia una capa nueva de visibilidad.{' '}
-        <Link to="/seo-vs-geo-vs-aeo">Entendé las diferencias reales entre SEO, GEO y AEO</Link> y cómo integrarlos en una estrategia coherente.
+        <Link to="/blog/seo-vs-geo-vs-aeo">Entendé las diferencias reales entre SEO, GEO y AEO</Link> y cómo integrarlos en una estrategia coherente.
       </p>
 
       <h2>Artículos relacionados del cluster GEO</h2>
@@ -91,13 +92,13 @@ export default function PorQueNoAparezcoEnChatGPTPage() {
       </div>
       <div className="blogpost-card">
         <h4 className="blogpost-card-title">
-          <Link to="/cuanto-cuesta-geo">¿Cuánto cuesta el GEO y qué incluye?</Link>
+          <Link to="/blog/cuanto-cuesta-geo">¿Cuánto cuesta el GEO y qué incluye?</Link>
         </h4>
         <p className="blogpost-card-body">Guía transparente de precios para 2026: niveles de servicio, qué exigir y ROI esperado.</p>
       </div>
       <div className="blogpost-card">
         <h4 className="blogpost-card-title">
-          <Link to="/seo-vs-geo-vs-aeo">SEO vs GEO vs AEO: Las diferencias reales</Link>
+          <Link to="/blog/seo-vs-geo-vs-aeo">SEO vs GEO vs AEO: Las diferencias reales</Link>
         </h4>
         <p className="blogpost-card-body">Tres disciplinas, un solo objetivo. Cuándo aplicar cada una y cómo integrarlas en 2026.</p>
       </div>
@@ -105,10 +106,10 @@ export default function PorQueNoAparezcoEnChatGPTPage() {
       <hr />
       <p style={{ textAlign: 'center', marginTop: 32 }}>
         <Link
-          to="/analisis-seo-gratuito"
+          to="/servicios/geo"
           style={{ display: 'inline-block', padding: '14px 32px', background: 'var(--accent)', color: 'var(--btn-fg)', borderRadius: 8, fontWeight: 600, textDecoration: 'none', fontSize: 15 }}
         >
-          Auditá tu visibilidad en IA — gratis
+          Ver el servicio GEO de RankAgile
         </Link>
       </p>
     </BlogPostLayout>

@@ -87,7 +87,8 @@ export default function CuantoCuestaGeoPage() {
       </p>
       <p>
         La ventana para construir ventaja competitiva en IA generativa se está cerrando. Las marcas que empiezan hoy tienen entre 6 y 18 meses de ventaja sobre quienes esperan.{' '}
-        <Link to="/por-que-no-aparezco-en-chatgpt">Entendé por qué tu empresa aún no aparece en ChatGPT</Link> y qué hacer para revertirlo.
+        <Link to="/servicios/geo">Ver la metodología GEO de RankAgile</Link> y qué incluye cada fase de ejecución. O si ya querés entender el diagnóstico,{' '}
+        <Link to="/blog/por-que-no-aparezco-en-chatgpt">entendé por qué tu empresa aún no aparece en ChatGPT</Link>.
       </p>
 
       <h2>Artículos relacionados del cluster GEO</h2>
@@ -99,13 +100,13 @@ export default function CuantoCuestaGeoPage() {
       </div>
       <div className="blogpost-card">
         <h4 className="blogpost-card-title">
-          <Link to="/por-que-no-aparezco-en-chatgpt">Por qué tu empresa no aparece en ChatGPT (y cómo solucionarlo)</Link>
+          <Link to="/blog/por-que-no-aparezco-en-chatgpt">Por qué tu empresa no aparece en ChatGPT (y cómo solucionarlo)</Link>
         </h4>
         <p className="blogpost-card-body">Las 5 razones reales por las que los modelos de IA no mencionan tu marca y el plan para revertirlo.</p>
       </div>
       <div className="blogpost-card">
         <h4 className="blogpost-card-title">
-          <Link to="/seo-vs-geo-vs-aeo">SEO vs GEO vs AEO: Las diferencias reales</Link>
+          <Link to="/blog/seo-vs-geo-vs-aeo">SEO vs GEO vs AEO: Las diferencias reales</Link>
         </h4>
         <p className="blogpost-card-body">Tres disciplinas, un solo objetivo. Cuándo aplicar cada una y cómo integrarlas en 2026.</p>
       </div>

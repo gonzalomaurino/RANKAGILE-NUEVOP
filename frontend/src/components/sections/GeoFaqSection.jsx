@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 export default function GeoFaqSection() {
@@ -11,7 +12,10 @@ export default function GeoFaqSection() {
         {faqs.map((f, i) => (
           <details key={i}>
             <summary>{f.q}</summary>
-            <p className="geo-page-faq-body">{f.a}</p>
+            <p className="geo-page-faq-body">
+              {f.a}
+              {f.link && <> <Link to={f.link.to}>{f.link.text}</Link>.</>}
+            </p>
           </details>
         ))}
       </div>

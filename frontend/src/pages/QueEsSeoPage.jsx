@@ -109,25 +109,38 @@ export default function QueEsSeoPage() {
       <h2>SEO y la nueva capa de visibilidad en IA</h2>
       <p>
         En 2026, el SEO ya no es suficiente por sí solo. Los motores generativos (ChatGPT, Gemini, Perplexity) están desplazando tráfico orgánico hacia respuestas directas. Entendé{' '}
-        <Link to="/seo-vs-geo-vs-aeo">las diferencias entre SEO, GEO y AEO</Link> y cómo construir una estrategia que cubra las tres capas de visibilidad.
+        <Link to="/blog/seo-vs-geo-vs-aeo">las diferencias entre SEO, GEO y AEO</Link> y cómo construir una estrategia que cubra las tres capas de visibilidad. Si querés entender específicamente cómo posicionar tu marca en los motores de IA,{' '}
+        <Link to="/blog/como-aparecer-en-motores-de-ia">la guía completa de visibilidad en motores de IA</Link> cubre el proceso paso a paso.
       </p>
 
-      <h2>Artículos relacionados</h2>
+      <h2>Recursos para profundizar en SEO</h2>
       <div className="blogpost-card">
         <h4 className="blogpost-card-title">
-          <Link to="/seo-completo">SEO Completo — Ver servicio</Link>
+          <Link to="/blog/seo-tecnico-que-es">Qué es el SEO Técnico y cómo auditarlo</Link>
         </h4>
-        <p className="blogpost-card-body">Estrategia integral de SEO técnico, contenido y autoridad para escalar visibilidad orgánica.</p>
+        <p className="blogpost-card-body">Core Web Vitals, rastreabilidad, indexabilidad, Schema y todos los componentes de la base técnica del SEO.</p>
       </div>
       <div className="blogpost-card">
         <h4 className="blogpost-card-title">
-          <Link to="/auditoria-tecnica">Auditoría Técnica SEO — Ver servicio</Link>
+          <Link to="/blog/que-es-on-page-seo">Qué es el SEO On-Page: guía de optimización</Link>
         </h4>
-        <p className="blogpost-card-body">Diagnóstico completo de tu sitio e identificación de los cuellos de botella que frenan el posicionamiento.</p>
+        <p className="blogpost-card-body">Títulos, H1-H6, meta descriptions, internal linking e imágenes: todo lo que controlás dentro de cada página.</p>
       </div>
       <div className="blogpost-card">
         <h4 className="blogpost-card-title">
-          <Link to="/seo-vs-geo-vs-aeo">SEO vs GEO vs AEO: Las diferencias reales</Link>
+          <Link to="/blog/que-es-link-building">Qué es Link Building y cómo conseguir backlinks</Link>
+        </h4>
+        <p className="blogpost-card-body">Estrategias éticas de construcción de autoridad externa: digital PR, guest posting, HARO y más.</p>
+      </div>
+      <div className="blogpost-card">
+        <h4 className="blogpost-card-title">
+          <Link to="/blog/que-es-eeat-google">Qué es E-E-A-T en Google</Link>
+        </h4>
+        <p className="blogpost-card-body">Los 4 criterios de calidad que Google usa para evaluar contenido y cómo construir señales sólidas.</p>
+      </div>
+      <div className="blogpost-card">
+        <h4 className="blogpost-card-title">
+          <Link to="/blog/seo-vs-geo-vs-aeo">SEO vs GEO vs AEO: Las diferencias reales</Link>
         </h4>
         <p className="blogpost-card-body">El mapa completo del ecosistema de visibilidad digital en 2026.</p>
       </div>
@@ -137,14 +150,20 @@ export default function QueEsSeoPage() {
         </h4>
         <p className="blogpost-card-body">Orgánico y pagado trabajando juntos: cuándo usar cada uno y cómo se retroalimentan.</p>
       </div>
+      <div className="blogpost-card">
+        <h4 className="blogpost-card-title">
+          <Link to="/blog/como-funciona-el-algoritmo-pagerank-de-google">Cómo funciona el algoritmo PageRank de Google</Link>
+        </h4>
+        <p className="blogpost-card-body">El sistema de ranking que asigna autoridad a páginas según sus backlinks.</p>
+      </div>
 
       <hr />
       <p style={{ textAlign: 'center', marginTop: 32 }}>
         <Link
-          to="/analisis-seo-gratuito"
+          to="/seo-completo"
           style={{ display: 'inline-block', padding: '14px 32px', background: 'var(--accent)', color: 'var(--btn-fg)', borderRadius: 8, fontWeight: 600, textDecoration: 'none', fontSize: 15 }}
         >
-          Analizá tu SEO gratis
+          Ver servicio de SEO Completo
         </Link>
       </p>
     </BlogPostLayout>

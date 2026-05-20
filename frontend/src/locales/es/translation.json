@@ -321,10 +321,10 @@
       "eyebrow": "Preguntas frecuentes",
       "title": "Lo que preguntan antes de empezar",
       "items": [
-        { "q": "¿GEO reemplaza al SEO que ya hacemos?", "a": "No. GEO amplía el SEO. Las señales que construís para Google siguen siendo valiosas y muchas acciones GEO refuerzan el SEO tradicional. Lo trabajamos como una capa adicional." },
-        { "q": "¿Cuánto tiempo tarda en verse resultados?", "a": "Las primeras citaciones aparecen entre 30 y 60 días en Perplexity. Para ChatGPT y Gemini los resultados consolidados llegan entre 90 y 180 días." },
-        { "q": "¿Funciona para todos los sectores?", "a": "GEO es especialmente efectivo en B2B, SaaS, servicios profesionales, consultoría y tecnología. Si tu cliente consulta IA antes de comprar, GEO es crítico." },
-        { "q": "¿Pueden garantizar que apareceré en ChatGPT?", "a": "Nadie garantiza posiciones en modelos de IA, igual que nadie garantiza el #1 en Google. Garantizamos un proceso sistemático, medible y basado en datos reales con resultados documentados." }
+        { "q": "¿GEO reemplaza al SEO que ya hacemos?", "a": "No. GEO amplía el SEO. Las señales que construís para Google siguen siendo valiosas y muchas acciones GEO refuerzan el SEO tradicional. Lo trabajamos como una capa adicional.", "link": { "to": "/blog/geo", "text": "Qué es GEO en detalle" } },
+        { "q": "¿Cuánto tiempo tarda en verse resultados?", "a": "Las primeras citaciones aparecen entre 30 y 60 días en Perplexity. Para ChatGPT y Gemini los resultados consolidados llegan entre 90 y 180 días.", "link": { "to": "/blog/cuanto-cuesta-geo", "text": "Cuánto cuesta implementar GEO" } },
+        { "q": "¿Funciona para todos los sectores?", "a": "GEO es especialmente efectivo en B2B, SaaS, servicios profesionales, consultoría y tecnología. Si tu cliente consulta IA antes de comprar, GEO es crítico.", "link": { "to": "/blog/seo-vs-geo-vs-aeo", "text": "Diferencias entre SEO, GEO y AEO" } },
+        { "q": "¿Pueden garantizar que apareceré en ChatGPT?", "a": "Nadie garantiza posiciones en modelos de IA, igual que nadie garantiza el #1 en Google. Garantizamos un proceso sistemático, medible y basado en datos reales con resultados documentados.", "link": { "to": "/blog/como-aparecer-en-motores-de-ia", "text": "Cómo aparecer en motores de IA" } }
       ]
     },
     "related": {
@@ -332,8 +332,8 @@
       "title": "Lecturas complementarias",
       "small": "Dos recursos clave para cerrar el circulo de visibilidad.",
       "articles": [
-        { "num": "01 / lectura", "h4": "Por que tu empresa no aparece en ChatGPT", "p": "Las 5 razones por las que el modelo no te conoce y como revertirlo.", "cta": "Leer articulo", "href": "/por-que-no-aparezco-en-chatgpt" },
-        { "num": "02 / lectura", "h4": "Cuanto cuesta el GEO y que incluye en 2026", "p": "Precios reales, que exigir en una propuesta y como calcular el ROI.", "cta": "Leer articulo", "href": "/cuanto-cuesta-geo" }
+        { "num": "01 / lectura", "h4": "Por que tu empresa no aparece en ChatGPT", "p": "Las 5 razones por las que el modelo no te conoce y como revertirlo.", "cta": "Leer articulo", "href": "/blog/por-que-no-aparezco-en-chatgpt" },
+        { "num": "02 / lectura", "h4": "Cuanto cuesta el GEO y que incluye en 2026", "p": "Precios reales, que exigir en una propuesta y como calcular el ROI.", "cta": "Leer articulo", "href": "/blog/cuanto-cuesta-geo" }
       ]
     },
     "cta": {

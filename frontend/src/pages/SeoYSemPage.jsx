@@ -90,7 +90,7 @@ export default function SeoYSemPage() {
       <h2>Más allá de SEO y SEM: la visibilidad en IA</h2>
       <p>
         En 2026, SEO y SEM cubren Google. Pero tus clientes también buscan en ChatGPT, Gemini y Perplexity. Esos canales requieren una estrategia diferente:{' '}
-        <Link to="/seo-vs-geo-vs-aeo">entendé las diferencias entre SEO, GEO y AEO</Link> para construir una arquitectura de visibilidad completa.
+        <Link to="/blog/seo-vs-geo-vs-aeo">entendé las diferencias entre SEO, GEO y AEO</Link> para construir una arquitectura de visibilidad completa.
       </p>
 
       <h2>Preguntas frecuentes sobre SEO y SEM</h2>

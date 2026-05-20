@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
 
@@ -41,21 +42,22 @@ const faqs = [
 
 export default function GeoPage() {
   useDocumentMeta({
-    title: 'GEO: Guía Completa de Generative Engine Optimization | RankAgile Blog',
+    title: 'Qué es GEO (Generative Engine Optimization) | RankAgile',
     description:
-      'Qué es GEO, cómo funciona y cómo aplicarlo para aparecer en ChatGPT, Gemini y Perplexity. La guía definitiva de Generative Engine Optimization por RankAgile.',
+      'GEO o Generative Engine Optimization es la disciplina que optimiza tu marca para aparecer en respuestas de ChatGPT, Gemini y Perplexity. Te explicamos qué es, cómo funciona y por qué importa en 2026.',
   });
 
   return (
     <BlogPostLayout
       tag="GEO"
       date="3 Mar 2026"
-      title="GEO: Generative Engine Optimization"
+      title="GEO: Qué es Generative Engine Optimization y cómo funciona en 2026"
       lead="ChatGPT responde 10 millones de consultas por día. Gemini recomienda marcas. Perplexity sustituye a Google para millones de compradores B2B. ¿Tu empresa aparece en esas respuestas? GEO es el conjunto de estrategias que posiciona tu marca dentro de las respuestas generadas por IA. No es el futuro del SEO. Es el presente."
     >
       <h2>GEO optimiza tu presencia dentro de respuestas de IA</h2>
       <p>
-        GEO trabaja sobre autoridad semántica, datos estructurados y cobertura en fuentes que los modelos usan para citar marcas.
+        GEO trabaja sobre autoridad semántica, datos estructurados y cobertura en fuentes que los modelos usan para citar marcas. Si querés ver la metodología completa y casos de uso,{' '}
+        <Link to="/servicios/geo">conocé el servicio GEO de RankAgile</Link>.
       </p>
       <ul>
         <li>Citaciones en contenido de alta autoridad.</li>
@@ -66,13 +68,16 @@ export default function GeoPage() {
 
       <h2>GEO es urgente para 2026</h2>
       <p>
-        El 72% de decisores B2B consulta una IA antes del primer contacto. Si no apareces ahí, no entras al ciclo de venta.
+        El 72% de decisores B2B consulta una IA antes del primer contacto. Si no aparecés ahí, no entrás al ciclo de venta.
       </p>
       <ul>
         <li>ChatGPT y Gemini influyen en la selección de proveedores.</li>
         <li>Perplexity y Copilot citan fuentes y desplazan el orgánico.</li>
         <li>GEO amplifica el SEO tradicional en capas nuevas.</li>
       </ul>
+      <p>
+        <Link to="/servicios/geo">Implementar GEO con RankAgile</Link> significa auditoría de citaciones, content engineering y authority building con KPIs claros desde el mes uno.
+      </p>
 
       <h3>Los motores que tenés que cubrir</h3>
       {aiEngines.map((e) => (
@@ -91,6 +96,10 @@ export default function GeoPage() {
       ))}
       <p className="blogpost-pullquote">
         La estrategia ganadora en 2026 no elige uno: combina SEO + GEO + AEO en una arquitectura de visibilidad integrada.
+      </p>
+      <p>
+        ¿Querés entender en profundidad cómo se diferencian?{' '}
+        <Link to="/blog/seo-vs-geo-vs-aeo">Leé la comparativa completa SEO vs GEO vs AEO</Link>.
       </p>
 
       <h2>Lo que gana tu empresa con GEO</h2>
@@ -123,6 +132,16 @@ export default function GeoPage() {
       <h2>Conclusión</h2>
       <p>
         GEO no es una moda ni un experimento académico. Es la disciplina que decide si tu empresa existe en la conversación que ya están teniendo tus clientes con la IA. Empezar primero compone ventaja en el tiempo — exactamente como funcionó el SEO en 2005.
+      </p>
+
+      <hr />
+      <p style={{ textAlign: 'center', marginTop: 32 }}>
+        <Link
+          to="/servicios/geo"
+          style={{ display: 'inline-block', padding: '14px 32px', background: 'var(--accent)', color: 'var(--btn-fg)', borderRadius: 8, fontWeight: 600, textDecoration: 'none', fontSize: 15 }}
+        >
+          Ver el servicio GEO de RankAgile
+        </Link>
       </p>
     </BlogPostLayout>
   );

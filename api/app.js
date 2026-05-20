@@ -30,6 +30,19 @@ app.use('/api/contact', contactRouter);
 app.use('/api/seo/analyze', seoAnalyzeLimiter);
 app.use('/api/seo', seoRouter);
 
+// ==================== 301 REDIRECTS ====================
+const REDIRECTS_301 = {
+  '/cuanto-cuesta-geo': '/blog/cuanto-cuesta-geo',
+  '/por-que-no-aparezco-en-chatgpt': '/blog/por-que-no-aparezco-en-chatgpt',
+  '/seo-vs-geo-vs-aeo': '/blog/seo-vs-geo-vs-aeo',
+};
+
+app.use((req, res, next) => {
+  const dest = REDIRECTS_301[req.path];
+  if (dest) return res.redirect(301, dest);
+  next();
+});
+
 // ==================== FRONTEND ESTÁTICO ====================
 if (fs.existsSync(FRONTEND_DIST)) {
   app.use(express.static(FRONTEND_DIST, {

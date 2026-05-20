@@ -9,6 +9,7 @@ import GeoBenefitsSection from '../components/sections/GeoBenefitsSection.jsx';
 import GeoMethodologySection from '../components/sections/GeoMethodologySection.jsx';
 import GeoFaqSection from '../components/sections/GeoFaqSection.jsx';
 import GeoRelatedSection from '../components/sections/GeoRelatedSection.jsx';
+import GeoRecursosSection from '../components/sections/GeoRecursosSection.jsx';
 import GeoCtaFinalSection from '../components/sections/GeoCtaFinalSection.jsx';
 import '../styles/claude-system.css';
 import '../styles/claude-home.css';
@@ -50,6 +51,7 @@ export default function GeoPage() {
         <GeoMethodologySection />
         <GeoFaqSection />
         <GeoRelatedSection />
+        <GeoRecursosSection />
         <GeoCtaFinalSection />
       </main>
       <Footer />

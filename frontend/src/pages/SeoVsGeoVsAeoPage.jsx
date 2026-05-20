@@ -95,14 +95,15 @@ export default function SeoVsGeoVsAeoPage() {
         La estrategia ganadora en 2026 no elige uno: combina SEO + GEO + AEO en una arquitectura de visibilidad integrada.
       </p>
       <p>
-        En RankAgile diseñamos estrategias integradas que trabajan las tres capas con recursos coordinados. Si tu empresa ya tiene SEO maduro, agregar GEO es la siguiente palanca de mayor impacto. Si recién empezás,{' '}
+        En RankAgile diseñamos estrategias integradas que trabajan las tres capas con recursos coordinados. Si tu empresa ya tiene SEO maduro,{' '}
+        <Link to="/servicios/geo">agregar GEO con RankAgile</Link> es la siguiente palanca de mayor impacto. Si recién empezás,{' '}
         <Link to="/blog/seo-que-es-y-para-que-sirve">entendé primero qué es el SEO y cómo funciona</Link> antes de construir las capas superiores.
       </p>
 
       <h2>¿Por qué GEO es urgente ahora?</h2>
       <p>
         El 72% de decisores B2B consulta una IA antes del primer contacto. Si no aparecés en esa respuesta, no entrás al ciclo de venta. La brecha entre empresas que ejecutan GEO y las que no se amplía cada mes.{' '}
-        <Link to="/por-que-no-aparezco-en-chatgpt">Entendé por qué tu empresa aún no aparece en ChatGPT</Link> y qué hacer para revertirlo.
+        <Link to="/blog/por-que-no-aparezco-en-chatgpt">Entendé por qué tu empresa aún no aparece en ChatGPT</Link> y qué hacer para revertirlo.
       </p>
 
       <h2>Artículos relacionados del cluster GEO</h2>
@@ -114,7 +115,7 @@ export default function SeoVsGeoVsAeoPage() {
       </div>
       <div className="blogpost-card">
         <h4 className="blogpost-card-title">
-          <Link to="/cuanto-cuesta-geo">¿Cuánto cuesta el GEO? Guía de precios 2026</Link>
+          <Link to="/blog/cuanto-cuesta-geo">¿Cuánto cuesta el GEO? Guía de precios 2026</Link>
         </h4>
         <p className="blogpost-card-body">Rangos de inversión, qué incluye cada nivel y ROI esperado.</p>
       </div>
@@ -128,10 +129,10 @@ export default function SeoVsGeoVsAeoPage() {
       <hr />
       <p style={{ textAlign: 'center', marginTop: 32 }}>
         <Link
-          to="/contacto"
+          to="/servicios/geo"
           style={{ display: 'inline-block', padding: '14px 32px', background: 'var(--accent)', color: 'var(--btn-fg)', borderRadius: 8, fontWeight: 600, textDecoration: 'none', fontSize: 15 }}
         >
-          Diseñar mi estrategia integrada
+          Ver el servicio GEO de RankAgile
         </Link>
       </p>
     </BlogPostLayout>
