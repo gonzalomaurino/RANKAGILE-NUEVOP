@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
+import PageSeo from '../seo/PageSeo';
 import ClaudeNavbar from '../components/ClaudeNavbar.jsx';
 import Footer from '../components/Footer.jsx';
 import '../styles/claude-system.css';
@@ -241,7 +242,7 @@ const styles = `
 
 // ─── Page ─────────────────────────────────────────────────
 export default function BlogsPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useDocumentMeta({
     title: t('blog.meta.title'),
@@ -250,6 +251,12 @@ export default function BlogsPage() {
 
   return (
     <>
+      <PageSeo
+        title={t('blog.meta.title')}
+        description={t('blog.meta.description')}
+        image="/og/blog.png"
+        locale={i18n.language === 'en' ? 'en_US' : 'es_ES'}
+      />
       <ClaudeNavbar />
       <main className="blog-page">
         <style>{styles}</style>

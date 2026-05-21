@@ -1,0 +1,16 @@
+{
+  "name": "rankagile-og-generator",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Generador de imágenes Open Graph para RankAgile",
+  "scripts": {
+    "generate": "node scripts/generate-og-images.js",
+    "generate:public": "node scripts/generate-og-images.js --out=../public/og",
+    "generate:one": "node scripts/generate-og-images.js --only"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "satori": "^0.10.13"
+  }
+}

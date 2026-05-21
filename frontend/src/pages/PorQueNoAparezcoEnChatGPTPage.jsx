@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const reasons = [
   {
@@ -38,7 +39,14 @@ export default function PorQueNoAparezcoEnChatGPTPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="Por Qué tu Empresa No Aparece en ChatGPT (y Cómo Solucionarlo) | RankAgile"
+        description="Las 5 razones reales por las que tu empresa no aparece en ChatGPT y el plan GEO para revertirlo. Guía práctica de RankAgile."
+        image="/og/blog/por-que-no-aparezco-en-chatgpt.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="GEO"
       date="Mar 2025"
       title="Por Qué tu Empresa No Aparece en ChatGPT (y Cómo Solucionarlo)"
@@ -113,5 +121,6 @@ export default function PorQueNoAparezcoEnChatGPTPage() {
         </Link>
       </p>
     </BlogPostLayout>
+    </>
   );
 }

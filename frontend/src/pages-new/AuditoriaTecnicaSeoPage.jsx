@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
+import PageSeo from '../seo/PageSeo';
 import ClaudeNavbar from '../components/ClaudeNavbar.jsx';
 import Footer from '../components/Footer.jsx';
 import AuditoriaGeoIncludesSection from '../components/sections/AuditoriaGeoIncludesSection.jsx';
@@ -24,6 +25,12 @@ export default function AuditoriaTecnicaSeoPage() {
 
   return (
     <>
+      <PageSeo
+        title={t('auditoria.geoPage.meta.title')}
+        description={t('auditoria.geoPage.meta.description')}
+        image="/og/auditoria-tecnica.png"
+        locale={i18n.language === 'en' ? 'en_US' : 'es_ES'}
+      />
       <ClaudeNavbar />
       <main className="geo-page">
         <section className="geo-page-section geo-intro">

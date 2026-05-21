@@ -1,5 +1,6 @@
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const heroBlurbs = [
   { title: 'Optimización Avanzada', body: 'Implementamos estrategias de SEO personalizadas para maximizar tu alcance en línea.' },
@@ -34,7 +35,14 @@ export default function SeoParaEmpresasPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="SEO para Empresas: Potencia tu Visibilidad Online | RankAgile"
+        description="SEO para empresas: estrategias personalizadas para mejorar tu presencia digital, atraer tráfico cualificado y convertir visibilidad en crecimiento."
+        image="/og/blog/seo-para-empresas.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="SEO"
       date="25 Feb 2026"
       title="SEO para Empresas: Potencia tu Visibilidad Online"
@@ -96,5 +104,6 @@ export default function SeoParaEmpresasPage() {
         Analizamos tu sitio, detectamos oportunidades y diseñamos un plan SEO a medida para tu empresa. Sin compromiso.
       </p>
     </BlogPostLayout>
+    </>
   );
 }

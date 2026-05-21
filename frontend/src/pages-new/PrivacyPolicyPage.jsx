@@ -1,4 +1,5 @@
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
+import PageSeo from '../seo/PageSeo';
 import LegalPageLayout from '../components/LegalPageLayout.jsx';
 
 export default function PrivacyPolicyPage() {
@@ -9,7 +10,12 @@ export default function PrivacyPolicyPage() {
   });
 
   return (
-    <LegalPageLayout
+    <>
+      <PageSeo
+        title="Política de Privacidad | RankAgile"
+        description="Política de Privacidad de RankAgile: qué datos recopilamos, con quién los compartimos, cuánto tiempo los conservamos y qué derechos tenés sobre ellos."
+      />
+      <LegalPageLayout
       title="Política de Privacidad"
       lead={<>Esta política describe qué datos personales recopilamos en <strong>RankAgile</strong>, cómo los usamos y qué derechos tenés sobre ellos.</>}
     >
@@ -77,5 +83,6 @@ export default function PrivacyPolicyPage() {
       <p>Si tenés preguntas sobre esta Política de Privacidad o sobre cómo manejamos tus datos, podés contactarnos en:</p>
       <a className="legal-contact-link" href="mailto:contacto@rankagile.com">contacto@rankagile.com</a>
     </LegalPageLayout>
+    </>
   );
 }

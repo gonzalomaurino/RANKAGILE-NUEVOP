@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
+import PageSeo from '../seo/PageSeo';
 import ClaudeNavbar from '../components/ClaudeNavbar.jsx';
 import Footer from '../components/Footer.jsx';
 import GeoCtaFinalSection from '../components/sections/GeoCtaFinalSection.jsx';
@@ -20,6 +21,12 @@ export default function QuienesSomosPage() {
 
   return (
     <>
+      <PageSeo
+        title={t('about.meta.title')}
+        description={t('about.meta.description')}
+        image="/og/quienes-somos.png"
+        locale={i18n.language === 'en' ? 'en_US' : 'es_ES'}
+      />
       <ClaudeNavbar />
 
       <header className="hero" id="top">

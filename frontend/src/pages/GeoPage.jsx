@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const aiEngines = [
   { title: 'ChatGPT', body: 'Consultas de compra, comparativas y recomendaciones.' },
@@ -48,7 +49,14 @@ export default function GeoPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="Qué es GEO (Generative Engine Optimization) | RankAgile"
+        description="GEO o Generative Engine Optimization es la disciplina que optimiza tu marca para aparecer en respuestas de ChatGPT, Gemini y Perplexity. Te explicamos qué es, cómo funciona y por qué importa en 2026."
+        image="/og/blog/geo.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="GEO"
       date="3 Mar 2026"
       title="GEO: Qué es Generative Engine Optimization y cómo funciona en 2026"
@@ -144,5 +152,6 @@ export default function GeoPage() {
         </Link>
       </p>
     </BlogPostLayout>
+    </>
   );
 }

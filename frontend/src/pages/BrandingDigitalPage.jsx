@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const stats = [
   { value: '67%', label: 'de las marcas no son interpretables para sistemas de IA' },
@@ -44,7 +45,14 @@ export default function BrandingDigitalPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="Branding Digital en la Era de la IA: Guía Estratégica | RankAgile Blog"
+        description="Cómo construir una marca digital sólida: autoridad semántica, SEO híbrido y posicionamiento en IA. Estrategias para liderar tu categoría en Google y modelos generativos."
+        image="/og/blog/branding-digital.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="Branding"
       date="18 Mar 2026"
       title="Branding Digital: El Arte de Ser Relevante en la Era de la IA"
@@ -137,5 +145,6 @@ export default function BrandingDigitalPage() {
         </Link>
       </p>
     </BlogPostLayout>
+    </>
   );
 }

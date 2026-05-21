@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const googleReasons = [
   { n: '1', title: 'Velocidad de respuesta', body: 'Los usuarios demandan información instantánea. Mostrar respuestas directamente elimina fricciones y reduce el tiempo de búsqueda exponencialmente.' },
@@ -38,7 +39,14 @@ export default function ZeroClickSearchPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="Zero-Click Search: Qué Es y Cómo Adaptarte en 2026 | RankAgile Blog"
+        description="Qué son las búsquedas zero-click, por qué crecen y qué estrategias usar para mantener visibilidad cuando Google responde sin que el usuario haga clic."
+        image="/og/blog/zero-click-search.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="GEO"
       date="12 Mar 2026"
       title="Zero-Click Search: La Revolución Silenciosa que Redefine el SEO"
@@ -124,5 +132,6 @@ export default function ZeroClickSearchPage() {
         </Link>
       </p>
     </BlogPostLayout>
+    </>
   );
 }

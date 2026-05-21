@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const modules = [
   { title: 'Conector GSC Automatizado', body: 'Conecta Search Console vía API REST y actualiza el modelo diariamente sin intervención manual. Elimina la exportación manual de CSV y reduce errores de consolidación.' },
@@ -33,7 +34,14 @@ export default function DashboardPowerBiPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="Dashboard SEO en Power BI para Agencias | RankAgile"
+        description="Dashboard SEO en Power BI: visualizá tráfico orgánico, rankings, conversiones y KPIs clave en un solo panel. Guía completa para agencias."
+        image="/og/blog/dashboard-seo-en-power-bi-para-agencias.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="SEO Analytics"
       date="Mar 2026"
       title="Dashboard SEO en Power BI para Agencias"
@@ -156,5 +164,6 @@ export default function DashboardPowerBiPage() {
         </Link>
       </p>
     </BlogPostLayout>
+    </>
   );
 }

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const disciplines = [
   {
@@ -43,7 +44,14 @@ export default function SeoVsGeoVsAeoPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="SEO vs GEO vs AEO: Las Diferencias Reales en 2026 | RankAgile"
+        description="Tres siglas, tres objetivos distintos. Diferencias reales entre SEO, GEO y AEO, cuándo aplicar cada uno y por qué la estrategia ganadora de 2026 es integrarlos."
+        image="/og/blog/seo-vs-geo-vs-aeo.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="SEO · GEO · AEO"
       date="Mar 2026"
       title="SEO vs GEO vs AEO: Las Diferencias Reales que Toda Empresa Debe Entender en 2026"
@@ -136,5 +144,6 @@ export default function SeoVsGeoVsAeoPage() {
         </Link>
       </p>
     </BlogPostLayout>
+    </>
   );
 }

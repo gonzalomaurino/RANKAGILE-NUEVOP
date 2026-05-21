@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const tiers = [
   {
@@ -39,7 +40,14 @@ export default function CuantoCuestaGeoPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="¿Cuánto Cuesta el GEO? Guía de Precios 2026 | RankAgile"
+        description="Sin rodeos: qué incluye un servicio GEO real, qué exigir por tu inversión y los rangos de precio justos en el mercado 2026. Guía transparente de RankAgile."
+        image="/og/blog/cuanto-cuesta-geo.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="GEO · Precios"
       date="Abr 2025"
       title="¿Cuánto Cuesta el GEO y Qué Incluye?"
@@ -121,5 +129,6 @@ export default function CuantoCuestaGeoPage() {
         </Link>
       </p>
     </BlogPostLayout>
+    </>
   );
 }

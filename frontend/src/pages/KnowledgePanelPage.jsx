@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const steps = [
   { num: '01', title: 'Crear o reclamar la entidad en Google', body: 'Si tu empresa ya tiene un Knowledge Panel, reclamarlo a través de Google Search Console. Si no tiene, el proceso comienza construyendo señales de entidad: consistencia de NAP (nombre, dirección, teléfono) en todos los directorios, página de Wikipedia o Wikidata, y Schema Organization completo.' },
@@ -25,7 +26,14 @@ export default function KnowledgePanelPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="Cómo Conseguir un Knowledge Panel en Google: Guía 2026 | RankAgile"
+        description="El Knowledge Panel es la tarjeta lateral en Google que consolida tu entidad. Te explicamos cómo conseguirlo paso a paso para marcas y empresas."
+        image="/og/blog/knowledge-panel-google-como-conseguirlo.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="GEO · Knowledge Graph"
       date="May 2026"
       title="Cómo Conseguir un Knowledge Panel en Google: Guía para Marcas y Empresas"
@@ -111,5 +119,6 @@ export default function KnowledgePanelPage() {
         </Link>
       </p>
     </BlogPostLayout>
+    </>
   );
 }

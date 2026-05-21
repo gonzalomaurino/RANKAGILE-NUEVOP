@@ -1,4 +1,5 @@
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
+import PageSeo from '../seo/PageSeo';
 import LegalPageLayout from '../components/LegalPageLayout.jsx';
 
 export default function CookiesPolicyPage() {
@@ -9,7 +10,12 @@ export default function CookiesPolicyPage() {
   });
 
   return (
-    <LegalPageLayout
+    <>
+      <PageSeo
+        title="Política de Cookies | RankAgile"
+        description="Política de Cookies de RankAgile: qué cookies usamos, para qué, y cómo podés gestionarlas desde tu navegador."
+      />
+      <LegalPageLayout
       title="Política de Cookies"
       lastUpdated="10 de marzo de 2026"
       lead={<>En <strong>RankAgile</strong> utilizamos cookies y tecnologías similares para mejorar la experiencia de los usuarios, analizar el tráfico del sitio web y ofrecer contenido personalizado. Esta Política de Cookies explica qué son las cookies, cómo las utilizamos y cómo podés gestionarlas.</>}
@@ -74,5 +80,6 @@ export default function CookiesPolicyPage() {
       <p>Si tenés preguntas sobre esta Política de Cookies o sobre cómo utilizamos tus datos, podés contactarnos en:</p>
       <a className="legal-contact-link" href="mailto:contacto@rankagile.com">contacto@rankagile.com</a>
     </LegalPageLayout>
+    </>
   );
 }

@@ -2,6 +2,10 @@
 node_modules/
 frontend/node_modules/
 api/node_modules/
+og-generator/node_modules/
+
+# OG generator output (imágenes se commitean en public/og/, no en output/)
+og-generator/output/
 
 # Build outputs
 frontend/dist/

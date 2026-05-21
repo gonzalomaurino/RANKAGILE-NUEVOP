@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
+import PageSeo from '../seo/PageSeo';
 import { Link } from 'react-router-dom';
 import { DashPrompts, DashTraffic, DashVisibility } from '../components/rankagile-dashboards.jsx';
 import ClaudeNavbar from '../components/ClaudeNavbar.jsx';
@@ -365,6 +366,12 @@ export default function ClaudeHomePage() {
 
   return (
     <>
+      <PageSeo
+        title={t('home.meta.title')}
+        description={t('home.meta.description')}
+        image="/og/home.png"
+        locale={i18n.language === 'en' ? 'en_US' : 'es_ES'}
+      />
       <Ticker />
       <ClaudeNavbar isHome />
 

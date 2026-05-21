@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const schema_types = [
   { num: '01', type: 'Organization', priority: 'Crítico', where: 'Homepage', desc: 'Define tu empresa como entidad reconocible. Debe incluir name, url, logo, description, foundingDate, address, contactPoint, sameAs (todos tus perfiles verificados). Es la base del Knowledge Panel y la primera fuente que leen los LLMs sobre tu empresa.' },
@@ -19,7 +20,14 @@ export default function SchemaMarkupGeoPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="Schema Markup para GEO: Datos Estructurados para IA | RankAgile"
+        description="Qué tipos de Schema Markup implementar para que ChatGPT, Gemini y Perplexity entiendan tu marca. Guía técnica con ejemplos prácticos."
+        image="/og/blog/schema-markup-para-geo.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="GEO · Schema"
       date="May 2026"
       title="Schema Markup para GEO: Datos Estructurados que los LLMs Procesan"
@@ -142,5 +150,6 @@ export default function SchemaMarkupGeoPage() {
         </Link>
       </p>
     </BlogPostLayout>
+    </>
   );
 }

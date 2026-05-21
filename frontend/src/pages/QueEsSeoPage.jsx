@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const pillars = [
   {
@@ -41,7 +42,14 @@ export default function QueEsSeoPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="SEO: ¿Qué es y para qué sirve? Guía Completa 2026 | RankAgile"
+        description="¿Qué es el SEO y para qué sirve? Cómo funciona el posicionamiento en Google, sus tres pilares, errores frecuentes y cómo aplicarlo para atraer más clientes."
+        image="/og/blog/seo-que-es-y-para-que-sirve.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="SEO"
       date="Ene 2026"
       title="SEO: El Sistema que Decide tu Visibilidad en Internet"
@@ -167,5 +175,6 @@ export default function QueEsSeoPage() {
         </Link>
       </p>
     </BlogPostLayout>
+    </>
   );
 }

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const pillars = [
   { letter: 'E', name: 'Experience (Experiencia)', body: 'Evidencia de experiencia directa con el tema. Contenido escrito por alguien que ha usado el producto, visitado el lugar o vivido la situación. Google premia el contenido de primera mano frente al contenido sintetizado o teórico. Señales: casos reales, datos propios, capturas de pantalla, testimonios.' },
@@ -23,7 +24,14 @@ export default function EEATPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="Qué es E-E-A-T en Google: Experiencia, Expertise, Autoridad y Confianza | RankAgile"
+        description="E-E-A-T son los 4 criterios de calidad que Google usa para evaluar contenido. Te explicamos cómo construir señales E-E-A-T sólidas para tu sitio."
+        image="/og/blog/que-es-eeat-google.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="E-E-A-T"
       date="May 2026"
       title="Qué es E-E-A-T en Google y cómo construir señales de calidad"
@@ -114,5 +122,6 @@ export default function EEATPage() {
         </Link>
       </p>
     </BlogPostLayout>
+    </>
   );
 }

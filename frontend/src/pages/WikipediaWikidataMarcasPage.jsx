@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const wiki_steps = [
   { num: '01', title: 'Verificar los criterios de notabilidad', body: 'Wikipedia exige "notabilidad verificable": tu empresa debe haber sido cubierta por fuentes independientes y fiables (medios de prensa, publicaciones del sector, estudios académicos). Sin esto, el artículo será eliminado. Antes de crear, documentar la cobertura mediática existente.' },
@@ -26,7 +27,14 @@ export default function WikipediaWikidataMarcasPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="Wikipedia y Wikidata para Marcas: Guía de Posicionamiento | RankAgile"
+        description="Wikipedia y Wikidata son fuentes clave para LLMs y Knowledge Graph. Te explicamos cómo construir presencia en estas plataformas para tu marca."
+        image="/og/blog/wikipedia-wikidata-marcas.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="GEO · Authority"
       date="May 2026"
       title="Wikipedia y Wikidata para Marcas: Cómo Construir Presencia en las Fuentes que los LLMs Priorizan"
@@ -125,5 +133,6 @@ export default function WikipediaWikidataMarcasPage() {
         </Link>
       </p>
     </BlogPostLayout>
+    </>
   );
 }

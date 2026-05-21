@@ -1,5 +1,6 @@
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const stats = [
   { value: '1998', label: 'El año en que Page y Brin diseñaron el algoritmo que redefinió cómo la web distribuye autoridad entre páginas.' },
@@ -35,7 +36,14 @@ export default function PageRankFuncionaPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="¿Cómo funciona el Algoritmo PageRank de Google? | RankAgile"
+        description="Descubrí cómo funciona el algoritmo PageRank de Google: el sistema de autoridad distribuida que determina qué páginas merecen posicionar."
+        image="/og/blog/como-funciona-el-algoritmo-pagerank-de-google.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="SEO Técnico"
       date="31 Mar 2026"
       title="¿Cómo funciona el Algoritmo PageRank de Google?"
@@ -151,5 +159,6 @@ export default function PageRankFuncionaPage() {
         PageRank evolucionó. Se volvió más sofisticado, más contextual, más difícil de manipular. Pero su lógica central no cambió: la autoridad se construye desde afuera hacia adentro, con criterio, con datos y con una visión de largo plazo sobre el grafo de la web.
       </p>
     </BlogPostLayout>
+    </>
   );
 }

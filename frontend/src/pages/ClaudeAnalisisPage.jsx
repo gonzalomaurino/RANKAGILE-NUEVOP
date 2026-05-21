@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
+import PageSeo from '../seo/PageSeo';
 import ClaudeNavbar from '../components/ClaudeNavbar.jsx';
 import Footer from '../components/Footer.jsx';
 import '../styles/claude-system.css';
@@ -132,6 +133,12 @@ export default function ClaudeAnalisisPage() {
 
   return (
     <>
+      <PageSeo
+        title={t('analisis.meta.title')}
+        description={t('analisis.meta.description')}
+        image="/og/analisis-gratuito.png"
+        locale={i18n.language === 'en' ? 'en_US' : 'es_ES'}
+      />
       <ClaudeNavbar />
       <div className="page">
         <main className="main">

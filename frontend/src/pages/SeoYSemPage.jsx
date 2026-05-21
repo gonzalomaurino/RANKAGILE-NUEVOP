@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const comparisonRows = [
   { variable: 'Velocidad de resultados', seo: '3–12 meses', sem: 'Inmediato (24–48h)' },
@@ -34,7 +35,14 @@ export default function SeoYSemPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="SEO y SEM en Marketing Digital: Diferencias y Estrategia 2026 | RankAgile"
+        description="¿Qué es SEO y SEM? Entendé cómo funcionan, en qué se diferencian y cuándo usar cada estrategia para mejorar tu visibilidad digital y maximizar el ROI."
+        image="/og/blog/seo-y-sem-en-marketing-digital.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="SEO · SEM"
       date="Feb 2026"
       title="Orgánico y Pagado: Dos Fuerzas que Trabajan Juntas"
@@ -131,5 +139,6 @@ export default function SeoYSemPage() {
         </Link>
       </p>
     </BlogPostLayout>
+    </>
   );
 }

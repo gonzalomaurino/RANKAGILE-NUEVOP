@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const strategies = [
   { num: '01', title: 'Digital PR y contenido linkable', body: 'Crear estudios originales, estadísticas propias o recursos únicos que medios especializados quieran citar. Es el método de mayor impacto: un artículo en un medio de autoridad puede generar decenas de backlinks secundarios.' },
@@ -27,7 +28,14 @@ export default function LinkBuildingPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="Qué es Link Building: Estrategias y Mejores Prácticas | RankAgile"
+        description="Link building es el proceso de conseguir enlaces de calidad desde otros sitios hacia el tuyo. Te explicamos estrategias éticas y efectivas en 2026."
+        image="/og/blog/que-es-link-building.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="Link Building"
       date="May 2026"
       title="Qué es el Link Building y cómo conseguir backlinks de calidad en 2026"
@@ -117,5 +125,6 @@ export default function LinkBuildingPage() {
         </Link>
       </p>
     </BlogPostLayout>
+    </>
   );
 }

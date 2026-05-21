@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
+import PageSeo from '../seo/PageSeo';
 import ClaudeNavbar from '../components/ClaudeNavbar.jsx';
 import Footer from '../components/Footer.jsx';
 import SeoCompletoGeoContextSection from '../components/sections/SeoCompletoGeoContextSection.jsx';
@@ -24,6 +25,12 @@ export default function ServicioSeoCompletoPage() {
 
   return (
     <>
+      <PageSeo
+        title={t('seoCompleto.geoPage.meta.title')}
+        description={t('seoCompleto.geoPage.meta.description')}
+        image="/og/seo-completo.png"
+        locale={i18n.language === 'en' ? 'en_US' : 'es_ES'}
+      />
       <ClaudeNavbar />
       <main className="geo-page">
         <section className="geo-page-section geo-intro">

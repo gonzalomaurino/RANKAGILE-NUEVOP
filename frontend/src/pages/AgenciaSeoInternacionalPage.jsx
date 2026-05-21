@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const strategies = [
   { num: '01', title: 'Estrategia SEO Internacional Adaptada', body: 'Analizamos cada mercado objetivo para definir una estrategia SEO personalizada según idioma, competencia y comportamiento de búsqueda. Priorizamos oportunidades reales de crecimiento en lugar de enfoques genéricos.' },
@@ -33,7 +34,14 @@ export default function AgenciaSeoInternacionalPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="Agencia SEO Internacional: Estrategia y Metodología | RankAgile Blog"
+        description="Cómo funciona el SEO internacional, qué diferencia a una agencia global y cómo la optimización multilingüe escala la visibilidad en nuevos mercados."
+        image="/og/blog/agencia-seo-internacional-rankagile.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="SEO"
       date="27 Mar 2026"
       title="Agencia SEO Internacional: RankAgile"
@@ -107,5 +115,6 @@ export default function AgenciaSeoInternacionalPage() {
         </Link>
       </p>
     </BlogPostLayout>
+    </>
   );
 }

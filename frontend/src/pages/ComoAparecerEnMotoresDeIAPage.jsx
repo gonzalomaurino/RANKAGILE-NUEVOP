@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const stats = [
   { value: '72%', label: 'de decisores B2B consultan IA antes del primer contacto con un proveedor' },
@@ -33,7 +34,14 @@ export default function ComoAparecerEnMotoresDeIAPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="Cómo Aparecer en Motores de IA (ChatGPT, Gemini, Perplexity) | RankAgile"
+        description="Guía completa para que tu marca aparezca en respuestas de ChatGPT, Gemini, Perplexity y Claude. Estrategias, métricas y casos reales de visibilidad en LLMs."
+        image="/og/blog/como-aparecer-en-motores-de-ia.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="GEO · IA"
       date="May 2026"
       title="Cómo Aparecer en Motores de IA: Guía Completa de Visibilidad en ChatGPT, Gemini y Perplexity"
@@ -169,5 +177,6 @@ export default function ComoAparecerEnMotoresDeIAPage() {
         </Link>
       </p>
     </BlogPostLayout>
+    </>
   );
 }

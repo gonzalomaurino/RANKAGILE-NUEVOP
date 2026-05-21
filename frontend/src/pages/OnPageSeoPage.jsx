@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const elements = [
   { num: '01', title: 'Title tag (etiqueta título)', body: 'El elemento de mayor peso en SEO on-page. Debe contener la keyword principal, tener entre 50 y 60 caracteres y ser único en cada página. Es lo que aparece en la pestaña del navegador y como enlace en los resultados de Google.' },
@@ -32,7 +33,14 @@ export default function OnPageSeoPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="Qué es SEO On-Page: Optimización Completa de Páginas | RankAgile"
+        description="El SEO on-page optimiza elementos dentro de cada página para mejorar su posicionamiento: contenido, headings, meta tags, internal linking y más."
+        image="/og/blog/que-es-on-page-seo.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="SEO On-Page"
       date="May 2026"
       title="Qué es el SEO On-Page: Guía de Optimización Página a Página"
@@ -136,5 +144,6 @@ export default function OnPageSeoPage() {
         </Link>
       </p>
     </BlogPostLayout>
+    </>
   );
 }

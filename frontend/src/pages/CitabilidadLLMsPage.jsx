@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const metrics = [
   { num: '01', title: 'Share of Voice en IA (SoV-AI)', body: 'Porcentaje de consultas de tu categoría donde tu marca aparece frente al total de menciones. Si en 100 prompts relevantes tu marca aparece en 12, tu SoV-AI es del 12%. Es la métrica maestra del GEO.' },
@@ -25,7 +26,14 @@ export default function CitabilidadLLMsPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="Citabilidad en LLMs: Cómo Medir la Visibilidad de tu Marca en IA | RankAgile"
+        description="Cómo medir si tu marca aparece en ChatGPT, Gemini y Perplexity. Métricas, herramientas y metodología para trackear citabilidad en LLMs."
+        image="/og/blog/citabilidad-llms-como-medirla.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="GEO · Métricas"
       date="May 2026"
       title="Citabilidad en LLMs: Cómo Medir si tu Marca Aparece en los Motores de IA"
@@ -127,5 +135,6 @@ export default function CitabilidadLLMsPage() {
         </Link>
       </p>
     </BlogPostLayout>
+    </>
   );
 }

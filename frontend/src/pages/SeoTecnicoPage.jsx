@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useDocumentMeta from '../hooks/useDocumentMeta.js';
 import BlogPostLayout from '../components/BlogPostLayout.jsx';
+import PageSeo from '../seo/PageSeo';
 
 const components = [
   { num: '01', title: 'Rastreabilidad e indexabilidad', body: 'Googlebot debe poder acceder a todas tus páginas importantes. Un robots.txt mal configurado, errores de servidor o bloqueos por JavaScript pueden impedir que el crawler indexe tu contenido, haciéndolo invisible aunque sea excelente.' },
@@ -28,7 +29,14 @@ export default function SeoTecnicoPage() {
   });
 
   return (
-    <BlogPostLayout
+    <>
+      <PageSeo
+        title="Qué es el SEO Técnico: Guía Completa 2026 | RankAgile"
+        description="SEO técnico abarca la optimización de la infraestructura web para que Google pueda crawlear, indexar y rankear tu sitio. Te explicamos sus componentes clave."
+        image="/og/blog/seo-tecnico-que-es.png"
+        type="article"
+      />
+      <BlogPostLayout
       tag="SEO Técnico"
       date="May 2026"
       title="Qué es el SEO Técnico y cómo se aplica en 2026"
@@ -138,5 +146,6 @@ export default function SeoTecnicoPage() {
         </Link>
       </p>
     </BlogPostLayout>
+    </>
   );
 }
